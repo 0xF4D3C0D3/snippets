@@ -5,7 +5,6 @@ next_ = get_next(start)
 
 count = 1
 while next_ != start:
-    print(next_, start)
     count += 1
     next_ = get_next(next_)
 print(count)
