@@ -1,10 +1,11 @@
 start = f'{input():>02}'
 
-get_next = lambda x: x + str(sum(map(int, start))%10)
-next_ = get_next(start[1])
+get_next = lambda x: x[1] + str(sum(map(int, x))%10)
+next_ = get_next(start)
 
 count = 1
 while next_ != start:
+    print(next_, start)
     count += 1
-    next_ = get_next(next_[1])
+    next_ = get_next(next_)
 print(count)
