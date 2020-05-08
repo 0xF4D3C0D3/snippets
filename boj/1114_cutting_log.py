@@ -1,72 +1,62 @@
-# https://www.topcoder.com/community/competitive-programming/tutorials/binary-search
-# to get least x for which pred(x) is true
-def binary_search(lo, hi, pred):
-    while lo < hi:
-        mid = (lo+hi) // 2
-        if pred(mid): hi = mid
-        else:
-            r = lo
-            lo = mid+1
-    return r
+# https://github.com/0xF4D3C0D3/snippets/blob/master/algorithm/bisect.py
+def binary_search_left(L, R, pred):
+    while L < R:
+        m = (L+R)//2
+        if pred(m): R = m
+        else: L = m+1
+    return L
 
-# get a predicate for verifying the max length
-def get_predicate(L, C, xs):
+def get_predicate_to_cut(L, C, X):
+    """
+    currying a predicate for specific L, C, X to cut
+    """
     
-    # closure to be returned
-    def cut_log(max_length, xs=xs):
-        diff  = 0
+    def pred(max_length):
+        """
+        predicate checks whether this length is sufficient or not
+        """
         count = 0
-        for i in range(0, len(xs)-1):
-            diff += xs[i+1] - xs[i]
-
-            # if this is the time to cut
-            if diff > max_length:
-                # cut it
-                count += 1
-                diff = xs[i+1] - xs[i]
+        diff = 0
+        for i in range(1, len(X)):
+            diff += X[i] - X[i-1]
+            if diff > max_length:    # if current chunk is longer than `max_length`
+                count += 1           # cut it, and increase count by 1
+                diff = X[i] - X[i-1] # now, the length of chunk is `X[i] - X[i-1]`
                 
-                if diff > max_length: return False    
+                # short-circuits
                 if count > C: return False
+                if diff > max_length: return False
         return count <= C
-    
-    return cut_log
+    return pred
 
-# get the first matching position
-def get_first_match(max_length, xs):
+def get_first_position(C, X, max_length):
+    """
+    returns first position to cut the log
+    """
     count = 0
     last = L
-
-    # from the last position, verify the max_length
-    for i in range(len(xs)-2, -1, -1):
-        # if current position can't be cut
-        # increase the count and set the last to the previous position
-        if last - xs[i] > max_length:
-            count += 1
-            last = xs[i+1]
-
-    # up to first position, if the count is less than C
-    # then it's safe to start from the first position
-    if (count < C): last = xs[1]
-        
+    # from the end to the start
+    for i in range(len(X)-2, -1, -1):
+        if last - X[i] > max_length:  # if current chunk is longer than `max_length`
+            count += 1                # it should be cut
+            last = X[i+1]             # and also update the last cut position
+    if count < C: last = X[1]         # if count is less than C, it's okay to cut from the start
     return last
 
-# the solver function
-def solve(L, C, xs):
-    # for convenience' sake, add the both-end position
-    xs = [0] + sorted(xs) + [L]
 
-    # get the max length of the shortest part
-    max_length = binary_search(0, L, get_predicate(L, C, xs))
+def get_max_length_and_first_pos(L, C, X):
+    """
+    params:
+        L (int): the length of a log
+        C (int): the maximum count for cutting
+        X (list[int]): the list of candidate positions to cut
+    """
+    sorted_X = [0, *sorted(X), L]
+    max_length = binary_search_left(0, L, get_predicate_to_cut(L, C, sorted_X))
+    first_pos = get_first_position(C, sorted_X, max_length)
+    return max_length, first_pos
 
-    # get the first position meets the above condition
-    first = get_first_match(max_length, xs)
-
-    print(max_length, first)
-
-# L -> the length of the log
-# C -> the max number of times to cut
-# xs -> the sorted list of possible positions to cut
 L, _, C = map(int, input().split())
-xs = map(int, input().split())
+X = map(int, input().split())
 
-solve(L, C, xs)
+print(*get_max_length_and_first_pos(L, C, X))
