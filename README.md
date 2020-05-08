@@ -1,2 +1,1 @@
-# snippets
-various thingies for algorithms, off-the-shelves, snippets and tacobell programming!
+## various snippets for algorithms, off-the-shelves, and tacobell programming!
