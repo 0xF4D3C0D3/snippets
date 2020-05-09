@@ -1,3 +1,136 @@
+# [Playlist link](https://www.youtube.com/playlist?list=PLRx1wWFQu1GMC1Qjxh5R_YAt71ftLTAj7)
+
+
+<nav class="toc">
+              <header><h4 class="nav__title"><svg class="svg-inline--fa fa-file-alt fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg><!-- <i class="fas fa-file-alt"></i> --> Table Of Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#queen">Queen</a>
+    <ul>
+      <li><a href="#queen---19730713">Queen - 1973/07/13</a>
+        <ul>
+          <li><a href="#liar---freddie-mercury">Liar - Freddie Mercury</a></li>
+          <li><a href="#seven-seas-of-rhye---freddie-mercury">Seven seas of rhye - Freddie Mercury</a></li>
+        </ul>
+      </li>
+      <li><a href="#sheer-heart-attack---19741108">Sheer Heart Attack - 1974/11/08</a>
+        <ul>
+          <li><a href="#killer-queen---freddie-mercury">Killer queen - Freddie Mercury</a></li>
+          <li><a href="#in-the-lap-of-the-gods---freddie-mercury">In The Lap of The Gods - Freddie Mercury</a></li>
+        </ul>
+      </li>
+      <li><a href="#a-night-at-the-opera---19751121">A Night at the Opera - 1975/11/21</a>
+        <ul>
+          <li><a href="#youre-my-best-friend---john-deacon">You’re My Best Friend - John Deacon</a></li>
+          <li><a href="#seaside-rendezvous---freddie-mercury">Seaside Rendezvous - Freddie Mercury</a></li>
+          <li><a href="#bohemian-rhapsody---freddie-mercury">Bohemian Rhapsody - Freddie Mercury</a></li>
+          <li><a href="#love-of-my-life---freddie-mercury">Love of My Life - Freddie Mercury</a></li>
+        </ul>
+      </li>
+      <li><a href="#a-day-at-the-races---19761220">A Day at the Races - 1976/12/20</a>
+        <ul>
+          <li><a href="#the-millionaire-waltz---freddie-mercury">The Millionaire Waltz - Freddie Mercury</a></li>
+          <li><a href="#you-and-i---john-deacon">You and I - John Deacon</a></li>
+          <li><a href="#somebody-to-love---freddie-mercury">Somebody to Love - Freddie Mercury</a></li>
+          <li><a href="#good-old-fashioned-lover-boy---freddie-mercury">Good Old-Fashioned Lover Boy - Freddie Mercury</a></li>
+        </ul>
+      </li>
+      <li><a href="#news-of-the-world---19771028">News of the World - 1977/10/28</a>
+        <ul>
+          <li><a href="#we-are-the-champions---freddie-mercury">We Are The Champions - Freddie Mercury</a></li>
+          <li><a href="#my-melancholy-blues---freddie-mercury">My Melancholy Blues - Freddie Mercury</a></li>
+        </ul>
+      </li>
+      <li><a href="#jazz---19781110">Jazz - 1978/11/10</a>
+        <ul>
+          <li><a href="#jealousy---freddie-mercury">Jealousy - Freddie Mercury</a></li>
+          <li><a href="#dont-stop-me-now---freddie-mercury">don’t stop me now - Freddie Mercury</a></li>
+        </ul>
+      </li>
+      <li><a href="#the-game---19800630">The Game - 1980/06/30</a>
+        <ul>
+          <li><a href="#play-the-game---freddie-mercury">Play the game - Freddie Mercury</a></li>
+          <li><a href="#crazy-little-thing-called-love---freddie-mercury">Crazy Little Thing Called Love - Freddie Mercury</a></li>
+          <li><a href="#save-me---brian-may">Save Me - Brian May</a></li>
+        </ul>
+      </li>
+      <li><a href="#under-pressure---19820521">Under Pressure - 1982/05/21</a>
+        <ul>
+          <li><a href="#staying-power---freddie-mercury">Staying Power - Freddie Mercury</a></li>
+          <li><a href="#calling-all-girls---roger-taylor">Calling All Girls - Roger Taylor</a></li>
+          <li><a href="#under-pressure---queen--david-bowie">Under Pressure - Queen &amp; David Bowie</a></li>
+        </ul>
+      </li>
+      <li><a href="#the-works---1984-02-27">The Works - 1984-02-27</a>
+        <ul>
+          <li><a href="#radio-ga-ga---roger-taylor">Radio Ga Ga - Roger Taylor</a></li>
+          <li><a href="#its-a-hard-life---freddie-mercury">It’s a Hard Life - Freddie Mercury</a></li>
+          <li><a href="#i-want-to-break-free---john-deacon">I Want to Break Free - John Deacon</a></li>
+          <li><a href="#hammer-to-fall---brian-may">Hammer to Fall - Brian May</a></li>
+          <li><a href="#is-this-the-world-we-created---freddie-mercurybrian-may">Is This The World We Created…? - Freddie Mercury&amp;Brian May</a></li>
+        </ul>
+      </li>
+      <li><a href="#kind-of-magic---19860602">Kind of Magic - 1986/06/02</a>
+        <ul>
+          <li><a href="#one-vision---queen">One Vision - Queen</a></li>
+          <li><a href="#a-kind-of-magic---roger-taylor">A Kind of Magic - Roger Taylor</a></li>
+          <li><a href="#one-year-of-love---john-deacon">One Year of Love - John Deacon</a></li>
+          <li><a href="#friends-will-be-friends---freddie-mercury--john-deacon">Friends Will Be Friends - Freddie Mercury &amp; John Deacon</a></li>
+          <li><a href="#who-wants-to-live-forever---brian-may">Who Wants to Live Forever - Brian May</a></li>
+        </ul>
+      </li>
+      <li><a href="#the-miracle---19850522">The Miracle - 1985/05/22</a>
+        <ul>
+          <li><a href="#the-miracle---queenfreddie-mercury--john-deacon">The Miracle - Queen(Freddie Mercury &amp; John Deacon)</a></li>
+          <li><a href="#scandal---brian-may">Scandal - Brian May</a></li>
+        </ul>
+      </li>
+      <li><a href="#innuendo---19910205">Innuendo - 1991/02/05</a>
+        <ul>
+          <li><a href="#innuendo---queen">Innuendo - Queen</a></li>
+          <li><a href="#im-going-slightly-mad---queenfreddie-mercury">I’m Going Slightly Mad - Queen(Freddie Mercury)</a></li>
+          <li><a href="#dont-try-so-hard---queenfreddie-mercury">Don’t Try So Hard - Queen(Freddie Mercury)</a></li>
+          <li><a href="#these-are-the-days-of-our-lives---queenroger-taylor">These are the Days of Our Lives - Queen(Roger Taylor)</a></li>
+          <li><a href="#the-show-must-go-on---queenbrian-may">The Show Must Go On - Queen(Brian May)</a></li>
+        </ul>
+      </li>
+      <li><a href="#made-in-heaven---19951106">Made in Heaven - 1995/11/06</a>
+        <ul>
+          <li><a href="#made-in-heaven---freddie-mercury">Made in Heaven - Freddie Mercury</a></li>
+          <li><a href="#mother-love---freddie-mercury--brian-may">Mother Love - Freddie Mercury &amp; Brian May</a></li>
+          <li><a href="#my-life-has-been-saved---john-deacon">My Life Has Been Saved - John Deacon</a></li>
+          <li><a href="#i-was-born-to-love-you---freddie-mercury">I Was Born to Love You - Freddie Mercury</a></li>
+          <li><a href="#too-much-love-will-kill-you---brian-may--frank-musker-elizabeth-lamers">Too Much Love Will Kill You - Brian May &amp; Frank Musker&amp; Elizabeth Lamers</a></li>
+          <li><a href="#you-dont-fool-me---queen">You Don’t Fool Me - Queen</a></li>
+          <li><a href="#a-winters-tale---freddie-mercury">A Winter’s Tale - Freddie Mercury</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#freddie-mercury">Freddie Mercury</a>
+    <ul>
+      <li><a href="#mr-bad-guy---19850429">Mr. Bad Guy - 1985/04/29</a>
+        <ul>
+          <li><a href="#foolin-around">Foolin’ Around</a></li>
+          <li><a href="#mr-bad-guy">Mr. Bad Guy</a></li>
+          <li><a href="#man-made-paradise">Man Made Paradise</a></li>
+          <li><a href="#living-on-my-own">Living on My Own</a></li>
+          <li><a href="#my-love-is-dangerous">My Love Is Dangerous</a></li>
+          <li><a href="#love-me-like-theres-no-tomorrow">Love Me Like There’s No Tomorrow</a></li>
+        </ul>
+      </li>
+      <li><a href="#singles">Singles</a>
+        <ul>
+          <li><a href="#love-kills---19840910">Love Kills - 1984/09/10</a></li>
+          <li><a href="#time---19860506">Time - 1986/05/06</a></li>
+          <li><a href="#the-great-pretender---19870223">The Great Pretender - 1987/02/23</a></li>
+          <li><a href="#in-my-defence---1986">In my defence - 1986</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</nav>
+
 # Queen
 ## Queen - 1973/07/13
 ### Liar - Freddie Mercury
