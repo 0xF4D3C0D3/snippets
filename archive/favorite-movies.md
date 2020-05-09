@@ -2,7 +2,7 @@
 
 > the order of movies is pretty subjective
 
-the template is {title} - {running time as minute} / {director} / {first release date}
+the template is {title} - {running time as minutes} / {director} / {first release date}
 
 1. The Shawshank Redemption - 142 / Frank Darabont / 1994-09-10
 1. Schindler's List - 194 / Steven Spielberg / 1993-12-15
@@ -27,3 +27,4 @@ the template is {title} - {running time as minute} / {director} / {first release
 1. GET OUT - 104 / Jordan Haworth Peele / 2017-02-24
 1. GATTACA - 106 / Andrew Niccol / 1997-10-24
 1. Requiem for a Dream - 100 / Darren Aronofsky / 2000-10-27
+1. The Hitchhiker's Guide to the Galaxy - 109 / Garth Jennings / 2005-04-28
