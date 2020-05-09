@@ -6,7 +6,7 @@
 1/1	1/2	1/3	1/4	1/5	…
 2/1	2/2	2/3	2/4	…  	…
 3/1	3/2	3/3	…  	…  	…
-4/1	4/2	…   …  	…  	…
+4/1	4/2 …  	…  	…   …
 5/1	…	…  	…	…  	…
 …	… 	…	…  	…  	…
 Above is infinite sized matrix enumerating fractions in zigzag order like below
@@ -28,8 +28,8 @@ the index of start at n-th floor = 1 + n(n+1)//2  ∵ it's difference sequence a
 
 # Solution
 1. Find the maximum n such that n(n+1) <= 2(x-1)
-2. Find the offset with |x - (1 + n(n+1)//2)|
-3. Let's a = n-offset, b = 1+offset
+2. Find the offset with 1 + |x - (1 + n(n+1)//2)|
+3. Let's a = 1+n-offset, b = 1+offset
 4. Print a/b if n is even number else b/a
 """
 
@@ -40,8 +40,7 @@ def find_n(x):
     return n
 
 x = int(input())
-n = find_n(x)
-offset = abs(x - (1 + n*(n+1)//2))
-a = 1+n-offset
-b = 1+offset
-print(f'{a}/{b}' if n%2==0 else f'{b}/{a}')
+n = find_n(x)                                # 1
+offset = abs(x - (1 + n*(n+1)//2))           # 2
+a, b = 1+n-offset, 1+offset                  # 3
+print(f'{a}/{b}' if n%2==0 else f'{b}/{a}')  # 4 
