@@ -1,10 +1,10 @@
-monitor.sh
+## monitor.sh
 ```bash
 #!/bin/bash
 nvidia-smi >> monitor-gpu.log
 ```
 
-/etc/systemd/system/monitor-gpu.timer
+## /etc/systemd/system/monitor-gpu.timer
 ```bash
 [Unit]
 Description=Run monitor-gpu every 2 seconds
@@ -18,7 +18,7 @@ AccuracySec=100ms
 WantedBy=timers.target
 ```
 
-/etc/systemd/system/monitor-gpu.service
+## /etc/systemd/system/monitor-gpu.service
 ```bash
 [Unit]
 Description=Monitoring nvidia-smi GPU status
@@ -33,7 +33,7 @@ Restart=no
 WantedBy=multi-user.target
 ```
 
-/etc/logrotate.d/monitor_gpu
+## /etc/logrotate.d/monitor_gpu
 ```bash
 /var/log/.../monitor_gpu/monitor-gpu.log {
   daily
@@ -43,18 +43,18 @@ WantedBy=multi-user.target
 }
 ```
 
-check status
+## check status
 ```bash
 sudo systemctl status monitor-gpu.service
 sudo systemctl status monitor-gpu.timer
 ```
 
-apply changes
+## apply changes
 ```bash
 sudo systemctl daemon-reload
 ```
 
-logrotate logs
+## logrotate logs
 ```bash
 less /var/lib/logrotate/status
 ```
