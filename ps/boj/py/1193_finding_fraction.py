@@ -17,7 +17,7 @@ So how can we find the x-th fraction when x is given?
 
 # Approach
 Let's rotate it 45 degree and it would looks like below
-        1/1         ... 0
+        1/1          ... 0
       1/2 2/1        ... 1
     3/1 2/2 1/3      ... 2
   1/4 2/3 3/2 1/4    ... 3
