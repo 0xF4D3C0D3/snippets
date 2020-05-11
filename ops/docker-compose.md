@@ -1,4 +1,4 @@
-## example
+## docker-compose.yml example
 ```
 version: '3.0'
 
@@ -18,4 +18,25 @@ services:
             - .env
   my_service_asdf:
         ...
+```
+
+## .env example
+```bash
+FOO=Hello
+BAR=world
+```
+
+## build example
+```bash
+docker-compose build
+# or
+docker-compose build my_service_qwerty
+```
+
+## deploy example
+```bash
+# start the service as a detached mode (daemon)
+docker-compose up -d my_service_qwerty
+# or with applying changes of Dockerfile
+docker-compose build my_service_qwerty && docker-compose up -d my_service_qwerty
 ```
