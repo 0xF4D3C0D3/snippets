@@ -1,0 +1,34 @@
+name: Docker Image CI
+on:
+  push:
+    branches: [ master, ci/** ]
+  pull_request:
+    branches: [ master, ci/** ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Get current version
+      id: version
+      run: echo "::set-output name=version::$(sed -r -n '/version = \"([^\"]+)\"/{s//\1/; p}' ./pyproject.toml)"
+    - uses: webfactory/ssh-agent@v0.4.0
+      with:
+        ssh-private-key: |
+          ${{ secrets.BLAH_SSH_PRIVATE_KEY }}
+    - name: build & push docker image
+      run: |
+        echo $BLAH_KEY | docker login -u _json_key --password-stdin <DOCKER_REGISTRY(gcr.io)>
+        docker build --ssh default --build-arg BUILDKIT_INLINE_CACHE=1 \
+          --cache-from $IMAGE_NAME:latest \
+          -t $IMAGE_NAME:latest \
+          -t $IMAGE_NAME:${{ github.sha }} \
+          -t $IMAGE_NAME:${{ steps.version.outputs.version }} .
+        docker run $IMAGE_NAME:latest python -m pytest -v
+        docker push $IMAGE_NAME:latest
+        docker push $IMAGE_NAME:${{ github.sha }}
+        docker push $IMAGE_NAME:${{ steps.version.outputs.version }}
+      env:
+        IMAGE_NAME: <DOCKER_REGISTRY_PATH(gcr.io/...)>/${{ github.event.repository.name }}
+        BLAH_KEY: ${{ secrets.BLAH_KEY }}
+        DOCKER_BUILDKIT: 1
