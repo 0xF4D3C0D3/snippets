@@ -18,3 +18,8 @@ Three concerns that are important in most software systems:
 - Reliability: The system should continue to work correctly
 - Scalability: As the system grows in data volume, traffic volume, or complexity, there should be resonable ways of dealing with that growth
 - Maintainability: Over time, many different people will work on the system, and they should all be to work on it productively
+
+Faults: The things that can go wrong
+Fault-tolerant or resilient: Systems that anticipate faults and can cope with them
+※ Fault-tolerant doesn't mean to be tolerant for every possilbe faults. it means for only certain types of faults
+※ Fault is not the same as a failure. A fault is usually defined as one component of the system deviating from its spec, whereas a failure is when the system as a whole stops providing the required service to the user. 
