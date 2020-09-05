@@ -72,7 +72,7 @@ jungdongho@jung-dong-ho-desktop:~$ ps -u whoopsie
     PID TTY          TIME CMD
    1389 ?        00:00:00 whoopsie
 ```
-the default selection discarded
+the default selection is discarded
 
 ```
 jungdongho@jung-dong-ho-desktop:~$ ps -u whoopsie -u avahi
