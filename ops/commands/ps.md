@@ -11,7 +11,7 @@ can be used; UNIX, BSD, GNU. UNIX options are preceded by a dash, BSD options ar
 GNU options are preceded by **two** dashes. 
 
 
-### 3. there are some compatibilities between UNIX and BSD styles though, don't rely upon them
+### 3. There are some compatibilities between UNIX and BSD styles though, don't rely upon them
 be careful for using dash, for example, `ps -aux` and `ps aux` are totally different. In POSIX and UNIX, `ps -aux` means
 print all processes owned by a user named "x", as well as printing all processes that would be seleced by `-a` option.
 If the user named "x" does not exist, this may be the same as `ps aux` as follows:
@@ -47,7 +47,7 @@ jungdongho@jung-dong-ho-desktop:~$ A=$(ps aux | head) B=$(ps -aux | head) bash -
 However, it's more or less just for backward compatiblity so don't rely on it.
 
 
-### 4. the output may different between UNIX and BSD styles and the default format is UNIX style
+### 4. The outputs may different between UNIX and BSD styles
 with UNIX-style, ps selects all processes with the same effective user ID(euid=EUID) as the current user and associated
 with the same terminal as the invoker. It displays the process ID(pid=PID),
 the terminal associated with the process(tname=TTY), the cumulated CPU time in [DD-]hh:mm:ss format(time=TIME), the
@@ -57,10 +57,12 @@ BSD-style will add the several columns to ouput such as process state(stat=STAT)
 the executable name and also change the process selection to include processes on other terminals(TTYs) that are owned
 by you. 
 
-and the default output format is UNIX style
+
+### 5. UNIX style is the default and standard
+the default output format is UNIX style
 
 
-### 5. by default, process selection is additive
+### 6. Process selection is additive
 Except as described below, process selection options are additive. The default selection is discarded, and then the
 selected processes are added to the set of processes to be displayed. A process will thus be shown if it meets any of the
 given selection criteria.
@@ -79,7 +81,7 @@ jungdongho@jung-dong-ho-desktop:~$ ps -u whoopsie -u avahi
     824 ?        00:00:00 avahi-daemon
    1389 ?        00:00:00 whoopsie
 ```
-two filters are additive, in other worlds, they are ORed.
+two filters are additive, in other words, they are ORed.
 
 
 ### 6. 
