@@ -1,0 +1,30 @@
+
+Symtab for file before_init.c
+Compilation directory is /home/jungdongho/Desktop/c/weird
+Read from object file /home/jungdongho/Desktop/c/weird/before_init (0x12e9120)
+Language: c
+
+Line table:
+
+ line 1 at 0x4004d6
+ line 4 at 0x4004da
+ line 5 at 0x4004de
+ line 7 at 0x4004e1
+ line 10 at 0x4004e5
+ line 12 at 0x4004ec
+ line 13 at 0x4004f1
+ line 0 at 0x4004f3
+
+Blockvector:
+
+block #000, object at 0x1384600, 1 syms/buckets in 0x4004d6..0x4004f3
+ void bar(); block object 0x13b6100, 0x4004d6..0x4004e1
+ int main(); block object 0x13b63e0, 0x4004e1..0x4004f3 section .text
+  block #001, object at 0x13b64a0 under 0x1384600, 1 syms/buckets in 0x4004d6..0x4004f3
+   typedef char char; 
+   typedef int int; 
+    block #002, object at 0x13b6100 under 0x13b64a0, 1 syms/buckets in 0x4004d6..0x4004e1, function bar
+     char baz; computed at runtime
+    block #003, object at 0x13b63e0 under 0x13b64a0, 1 syms/buckets in 0x4004e1..0x4004f3, function main
+     int foo; computed at runtime
+
