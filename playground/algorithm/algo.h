@@ -4,5 +4,8 @@
 #include "input.h"
 #include "print.h"
 
+#include <math.h>
+#include <stdlib.h>
+
 #endif /* ALGO_H */
 
