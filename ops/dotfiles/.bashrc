@@ -188,3 +188,5 @@ c() {
 alias dis='gcc -Wall -Wa,-adhln -g -masm=intel -o /dev/null'
 
 eb() { vim ~/.bashrc; source ~/.bashrc; }
+
+export TERM=screen-256color
