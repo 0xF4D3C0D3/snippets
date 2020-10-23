@@ -14,6 +14,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'svermeulen/vim-easyclip'
+Plugin 'tpope/vim-repeat'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -26,6 +30,9 @@ syntax enable
 set background=light
 let g:airline_theme='solarized'
 colorscheme solarized
+
+set clipboard=unnamed
+let g:EasyClipShareYanks=1
 
 function! LoadCscope()
   let db = findfile("cscope.out", ".;")
