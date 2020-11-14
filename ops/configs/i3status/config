@@ -1,0 +1,38 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 1
+}
+
+order += "ethernet ens33"
+order += "load"
+order += "disk /"
+order += "cpu_usage"
+order += "memory"
+order += "volume master"
+order += "time"
+
+disk "/" {
+	format = "disk %percentage_used used, %percentage_free free, %percentage_avail avail"
+}
+
+ethernet ens33 {
+	format_up = "E: %ip (%speed)"
+	format_down = "E: down"
+}
+
+cpu_usage {
+	format = "cpu: %usage"
+}
+
+memory {
+	format = "mem: %percentage_used used, %percentage_free free, %percentage_shared shared"
+	threshold_degraded = "10%"
+	format_degraded = "MEMORY: %free"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "pulse"
+}
