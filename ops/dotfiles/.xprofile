@@ -1,0 +1,7 @@
+export GTK_IM_MODULE=im
+export XMODIFIERS=@im=im
+export QT_IM_MODULE=im
+
+export PATH=/home/jungdongho/.shortcut:$PATH
+
+xbindkeys
