@@ -4,6 +4,7 @@
 #include "input.h"
 #include "print.h"
 
+#include <limits.h>
 #include <math.h>
 #include <stdlib.h>
 
