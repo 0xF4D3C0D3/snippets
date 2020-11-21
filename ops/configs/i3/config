@@ -176,9 +176,8 @@ bar {
 for_window [class=".*"] border pixel 2
 gaps inner 15
 
-exec --no-startup-id picom -b
-exec --no-startup-id feh --bg-scale --randomize /usr/share/backgrounds/archlinux/
 exec --no-startup-id flameshot &
+exec --no-startup-id feh --bg-scale --randomize ~/img/cities/*
 
 bindsym KP_Begin exec --no-startup-id sleep 0.2 && xdotool search --onlyvisible chrome windowactivate key space windowactivate search --onlyvisible terminator windowactivate
 bindsym KP_Left exec --no-startup-id sleep 0.2 && xdotool search --onlyvisible chrome windowactivate key Left windowactivate search --onlyvisible terminator windowactivate
