@@ -182,6 +182,6 @@ gaps inner 15
 exec --no-startup-id flameshot &
 exec --no-startup-id feh --bg-scale --randomize ~/img/cities/*
 
-bindsym KP_Begin exec --no-startup-id sleep 0.2 && xdotool search --onlyvisible chrome windowactivate key space windowactivate search --onlyvisible terminator windowactivate
-bindsym KP_Left exec --no-startup-id sleep 0.2 && xdotool search --onlyvisible chrome windowactivate key Left windowactivate search --onlyvisible terminator windowactivate
-bindsym KP_Right exec --no-startup-id sleep 0.2 && xdotool search --onlyvisible chrome windowactivate key Right windowactivate search --onlyvisible terminator windowactivate
+bindsym KP_Begin exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key space windowactivate search --onlyvisible terminator windowactivate
+bindsym KP_Left exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key Left windowactivate search --onlyvisible terminator windowactivate
+bindsym KP_Right exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key Right windowactivate search --onlyvisible terminator windowactivate
