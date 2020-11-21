@@ -176,8 +176,8 @@ bar {
 # cope with top inner gaps graphic glitch
 for_window [class="^.*"] border pixel 0
 
-for_window [class=".*"] border pixel 2
-gaps inner 15
+for_window [class=".*"] border pixel 3
+gaps inner 5
 
 exec --no-startup-id flameshot &
 exec --no-startup-id feh --bg-scale --randomize ~/img/cities/*
