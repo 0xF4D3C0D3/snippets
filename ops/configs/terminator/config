@@ -1,0 +1,30 @@
+[global_config]
+  geometry_hinting = True
+  scroll_tabbar = True
+  homogeneous_tabbar = False
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, Logger
+  smart_copy = False
+[keybindings]
+[profiles]
+  [[default]]
+    font = MesloLGS NF 12
+    show_titlebar = False
+    scrollbar_position = hidden
+    use_system_font = False
+    copy_on_selection = True
+    rewrap_on_resize = False
+
+    palette = "#073642:#d30102:#859900:#b58900:#6c71c4:#d33682:#2aa198:#839496:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#93a1a1"
+    background_color = "#eee8d5"
+    cursor_color = "#002b36"
+    foreground_color = "#002b36"
+
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

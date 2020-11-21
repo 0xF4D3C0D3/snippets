@@ -185,3 +185,22 @@ exec --no-startup-id feh --bg-scale --randomize ~/img/cities/*
 bindsym KP_Begin exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key space windowactivate search --onlyvisible terminator windowactivate
 bindsym KP_Left exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key Left windowactivate search --onlyvisible terminator windowactivate
 bindsym KP_Right exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key Right windowactivate search --onlyvisible terminator windowactivate
+
+set $coloract "#8f6d01"
+set $colorin "#624a01"
+set $primary_display "$(get_display.sh primary)"
+set $secondary_display "$(get_display.sh secondary)"
+set $terminal kitty
+set_from_resource $color15 i3wm.color15 "#fdf6e3"
+set_from_resource $split i3wm.color10 "#859900"
+set_from_resource $coloru i3wm.color2 "#859900"
+set_from_resource $color0 i3wm.color0 "#002b36"
+set_from_resource $color8 i3wm.color8 "#657b83"
+
+# class                 border    backgr    text    indicator child_border
+client.focused          $coloract $coloract $color15 $split  $coloract
+client.focused_inactive $color0   $color0   $color15 $split  $color0
+client.unfocused        $color0   $color0   $color15 $split  $color0
+client.urgent           $coloru   $coloru   $color15 $coloru $coloru
+client.placeholder      $color0   $color8   $color15 $color0 $color8
+client.background       $color0
