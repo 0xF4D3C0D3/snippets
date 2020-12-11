@@ -20,3 +20,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 alias ll='ls -alh'
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
