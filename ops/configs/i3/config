@@ -41,6 +41,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# change workspace
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -182,11 +186,13 @@ for_window [class=".*"] border pixel 3
 gaps inner 5
 
 exec --no-startup-id flameshot &
+exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id feh --bg-scale --randomize ~/img/cities/*
 
-bindsym KP_Begin exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key space windowactivate search --onlyvisible terminator windowactivate
-bindsym KP_Left exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key Left windowactivate search --onlyvisible terminator windowactivate
-bindsym KP_Right exec --no-startup-id sleep 0.1 && xdotool search --onlyvisible --class 'mpv|chrome' windowactivate --sync key Right windowactivate search --onlyvisible terminator windowactivate
+bindsym Alt_R exec --no-startup-id ~/.local/bin/send_key 'chrome|mpv' 'space'
+bindsym Hangul_Hanja exec --no-startup-id ~/.local/bin/send_key 'chrome|mpv' 'Left'
+bindsym Shift+Alt_R exec --no-startup-id ~/.local/bin/send_key 'chrome|mpv' 'shift+0x2e'
+bindsym Shift+Hangul_Hanja exec --no-startup-id ~/.local/bin/send_key 'chrome|mpv' 'shift+0x2c'
 
 set $coloract "#8f6d01"
 set $colorin "#624a01"
