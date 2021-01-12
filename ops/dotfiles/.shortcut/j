@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+if [ $#  -eq 1 ]
+then
+	CMD=". ~/.zshrc && source activate $1 && python -m jupyter lab"
+else
+	CMD=". ~/.zshrc && python -m jupyter lab"
+fi
+
+i3-msg "workspace 10:bg; exec \"terminator -e '$CMD'\""
