@@ -1,0 +1,1791 @@
+2020-12-19 08:12:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-19 08:12:35	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-19 08:12:35	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-19 08:12:35	--	Channel #nginx: 693 nicks (3 ops, 0 voices, 690 normals)
+2020-12-19 08:12:37	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-19 08:13:06	<--	Vaelatern (~Vaelatern@98.156.197.132) has quit (Ping timeout: 240 seconds)
+2020-12-19 08:16:53	-->	Vaelatern (~Vaelatern@98.156.197.132) has joined #nginx
+2020-12-19 08:16:59	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-19 08:17:25	<--	teardown (~user@gateway/tor-sasl/mrush) has quit (Ping timeout: 240 seconds)
+2020-12-19 08:19:28	-->	teardown (~user@gateway/tor-sasl/mrush) has joined #nginx
+2020-12-19 08:19:32	<--	systemE (~user@h67-204-176-255.bendor.broadband.dynamic.tds.net) has quit (Ping timeout: 265 seconds)
+2020-12-19 08:21:47	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 268 seconds)
+2020-12-19 08:26:28	--	irc: disconnected from server
+2020-12-19 11:22:08	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-19 11:22:08	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-19 11:22:08	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-19 11:22:08	--	Channel #nginx: 692 nicks (3 ops, 0 voices, 689 normals)
+2020-12-19 11:22:09	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-19 11:22:26	-->	normen (~normen@p200300d71721c4000de3fa452aaf8bf7.dip0.t-ipconnect.de) has joined #nginx
+2020-12-19 11:23:38	-->	ac3Takwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-19 11:24:32	-->	MenschZwoNull__ (~MenschZwo@p200300c8571bfe00bae3cf4c8c05430a.dip0.t-ipconnect.de) has joined #nginx
+2020-12-19 11:26:09	<--	thekingofbandit` (~tkob@thunix.net) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:26:17	-->	Teraii_ (~teraii@185.219.206.44) has joined #nginx
+2020-12-19 11:26:33	-->	thekingofbandit (~tkob@thunix.net) has joined #nginx
+2020-12-19 11:26:43	<--	Aleks3Y (uid54913@gateway/web/irccloud.com/x-jasxfbustygiozsl) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:26:43	<--	satmd (~satmd@unaffiliated/satmd) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:26:44	--	gaulishcoin0 is now known as gaulishcoin
+2020-12-19 11:27:00	<--	Teraii (~teraii@juraii-s1-1.teraii.net) has quit (Read error: Connection reset by peer)
+2020-12-19 11:27:18	<--	MenschZwoNull_ (~MenschZwo@2a03:2260:200c:400:cea:58ca:5931:c0d0) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:18	<--	GrayShade (~quassel@unaffiliated/grayshade) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:18	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:19	<--	localhorst (nekobus@kirika.nerdpol.org) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:19	<--	demonspork (~demonspor@unaffiliated/demonspork) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:19	--	ac3Takwas is now known as acetakwas
+2020-12-19 11:27:47	-->	GrayShade (~quassel@unaffiliated/grayshade) has joined #nginx
+2020-12-19 11:27:58	-->	localhorst (nekobus@kirika.nerdpol.org) has joined #nginx
+2020-12-19 11:28:07	-->	demonspork (~demonspor@unaffiliated/demonspork) has joined #nginx
+2020-12-19 11:28:13	-->	Aleks3Y (uid54913@gateway/web/irccloud.com/x-blvaggtibyhcpkgl) has joined #nginx
+2020-12-19 11:28:34	--	Teraii_ is now known as Teraii
+2020-12-19 11:33:16	-->	satmd (~satmd@unaffiliated/satmd) has joined #nginx
+2020-12-19 11:35:24	<--	normen (~normen@p200300d71721c4000de3fa452aaf8bf7.dip0.t-ipconnect.de) has quit (Ping timeout: 272 seconds)
+2020-12-19 11:37:11	<--	jalalsfs_ (~jalalsfs@unaffiliated/jalalsfs) has quit (Ping timeout: 256 seconds)
+2020-12-19 11:44:40	<--	MenschZwoNull__ (~MenschZwo@p200300c8571bfe00bae3cf4c8c05430a.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-19 11:48:56	<--	OmIkRoNiXz (~omik@134.209.139.24) has quit (Quit: ...)
+2020-12-19 11:49:01	<--	TheOmega (~SysCore@ZNC.BorstNet.nl) has quit (Quit: (A)bort, (R)etry, (P)retend this never happened...)
+2020-12-19 11:49:22	-->	TheOmega (~SysCore@2a00:f10:400:2:45b:bcff:fe00:2fa) has joined #nginx
+2020-12-19 11:51:07	-->	OmIkRoNiXz (~omik@134.209.139.24) has joined #nginx
+2020-12-19 11:55:48	--	irc: disconnected from server
+2020-12-19 11:57:31	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-19 11:57:31	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-19 11:57:31	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-19 11:57:31	--	Channel #nginx: 691 nicks (3 ops, 0 voices, 688 normals)
+2020-12-19 11:58:02	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-19 12:01:33	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-19 12:04:05	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-19 12:04:06	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-19 12:06:42	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 265 seconds)
+2020-12-19 12:08:24	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-19 12:11:17	<--	Aelius (~Aelius@unaffiliated/aelius) has quit (Quit: quit)
+2020-12-19 12:12:29	-->	Aelius (~Aelius@unaffiliated/aelius) has joined #nginx
+2020-12-19 12:24:35	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-19 12:28:01	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-19 12:32:38	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 260 seconds)
+2020-12-19 12:45:25	<--	hidedagger (~nate@unaffiliated/hidedagger) has quit (Quit: WeeChat 2.9)
+2020-12-19 12:46:04	-->	Dunedan_ (~dunedan@unaffiliated/dunedan) has joined #nginx
+2020-12-19 12:46:52	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-19 12:47:54	--	irc: disconnected from server
+2020-12-20 03:36:55	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-20 03:36:55	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-20 03:36:55	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-20 03:36:55	--	Channel #nginx: 694 nicks (2 ops, 0 voices, 692 normals)
+2020-12-20 03:37:26	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-20 03:39:59	-->	arcatech (~arcatech@2604:2000:1200:5d9:699a:d585:3c16:80fc) has joined #nginx
+2020-12-20 03:40:26	<--	killall (~killall@2001:818:eacb:f600:dea6:32ff:febe:c13c) has quit (Quit: %im lost in the world of cyber computing%)
+2020-12-20 03:40:52	-->	killall (~killall@2001:818:eacb:f600:dea6:32ff:febe:c13c) has joined #nginx
+2020-12-20 03:42:19	<--	MenschZwoNull_ (~MenschZwo@p200300c8571bfe00bae3cf4c8c05430a.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-20 03:43:17	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-20 03:50:02	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 264 seconds)
+2020-12-20 03:51:19	vandemar	netcrash: I have not used plain chroot for so long, are you sure it's using a separate userid namespace?  I'd just use one of the standard container toolings and use a container; those are sure to have namespaced/isolated users, networking, etc.
+2020-12-20 03:57:17	vandemar	TheSilentLink: what do you mean password protect it?  With http auth?  Clear your browser cache, if your browser has an old copy it may display that if the server returns a 401/403
+2020-12-20 03:59:02	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 04:06:51	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-20 04:08:58	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 04:09:19	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-20 04:09:47	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 04:10:44	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-20 04:10:57	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 04:12:15	<--	Praise (~Fat@unaffiliated/praise) has quit (Ping timeout: 256 seconds)
+2020-12-20 04:12:22	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-20 04:13:48	-->	Luther (~mark@125.71.74.118) has joined #nginx
+2020-12-20 04:14:22	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 256 seconds)
+2020-12-20 04:15:22	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 258 seconds)
+2020-12-20 04:22:12	-->	Praise (~Fat@unaffiliated/praise) has joined #nginx
+2020-12-20 04:27:56	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-20 04:34:55	<--	Gokturk (~Gokturk@84.241.202.149) has quit (Ping timeout: 256 seconds)
+2020-12-20 04:34:58	-->	Gokturk-Away (~Gokturk@84.241.202.149) has joined #nginx
+2020-12-20 04:35:43	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 260 seconds)
+2020-12-20 04:45:00	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 04:45:50	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-20 04:47:12	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 04:49:36	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 04:50:53	-->	ac3Takwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 04:52:10	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Ping timeout: 272 seconds)
+2020-12-20 04:52:18	-->	acetakwa- (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 04:52:45	--	acetakwa- is now known as acetakwas
+2020-12-20 04:53:40	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 04:54:05	<--	ac3Takwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Read error: Connection reset by peer)
+2020-12-20 04:54:32	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 256 seconds)
+2020-12-20 04:58:56	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 05:12:20	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 05:13:51	satmd	chroot does not have any isolation
+2020-12-20 05:14:02	satmd	just path-based
+2020-12-20 05:14:46	satmd	netcrash: but you need to have /etc/passwd available in a chroot
+2020-12-20 05:14:55	satmd	or a reduced copy of it
+2020-12-20 05:17:16	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 256 seconds)
+2020-12-20 05:21:16	-->	bocephus607 (~bradf@2600:1700:8460:fda0:5cb8:4da1:3c18:7d5e) has joined #nginx
+2020-12-20 05:22:06	--	arooni_team_b is now known as arooni
+2020-12-20 05:34:18	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-20 05:39:06	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 240 seconds)
+2020-12-20 05:44:31	<--	Luther (~mark@125.71.74.118) has quit (Quit: This computer has gone to sleep)
+2020-12-20 05:54:24	--	irc: disconnected from server
+2020-12-20 05:54:58	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-20 05:54:58	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-20 05:54:58	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-20 05:54:58	--	Channel #nginx: 695 nicks (2 ops, 0 voices, 693 normals)
+2020-12-20 05:55:31	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-20 05:58:17	<--	kipras (~kipras@78-56-235-39.static.zebra.lt) has quit (Ping timeout: 240 seconds)
+2020-12-20 05:59:43	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 260 seconds)
+2020-12-20 06:00:41	--	irc: disconnected from server
+2020-12-20 06:18:28	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-20 06:18:28	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-20 06:18:28	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-20 06:18:28	--	Channel #nginx: 693 nicks (2 ops, 0 voices, 691 normals)
+2020-12-20 06:18:59	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-20 06:20:13	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 268 seconds)
+2020-12-20 16:45:14	--	irc: disconnected from server
+2020-12-20 16:45:50	--	irc: disconnected from server
+2020-12-20 16:46:44	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-20 16:46:44	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-20 16:46:44	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-20 16:46:44	--	Channel #nginx: 683 nicks (2 ops, 0 voices, 681 normals)
+2020-12-20 16:47:34	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-20 16:54:51	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-20 16:58:35	--	irc: disconnected from server
+2020-12-20 16:59:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-20 16:59:35	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-20 16:59:35	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-20 16:59:35	--	Channel #nginx: 683 nicks (2 ops, 0 voices, 681 normals)
+2020-12-20 17:00:06	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-20 17:02:03	<--	Heirlung (Heirlung@71.71.176.215) has quit (Quit: ZNC - http://znc.in)
+2020-12-20 17:03:11	<--	unluckyshrubbery (~unluckysh@unaffiliated/unluckyshrubbery) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-20 17:03:20	--	irc: disconnected from server
+2020-12-20 17:03:50	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-20 17:03:50	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-20 17:03:50	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-20 17:03:50	--	Channel #nginx: 681 nicks (2 ops, 0 voices, 679 normals)
+2020-12-20 17:03:51	-->	Heirlung (~Heirlung@71.71.176.215) has joined #nginx
+2020-12-20 17:04:22	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-20 17:04:45	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-20 17:15:17	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 17:15:47	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-20 17:16:22	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-20 17:17:36	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 17:18:04	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-20 17:19:43	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 17:20:10	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-20 17:20:49	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 17:21:11	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 265 seconds)
+2020-12-20 17:21:16	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-20 17:22:01	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 17:22:30	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-20 17:22:50	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 17:27:15	<--	munio (~Thunderbi@188.254.215.199) has quit (Remote host closed the connection)
+2020-12-20 17:27:31	-->	munio (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-20 17:39:22	<--	cim209 (~cim209@205.185.117.110) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-20 17:39:34	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-20 17:40:00	-->	cim209 (~cim209@205.185.117.110) has joined #nginx
+2020-12-20 17:44:42	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 268 seconds)
+2020-12-20 17:48:12	-->	Kurozen (~WL-KUBLX@cpe2-23-244.cable.triera.net) has joined #nginx
+2020-12-20 18:00:55	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 18:02:25	-->	netcrash (~charmande@97.245.60.94.rev.vodafone.pt) has joined #nginx
+2020-12-20 18:05:03	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Ping timeout: 240 seconds)
+2020-12-20 18:05:25	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 240 seconds)
+2020-12-20 18:09:50	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-20 18:12:09	-->	normen (~normen@p200300d71721c4005cfbee396572b512.dip0.t-ipconnect.de) has joined #nginx
+2020-12-20 18:13:18	-->	daniel11420 (~daniel114@unaffiliated/daniel11420) has joined #nginx
+2020-12-20 18:14:55	<--	daimon (znc@freebsd/lover/daemon) has quit (Excess Flood)
+2020-12-20 18:15:10	-->	daimon (znc@freebsd/lover/daemon) has joined #nginx
+2020-12-20 18:16:44	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-20 18:21:10	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 18:21:42	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-20 18:25:58	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 246 seconds)
+2020-12-20 18:35:35	-->	unluckyshrubbery (~unluckysh@unaffiliated/unluckyshrubbery) has joined #nginx
+2020-12-20 18:42:04	<--	munio (~Thunderbi@188.254.215.199) has quit (Ping timeout: 256 seconds)
+2020-12-20 18:42:11	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-20 18:44:10	<--	aidanpr (~aidanpr@205.185.113.93) has quit (Ping timeout: 246 seconds)
+2020-12-20 18:45:26	-->	aidanpr (~aidanpr@205.185.113.93) has joined #nginx
+2020-12-20 18:47:10	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 256 seconds)
+2020-12-20 18:49:44	-->	munio (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-20 18:56:47	<--	hatesec (~facebook@unaffiliated/hatesec) has quit (Quit: Leaving)
+2020-12-20 20:58:23	--	irc: disconnected from server
+2020-12-20 20:59:30	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-20 20:59:30	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-20 20:59:30	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-20 20:59:31	--	Channel #nginx: 685 nicks (2 ops, 0 voices, 683 normals)
+2020-12-20 21:00:21	<--	curvv (~quetzlcoa@unaffiliated/curvv) has quit (Ping timeout: 240 seconds)
+2020-12-20 21:00:21	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-20 21:00:46	-->	curvv (~quetzlcoa@unaffiliated/curvv) has joined #nginx
+2020-12-20 21:02:57	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 256 seconds)
+2020-12-20 21:05:01	-->	LydiaUK (~privchat@i16-lef02-th2-89-83-167-245.ft.lns.abo.bbox.fr) has joined #nginx
+2020-12-20 21:06:14	<--	daimon (znc@freebsd/lover/daemon) has quit (Excess Flood)
+2020-12-20 21:06:35	-->	daimon (znc@freebsd/lover/daemon) has joined #nginx
+2020-12-20 21:08:35	<--	LydiaUK (~privchat@i16-lef02-th2-89-83-167-245.ft.lns.abo.bbox.fr) has quit (Remote host closed the connection)
+2020-12-20 21:15:24	<--	j7k6 (~j7k6@gateway/tor-sasl/j7k6) has quit (Ping timeout: 240 seconds)
+2020-12-20 21:16:00	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 21:17:06	-->	j7k6 (~j7k6@gateway/tor-sasl/j7k6) has joined #nginx
+2020-12-20 21:21:33	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 272 seconds)
+2020-12-20 21:26:30	<--	adammc (adam@198.27.111.136) has quit (Quit: WeeChat 2.8)
+2020-12-20 21:28:20	-->	MenschZwoNull_ (~MenschZwo@2a03:2260:200c:400:cea:58ca:5931:c0d0) has joined #nginx
+2020-12-20 21:29:02	-->	adammc (adam@198.27.111.136) has joined #nginx
+2020-12-20 21:32:52	-->	MenschZwoNull__ (~MenschZwo@p200300c8571bfe00bae3cf4c8c05430a.dip0.t-ipconnect.de) has joined #nginx
+2020-12-20 21:36:00	<--	MenschZwoNull_ (~MenschZwo@2a03:2260:200c:400:cea:58ca:5931:c0d0) has quit (Ping timeout: 272 seconds)
+2020-12-20 21:37:15	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (Quit: simplicity does not kill)
+2020-12-20 21:37:21	-->	Luther (~mark@125.71.74.118) has joined #nginx
+2020-12-20 21:37:39	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 21:41:29	<--	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-20 21:42:25	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 240 seconds)
+2020-12-20 21:50:27	<--	normen (~normen@p200300d71721c4005cfbee396572b512.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2020-12-20 21:51:15	<--	munio (~Thunderbi@188.254.215.199) has quit (Read error: Connection reset by peer)
+2020-12-20 21:51:24	-->	munio (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-20 21:51:59	-->	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has joined #nginx
+2020-12-20 21:51:59	<--	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has quit (Changing host)
+2020-12-20 21:52:00	-->	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has joined #nginx
+2020-12-20 21:52:16	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-20 21:56:03	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-20 21:56:27	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 22:00:37	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-20 22:05:24	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 260 seconds)
+2020-12-20 22:07:20	-->	PantyhoseLover (~privchat@89-83-167-245.abo.bbox.fr) has joined #nginx
+2020-12-20 22:14:18	<--	apus (~apus@gateway/tor-sasl/apus) has quit (Remote host closed the connection)
+2020-12-20 22:14:55	<--	Gokturk (~Gokturk@89.205.139.66) has quit (Read error: Connection reset by peer)
+2020-12-20 22:15:36	-->	apus (~apus@gateway/tor-sasl/apus) has joined #nginx
+2020-12-20 22:20:34	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (Ping timeout: 260 seconds)
+2020-12-20 22:22:26	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 22:23:24	-->	thiras (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-20 22:27:08	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 246 seconds)
+2020-12-20 22:34:29	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 22:35:36	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 22:42:35	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-20 22:42:37	-->	munio1 (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-20 22:43:03	<--	munio (~Thunderbi@188.254.215.199) has quit (Ping timeout: 260 seconds)
+2020-12-20 22:43:03	--	munio1 is now known as munio
+2020-12-20 22:43:08	<--	PantyhoseLover (~privchat@89-83-167-245.abo.bbox.fr) has quit (Remote host closed the connection)
+2020-12-20 22:47:41	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 272 seconds)
+2020-12-20 22:52:23	-->	Gokturk (~Gokturk@89.205.139.66) has joined #nginx
+2020-12-20 22:55:48	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-20 22:56:03	<--	munio (~Thunderbi@188.254.215.199) has quit (Remote host closed the connection)
+2020-12-20 22:56:15	-->	munio (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-20 23:02:06	<--	steven_saus (~steven_sa@cpe-74-131-36-220.kya.res.rr.com) has quit (Quit: WeeChat 3.0)
+2020-12-20 23:02:55	-->	steven_saus (~steven_sa@cpe-74-131-36-220.kya.res.rr.com) has joined #nginx
+2020-12-20 23:03:23	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-20 23:08:24	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 256 seconds)
+2020-12-20 23:08:36	-->	normen (~normen@p200300d71721c4005cfbee396572b512.dip0.t-ipconnect.de) has joined #nginx
+2020-12-20 23:17:35	<--	gschanuel7 (~gschanuel@201.89.125.40) has quit (Read error: Connection reset by peer)
+2020-12-20 23:18:33	-->	gschanuel (~gschanuel@201.89.125.40) has joined #nginx
+2020-12-20 23:23:57	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 23:28:44	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 246 seconds)
+2020-12-20 23:41:42	<--	netcrash (~charmande@97.245.60.94.rev.vodafone.pt) has quit (Quit: Lost terminal)
+2020-12-20 23:43:56	<--	normen (~normen@p200300d71721c4005cfbee396572b512.dip0.t-ipconnect.de) has quit (Quit: WeeChat 3.0)
+2020-12-20 23:47:47	-->	normen (~normen@p200300d71721c4002563c992a2168c21.dip0.t-ipconnect.de) has joined #nginx
+2020-12-20 23:48:07	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-20 23:51:20	<--	sunri5e (~sunri5e@unaffiliated/sunri5e) has quit (Quit: goodbye)
+2020-12-20 23:52:57	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 256 seconds)
+2020-12-20 23:54:35	-->	sunri5e (~sunri5e@unaffiliated/sunri5e) has joined #nginx
+2020-12-21 00:03:23	-->	deksar (~UNIX@unaffiliated/deksar) has joined #nginx
+2020-12-21 00:07:25	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-21 00:12:26	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 256 seconds)
+2020-12-21 00:18:27	<--	Luther (~mark@125.71.74.118) has quit (Quit: This computer has gone to sleep)
+2020-12-21 00:19:25	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-21 00:23:58	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-21 00:24:10	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #nginx
+2020-12-21 00:28:20	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-21 00:29:25	-->	Hazel16 (~uid478614@i16-lef02-th2-89-83-167-245.ft.lns.abo.bbox.fr) has joined #nginx
+2020-12-21 00:32:29	<--	shokohsc (~shokohsc@117.238.142.88.rev.sfr.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 00:33:05	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 240 seconds)
+2020-12-21 00:36:23	<--	Hazel16 (~uid478614@i16-lef02-th2-89-83-167-245.ft.lns.abo.bbox.fr) has quit (Remote host closed the connection)
+2020-12-21 00:42:05	-->	shokohsc (~shokohsc@117.238.142.88.rev.sfr.net) has joined #nginx
+2020-12-21 00:48:45	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-21 00:53:00	<--	maxwilli- (~maxwillia@gateway/tor-sasl/maxwilliamson) has quit (Remote host closed the connection)
+2020-12-21 00:53:38	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 264 seconds)
+2020-12-21 00:55:04	-->	maxwilliamson (~maxwillia@gateway/tor-sasl/maxwilliamson) has joined #nginx
+2020-12-21 01:07:29	<--	MenschZwoNull__ (~MenschZwo@p200300c8571bfe00bae3cf4c8c05430a.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-21 01:09:28	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-21 01:14:12	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 256 seconds)
+2020-12-21 01:17:01	-->	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has joined #nginx
+2020-12-21 01:17:01	<--	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has quit (Changing host)
+2020-12-21 01:17:01	-->	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has joined #nginx
+2020-12-21 01:23:24	-->	Xaldafax (~Xaldafax@cpe-104-34-193-119.socal.res.rr.com) has joined #nginx
+2020-12-21 01:35:07	-->	MenschZwoNull__ (~MenschZwo@2a03:2260:200c:400:cea:58ca:5931:c0d0) has joined #nginx
+2020-12-21 01:36:28	<--	ufk (~ufk@bzq-84-108-89-138.cablep.bezeqint.net) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-21 01:36:47	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-21 01:37:10	-->	ChmEarl (~chmearl@unaffiliated/prymar56) has joined #nginx
+2020-12-21 01:37:46	-->	ufk (~ufk@bzq-84-108-89-138.cablep.bezeqint.net) has joined #nginx
+2020-12-21 01:41:55	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 265 seconds)
+2020-12-21 01:47:02	-->	blackmesa (~daniel@2a02:908:f81:c140:8d04:ee17:cc59:e793) has joined #nginx
+2020-12-21 01:47:25	<--	blackmesa (~daniel@2a02:908:f81:c140:8d04:ee17:cc59:e793) has quit (Client Quit)
+2020-12-21 01:54:37	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-21 01:59:54	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 260 seconds)
+2020-12-21 02:09:54	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-21 02:16:18	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-21 02:20:56	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 246 seconds)
+2020-12-21 02:26:52	<--	thebiffman (~thebiffma@h-148-234.A163.priv.bahnhof.se) has quit (Quit: Leaving)
+2020-12-21 02:27:20	<--	MenschZwoNull__ (~MenschZwo@2a03:2260:200c:400:cea:58ca:5931:c0d0) has quit (Ping timeout: 272 seconds)
+2020-12-21 02:31:30	-->	thebiffman (~thebiffma@217-64-148-148.pool.ovpn.com) has joined #nginx
+2020-12-21 02:39:15	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-21 02:43:04	-->	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has joined #nginx
+2020-12-21 02:44:33	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 272 seconds)
+2020-12-21 02:45:39	-->	ExeciN (~nicexe@213.140.201.244) has joined #nginx
+2020-12-21 02:46:30	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-21 02:48:23	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #nginx
+2020-12-21 02:55:43	-->	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has joined #nginx
+2020-12-21 02:59:12	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-21 03:04:02	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 268 seconds)
+2020-12-21 03:17:19	<--	ravustaja (~ravustaja@178-55-134-196.bb.dnainternet.fi) has quit (Quit: leaving)
+2020-12-21 03:21:32	-->	ravustaja (~ravustaja@178-55-134-196.bb.dnainternet.fi) has joined #nginx
+2020-12-21 03:26:21	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-21 03:26:36	-->	deksar_ (~deksar@unaffiliated/deksar) has joined #nginx
+2020-12-21 03:26:42	<--	deksar_ (~deksar@unaffiliated/deksar) has left #nginx
+2020-12-21 03:26:49	<--	deksar (~UNIX@unaffiliated/deksar) has quit (Disconnected by services)
+2020-12-21 03:27:21	-->	deksar (~UNIX@unaffiliated/deksar) has joined #nginx
+2020-12-21 03:27:42	<--	deksar (~UNIX@unaffiliated/deksar) has quit (Client Quit)
+2020-12-21 03:28:39	-->	deksar (~deksar@unaffiliated/deksar) has joined #nginx
+2020-12-21 03:31:10	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 268 seconds)
+2020-12-21 03:36:31	<--	deksar (~deksar@unaffiliated/deksar) has quit (Remote host closed the connection)
+2020-12-21 03:37:32	-->	deksar (~deksar@unaffiliated/deksar) has joined #nginx
+2020-12-21 03:39:41	-->	arcatech (~arcatech@2604:2000:1200:5d9:715d:2e6d:e466:7540) has joined #nginx
+2020-12-21 03:44:22	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-21 03:46:11	--	Hazelesque_ is now known as Hazelesque
+2020-12-21 03:49:17	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 260 seconds)
+2020-12-21 04:01:14	<--	notpiika (~quassel@pool-74-105-144-187.nwrknj.fios.verizon.net) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-21 04:05:47	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-21 04:10:29	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 246 seconds)
+2020-12-21 04:12:33	-->	ttys000 (~ttys000@50.92.215.114) has joined #nginx
+2020-12-21 04:12:55	-->	notpiika (~quassel@pool-74-105-144-187.nwrknj.fios.verizon.net) has joined #nginx
+2020-12-21 04:13:55	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-21 04:15:05	<--	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has quit (Quit: Halcyon flies away.)
+2020-12-21 04:15:13	<--	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2020-12-21 04:16:15	<--	notpiika (~quassel@pool-74-105-144-187.nwrknj.fios.verizon.net) has quit (Remote host closed the connection)
+2020-12-21 04:17:40	-->	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has joined #nginx
+2020-12-21 04:18:33	-->	notpiika (~quassel@pool-74-105-144-187.nwrknj.fios.verizon.net) has joined #nginx
+2020-12-21 04:21:02	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-21 04:23:51	<--	deksar (~deksar@unaffiliated/deksar) has quit (Read error: Connection reset by peer)
+2020-12-21 04:24:38	-->	deksar (~deksar@unaffiliated/deksar) has joined #nginx
+2020-12-21 04:25:44	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 256 seconds)
+2020-12-21 04:25:51	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 264 seconds)
+2020-12-21 04:26:11	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-21 04:28:27	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 04:29:02	-->	zapata (~zapata@2a02:1748:fad4:7260:b9f6:a09c:c32c:a2d7) has joined #nginx
+2020-12-21 04:29:03	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-21 04:30:59	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 268 seconds)
+2020-12-21 04:32:01	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-21 04:34:37	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 04:35:08	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-21 04:36:31	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 04:37:22	-->	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has joined #nginx
+2020-12-21 04:37:36	<--	DarthRadar (~DarthRada@c-71-231-195-130.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 04:42:52	-->	Muimi (~ReedK0@unaffiliated/reedk0) has joined #nginx
+2020-12-21 04:50:14	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-21 04:54:57	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 240 seconds)
+2020-12-21 05:05:57	-->	Praise (~Fat@unaffiliated/praise) has joined #nginx
+2020-12-21 05:15:10	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Ping timeout: 272 seconds)
+2020-12-21 05:17:23	-->	minsec (~minsec@103.7.29.7) has joined #nginx
+2020-12-21 05:22:05	<--	minsec (~minsec@103.7.29.7) has quit (Ping timeout: 240 seconds)
+2020-12-21 05:25:29	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #nginx
+2020-12-21 05:32:23	<--	ExeciN (~nicexe@213.140.201.244) has quit (Quit: so long king Bowser)
+2020-12-21 05:35:37	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-21 05:36:47	--	grumble is now known as SeasonsBeatings
+2020-12-21 05:40:32	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 256 seconds)
+2020-12-21 05:41:36	--	jess is now known as sandy-claws
+2020-12-21 05:46:46	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-21 05:58:40	<--	gschanuel (~gschanuel@201.89.125.40) has quit (Read error: Connection reset by peer)
+2020-12-21 05:59:42	-->	gschanuel (~gschanuel@201.89.125.40) has joined #nginx
+2020-12-21 06:01:33	<--	Muimi (~ReedK0@unaffiliated/reedk0) has quit (Remote host closed the connection)
+2020-12-21 06:01:52	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-21 06:06:13	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #nginx
+2020-12-21 06:07:10	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 268 seconds)
+2020-12-21 06:09:46	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #nginx
+2020-12-21 06:13:20	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 268 seconds)
+2020-12-21 06:20:30	-->	minsec (~minsec@103.7.29.9) has joined #nginx
+2020-12-21 06:21:50	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-21 06:23:18	<--	deksar (~deksar@unaffiliated/deksar) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2020-12-21 06:25:34	<--	minsec (~minsec@103.7.29.9) has quit (Ping timeout: 272 seconds)
+2020-12-21 06:26:12	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-21 06:28:55	<--	Gokturk (~Gokturk@89.205.139.66) has quit (Remote host closed the connection)
+2020-12-21 06:39:53	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (Ping timeout: 260 seconds)
+2020-12-21 06:46:07	-->	minsec (~minsec@103.7.29.6) has joined #nginx
+2020-12-21 06:51:09	<--	minsec (~minsec@103.7.29.6) has quit (Ping timeout: 256 seconds)
+2020-12-21 06:55:44	-->	kipras (~kipras@78-56-235-39.static.zebra.lt) has joined #nginx
+2020-12-21 13:06:57	--	irc: disconnected from server
+2020-12-21 13:08:00	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-21 13:08:00	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-21 13:08:00	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-21 13:08:00	--	Channel #nginx: 684 nicks (2 ops, 0 voices, 682 normals)
+2020-12-21 13:08:46	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-21 13:11:07	-->	hatesec (~facebook@unaffiliated/hatesec) has joined #nginx
+2020-12-21 13:17:55	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-21 13:21:24	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Ping timeout: 240 seconds)
+2020-12-21 13:38:40	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-21 13:53:44	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Ping timeout: 240 seconds)
+2020-12-21 13:56:36	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-21 13:56:41	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-21 14:04:04	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Ping timeout: 240 seconds)
+2020-12-21 14:05:53	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Quit: real life interrupt)
+2020-12-21 14:11:44	<--	donofrio (~donofrio@host-252.subnet-17.med.umich.edu) has quit (Remote host closed the connection)
+2020-12-21 14:18:07	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-21 14:20:52	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Remote host closed the connection)
+2020-12-21 14:21:45	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-21 14:27:24	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Ping timeout: 240 seconds)
+2020-12-21 14:33:48	<--	Xenguy_ (~Xenguy@devuan/community/Xenguy) has quit (Ping timeout: 265 seconds)
+2020-12-21 14:42:58	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-21 14:45:52	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Remote host closed the connection)
+2020-12-21 14:46:24	<--	normen (~normen@p200300d71721e8003d7e4d9e766e3537.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-21 14:47:53	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-21 14:49:04	-->	Gokturk (~Gokturk@89.205.139.11) has joined #nginx
+2020-12-21 14:50:43	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-22 05:26:07	--	irc: disconnected from server
+2020-12-22 05:27:13	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-22 05:27:13	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-22 05:27:13	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-22 05:27:13	--	Channel #nginx: 691 nicks (2 ops, 0 voices, 689 normals)
+2020-12-22 05:27:58	MTecknology	18:25 < cluelessperson> When I run the docker nginx, I kinda expected it to populate the empty /etc/nginx  but nope.
+2020-12-22 05:27:59	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-22 05:28:14	MTecknology	^ That's not an nginx question... it's a docker one.
+2020-12-22 05:29:58	MTecknology	20:27 < cluelessperson> but I don't know what I can do better right now.
+2020-12-22 05:30:05	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:31:14	MTecknology	^ "right now" read the pitfalls before your next question
+2020-12-22 05:31:31	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 05:31:41	<--	nrh^ (nrh@ip98-184-89-2.mc.at.cox.net) has quit
+2020-12-22 05:33:11	-->	Seriusam (~seirusam@217.131.82.194) has joined #nginx
+2020-12-22 05:35:27	<--	Nekomander (~Happy@unaffiliated/featheredserpent) has quit (Quit: You can pretend to care about your users and help them run old versions of software or you can actually care about them and give them incentive to upgrade. Do the responsible thing, run supported software and encourage your users to as well. - ircmaxеll)
+2020-12-22 05:35:55	-->	Nekomander (~Happy@unaffiliated/featheredserpent) has joined #nginx
+2020-12-22 05:38:33	-->	daniel11420 (~daniel114@unaffiliated/daniel11420) has joined #nginx
+2020-12-22 05:42:04	<--	daniel11420_ (~daniel114@unaffiliated/daniel11420) has quit (Ping timeout: 272 seconds)
+2020-12-22 05:42:20	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:42:44	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 05:43:09	-->	daniel11420_ (~daniel114@unaffiliated/daniel11420) has joined #nginx
+2020-12-22 05:43:16	<--	OrNix (~OrNix@77.106.248.188) has quit (Ping timeout: 240 seconds)
+2020-12-22 05:43:34	cluelessperson	I think you're telling me to read these pitfalls, and I have: https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
+2020-12-22 05:43:58	<--	daniel11420 (~daniel114@unaffiliated/daniel11420) has quit (Ping timeout: 272 seconds)
+2020-12-22 05:44:38	MTecknology	I told you a lot...
+2020-12-22 05:45:54	MTecknology	well... ranted as well
+2020-12-22 05:47:37	cluelessperson	Well, I'm also recursively going through each link starting with the beginner macro/paste you provided.
+2020-12-22 05:48:16	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:48:24	<--	daniel11420_ (~daniel114@unaffiliated/daniel11420) has quit (Ping timeout: 272 seconds)
+2020-12-22 05:48:25	cluelessperson	but there's a lot of data to go through and I'm trying to focus on the things I can .
+2020-12-22 05:48:48	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 05:48:50	cluelessperson	as for ranting, that's alright, I was just worried I'd bothered you.  I don't want to do that to you.
+2020-12-22 05:50:57	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 05:51:04	MTecknology	I don't know which link your using recursively, but I wasn't suggesting you need to read every page that ever exists. Factoids in here are a big deal to pay attention to. the paste (you knew better), yada yada yada
+2020-12-22 05:51:18	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 05:51:34	MTecknology	Anyway... cheers.
+2020-12-22 05:51:43	 *	MTecknology forces a hug out of cluelessperson 
+2020-12-22 05:55:43	 *	cluelessperson hugs
+2020-12-22 05:55:45	cluelessperson	:P
+2020-12-22 05:56:00	-->	daniel11420 (~daniel114@unaffiliated/daniel11420) has joined #nginx
+2020-12-22 05:57:26	-->	daniel11420_ (~daniel114@unaffiliated/daniel11420) has joined #nginx
+2020-12-22 05:57:42	--	daniel11420 is now known as Guest69284
+2020-12-22 05:57:42	--	daniel11420_ is now known as daniel11420
+2020-12-22 05:58:01	--	daniel11420 is now known as daniel11420_
+2020-12-22 05:58:36	--	daniel11420_ is now known as daniel11420
+2020-12-22 06:00:58	<--	Guest69284 (~daniel114@unaffiliated/daniel11420) has quit (Ping timeout: 246 seconds)
+2020-12-22 06:03:49	<--	ExeciN (~nicexe@213.140.201.244) has quit (Quit: so long king Bowser)
+2020-12-22 06:09:29	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 06:10:25	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 06:11:41	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:13:26	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 06:14:46	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:18:39	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 06:21:41	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:23:41	-->	jalalsfs_ (~jalalsfs@unaffiliated/jalalsfs) has joined #nginx
+2020-12-22 06:24:59	<--	jalalsfs (~jalalsfs@unaffiliated/jalalsfs) has quit (Ping timeout: 256 seconds)
+2020-12-22 06:31:57	-->	leev_ (lee@high.leev.net) has joined #nginx
+2020-12-22 06:32:29	<--	gajus (sid202456@gateway/web/irccloud.com/x-mkdtjbtloqqtpqsl) has quit (Ping timeout: 244 seconds)
+2020-12-22 06:33:00	<--	maedox (sid2021@gateway/web/irccloud.com/x-jbuqolqmmtoplfle) has quit (Ping timeout: 258 seconds)
+2020-12-22 06:33:00	<--	leev (lee@high.leev.net) has quit (Read error: Connection reset by peer)
+2020-12-22 06:33:00	<--	kolev_ (sid18119@gateway/web/irccloud.com/x-dpozlhqzloembhdg) has quit (Ping timeout: 258 seconds)
+2020-12-22 06:33:00	--	leev_ is now known as leev
+2020-12-22 06:33:43	<--	Kingsy (~chris@unaffiliated/kingsy101) has quit (Ping timeout: 258 seconds)
+2020-12-22 06:34:03	-->	maedox (sid2021@gateway/web/irccloud.com/x-gdrzjdmwklehduxp) has joined #nginx
+2020-12-22 06:34:06	<--	BLZbubba (~mark@185.56.20.124) has quit (Ping timeout: 258 seconds)
+2020-12-22 06:34:12	-->	gajus (sid202456@gateway/web/irccloud.com/x-pwzutglmlfxgxsqn) has joined #nginx
+2020-12-22 06:34:30	-->	Kingsy (~chris@kingsy.co.uk) has joined #nginx
+2020-12-22 06:34:51	-->	kolev_ (sid18119@gateway/web/irccloud.com/x-rktwlgdvkoqpjzgn) has joined #nginx
+2020-12-22 06:34:55	-->	BLZbubba (~mark@185.56.20.124) has joined #nginx
+2020-12-22 06:36:23	<--	`VL (~vl@94.25.168.230) has quit (Ping timeout: 256 seconds)
+2020-12-22 06:37:56	<--	Gokturk (~Gokturk@89.205.139.11) has quit (Ping timeout: 240 seconds)
+2020-12-22 06:38:20	-->	MenschZwoNull (~MenschZwo@p200300c8574d230077328bb2964baf12.dip0.t-ipconnect.de) has joined #nginx
+2020-12-22 06:41:31	<--	split-brain (~split_bra@37-48-0-21.nat.epc.tmcz.cz) has left #nginx
+2020-12-22 06:41:53	-->	haniaF_ (~haniaF@79.191.132.158.ipv4.supernova.orange.pl) has joined #nginx
+2020-12-22 06:42:29	<--	haniaF (~haniaF@79.191.102.150.ipv4.supernova.orange.pl) has quit (Ping timeout: 260 seconds)
+2020-12-22 06:42:31	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 06:44:27	-->	daf19 (4cb5c36b@cpe-76-181-195-107.columbus.res.rr.com) has joined #nginx
+2020-12-22 06:47:29	<--	daf19 (4cb5c36b@cpe-76-181-195-107.columbus.res.rr.com) has left #nginx
+2020-12-22 06:47:37	-->	daf19 (4cb5c36b@cpe-76-181-195-107.columbus.res.rr.com) has joined #nginx
+2020-12-22 06:47:57	daf19	Is this a good place to ask general support questions?
+2020-12-22 06:48:08	daf19	(for nginx)
+2020-12-22 06:48:24	-->	`VL (~vl@94.25.168.10) has joined #nginx
+2020-12-22 06:49:24	MTecknology	topic?
+2020-12-22 06:49:44	daf19	websocket proxying
+2020-12-22 06:49:57	MTecknology	Read. The. Topic.
+2020-12-22 06:50:14	MTecknology	Yes- This channel is for nginx questions.
+2020-12-22 06:50:17	daf19	ah, okay
+2020-12-22 06:52:43	daf19	I'm using nginx for websocket proxying to a jetty server on the same box.  It's a situation where I need the max-idle-time for clients to be infinite: clients stay connected and receive data from the server until they decide to close the connection.
+2020-12-22 06:53:13	daf19	This is working with jetty, but over nginx I find the client connections are being closed
+2020-12-22 06:53:40	daf19	They connect, but close after around a minute.
+2020-12-22 06:54:27	daf19	How do I configure nginx to not close the websocket connection?
+2020-12-22 06:55:53	@ngxbot	Paste from daf19: [ https://paste.nginx.org/01 ]
+2020-12-22 07:07:23	<--	CrypticSquared (~CrypticS_@unaffiliated/crypticsquared) has quit (Ping timeout: 240 seconds)
+2020-12-22 07:07:43	-->	CrypticSquared (~CrypticS_@unaffiliated/crypticsquared) has joined #nginx
+2020-12-22 07:07:54	<--	Ashleee (~AshleeRee@static.236.64.76.144.clients.your-server.de) has quit (Quit: Leaving... bbl)
+2020-12-22 07:07:55	<--	astronavt (~astronavt@unaffiliated/astronavt) has quit (Remote host closed the connection)
+2020-12-22 07:08:15	-->	astronavt (~astronavt@unaffiliated/astronavt) has joined #nginx
+2020-12-22 07:08:36	-->	Ashleee (~AshleeRee@static.236.64.76.144.clients.your-server.de) has joined #nginx
+2020-12-22 07:10:15	questionmarkking	bit og a weird question with a few caveats. I have an nginx host that handles ssl translation, load balancing with two upstreams, etc. However, I need to redirect requests for /path1 to a separate backend host that is already running https right now, another kicker is that the SSL cert already running on that host I need to redirect to will be a mistmatch because of resolution issues within the
+2020-12-22 07:10:17	questionmarkking	environment. Any way to set up location block for an existing https upstream that will also have a cert mismatch/ignore the mismatch?
+2020-12-22 07:11:49	questionmarkking	I've tried using prox_ssl_server_name on; and just using the IP as the upstream server in that block.
+2020-12-22 07:12:13	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-22 07:13:36	<--	andi- (~andi-@NixOS/user/andi-) has quit (Remote host closed the connection)
+2020-12-22 07:13:36	questionmarkking	backstory is basically we have an old site with some resources we still need access to temporarily in /path1, which is why using the public name won't work anymore b/c that directs to newly launched site.
+2020-12-22 07:15:40	-->	andi- (~andi-@NixOS/user/andi-) has joined #nginx
+2020-12-22 07:15:59	questionmarkking	I'm also considering, since it's not in production anymore, allowing non-ssl access to this resource url.
+2020-12-22 07:16:46	MTecknology	It sounds like your question is less about nginx and more about figuring out what it is you should be trying to accomplish.
+2020-12-22 07:17:07	questionmarkking	well, my intial question is still about nginx.
+2020-12-22 07:17:32	questionmarkking	can you send to an upstream that is already on https with a cert mismatch?
+2020-12-22 07:17:38	MTecknology	Yeah... and I'm sure it's somewhere in that wall of text.
+2020-12-22 07:18:14	questionmarkking	Ah yes, "not enough detail" vs "wall of text", a classic.
+2020-12-22 07:18:23	MTecknology	What's the point of a cert if you plan to ignore mismatches?
+2020-12-22 07:19:37	questionmarkking	While I agree, that's just not a relevant questoin right now
+2020-12-22 07:20:22	MTecknology	okay
+2020-12-22 07:22:27	-->	spacesuitdiver (~spacesuit@47.188.196.174) has joined #nginx
+2020-12-22 07:23:42	-->	WishBoy (~WishBoy@unaffiliated/wishboy) has joined #nginx
+2020-12-22 07:25:35	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #nginx
+2020-12-22 07:26:45	<--	Seriusam (~seirusam@217.131.82.194) has quit (Ping timeout: 240 seconds)
+2020-12-22 07:26:52	<--	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has quit (Quit: Be back later.)
+2020-12-22 07:28:24	-->	normen_ (~normen@p200300d71721e800e8379a9b2f2cd5fa.dip0.t-ipconnect.de) has joined #nginx
+2020-12-22 07:28:26	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Remote host closed the connection)
+2020-12-22 07:29:43	<--	normen (~normen@p200300d71721e8003d7e4d9e766e3537.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-22 07:29:45	--	normen_ is now known as normen
+2020-12-22 07:30:34	<--	macc24 (~macc24@unaffiliated/maccraft) has quit (Ping timeout: 246 seconds)
+2020-12-22 07:31:51	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #nginx
+2020-12-22 07:33:09	<--	Nikolaj_basher (~Nikolaj_b@0x5b90e1aa.dhcp.fiberflex.dk) has quit (Quit: Leaving)
+2020-12-22 07:36:49	<--	`VL (~vl@94.25.168.10) has quit (Ping timeout: 264 seconds)
+2020-12-22 07:38:53	<--	WishBoy (~WishBoy@unaffiliated/wishboy) has quit
+2020-12-22 07:45:30	daf19	Any ideas?
+2020-12-22 07:45:56	-->	alex88 (~alex88@unaffiliated/alex88) has joined #nginx
+2020-12-22 07:47:44	alex88	Hi everyone, I have a cdn in front of nginx e.g. example.com which is set to fetch from origin.example.com (which is sent in the Host header), now, a redirect like "return 301 /foo" returns origin.example.com/foo
+2020-12-22 07:48:15	alex88	since the cdn sends the original Host in another header, can i somehow make nginx swap the header with the Host it uses for redirects etc?
+2020-12-22 07:48:29	alex88	so that for nginx the request is coming as example.com and not origin.example.com?
+2020-12-22 07:49:38	-->	`VL (~vl@94.25.170.126) has joined #nginx
+2020-12-22 07:49:46	Peng	This is not what you asked for, but `absolute_redirect' is an option
+2020-12-22 07:49:47	@ngxbot	https://nginx.org/r/absolute_redirect
+2020-12-22 07:50:30	Peng	This is also not exactly what you asked for, but you can just do "return 301 http://example.com/foo;"
+2020-12-22 07:50:50	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #nginx
+2020-12-22 07:51:24	alex88	Peng: that's my current temporary fix, but since we deploy to multiple envs, the absolute hostname isn't always the same
+2020-12-22 07:52:23	Peng	"return 301 http://$http_some_header/foo;"? But you would want to verify that the header couldn't be spoofed
+2020-12-22 07:53:14	alex88	well we don't get any requests outside the CDN servers so that header should always be set by the cdn
+2020-12-22 07:53:26	alex88	but that might be an idea thanks :)
+2020-12-22 07:53:46	alex88	or we can just set a cdn rule to always set that even if the client doesn't send it
+2020-12-22 07:53:58	alex88	so we should be safe
+2020-12-22 08:00:05	alex88	thanks Peng!
+2020-12-22 08:04:44	-->	macc24 (~macc24@unaffiliated/maccraft) has joined #nginx
+2020-12-22 08:06:19	<--	daniel11420 (~daniel114@unaffiliated/daniel11420) has quit (Read error: Connection reset by peer)
+2020-12-22 08:17:08	-->	RzR (~rzr@2a01:e35:2fd7:d710:5e08:ef32:68ac:50f9) has joined #nginx
+2020-12-22 08:22:08	<--	gajus (sid202456@gateway/web/irccloud.com/x-pwzutglmlfxgxsqn) has quit (Ping timeout: 268 seconds)
+2020-12-22 08:22:11	<--	ILoveYaToo (sid345109@gateway/web/irccloud.com/x-gxyvscvntxnjimsq) has quit (Ping timeout: 272 seconds)
+2020-12-22 08:23:07	<--	kolev_ (sid18119@gateway/web/irccloud.com/x-rktwlgdvkoqpjzgn) has quit (Ping timeout: 260 seconds)
+2020-12-22 08:23:27	<--	maedox (sid2021@gateway/web/irccloud.com/x-gdrzjdmwklehduxp) has quit (Ping timeout: 264 seconds)
+2020-12-22 08:30:48	-->	sandy-claws (jess@freenode/staff/jess) has joined #nginx
+2020-12-22 08:32:42	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-22 08:33:26	daf19	No ideas on how to do this?  I'm about to lose my mind lol
+2020-12-22 08:33:41	daf19	Not much of an ops guy and I've tried about 20 different things
+2020-12-22 08:37:11	<--	daf19 (4cb5c36b@cpe-76-181-195-107.columbus.res.rr.com) has quit (Remote host closed the connection)
+2020-12-22 08:37:14	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 264 seconds)
+2020-12-22 08:44:12	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (Ping timeout: 265 seconds)
+2020-12-22 08:44:21	<--	Steeve (~steve@unaffiliated/steeve) has quit (Quit: end)
+2020-12-22 08:44:48	<--	alex88 (~alex88@unaffiliated/alex88) has quit
+2020-12-22 09:05:47	<--	kolbrich (~quassel@185-118-198-140.clients.srvfarm.net) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-22 09:11:44	-->	kolbrich (~quassel@185-118-198-140.clients.srvfarm.net) has joined #nginx
+2020-12-22 09:18:09	-->	Hackerpcs (~user@unaffiliated/hackerpcs) has joined #nginx
+2020-12-22 09:25:27	<--	Membear (membear@unaffiliated/membear) has left #nginx
+2020-12-22 09:29:17	<--	NeoCron (~neocron_@p200300c4cf43fe00741fa2c6e5a278dc.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-22 09:33:16	-->	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has joined #nginx
+2020-12-22 09:38:10	-->	Membear (membear@unaffiliated/membear) has joined #nginx
+2020-12-22 09:38:45	<--	gffa (~unknown@unaffiliated/gffa) has quit (Remote host closed the connection)
+2020-12-22 09:52:34	<--	MenschZwoNull (~MenschZwo@p200300c8574d230077328bb2964baf12.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-22 09:56:34	--	nitrix is now known as nitrix-mas
+2020-12-22 10:13:25	<--	jalalsfs_ (~jalalsfs@unaffiliated/jalalsfs) has quit (Ping timeout: 256 seconds)
+2020-12-22 10:16:50	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 268 seconds)
+2020-12-22 10:17:04	-->	jalalsfs (~jalalsfs@unaffiliated/jalalsfs) has joined #nginx
+2020-12-22 10:21:13	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-22 10:33:37	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-22 10:37:56	-->	avane (~avane@host213-120-42-96.range213-120.btcentralplus.com) has joined #nginx
+2020-12-22 10:38:27	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-22 10:39:36	avane	hi all, I'm trying to set up a vhost accessible over Tor with nginx. however, trying to set the v3 onion hostname as the server name causes nginx to fail the configuration check, and thus fail to start. is there anything I can do about this?
+2020-12-22 10:40:48	MTecknology	fix the error it raises?
+2020-12-22 10:53:05	<--	killbash (~Geek@unaffiliated/geek) has quit (Ping timeout: 240 seconds)
+2020-12-22 11:13:45	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2020-12-22 11:29:43	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-22 11:32:31	<--	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-22 11:32:54	-->	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has joined #nginx
+2020-12-22 11:36:05	<--	TheSilentLink (~TheSilent@unaffiliated/thesilentlink) has quit (Ping timeout: 256 seconds)
+2020-12-22 11:40:50	-->	TheSilentLink (~TheSilent@unaffiliated/thesilentlink) has joined #nginx
+2020-12-22 11:49:23	-->	jayjo (~jayjo@unaffiliated/jayjo) has joined #nginx
+2020-12-22 11:49:45	<--	jayjo- (jayjo@gateway/vpn/privateinternetaccess/jayjo) has quit (Ping timeout: 240 seconds)
+2020-12-22 11:51:18	-->	jayjo- (jayjo@gateway/vpn/privateinternetaccess/jayjo) has joined #nginx
+2020-12-22 11:55:30	<--	jayjo (~jayjo@unaffiliated/jayjo) has quit (Ping timeout: 268 seconds)
+2020-12-22 12:03:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-22 12:18:18	<--	gschanuel (~gschanuel@201.89.125.40) has quit (Read error: Connection reset by peer)
+2020-12-22 12:19:18	-->	gschanuel (~gschanuel@201.89.125.40) has joined #nginx
+2020-12-22 12:26:05	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-22 12:30:04	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-22 12:30:44	-->	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has joined #nginx
+2020-12-22 12:30:44	<--	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has quit (Changing host)
+2020-12-22 12:30:44	-->	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has joined #nginx
+2020-12-22 12:34:28	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-22 12:39:12	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-22 12:40:48	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-22 12:42:29	-->	Dunedan (~dunedan@unaffiliated/dunedan) has joined #nginx
+2020-12-22 12:45:10	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #nginx
+2020-12-22 12:46:00	<--	Dunedan_ (~dunedan@unaffiliated/dunedan) has quit (Ping timeout: 256 seconds)
+2020-12-22 12:46:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-22 12:47:00	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-22 12:48:07	<--	Surfer2011_ (~quassel@83.135.220.11) has quit (Ping timeout: 256 seconds)
+2020-12-22 12:49:04	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 12:50:33	-->	vs^ (vs@ip98-184-89-2.mc.at.cox.net) has joined #nginx
+2020-12-22 12:53:23	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-22 12:55:09	<--	toli (~toli@2a02:578:8511:600:211:32ff:fe2c:9ef8) has quit (Quit: See you!)
+2020-12-22 12:55:26	-->	toli (~toli@77.109.112.4) has joined #nginx
+2020-12-22 12:59:54	-->	jayjo (jayjo@gateway/vpn/privateinternetaccess/jayjo) has joined #nginx
+2020-12-22 13:00:00	<--	avane (~avane@host213-120-42-96.range213-120.btcentralplus.com) has quit (Quit: ZNC - https://znc.in)
+2020-12-22 13:01:29	-->	avane (~avane@host213-120-42-96.range213-120.btcentralplus.com) has joined #nginx
+2020-12-22 13:01:56	<--	jayjo- (jayjo@gateway/vpn/privateinternetaccess/jayjo) has quit (Ping timeout: 240 seconds)
+2020-12-22 13:03:22	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-22 13:05:49	<--	avane (~avane@host213-120-42-96.range213-120.btcentralplus.com) has left #nginx
+2020-12-22 13:06:44	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-22 13:22:25	<--	thiras (~thiras@unaffiliated/thiras) has quit (Ping timeout: 240 seconds)
+2020-12-22 13:47:55	-->	daf19 (4cb5c36b@cpe-76-181-195-107.columbus.res.rr.com) has joined #nginx
+2020-12-22 13:48:16	<--	daf19 (4cb5c36b@cpe-76-181-195-107.columbus.res.rr.com) has quit (Remote host closed the connection)
+2020-12-22 13:54:02	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-22 13:57:52	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-22 14:05:43	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-22 14:09:45	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-22 14:32:56	<--	jamiew0w (~jamie@unaffiliated/jamiew0w) has quit (Ping timeout: 240 seconds)
+2020-12-22 14:35:15	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-22 14:40:14	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 264 seconds)
+2020-12-22 14:52:14	-->	OrNix (~OrNix@77.106.248.188) has joined #nginx
+2020-12-22 15:02:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 15:09:55	<--	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has quit (Quit: Be back later.)
+2020-12-22 15:11:50	-->	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has joined #nginx
+2020-12-22 15:16:35	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Quit: "")
+2020-12-22 15:16:55	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-22 15:20:14	<--	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has quit (Quit: Be back later.)
+2020-12-22 15:27:17	-->	Guest20 (~textual@192.146.154.3) has joined #nginx
+2020-12-22 15:29:26	-->	Gokturk (~Gokturk@84.241.202.242) has joined #nginx
+2020-12-22 15:34:07	<--	normen (~normen@p200300d71721e800e8379a9b2f2cd5fa.dip0.t-ipconnect.de) has quit (Ping timeout: 272 seconds)
+2020-12-22 15:37:05	-->	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has joined #nginx
+2020-12-22 15:37:21	<--	geosmile (~geosmile@unaffiliated/geosmile) has quit (Remote host closed the connection)
+2020-12-22 15:37:24	<--	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has quit (Client Quit)
+2020-12-22 15:37:31	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Quit: real life interrupt)
+2020-12-22 15:42:38	--	nitrix-mas is now known as nitrix
+2020-12-22 15:43:13	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-22 15:44:42	-->	deksar (~deksar@unaffiliated/deksar) has joined #nginx
+2020-12-22 15:46:44	deksar	Hello everyone. What would you suggest for the best nginx performance? A CPU with 4 c / 8 t - 4.2 GHz / 4.5 GHz (turbo) - or a CPU with: 4 c / 8 t - 4 GHz / 4.9 GHz. More cores/threads or much faster core clock speed?
+2020-12-22 15:49:17	kerframil	neither has more cores/threads than the other, though?
+2020-12-22 15:49:44	deksar	Sorry my bad. It is 28 c / 56 t - 2.6 GHz / 3.7 GHz vs 4 c / 8 t - 4 GHz / 4.9 GHz
+2020-12-22 15:50:02	kerframil	in any case, if anything renders you CPU bound, it's almost certainly not going to be nginx. that's something to keep in mind.
+2020-12-22 15:51:20	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (Ping timeout: 272 seconds)
+2020-12-22 15:53:38	<--	Xaldafax (~Xaldafax@cpe-104-34-193-119.socal.res.rr.com) has quit (Quit: Bye...)
+2020-12-22 15:56:01	kerframil	just as an example, say you execute long-running, single-core burning PHP programs but with a low degree of concurrency, then the second CPU might serve you better. yet, the first one obviously gives you far more aggregate power and will scale much further.
+2020-12-22 15:58:21	kerframil	it's not just about clock speeds either. newer generation cores have IPC improvements and may be less adversely affected by security mitigations in view of the meltdown and spectre fiascos.
+2020-12-22 15:58:22	FinalX	deksar: Xeon vs Core i makes a difference in being able to execute tasks in parallel faster, but neither will probably matter for your usecase.
+2020-12-22 15:58:43	kerframil	and Xeons have more cache etc.
+2020-12-22 15:59:11	FinalX	deksar: I manage nginx loadbalancers for tens of thousands of websites, with 3000 lines of self-programmed Lua-code, and still it can reach over a million requests per second in benchmarks.
+2020-12-22 15:59:24	FinalX	Meanwhile the whole cluster does like 400 requests per second, tops.
+2020-12-22 15:59:27	kerframil	indeed. nginx itself is peanuts.
+2020-12-22 15:59:51	kerframil	owing in no small part to its astonishing efficiency.
+2020-12-22 16:03:58	FinalX	I think that for this purpose (load balancing for tens of thousands of sites with the Lua-code and sending it off to different backends) I could probably get away with running nginx on a Raspberry Pi tbh.
+2020-12-22 16:05:00	FinalX	Though the Lua-stuff is eating some memory. Still, that fits in 4GB total :)
+2020-12-22 16:06:21	FinalX	Mind you, this is a dual https://ark.intel.com/content/www/us/en/ark/products/83356/intel-xeon-processor-e5-2630-v3-20m-cache-2-40-ghz.html with 64GB RAM.. uses almost nothing of it
+2020-12-22 16:07:22	-->	normen (~normen@p200300d71721e800e8379a9b2f2cd5fa.dip0.t-ipconnect.de) has joined #nginx
+2020-12-22 16:13:38	<--	kolla (~kolla@cloudsmurf.kolla.no) has quit (Quit: %fog relay%)
+2020-12-22 16:14:29	-->	kolla (~kolla@cloudsmurf.kolla.no) has joined #nginx
+2020-12-22 16:17:55	<--	normen (~normen@p200300d71721e800e8379a9b2f2cd5fa.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-22 16:20:46	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 16:21:45	MTecknology	I watched  something on this discussion recently...
+2020-12-22 16:22:32	MTecknology	deksar: https://www.youtube.com/watch?v=jweQNDCe218
+2020-12-22 16:23:40	deksar	Let's see, thank you!
+2020-12-22 16:24:21	MTecknology	(the extended "behind the scenes" version is better, but rather long)
+2020-12-22 16:28:00	-->	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has joined #nginx
+2020-12-22 16:28:00	<--	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has quit (Changing host)
+2020-12-22 16:28:00	-->	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has joined #nginx
+2020-12-22 16:29:16	<--	killbash (~Geek@unaffiliated/geek) has quit (Ping timeout: 256 seconds)
+2020-12-22 16:30:02	<--	April- (~april@textual/helper/April-) has quit (Quit: Quitting)
+2020-12-22 16:30:57	-->	April- (~april@textual/helper/April-) has joined #nginx
+2020-12-22 16:32:24	deksar	MTecknology: That was VERY informative! Thank you!
+2020-12-22 16:32:35	deksar	Is it there too?
+2020-12-22 16:36:05	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-22 16:38:12	deksar	MTecknology and all: also a very informative article: https://haydenjames.io/php-performance-additional-cpu-cores-vs-faster-cpu-cores/
+2020-12-22 16:38:52	Nekomander	deksar, hello.
+2020-12-22 16:39:17	deksar	Nekomander: Hi :)
+2020-12-22 16:40:42	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-22 16:42:53	-->	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has joined #nginx
+2020-12-22 16:45:35	-->	cr4y1 (~cr4y1@188.241.65.122) has joined #nginx
+2020-12-22 16:52:02	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Quit: bye)
+2020-12-22 16:53:20	-->	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has joined #nginx
+2020-12-22 16:54:09	MTecknology	deksar: it's in the description.
+2020-12-22 16:55:09	MTecknology	that last link is talking about php and not about nginx
+2020-12-22 16:55:57	-->	melvincv (~melvincv@122.174.184.64) has joined #nginx
+2020-12-22 16:57:04	melvincv	hi, I'm back. Please help me debug a Dockerfile.
+2020-12-22 16:57:47	@ngxbot	Paste from melvincv: [ https://paste.nginx.org/fd ]
+2020-12-22 16:58:29	MTecknology	!docker
+2020-12-22 16:58:29	@ngxbot	(#1) https://xkcd.com/1988/, or (#2) Docker in human form - https://i.imgur.com/PloHQXm.jpg, or (#3) If you're having network/connection-related troubles and nginx or something nginx is talking to is in a container, make sure you understand how your containerization handles networking, and that it's configured right, or (#4) The fad of the month (as of June 2018) is Docker. It's always Docker. Why are they doing it THAT WAY? Because Docker.
+2020-12-22 16:58:34	melvincv	line 17 and 18 - the COPY statements do not work
+2020-12-22 16:58:51	--	Mode #nginx [+q *!*@122.174.184.64] by ChanServ
+2020-12-22 16:59:27	kerframil	hmm, that bot fact looks familiar.
+2020-12-22 16:59:57	kerframil	MTecknology: have you seen the revision history for the one in #bash? it's pretty funny.
+2020-12-22 17:00:06	MTecknology	I think I just added that 4th one yesterday
+2020-12-22 17:00:18	MTecknology	I haven't, but now I want to.
+2020-12-22 17:00:26	kerframil	MTecknology: actually, it's this one: http://wooledge.org/~greybot/meta/b29
+2020-12-22 17:01:04	kerframil	almost makes me want to see what's going to be next. almost.
+2020-12-22 17:01:12	MTecknology	heheh, nice
+2020-12-22 17:01:23	--	Mode #nginx [-q *!*@122.174.184.64] by ChanServ
+2020-12-22 17:01:45	<--	melvincv (~melvincv@122.174.184.64) has left #nginx ("Leaving")
+2020-12-22 17:01:53	-->	melvincv (~melvincv@122.174.184.64) has joined #nginx
+2020-12-22 17:02:22	<--	unluckyshrubbery (~unluckysh@unaffiliated/unluckyshrubbery) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-22 17:02:31	-->	daniel11420 (~daniel114@unaffiliated/daniel11420) has joined #nginx
+2020-12-22 17:03:03	melvincv	Yes, I usually have issues with the Docker container of nginx, not the normal install...
+2020-12-22 17:03:32	 *	melvincv is trying to kill himself by banging his head on the wall
+2020-12-22 17:03:37	MTecknology	kerframil: I actually used the wrong one...
+2020-12-22 17:03:42	MTecknology	!nanq | melvincv
+2020-12-22 17:03:43	@ngxbot	melvincv: Not an #nginx question. We are not experts in all software that exists; consider asking the channel or mailing list with experts on that topic (eg. ##linux, #systemd, #zsh, #docker, or PM alis with list keyword to search for channels).
+2020-12-22 17:04:32	melvincv	ok
+2020-12-22 17:13:37	<--	kerframil (~kerframil@gentoo/user/kerframil) has quit (Quit: WeeChat 3.0)
+2020-12-22 17:15:22	-->	kipras (~kipras@78-56-235-39.static.zebra.lt) has joined #nginx
+2020-12-22 17:16:09	<--	Dev0n (~Dev0n@unaffiliated/dev0n) has quit (Ping timeout: 256 seconds)
+2020-12-22 17:17:51	<--	brezanac (~brezanac@unaffiliated/brezanac) has quit (Ping timeout: 256 seconds)
+2020-12-22 17:17:51	<--	Clorith (~marius@irc.clorith.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 17:18:07	-->	Clorith (~marius@irc.clorith.net) has joined #nginx
+2020-12-22 17:18:24	-->	brezanac (~brezanac@unaffiliated/brezanac) has joined #nginx
+2020-12-22 17:20:45	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-22 17:22:52	-->	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has joined #nginx
+2020-12-22 17:28:07	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Ping timeout: 272 seconds)
+2020-12-22 17:30:09	<--	melvincv (~melvincv@122.174.184.64) has quit (Quit: Leaving)
+2020-12-22 17:32:26	-->	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has joined #nginx
+2020-12-22 17:36:51	-->	Guest20_ (~textual@103.215.168.1) has joined #nginx
+2020-12-22 17:38:24	<--	Guest20 (~textual@192.146.154.3) has quit (Ping timeout: 256 seconds)
+2020-12-22 17:44:16	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 240 seconds)
+2020-12-22 17:44:25	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #nginx
+2020-12-22 17:45:30	-->	normen (~normen@p200300d71721e800e8379a9b2f2cd5fa.dip0.t-ipconnect.de) has joined #nginx
+2020-12-22 17:45:52	-->	Seriusam (~seirusam@217.131.82.194) has joined #nginx
+2020-12-22 17:59:40	-->	jamiew0w (~jamie@unaffiliated/jamiew0w) has joined #nginx
+2020-12-22 17:59:51	-->	ace_me (~Thunderbi@unaffiliated/ace-me/x-814638) has joined #nginx
+2020-12-22 18:02:57	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Ping timeout: 272 seconds)
+2020-12-22 18:03:15	Gokturk	Hello. Is there any example server block for how to http and https ://serverip redirection to a domain.
+2020-12-22 18:03:35	<--	stalled (~stalled@unaffiliated/stalled) has quit (Ping timeout: 272 seconds)
+2020-12-22 18:03:43	<--	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has quit (Ping timeout: 246 seconds)
+2020-12-22 18:05:20	<--	coffee (~coffee@home.coffeetales.net) has quit (Quit: coffeetales.net - dernier site de France compatible ie5.5)
+2020-12-22 18:06:56	-->	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has joined #nginx
+2020-12-22 18:20:28	-->	gffa (~unknown@unaffiliated/gffa) has joined #nginx
+2020-12-22 18:20:34	<--	Randy (randy@freebsd/user/randy) has quit (Quit: Brb)
+2020-12-22 18:25:56	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-22 18:30:39	<--	kashike (kashike@unaffiliated/kashike) has quit (Ping timeout: 244 seconds)
+2020-12-22 18:31:58	-->	jab416171 (~jab416171@c-174-52-51-130.hsd1.ut.comcast.net) has joined #nginx
+2020-12-22 18:32:17	-->	Poipa5 (~chano@188.228.108.247) has joined #nginx
+2020-12-22 18:32:30	<--	michele (~eraser@unaffiliated/michele) has quit (Remote host closed the connection)
+2020-12-22 18:32:30	<--	Poipa (~chano@188.228.108.247) has quit (Quit: Ping timeout (120 seconds))
+2020-12-22 18:32:30	--	Poipa5 is now known as Poipa
+2020-12-22 18:32:54	-->	Nefertari (~Nefertiti@unaffiliated/nefertiti) has joined #nginx
+2020-12-22 18:33:07	-->	michele (~eraser@unaffiliated/michele) has joined #nginx
+2020-12-22 18:33:21	<--	Nintenuendo (~Nintenuen@unaffiliated/nintenuendo) has quit (Remote host closed the connection)
+2020-12-22 18:33:31	-->	frostschutz (~frostschu@55d4f15a.access.ecotel.net) has joined #nginx
+2020-12-22 18:33:40	-->	Nintenuendo (~Nintenuen@S01062c3033405542.vs.shawcable.net) has joined #nginx
+2020-12-22 18:33:40	<--	Nintenuendo (~Nintenuen@S01062c3033405542.vs.shawcable.net) has quit (Changing host)
+2020-12-22 18:33:40	-->	Nintenuendo (~Nintenuen@unaffiliated/nintenuendo) has joined #nginx
+2020-12-22 18:34:56	<--	Nefertiti (~Nefertiti@unaffiliated/nefertiti) has quit (Ping timeout: 240 seconds)
+2020-12-22 18:37:01	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-22 18:37:08	jaybe	Gokturk: `yeshttps'
+2020-12-22 18:37:08	@ngxbot	Error: No factoid matches that key.
+2020-12-22 18:37:23	jaybe	!yesssl
+2020-12-22 18:37:23	@ngxbot	If you want to enforce ssl: server { listen 80; server_name www.example.com; return 302 https://$host$request_uri; } || Why 302? Unless your site is operational and config set in stone, 301s can cause serious problems when/if you attempt to change things.
+2020-12-22 18:38:20	-->	unluckyshrubbery (~unluckysh@unaffiliated/unluckyshrubbery) has joined #nginx
+2020-12-22 18:41:40	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 258 seconds)
+2020-12-22 18:58:48	-->	coffee (~coffee@home.coffeetales.net) has joined #nginx
+2020-12-22 19:00:59	<--	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has quit (Quit: No Ping reply in 180 seconds.)
+2020-12-22 19:02:15	-->	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has joined #nginx
+2020-12-22 19:08:34	Gokturk	jaybe: Thanks. It worked with http://server.ip but, I also asked for https://ip.address to domain redirection?
+2020-12-22 19:11:19	jaybe	!yeswww
+2020-12-22 19:11:20	@ngxbot	If you want to enforce www.* traffic to your server (recommended!), try this: server { listen 80 default_server; return 302 $scheme://www.example.com$request_uri; } and make sure your site's server block is configured (server_name) for www.example.com only.
+2020-12-22 19:11:23	jaybe	Gokturk: ^
+2020-12-22 19:13:05	Gokturk	ty
+2020-12-22 19:14:43	-->	forgotmynick (uid24625@gateway/web/irccloud.com/x-lvydsdiwmhjmytsx) has joined #nginx
+2020-12-22 19:15:10	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-22 19:24:19	-->	MenschZwoNull (~MenschZwo@p200300c8574d230077328bb2964baf12.dip0.t-ipconnect.de) has joined #nginx
+2020-12-22 19:24:46	-->	maedox (sid2021@gateway/web/irccloud.com/x-slauavuyrpzatnzn) has joined #nginx
+2020-12-22 19:25:23	-->	kolev_ (sid18119@gateway/web/irccloud.com/x-ohbgclyrpzuaunjt) has joined #nginx
+2020-12-22 19:26:11	-->	geek (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-22 19:27:03	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Ping timeout: 240 seconds)
+2020-12-22 19:28:14	<--	Guest20_ (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 19:28:25	<--	killbash (~Geek@unaffiliated/geek) has quit (Ping timeout: 240 seconds)
+2020-12-22 19:29:03	<--	MenschZwoNull (~MenschZwo@p200300c8574d230077328bb2964baf12.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-22 19:29:17	-->	gajus (sid202456@gateway/web/irccloud.com/x-ipiuyllmgkaymgue) has joined #nginx
+2020-12-22 19:31:55	-->	ILoveYaToo (sid345109@gateway/web/irccloud.com/x-cwycwsrsokzbjxuv) has joined #nginx
+2020-12-22 19:32:10	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-22 19:35:52	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Remote host closed the connection)
+2020-12-22 19:37:34	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-22 19:56:35	-->	XATRIX (~xatrix@xe-0-1-0-1104.yalt-01-ar1.miranda-media.net) has joined #nginx
+2020-12-22 19:58:30	-->	Noti (~steffan@77-164-7-116.fixed.kpn.net) has joined #nginx
+2020-12-22 20:02:38	-->	michele- (~eraser@unaffiliated/michele) has joined #nginx
+2020-12-22 20:03:03	<--	michele (~eraser@unaffiliated/michele) has quit (Remote host closed the connection)
+2020-12-22 20:04:56	<--	Noti (~steffan@77-164-7-116.fixed.kpn.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 20:05:56	<--	manifest (~manifest@89-27-78-102.bb.dnainternet.fi) has quit (Ping timeout: 240 seconds)
+2020-12-22 20:07:05	-->	manifest (~manifest@89-27-78-102.bb.dnainternet.fi) has joined #nginx
+2020-12-22 20:19:09	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-22 20:22:17	<--	hatesec (~facebook@unaffiliated/hatesec) has quit (Read error: Connection reset by peer)
+2020-12-22 20:22:52	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #nginx
+2020-12-22 20:31:25	<--	deksar (~deksar@unaffiliated/deksar) has quit (Ping timeout: 246 seconds)
+2020-12-22 20:31:36	-->	deksar (~deksar@unaffiliated/deksar) has joined #nginx
+2020-12-22 20:31:48	<--	daimon (znc@freebsd/lover/daemon) has quit (Excess Flood)
+2020-12-22 20:32:23	-->	daimon (znc@freebsd/lover/daemon) has joined #nginx
+2020-12-22 20:37:58	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-22 20:42:25	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 258 seconds)
+2020-12-22 20:44:36	<--	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has quit (Ping timeout: 256 seconds)
+2020-12-22 20:46:28	<--	hekel (~hekel@unaffiliated/hekel) has quit (Quit: VGhlIGNha2UgaXMgYSBsaWUu)
+2020-12-22 20:46:56	-->	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has joined #nginx
+2020-12-22 20:56:07	-->	MenschZwoNull (~MenschZwo@business-176-095-234-031.static.arcor-ip.net) has joined #nginx
+2020-12-22 20:57:58	-->	Noti (~steffan@185.2.243.3) has joined #nginx
+2020-12-22 21:11:31	<--	gschanuel (~gschanuel@201.89.125.40) has quit (Read error: Connection reset by peer)
+2020-12-22 21:12:28	-->	gschanuel (~gschanuel@201.89.125.40) has joined #nginx
+2020-12-22 21:14:02	<--	vs^ (vs@ip98-184-89-2.mc.at.cox.net) has quit
+2020-12-22 21:24:16	<--	dob1 (~dob1@unaffiliated/dob1) has quit (Remote host closed the connection)
+2020-12-22 21:24:18	<--	forgotmynick (uid24625@gateway/web/irccloud.com/x-lvydsdiwmhjmytsx) has quit (Quit: Connection closed for inactivity)
+2020-12-22 21:25:00	-->	dob1 (~dob1@unaffiliated/dob1) has joined #nginx
+2020-12-22 21:35:52	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-22 21:39:40	<--	aakvik (goodtimes@aakvik.net) has quit (Ping timeout: 272 seconds)
+2020-12-22 21:42:43	-->	bashes2 (~bashes@45.63.17.240) has joined #nginx
+2020-12-22 21:42:56	<--	bashes2 (~bashes@45.63.17.240) has quit (Client Quit)
+2020-12-22 21:44:44	<--	Gokturk (~Gokturk@84.241.202.242) has quit (Ping timeout: 272 seconds)
+2020-12-22 21:45:10	<--	hassel (~hassel@juno.srv.q.ipv6.mooo.se) has quit (Remote host closed the connection)
+2020-12-22 21:50:26	<--	geek (~Geek@unaffiliated/geek) has quit (Ping timeout: 272 seconds)
+2020-12-22 21:50:39	-->	thiras (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-22 21:54:19	<--	thiras (~thiras@unaffiliated/thiras) has quit (Max SendQ exceeded)
+2020-12-22 21:54:21	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-22 21:54:39	-->	thiras (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-22 21:54:49	-->	hassel (~hassel@2a01:298:969:100:20c:29ff:fee3:8f6) has joined #nginx
+2020-12-22 21:57:43	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-22 21:57:51	<--	XATRIX (~xatrix@xe-0-1-0-1104.yalt-01-ar1.miranda-media.net) has quit (Quit: Goodbye and wish you luck!)
+2020-12-22 21:58:53	<--	hassel (~hassel@2a01:298:969:100:20c:29ff:fee3:8f6) has quit (Client Quit)
+2020-12-22 21:58:59	-->	hassel (~hassel@2a01:298:969:100:20c:29ff:fee3:8f6) has joined #nginx
+2020-12-22 21:59:03	<--	hassel (~hassel@2a01:298:969:100:20c:29ff:fee3:8f6) has quit (Client Quit)
+2020-12-22 21:59:09	-->	hassel_ (~hassel@2a01:298:969:100:20c:29ff:fee3:8f6) has joined #nginx
+2020-12-22 21:59:11	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-22 22:03:41	<--	thiras (~thiras@unaffiliated/thiras) has quit (Remote host closed the connection)
+2020-12-22 22:06:11	-->	thiras (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-22 22:06:46	-->	aakvik (goodtimes@aakvik.net) has joined #nginx
+2020-12-22 22:20:21	-->	hekel (~hekel@unaffiliated/hekel) has joined #nginx
+2020-12-22 22:29:13	-->	jessequinn (~jessequin@45.231.1.72) has joined #nginx
+2020-12-22 22:29:26	<--	jessequinn (~jessequin@45.231.1.72) has quit (Client Quit)
+2020-12-22 22:32:37	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-22 22:32:52	<--	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has quit (Ping timeout: 272 seconds)
+2020-12-22 22:32:54	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #nginx
+2020-12-22 22:47:26	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-22 22:49:59	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #nginx
+2020-12-22 22:58:53	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 22:59:19	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-22 23:00:22	-->	mijoharas (~user@d1sxj8c2-6lfk1ccq1k-4.rev.dnainternet.fi) has joined #nginx
+2020-12-22 23:00:52	mijoharas	Hi people. I've got a fairly simple clear question which I was wondering whether someone could help me with:
+2020-12-22 23:02:06	<--	steven_saus (~steven_sa@cpe-74-131-36-220.kya.res.rr.com) has quit (Quit: WeeChat 3.0)
+2020-12-22 23:02:18	mijoharas	How do I make the `auth_basic` and `auth_basic_user_file` directives respond to a header other than `Authorization` (I'd like to make them respond to `Proxy-Authorization` (ref https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization)
+2020-12-22 23:02:47	<--	normen (~normen@p200300d71721e800e8379a9b2f2cd5fa.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-22 23:02:58	mijoharas	(or alternatively, is there a directive I should be using instead of them to support proxy authorisation, I haven't been able to find one)
+2020-12-22 23:02:59	-->	steven_saus (~steven_sa@cpe-74-131-36-220.kya.res.rr.com) has joined #nginx
+2020-12-22 23:04:03	-->	normen (~normen@p200300d71740a40068b9999583aad2c3.dip0.t-ipconnect.de) has joined #nginx
+2020-12-22 23:09:16	-->	geosmile (~geosmile@unaffiliated/geosmile) has joined #nginx
+2020-12-22 23:09:45	<--	MenschZwoNull (~MenschZwo@business-176-095-234-031.static.arcor-ip.net) has quit (Read error: Connection reset by peer)
+2020-12-22 23:12:24	-->	MenschZwoNull (~MenschZwo@business-176-095-234-031.static.arcor-ip.net) has joined #nginx
+2020-12-22 23:15:05	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Ping timeout: 240 seconds)
+2020-12-22 23:15:41	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #nginx
+2020-12-22 23:16:37	<--	dob1 (~dob1@unaffiliated/dob1) has quit (Remote host closed the connection)
+2020-12-22 23:17:33	-->	dob1 (~dob1@unaffiliated/dob1) has joined #nginx
+2020-12-22 23:17:57	demonspork	mijoharas: I don't think so. That's typically for a forward proxy, but nginx is primarily a reverse proxy
+2020-12-22 23:19:44	mijoharas	Hmmmm... that's what it looked like when I was digging in. Thanks @demonspork.
+2020-12-22 23:24:41	-->	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has joined #nginx
+2020-12-22 23:25:36	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Ping timeout: 256 seconds)
+2020-12-22 23:26:36	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #nginx
+2020-12-22 23:26:36	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #nginx
+2020-12-22 23:38:46	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-22 23:44:36	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #nginx
+2020-12-22 23:54:45	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 240 seconds)
+2020-12-22 23:55:06	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #nginx
+2020-12-22 23:55:50	<--	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has quit (Ping timeout: 272 seconds)
+2020-12-23 00:13:30	-->	think_r (~think_r@2001:b07:5d28:4be:c86a:80e5:d158:4e6a) has joined #nginx
+2020-12-23 00:16:37	<--	normen (~normen@p200300d71740a40068b9999583aad2c3.dip0.t-ipconnect.de) has quit (Ping timeout: 272 seconds)
+2020-12-23 00:17:13	-->	monicaan (~monicaan@cpc147778-oldh13-2-0-cust377.10-1.cable.virginm.net) has joined #nginx
+2020-12-23 00:18:49	<--	mijoharas (~user@d1sxj8c2-6lfk1ccq1k-4.rev.dnainternet.fi) has left #nginx ("ERC (IRC client for Emacs 27.1)")
+2020-12-23 00:19:00	monicaan	Is there a good guide anywhere for setting up SSH routing through nginx proxy manager?
+2020-12-23 00:19:22	<--	MenschZwoNull (~MenschZwo@business-176-095-234-031.static.arcor-ip.net) has quit (Remote host closed the connection)
+2020-12-23 00:24:23	-->	Steeve (~steve@unaffiliated/steeve) has joined #nginx
+2020-12-23 00:25:18	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Max SendQ exceeded)
+2020-12-23 00:25:44	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-23 00:26:34	<--	monicaan (~monicaan@cpc147778-oldh13-2-0-cust377.10-1.cable.virginm.net) has quit (Remote host closed the connection)
+2020-12-23 00:26:45	think_r	does anyone installed a self hosted instance of privatebin with nginx?
+2020-12-23 00:35:12	-->	normen (~normen@p200300d71740a400d400c51e00298ccf.dip0.t-ipconnect.de) has joined #nginx
+2020-12-23 00:36:48	-->	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has joined #nginx
+2020-12-23 00:39:18	<--	think_r (~think_r@2001:b07:5d28:4be:c86a:80e5:d158:4e6a) has quit (Quit: Leaving)
+2020-12-23 00:39:33	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-23 00:43:04	<--	ace_me (~Thunderbi@unaffiliated/ace-me/x-814638) has quit (Quit: Thank you)
+2020-12-23 00:44:17	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-23 00:47:23	-->	Gokturk (~Gokturk@84.241.206.22) has joined #nginx
+2020-12-23 00:47:28	-->	normen_ (~normen@pd9eecda5.dip0.t-ipconnect.de) has joined #nginx
+2020-12-23 00:47:38	-->	Xaldafax (~Xaldafax@cpe-104-34-193-119.socal.res.rr.com) has joined #nginx
+2020-12-23 00:50:02	<--	normen (~normen@p200300d71740a400d400c51e00298ccf.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-23 00:50:04	--	normen_ is now known as normen
+2020-12-23 00:55:05	<--	aakvik (goodtimes@aakvik.net) has quit (Ping timeout: 256 seconds)
+2020-12-23 00:58:41	--	irc: disconnected from server
+2020-12-23 11:06:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-23 11:06:17	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-23 11:06:17	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-23 11:06:17	--	Channel #nginx: 687 nicks (2 ops, 0 voices, 685 normals)
+2020-12-23 11:06:42	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-23 11:10:52	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-23 11:11:43	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:15:00	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-23 11:15:48	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:16:17	<--	MenschZwoNull (~MenschZwo@2a03:2260:200c:400:94c:ccf2:19cf:7fbe) has quit (Ping timeout: 260 seconds)
+2020-12-23 11:17:29	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 256 seconds)
+2020-12-23 11:18:53	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-23 11:20:28	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:20:49	<--	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has quit (Quit: Be back later.)
+2020-12-23 11:25:32	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-23 11:25:48	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-23 11:26:12	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-23 11:27:47	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-23 11:27:49	<--	thiras_ (~thiras@unaffiliated/thiras) has quit (Quit: Leaving)
+2020-12-23 11:28:00	-->	thiras (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-23 12:04:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-23 12:27:46	-->	thiras_ (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-23 12:29:44	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2020-12-23 12:30:03	<--	thiras (~thiras@unaffiliated/thiras) has quit (Ping timeout: 246 seconds)
+2020-12-23 12:36:22	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-23 12:41:49	-->	Dunedan_ (~dunedan@unaffiliated/dunedan) has joined #nginx
+2020-12-23 12:42:35	<--	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has quit (Ping timeout: 240 seconds)
+2020-12-23 12:43:27	-->	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has joined #nginx
+2020-12-23 12:44:05	-->	Surfer2011_ (~quassel@i59F776AE.versanet.de) has joined #nginx
+2020-12-23 12:44:40	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-23 12:45:19	<--	Dunedan (~dunedan@unaffiliated/dunedan) has quit (Ping timeout: 256 seconds)
+2020-12-23 12:47:01	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Ping timeout: 256 seconds)
+2020-12-23 12:49:21	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-23 12:49:29	<--	spacesuitdiver (~spacesuit@47.188.196.174) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 12:54:15	<--	geek (~Geek@unaffiliated/geek) has quit (Ping timeout: 240 seconds)
+2020-12-23 12:55:05	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-23 12:59:02	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-23 13:00:29	-->	spacesuitdiver (~spacesuit@47.188.196.174) has joined #nginx
+2020-12-23 13:04:19	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-23 13:14:04	ross`	can someone please help me understand error_page and redirection for reverse proxies? What I am trying to is create a proxy so that when I go to http://with.im/foo.tld/more/path it first tries to go to http://foo.tld/more/path. If there is redirect (like for tls) then it handles that internally, and always returns the response html back to the same request location (in browser) so no redirect just response.
+2020-12-23 13:14:10	ross`	Here is my configuration file: https://diablo.im/~ross/proxy
+2020-12-23 13:14:17	ross`	Sorry: https://diablo.im/~ross/pb/proxy
+2020-12-23 13:28:46	MTecknology	http://with.im/foo.tld/more/path  ... wtf?
+2020-12-23 13:28:59	MTecknology	Why is foo.tld in that path?
+2020-12-23 13:29:38	-->	dqx (~dqx@unaffiliated/dqx) has joined #nginx
+2020-12-23 13:30:17	ross`	Because it's proxying to foo.tld
+2020-12-23 13:30:25	ross`	That's what the location rewrite is doing
+2020-12-23 13:30:52	MTecknology	Nginx is a reverse proxy, not a forward proxy.
+2020-12-23 13:31:56	ross`	I want nginx to make the request on behalf of client and follow redirects. This is possible but no one is doing it exactly the way I'
+2020-12-23 13:32:08	MTecknology	04:30 < MTecknology> Nginx is a reverse proxy, not a forward proxy.
+2020-12-23 13:32:10	ross`	I'm trying to do, and I'm trying to figure out if that's where proxy_redirect comes in
+2020-12-23 13:32:19	ross`	Yes, I am trying to use it as a reverse proxy
+2020-12-23 13:32:23	MTecknology	No, you are not.
+2020-12-23 13:33:00	MTecknology	You are trying to force nginx to be a forward proxy, which it is not.
+2020-12-23 13:33:31	<--	spacesuitdiver (~spacesuit@47.188.196.174) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-23 13:35:36	<--	dqx (~dqx@unaffiliated/dqx) has quit (Ping timeout: 256 seconds)
+2020-12-23 13:35:54	ross`	MTecknology: A regular forward proxy won't support what I'm trying to do. I need rewrite behavior. hmm
+2020-12-23 13:36:25	ross`	I am NOT trying to forward proxy
+2020-12-23 13:36:51	ross`	I want only connection: closed behavior, nothing stays open, only http/s
+2020-12-23 13:39:30	MTecknology	A regular forward proxy absolutely does support rewriting requests and responses.
+2020-12-23 13:40:26	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-23 13:40:32	MTecknology	You are trying to proxy from a user to a server that is not yours.
+2020-12-23 13:41:43	MTecknology	Just because you don't know how to make a forward proxy do what you want, doesn't mean a reverse proxy is the correct answer.
+2020-12-23 13:41:56	-->	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has joined #nginx
+2020-12-23 13:43:12	-->	ace_me (~Thunderbi@unaffiliated/ace-me/x-814638) has joined #nginx
+2020-12-23 13:44:33	ross`	Maybe I'm bad at googling but I can't find a forward proxy that lets you use it via a url form instead of browser level configuration
+2020-12-23 13:47:32	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-23 13:49:39	ross`	Bleh, I wish I knew how to see exactly what requests nginx was making I have logging set up but not the logging I need
+2020-12-23 14:13:24	<--	thiras_ (~thiras@unaffiliated/thiras) has quit (Ping timeout: 240 seconds)
+2020-12-23 14:17:46	-->	jlelz (~jlelz@2603-8080-a402-6852-6d0d-f05b-13a4-0686.res6.spectrum.com) has joined #nginx
+2020-12-23 14:25:21	-->	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has joined #nginx
+2020-12-23 14:25:21	<--	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has quit (Changing host)
+2020-12-23 14:25:21	-->	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has joined #nginx
+2020-12-23 14:28:34	<--	geosmile (~geosmile@unaffiliated/geosmile) has quit (Remote host closed the connection)
+2020-12-23 14:32:38	<--	nurupo (~nurupo.ga@unaffiliated/nurupo) has quit (Quit: nurupo.ga)
+2020-12-23 14:50:55	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2020-12-23 14:51:07	-->	stalled (~stalled@unaffiliated/stalled) has joined #nginx
+2020-12-23 14:57:53	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-23 15:08:11	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Quit: real life interrupt)
+2020-12-23 15:10:14	<--	normen (~normen@p200300d71740a4004058af9ee5009674.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-23 15:10:34	-->	geek (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-23 15:14:36	<--	deksar (~deksar@unaffiliated/deksar) has quit (Ping timeout: 264 seconds)
+2020-12-23 15:18:26	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-23 15:18:44	<--	TheConjurer (~TheConjur@149.91.83.123) has quit (Ping timeout: 240 seconds)
+2020-12-23 15:20:04	<--	geek (~Geek@unaffiliated/geek) has quit (Ping timeout: 240 seconds)
+2020-12-23 15:29:14	-->	dqx (~dqx@unaffiliated/dqx) has joined #nginx
+2020-12-23 15:35:22	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Ping timeout: 240 seconds)
+2020-12-23 15:35:30	-->	combatvet_ (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-23 15:37:09	--	combatvet_ is now known as CombatVet
+2020-12-23 15:41:32	<--	Xaldafax (~Xaldafax@cpe-104-34-193-119.socal.res.rr.com) has quit (Quit: Bye...)
+2020-12-23 15:42:03	-->	OrNix (~OrNix@77.106.248.188) has joined #nginx
+2020-12-23 15:44:49	-->	normen (~normen@p200300d71740a4004058af9ee5009674.dip0.t-ipconnect.de) has joined #nginx
+2020-12-23 15:50:08	<--	arcatech (~arcatech@2604:2000:1200:5d9:3d5a:79:1d03:f55f) has quit (Ping timeout: 272 seconds)
+2020-12-23 15:52:31	<--	normen (~normen@p200300d71740a4004058af9ee5009674.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-23 15:54:12	-->	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has joined #nginx
+2020-12-23 15:56:27	-->	nurupo (~nurupo.ga@unaffiliated/nurupo) has joined #nginx
+2020-12-23 15:58:49	<--	dqx (~dqx@unaffiliated/dqx) has quit (Quit: .)
+2020-12-23 16:02:00	-->	TheConjurer (~TheConjur@149.91.83.123) has joined #nginx
+2020-12-23 16:05:19	<--	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-23 16:18:54	-->	normen (~normen@p200300d71740a4004058af9ee5009674.dip0.t-ipconnect.de) has joined #nginx
+2020-12-23 16:30:01	<--	April- (~april@textual/helper/April-) has quit (Quit: Quitting)
+2020-12-23 16:30:55	-->	April- (~april@textual/helper/April-) has joined #nginx
+2020-12-23 16:46:21	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-23 16:51:01	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 264 seconds)
+2020-12-23 16:53:52	<--	normen (~normen@p200300d71740a4004058af9ee5009674.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-23 16:55:17	-->	Gokturk (~Gokturk@84.241.206.22) has joined #nginx
+2020-12-23 17:02:55	-->	VG38 (~VG38@141.138.91.161) has joined #nginx
+2020-12-23 17:05:22	--	irc: disconnected from server
+2020-12-23 17:05:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-23 17:05:57	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-23 17:05:57	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-23 17:05:57	--	Channel #nginx: 685 nicks (2 ops, 0 voices, 683 normals)
+2020-12-23 17:06:22	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-23 17:06:51	<--	leprechau (d6mys526oi@c-68-53-25-131.hsd1.tn.comcast.net) has quit (Quit: ZNC - http://znc.in)
+2020-12-23 17:07:28	-->	leprechau (qmmjaq8f3u@c-68-53-25-131.hsd1.tn.comcast.net) has joined #nginx
+2020-12-23 17:08:15	<--	TheConjurer (~TheConjur@149.91.83.123) has quit (Quit: Leaving)
+2020-12-23 17:08:23	-->	TheConjurer (~TheConjur@149.91.83.123) has joined #nginx
+2020-12-23 17:10:56	<--	TheConjurer (~TheConjur@149.91.83.123) has quit (Client Quit)
+2020-12-23 17:11:06	-->	TheConjurer (~TheConjur@149.91.83.123) has joined #nginx
+2020-12-23 17:11:07	<--	Disconsented (~quassel@disconsented.com) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-23 17:13:06	<--	TheConjurer (~TheConjur@149.91.83.123) has quit (Client Quit)
+2020-12-23 17:13:22	-->	TheConjurer (~TheConjur@149.91.83.123) has joined #nginx
+2020-12-23 17:15:15	<--	TheConjurer (~TheConjur@149.91.83.123) has quit (Client Quit)
+2020-12-23 17:16:23	-->	TheConjurer (~TheConjur@149.91.83.123) has joined #nginx
+2020-12-23 17:21:11	-->	Disconsented (~quassel@disconsented.com) has joined #nginx
+2020-12-23 17:23:13	<--	ace_me (~Thunderbi@unaffiliated/ace-me/x-814638) has quit (Ping timeout: 260 seconds)
+2020-12-23 17:25:06	-->	gffa (~unknown@unaffiliated/gffa) has joined #nginx
+2020-12-23 17:32:13	<--	ib07 (~quassel@80-110-99-157.cgn.dynamic.surfer.at) has quit (Ping timeout: 272 seconds)
+2020-12-23 17:32:37	<--	leprechau (qmmjaq8f3u@c-68-53-25-131.hsd1.tn.comcast.net) has quit (Quit: ZNC - http://znc.in)
+2020-12-23 17:32:54	-->	leprechau (pyucnnvb2s@c-68-53-25-131.hsd1.tn.comcast.net) has joined #nginx
+2020-12-23 17:39:31	<--	thresh (~popa3d@videolan/developer/thresh) has quit (Quit: I'm a quit message virus. Please replace your old line with this line and help me take over the world)
+2020-12-23 17:39:44	-->	thresh (~popa3d@videolan/developer/thresh) has joined #nginx
+2020-12-23 17:40:33	-->	kipras (~kipras@78-56-235-39.static.zebra.lt) has joined #nginx
+2020-12-23 17:48:48	<--	michele- (~eraser@unaffiliated/michele) has quit (Ping timeout: 264 seconds)
+2020-12-23 17:50:29	-->	cr4y1 (~cr4y1@188.241.65.122) has joined #nginx
+2020-12-23 17:50:58	-->	Seriusam (~seirusam@217.131.82.194) has joined #nginx
+2020-12-23 17:52:40	<--	daimon (znc@freebsd/lover/daemon) has quit (Excess Flood)
+2020-12-23 17:53:07	-->	daimon (znc@freebsd/lover/daemon) has joined #nginx
+2020-12-23 17:53:40	<--	gschanuel (~gschanuel@201.89.125.40) has quit (Read error: Connection reset by peer)
+2020-12-23 17:54:47	-->	gschanuel (~gschanuel@201.89.125.40) has joined #nginx
+2020-12-23 17:56:15	<--	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has quit (Ping timeout: 246 seconds)
+2020-12-23 17:59:49	<--	abirkill (~abirkill@d207-216-233-23.bchsia.telus.net) has quit (Quit: Let us prepare to grapple with the ineffable itself, and see if we may not eff it after all.)
+2020-12-23 17:59:55	<--	antoine (~antoine@159.100.241.193) has quit (Quit: Ping timeout (120 seconds))
+2020-12-23 18:00:10	-->	abirkill (~abirkill@d207-216-233-23.bchsia.telus.net) has joined #nginx
+2020-12-23 18:00:39	<--	mpmc (~mpmc@unaffiliated/mpmc) has quit (Remote host closed the connection)
+2020-12-23 18:00:42	-->	antoine (~antoine@159.100.241.193) has joined #nginx
+2020-12-23 18:00:49	<--	Cerise (~jerry@unaffiliated/cerise) has quit (Quit: :qa!)
+2020-12-23 18:00:57	<--	NEOhidra (~NEOhidra@unaffiliated/neohidra) has quit (Quit: ZNC - https://znc.in)
+2020-12-23 18:01:18	-->	NEOhidra (~NEOhidra@unaffiliated/neohidra) has joined #nginx
+2020-12-23 18:02:27	-->	mpmc (~mpmc@unaffiliated/mpmc) has joined #nginx
+2020-12-23 18:04:14	-->	Cerise (~jerry@natsumi.devzero.info) has joined #nginx
+2020-12-23 18:04:14	<--	Cerise (~jerry@natsumi.devzero.info) has quit (Changing host)
+2020-12-23 18:04:14	-->	Cerise (~jerry@unaffiliated/cerise) has joined #nginx
+2020-12-23 18:18:53	<--	zatwai (~zatwai@80.211.175.241) has quit (Quit: ZNC 1.8.2+deb1~bpo10+1 - https://znc.in)
+2020-12-23 18:19:54	-->	zatwai (~zatwai@2a00:6d40:72:5ef1::1) has joined #nginx
+2020-12-23 18:24:11	<--	kipras (~kipras@78-56-235-39.static.zebra.lt) has quit (Ping timeout: 256 seconds)
+2020-12-23 18:36:48	<--	TheConjurer (~TheConjur@149.91.83.123) has quit (Read error: Connection reset by peer)
+2020-12-23 18:38:11	-->	kipras (~kipras@inet-160-34-121-188.oracle-ocna.com) has joined #nginx
+2020-12-23 18:40:55	-->	unluckyshrubbery (~unluckysh@unaffiliated/unluckyshrubbery) has joined #nginx
+2020-12-23 18:48:54	<--	qgTG (~qgTG@unaffiliated/qgtg) has quit (Quit: quit)
+2020-12-23 18:49:06	-->	normen (~normen@p200300d71740a4004058af9ee5009674.dip0.t-ipconnect.de) has joined #nginx
+2020-12-23 18:49:14	-->	qgTG (~qgTG@unaffiliated/qgtg) has joined #nginx
+2020-12-23 18:58:19	-->	Assid (~assid@unaffiliated/assid) has joined #nginx
+2020-12-23 19:01:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-23 19:02:52	<--	Muimi (~ReedK0@unaffiliated/reedk0) has quit (Remote host closed the connection)
+2020-12-23 19:19:34	--	Gokturk is now known as Gokturk-Away
+2020-12-23 19:23:37	<--	normen (~normen@p200300d71740a4004058af9ee5009674.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-23 19:33:51	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #nginx
+2020-12-23 19:45:30	-->	normen (~normen@p200300d71740a4004058af9ee5009674.dip0.t-ipconnect.de) has joined #nginx
+2020-12-23 20:03:51	-->	daniel11420 (~daniel114@unaffiliated/daniel11420) has joined #nginx
+2020-12-23 20:25:17	<--	veegee (~veegee@142.126.160.36) has quit (Remote host closed the connection)
+2020-12-23 20:35:49	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-23 20:37:26	-->	daniel11420_ (~daniel114@unaffiliated/daniel11420) has joined #nginx
+2020-12-23 20:38:38	<--	daimon (znc@freebsd/lover/daemon) has quit (Excess Flood)
+2020-12-23 20:38:53	-->	daimon (znc@freebsd/lover/daemon) has joined #nginx
+2020-12-23 20:40:24	<--	daniel11420 (~daniel114@unaffiliated/daniel11420) has quit (Ping timeout: 240 seconds)
+2020-12-23 20:41:25	--	daniel11420_ is now known as daniel11420
+2020-12-23 20:47:19	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-23 20:49:53	<--	jlelz (~jlelz@2603-8080-a402-6852-6d0d-f05b-13a4-0686.res6.spectrum.com) has quit
+2020-12-23 21:09:02	<--	j7k6 (~j7k6@gateway/tor-sasl/j7k6) has quit (Ping timeout: 240 seconds)
+2020-12-23 21:11:18	-->	j7k6 (~j7k6@gateway/tor-sasl/j7k6) has joined #nginx
+2020-12-23 21:16:45	-->	michele (~eraser@unaffiliated/michele) has joined #nginx
+2020-12-23 21:22:06	<--	RzR (~rzr@2a01:e35:2fd7:d710:5e08:ef32:68ac:50f9) has quit (Changing host)
+2020-12-23 21:22:06	-->	RzR (~rzr@unaffiliated/rzr) has joined #nginx
+2020-12-23 21:44:13	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Remote host closed the connection)
+2020-12-23 21:45:50	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-23 22:04:36	-->	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has joined #nginx
+2020-12-23 22:09:19	trebuh	hey! Is this a good configuration for Nginx reverse proxy: https://bpa.st/GCTQ ?
+2020-12-24 06:11:05	--	irc: disconnected from server
+2020-12-24 06:11:39	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-24 06:11:39	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-24 06:11:39	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-24 06:11:39	--	Channel #nginx: 693 nicks (2 ops, 0 voices, 691 normals)
+2020-12-24 06:12:04	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-24 06:16:12	-->	geosmileus (~geosmile@unaffiliated/geosmile) has joined #nginx
+2020-12-24 06:17:09	-->	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has joined #nginx
+2020-12-24 06:17:15	<--	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has quit (Remote host closed the connection)
+2020-12-24 06:17:48	-->	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has joined #nginx
+2020-12-24 06:18:32	<--	geosmile (~geosmile@unaffiliated/geosmile) has quit (Ping timeout: 256 seconds)
+2020-12-24 06:26:39	<--	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has quit (Ping timeout: 268 seconds)
+2020-12-24 06:29:55	-->	geosmile (~geosmile@unaffiliated/geosmile) has joined #nginx
+2020-12-24 06:31:25	<--	geosmileus (~geosmile@unaffiliated/geosmile) has quit (Ping timeout: 240 seconds)
+2020-12-24 06:32:57	<--	geosmile (~geosmile@unaffiliated/geosmile) has quit (Read error: Connection reset by peer)
+2020-12-24 06:34:55	-->	geosmileus (~geosmile@unaffiliated/geosmile) has joined #nginx
+2020-12-24 06:36:57	<--	geosmileus (~geosmile@unaffiliated/geosmile) has quit (Read error: Connection reset by peer)
+2020-12-24 06:37:21	-->	geosmileus (~geosmile@unaffiliated/geosmile) has joined #nginx
+2020-12-24 06:37:59	MTecknology	vicatcu: `enter' & `beginner'
+2020-12-24 06:37:59	@ngxbot	We love that you're excited about Nginx. It's amazing to see such eager typing. However, we would really appreciate it if you could keep each thought on one line. Enter "spam" adds extra scroll back, makes things harder to read, and makes it hard to know when your thought is done. Please and thank-you. :D
+2020-12-24 06:38:00	@ngxbot	A collection of beginner resources: Read them; seriously. * https://www.nginx.com/resources/wiki/start/ * http://nginx.org/en/docs/http/ngx_http_core_module.html#location * https://michael.lustfield.net/nginx/dummies-guide-to-setting-up-nginx * http://blog.martinfjordvald.com/nginx-primer/
+2020-12-24 06:41:30	Seriusam	Is the Jenkins UI supposed to be open to public? I used nginx to setup a reverse proxy for a repo with jenkins. However it smells
+2020-12-24 06:46:19	MTecknology	That sounds like a question for a junkins channel
+2020-12-24 06:48:09	-->	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has joined #nginx
+2020-12-24 06:48:37	MTecknology	(considering they wrote the software, it's a pretty safe assumption what they'll say)
+2020-12-24 06:52:08	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-24 06:54:05	-->	notpiika (~quassel@pool-74-105-144-187.nwrknj.fios.verizon.net) has joined #nginx
+2020-12-24 06:54:40	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (Ping timeout: 272 seconds)
+2020-12-24 06:55:56	<--	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has quit (Ping timeout: 272 seconds)
+2020-12-24 06:56:42	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-24 06:58:38	<--	perkin (uid478373@gateway/web/irccloud.com/x-rkwhxdxnriobjmrp) has quit (Quit: Connection closed for inactivity)
+2020-12-24 07:13:06	-->	rocktop (~rocktop@105.158.14.4) has joined #nginx
+2020-12-24 07:27:45	-->	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has joined #nginx
+2020-12-24 07:28:10	-->	jalalsfs_ (~jalalsfs@unaffiliated/jalalsfs) has joined #nginx
+2020-12-24 07:28:36	<--	gschanuel (~gschanuel@201.89.125.40) has quit (Read error: Connection reset by peer)
+2020-12-24 07:29:28	-->	gschanuel (~gschanuel@201.89.125.40) has joined #nginx
+2020-12-24 07:31:08	<--	jalalsfs (~jalalsfs@unaffiliated/jalalsfs) has quit (Ping timeout: 256 seconds)
+2020-12-24 07:46:52	<--	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has quit (Ping timeout: 265 seconds)
+2020-12-24 07:49:00	-->	zumba_addict (~zumba_add@108-197-162-97.lightspeed.cicril.sbcglobal.net) has joined #nginx
+2020-12-24 07:51:02	<--	geek (~Geek@unaffiliated/geek) has quit (Ping timeout: 272 seconds)
+2020-12-24 07:53:43	<--	vs^ (vs@ip98-184-89-2.mc.at.cox.net) has quit
+2020-12-24 08:03:17	-->	jalalsfs (~jalalsfs@unaffiliated/jalalsfs) has joined #nginx
+2020-12-24 11:23:00	--	irc: disconnected from server
+2020-12-24 11:23:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-24 11:23:35	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-24 11:23:35	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-24 11:23:35	--	Channel #nginx: 683 nicks (2 ops, 0 voices, 681 normals)
+2020-12-24 11:24:00	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-24 11:41:44	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2020-12-24 11:47:35	-->	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has joined #nginx
+2020-12-24 11:49:36	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-24 11:51:55	<--	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has quit (Ping timeout: 240 seconds)
+2020-12-24 11:58:24	<--	thiras (~thiras@unaffiliated/thiras) has quit (Ping timeout: 268 seconds)
+2020-12-24 12:04:02	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-24 12:27:02	<--	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-24 12:27:03	-->	thiras (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-24 19:00:38	--	irc: disconnected from server
+2020-12-24 19:01:13	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-24 19:01:13	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-24 19:01:13	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-24 19:01:13	--	Channel #nginx: 685 nicks (2 ops, 0 voices, 683 normals)
+2020-12-24 19:01:38	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-24 19:02:04	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 268 seconds)
+2020-12-24 19:05:55	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #nginx
+2020-12-24 19:06:08	<--	helloworld1 (~helloworl@45.255.127.28) has quit (Ping timeout: 260 seconds)
+2020-12-24 19:07:52	<--	normen (~normen@p200300d71740a400b91526c024b4e6fb.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-24 19:11:24	-->	normen (~normen@p200300d71740a400b91526c024b4e6fb.dip0.t-ipconnect.de) has joined #nginx
+2020-12-24 19:14:55	<--	kerframil (~kerframil@gentoo/user/kerframil) has quit (Ping timeout: 272 seconds)
+2020-12-24 19:25:42	-->	gffa (~unknown@unaffiliated/gffa) has joined #nginx
+2020-12-24 19:35:22	<--	blahboybaz (~quassel@2601:602:cd00:3a3f:a45c:4bc5:b628:996c) has quit (Ping timeout: 268 seconds)
+2020-12-24 19:38:03	bryanpedini	nvm, I configured "virtualhostuser:nginx" ownership both on php fpm socket and httpdocs files,and "nginx:adm" ownership on log files
+2020-12-24 19:38:37	bryanpedini	thank you for the information before, I understood the reason of the log files permissions and ownership
+2020-12-24 19:38:52	bryanpedini	now I'm back to struggle with PHP :)
+2020-12-24 19:43:07	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-24 19:48:05	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #nginx
+2020-12-24 19:56:56	<--	kerframil (~kerframil@gentoo/user/kerframil) has quit (Ping timeout: 268 seconds)
+2020-12-24 20:01:56	-->	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has joined #nginx
+2020-12-24 20:04:39	-->	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has joined #nginx
+2020-12-24 20:06:24	<--	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has quit (Ping timeout: 240 seconds)
+2020-12-24 20:07:11	Skyrider	Speaking of which... The rate limits. How can I apply it with reversed proxy?
+2020-12-24 20:07:26	Skyrider	Seems to be grabbing the container IP rather than the real IP of the user.
+2020-12-24 20:11:59	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #nginx
+2020-12-24 20:13:10	<--	pm001 (~pac82@212.25.0.228) has quit
+2020-12-24 20:15:44	<--	victori (~victori@cpe-76-174-179-126.socal.res.rr.com) has quit (Read error: Connection reset by peer)
+2020-12-24 20:15:59	-->	victori (~victori@cpe-76-174-179-126.socal.res.rr.com) has joined #nginx
+2020-12-24 20:20:14	<--	another (~another@unaffiliated/another) has quit (Remote host closed the connection)
+2020-12-24 20:21:45	-->	another (~another@unaffiliated/another) has joined #nginx
+2020-12-24 20:22:07	-->	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has joined #nginx
+2020-12-24 20:25:34	<--	Seriusam (~seirusam@217.131.80.123) has quit (Read error: Connection reset by peer)
+2020-12-24 20:26:16	<--	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has quit (Ping timeout: 240 seconds)
+2020-12-24 20:34:16	<--	hatesec (~facebook@unaffiliated/hatesec) has quit (Quit: Leaving)
+2020-12-24 20:45:05	<--	MenschZwoNull_ (~MenschZwo@p200300c8574d230077328bb2964baf12.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-24 20:49:07	<--	daimon (znc@freebsd/lover/daemon) has quit (Excess Flood)
+2020-12-24 20:49:40	-->	daimon (znc@freebsd/lover/daemon) has joined #nginx
+2020-12-24 20:49:42	<--	daimon (znc@freebsd/lover/daemon) has quit (Max SendQ exceeded)
+2020-12-24 20:49:57	-->	daimon (znc@freebsd/lover/daemon) has joined #nginx
+2020-12-25 01:06:22	--	irc: disconnected from server
+2020-12-25 01:07:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-25 01:07:06	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-25 01:07:06	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-25 01:07:06	--	Channel #nginx: 682 nicks (2 ops, 0 voices, 680 normals)
+2020-12-25 01:07:30	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-25 01:07:40	cyb3rquarks	I have this "catch-all" server block
+2020-12-25 01:07:40	cyb3rquarks	```
+2020-12-25 01:07:40	cyb3rquarks	server {
+2020-12-25 01:07:40	cyb3rquarks	    listen      80;
+2020-12-25 01:07:40	cyb3rquarks	    server_name ~. "";
+2020-12-25 01:07:40	--	Mode #nginx [+q cyb3rquarks!*@*] by ngxbot
+2020-12-25 01:07:40	cyb3rquarks	}
+2020-12-25 01:07:40	cyb3rquarks	```
+2020-12-25 01:07:40	<--	cyb3rquarks (~kerby@49.144.105.98) has quit (Killed (Sigyn (Spam is off topic on freenode.)))
+2020-12-25 01:08:29	Amun_Ra	hm, I didn't know flooding may and in kill
+2020-12-25 01:11:01	<--	saidi (~saidi@unaffiliated/saidi) has quit (Ping timeout: 260 seconds)
+2020-12-25 01:12:11	-->	Xaldafax (~Xaldafax@cpe-104-34-193-119.socal.res.rr.com) has joined #nginx
+2020-12-25 01:13:14	-->	ChmEarl (~chmearl@unaffiliated/prymar56) has joined #nginx
+2020-12-25 01:13:52	--	Mode #nginx [+o Peng] by ChanServ
+2020-12-25 01:14:41	--	Mode #nginx [-qo cyb3rquarks!*@* Peng] by Peng
+2020-12-25 01:15:06	Peng	The quiet's removed and Sigyn has removed its thing too
+2020-12-25 01:18:03	-->	cyberquarks_8080 (31906962@49.144.105.98) has joined #nginx
+2020-12-25 01:20:02	<--	cyberquarks_8080 (31906962@49.144.105.98) has left #nginx
+2020-12-25 01:22:35	-->	cyberquarks (31906962@49.144.105.98) has joined #nginx
+2020-12-25 01:23:43	cyberquarks	Hello
+2020-12-25 01:24:09	-->	saidi (~saidi@unaffiliated/saidi) has joined #nginx
+2020-12-25 01:24:32	cyberquarks	Is there a way to have catch-all server block and another server block to work together? Here's a complete description: https://stackoverflow.com/questions/65440763/catch-all-server-block-with-non-catch-all-server-block
+2020-12-25 01:33:01	-->	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has joined #nginx
+2020-12-25 01:34:10	kerframil	cyberquarks: drop server_name and define "listen 80 default_server;" in the first example.
+2020-12-25 01:34:45	kerframil	here's why:
+2020-12-25 01:35:25	kerframil	actually, I can't remember what the bot fact is now.
+2020-12-25 01:35:55	cyberquarks	kerframil okay I see, I will try it
+2020-12-25 01:35:57	kerframil	anyway, a server_name match comes first, and a listen directive with default_server comes second.
+2020-12-25 01:36:24	kerframil	you want at least one default_server for every (ip):port tuple you ever listen on, ideally. if you don't do this, you run the risk of the first parsed server being the default, which can lead to disaster.
+2020-12-25 01:37:24	<--	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has quit (Ping timeout: 240 seconds)
+2020-12-25 01:37:35	thresh	no, in this example grafana will be chosen if Host: grafana.mydomain.com is there
+2020-12-25 01:38:01	kerframil	no in response to?
+2020-12-25 01:38:17	thresh	https://gist.github.com/thresheek/22f22798b916f536fa6b24a87cee8860
+2020-12-25 01:38:33	thresh	I mean those snippets do exactly as cyberquarks wants, choosing grafana properly
+2020-12-25 01:39:04	thresh	http://nginx.org/r/server_name also tells how the server blocks are chosen
+2020-12-25 01:40:35	cyberquarks	thresh i works for you, what could be wrong in my conf
+2020-12-25 01:40:39	cyberquarks	it*
+2020-12-25 01:40:42	kerframil	ok. I stand by the suggestion to use default_server, though.
+2020-12-25 01:40:50	thresh	cyberquarks, dunno, we didnt see your full configuration
+2020-12-25 01:42:17	thresh	output of `nginx -T`, curl requests showing it's indeed hitting a wrong one, and access/error logs might be helpful
+2020-12-25 01:44:32	cyberquarks	Here: https://gist.github.com/cyberquarks/7ee685785825db8044b49d57ed3adda8
+2020-12-25 01:45:58	cyberquarks	Just updated the config, I made a typo
+2020-12-25 01:48:55	thresh	can you please post the output of `nginx -T` ?
+2020-12-25 01:49:21	thresh	the one in gist currently has syntax errors, which means it's not a configuration you're running
+2020-12-25 01:52:24	cyberquarks	I see, I updated the conf here: https://gist.github.com/cyberquarks/7ee685785825db8044b49d57ed3adda8
+2020-12-25 01:52:52	cyberquarks	I omitted some log config but I pasted all now, then `nginx -t` is successful
+2020-12-25 01:53:58	-->	CoreISP (~CoreISP@simplemachines/rootadmin/CoreISP) has joined #nginx
+2020-12-25 01:55:43	thresh	ok, what about the requests and logs?
+2020-12-25 01:55:48	<--	MenschZwoNull_ (~MenschZwo@2a03:2260:200c:400:94c:ccf2:19cf:7fbe) has quit (Ping timeout: 272 seconds)
+2020-12-25 01:56:33	thresh	fwiw this configuration also results in proper requests passing to grafana for me
+2020-12-25 01:58:01	cyberquarks	Hmmm maybe because of the `/etc/nginx/sites-enabled/default` that I have
+2020-12-25 01:59:31	thresh	that's why I asked you to post nginx -T output two times
+2020-12-25 02:02:44	<--	saidi (~saidi@unaffiliated/saidi) has quit (Quit: Quitte)
+2020-12-25 02:02:46	cyberquarks	I did `nginx -T`
+2020-12-25 02:03:13	cyberquarks	`nginx: the configuration file /etc/nginx/nginx.conf syntax is ok`
+2020-12-25 02:03:37	thresh	it would be followed by full unmodified configuration
+2020-12-25 02:04:40	cyberquarks	yep, the one in my gist is the latest one I have which I did `systemctl restart nginx`
+2020-12-25 02:05:57	kerframil	the point is that it's still not the output of nginx -T. one can tell because the includes are not being inlined.
+2020-12-25 02:07:18	cyberquarks	I see, I get what you mean now
+2020-12-25 02:14:05	cyberquarks	I found server block with `server_name *.mydomain.com;` on it after logging `nginx -T`
+2020-12-25 02:15:58	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-25 02:18:49	cyberquarks	thresh thanks, it works now apparently I had to add a SSL server block since browser is forwarding from HTTP to HTTPS
+2020-12-25 02:19:00	cyberquarks	kerframil thanks also
+2020-12-25 02:37:07	-->	astrofog (~astrofog@unaffiliated/astrofog) has joined #nginx
+2020-12-25 02:39:25	-->	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has joined #nginx
+2020-12-25 02:40:32	cyberquarks	The problem with adding a SSL block is that it catches everything
+2020-12-25 02:45:06	<--	itsonlybinary (~itsonlybi@unaffiliated/nucwin) has quit (Remote host closed the connection)
+2020-12-25 02:47:38	<--	longshot (~nobody@2001:470:f0f4:a0a:7158:925b:f6c:2b40) has quit (Ping timeout: 268 seconds)
+2020-12-25 02:48:54	<--	Some_Person (someperson@2600:1700:d02:1c50:ce81:24dc:3854:f698) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-25 02:49:55	<--	secretmeeting (~secretmee@bras-base-toroon0954w-grc-69-142-113-222-97.dsl.bell.ca) has quit (Ping timeout: 240 seconds)
+2020-12-25 02:52:01	<--	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-25 02:57:44	<--	astrofog (~astrofog@unaffiliated/astrofog) has quit (Quit: Quite)
+2020-12-25 02:58:52	-->	geosmile (~geosmile@unaffiliated/geosmile) has joined #nginx
+2020-12-25 03:00:34	<--	berglh (~quassel@ns1.bytefuse.net) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-25 03:01:12	-->	berglh (~quassel@ns1.bytefuse.net) has joined #nginx
+2020-12-25 03:02:10	<--	SporkWitch (~SporkWitc@unaffiliated/sporkwitch) has quit (Quit: ZNC - http://znc.in)
+2020-12-25 03:02:42	-->	Some_Person (someperson@2600:1700:d02:1c50:ce81:24dc:3854:f698) has joined #nginx
+2020-12-25 03:02:52	-->	itsonlybinary (~itsonlybi@unaffiliated/nucwin) has joined #nginx
+2020-12-25 03:03:39	-->	SporkWitch (~SporkWitc@unaffiliated/sporkwitch) has joined #nginx
+2020-12-25 03:04:44	<--	munio (~Thunderbi@188.254.215.199) has quit (Ping timeout: 240 seconds)
+2020-12-25 03:08:07	<--	Sleepy63 (~Sleepy63@47.185.218.67) has quit (Ping timeout: 272 seconds)
+2020-12-25 03:08:33	<--	itsonlybinary (~itsonlybi@unaffiliated/nucwin) has quit (Ping timeout: 260 seconds)
+2020-12-25 03:17:32	-->	itsonlybinary (~itsonlybi@unaffiliated/nucwin) has joined #nginx
+2020-12-25 03:20:11	<--	SporkWitch (~SporkWitc@unaffiliated/sporkwitch) has quit (Quit: ZNC - http://znc.in)
+2020-12-25 03:22:29	-->	SporkWitch (~SporkWitc@unaffiliated/sporkwitch) has joined #nginx
+2020-12-25 03:22:48	<--	gschanuel (~gschanuel@201.89.125.40) has quit (Read error: Connection reset by peer)
+2020-12-25 03:22:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-25 03:23:48	-->	gschanuel (~gschanuel@201.89.125.40) has joined #nginx
+2020-12-25 03:27:10	-->	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has joined #nginx
+2020-12-25 03:38:15	<--	itsonlybinary (~itsonlybi@unaffiliated/nucwin) has quit (Quit: ttfn)
+2020-12-25 03:41:54	-->	itsonlybinary (~itsonlybi@unaffiliated/nucwin) has joined #nginx
+2020-12-25 03:44:48	<--	itsonlybinary (~itsonlybi@unaffiliated/nucwin) has quit (Client Quit)
+2020-12-25 03:45:06	-->	itsonlybinary (~itsonlybi@unaffiliated/nucwin) has joined #nginx
+2020-12-25 03:46:01	-->	Izorkin_ (~Izorkin@2600:70ff:b1c5:0:1699:334e:c87a:58a8) has joined #nginx
+2020-12-25 03:46:15	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-25 03:48:32	<--	Izorkin (~Izorkin@2600:70ff:b1c5:0:39c9:441c:726b:d229) has quit (Ping timeout: 272 seconds)
+2020-12-25 03:48:32	--	Izorkin_ is now known as Izorkin
+2020-12-25 03:50:47	-->	anemoiac (~anemoiac@23.226.128.210) has joined #nginx
+2020-12-25 03:54:00	kerframil	cyberquarks: very good. yes, you would indeed need a suitable server for that.
+2020-12-25 03:58:05	-->	Sleepy63 (~Sleepy63@47.185.218.67) has joined #nginx
+2020-12-25 04:03:58	<--	SporkWitch (~SporkWitc@unaffiliated/sporkwitch) has quit (Quit: ZNC - http://znc.in)
+2020-12-25 04:05:35	-->	SporkWitch (~SporkWitc@unaffiliated/sporkwitch) has joined #nginx
+2020-12-25 04:10:33	<--	anemoiac (~anemoiac@23.226.128.210) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-25 04:17:24	<--	ib07 (~quassel@80-110-72-138.cgn.dynamic.surfer.at) has quit (Ping timeout: 240 seconds)
+2020-12-25 04:18:06	-->	ib07 (~quassel@80-110-100-1.cgn.dynamic.surfer.at) has joined #nginx
+2020-12-25 04:37:16	-->	Sajesajama (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #nginx
+2020-12-25 04:39:57	-->	Sajesajama_ (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #nginx
+2020-12-25 04:41:48	<--	Sajesajama_ (Salsa@gateway/vpn/protonvpn/sajesajama) has quit (Remote host closed the connection)
+2020-12-25 04:47:53	<--	Sleepy63 (~Sleepy63@47.185.218.67) has quit (Ping timeout: 268 seconds)
+2020-12-25 06:58:27	--	irc: disconnected from server
+2020-12-25 06:59:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-25 06:59:06	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-25 06:59:06	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-25 06:59:06	--	Channel #nginx: 683 nicks (2 ops, 0 voices, 681 normals)
+2020-12-25 06:59:30	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-25 07:04:14	-->	sc0tt2 (sid412351@gateway/web/irccloud.com/x-uoomnnsjdclbqoir) has joined #nginx
+2020-12-25 07:13:37	--	Gokturk is now known as Gokturk-Away
+2020-12-25 07:13:53	-->	blahboybaz (~quassel@2601:602:cd00:3a3f:a45c:4bc5:b628:996c) has joined #nginx
+2020-12-25 07:18:35	-->	veegee (~veegee@bras-base-toroon0411w-grc-53-142-114-107-114.dsl.bell.ca) has joined #nginx
+2020-12-25 07:28:32	<--	gffa (~unknown@unaffiliated/gffa) has quit (Remote host closed the connection)
+2020-12-25 07:28:44	-->	TheFatherMind (~TheFather@cpe-172-117-218-16.socal.res.rr.com) has joined #nginx
+2020-12-25 07:29:38	<--	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has quit (Remote host closed the connection)
+2020-12-25 07:30:02	-->	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has joined #nginx
+2020-12-25 07:30:59	<--	Sleepy63 (~Sleepy63@47.185.218.67) has quit (Ping timeout: 256 seconds)
+2020-12-25 07:33:23	-->	stfb (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has joined #nginx
+2020-12-25 07:35:14	-->	munio (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-25 07:36:54	<--	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has quit (Ping timeout: 260 seconds)
+2020-12-25 07:38:42	<--	d_vice (~d_vice@BC9DF4C2.mobile.pool.telekom.hu) has quit
+2020-12-25 07:43:02	<--	blahboybaz (~quassel@2601:602:cd00:3a3f:a45c:4bc5:b628:996c) has quit (Ping timeout: 260 seconds)
+2020-12-25 07:46:16	<--	munio (~Thunderbi@188.254.215.199) has quit (Ping timeout: 240 seconds)
+2020-12-25 07:46:24	-->	Sleepy63 (~Sleepy63@47.185.218.67) has joined #nginx
+2020-12-25 07:47:41	-->	munio (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-25 08:02:52	-->	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has joined #nginx
+2020-12-25 08:06:13	<--	stfb (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has quit (Ping timeout: 264 seconds)
+2020-12-25 08:17:34	<--	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-25 08:52:26	-->	seriusam12 (~seirusam@176.234.8.19) has joined #nginx
+2020-12-25 08:54:49	<--	Seriusam (~seirusam@217.131.80.123) has quit (Ping timeout: 264 seconds)
+2020-12-25 09:02:16	<--	unluckyshrubbery (~unluckysh@unaffiliated/unluckyshrubbery) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-25 09:03:07	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-25 09:03:08	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-25 09:05:14	<--	kolbrich (~quassel@185-118-198-140.clients.srvfarm.net) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-25 09:08:08	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 268 seconds)
+2020-12-25 09:08:39	-->	kolbrich (~quassel@185-118-198-140.clients.srvfarm.net) has joined #nginx
+2020-12-25 09:15:33	<--	munio (~Thunderbi@188.254.215.199) has quit (Read error: Connection reset by peer)
+2020-12-25 09:16:41	-->	munio (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-25 09:22:48	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-25 09:25:09	-->	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has joined #nginx
+2020-12-25 09:55:36	-->	stfb (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has joined #nginx
+2020-12-25 09:56:37	<--	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has quit (Ping timeout: 264 seconds)
+2020-12-25 10:03:49	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-25 10:05:45	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-25 10:06:11	<--	seriusam12 (~seirusam@176.234.8.19) has quit (Read error: Connection reset by peer)
+2020-12-25 10:07:34	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-25 10:11:24	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-25 10:14:17	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:16:39	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-25 10:19:15	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:33:44	<--	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-25 10:37:27	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-25 10:42:07	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:44:02	-->	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has joined #nginx
+2020-12-25 10:44:53	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-25 10:45:54	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:53:18	-->	geek (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-25 10:53:47	<--	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-25 10:55:45	<--	killbash (~Geek@unaffiliated/geek) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:04:04	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-25 11:04:05	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:05:01	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-25 11:06:42	<--	gschanuel (~gschanuel@201.89.125.40) has quit (Read error: Connection reset by peer)
+2020-12-25 11:07:27	-->	gschanuel (~gschanuel@201.89.125.40) has joined #nginx
+2020-12-25 11:08:37	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-25 11:08:53	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-25 11:31:15	-->	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has joined #nginx
+2020-12-25 11:38:07	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 256 seconds)
+2020-12-25 11:39:00	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-25 11:40:45	<--	geek (~Geek@unaffiliated/geek) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:42:04	<--	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-25 11:43:12	<--	munio (~Thunderbi@188.254.215.199) has quit (Ping timeout: 256 seconds)
+2020-12-25 11:45:58	-->	munio (~Thunderbi@188.254.215.199) has joined #nginx
+2020-12-25 11:47:02	-->	arcatech (~arcatech@2603-7000-a640-0025-5cf6-6f97-6c0c-03d3.res6.spectrum.com) has joined #nginx
+2020-12-25 12:04:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-25 12:18:30	<--	daniel11420 (~daniel114@unaffiliated/daniel11420) has quit (Ping timeout: 256 seconds)
+2020-12-25 12:26:46	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-25 12:32:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-25 12:40:21	-->	Dunedan_ (~dunedan@unaffiliated/dunedan) has joined #nginx
+2020-12-25 12:42:11	-->	Surfer2011 (~quassel@87.123.119.91) has joined #nginx
+2020-12-25 12:43:26	<--	Dunedan (~dunedan@unaffiliated/dunedan) has quit (Ping timeout: 256 seconds)
+2020-12-25 12:44:34	<--	Surfer2011_ (~quassel@83.135.178.175) has quit (Ping timeout: 246 seconds)
+2020-12-25 12:55:23	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-25 13:04:19	<--	CoreISP (~CoreISP@simplemachines/rootadmin/CoreISP) has quit (Quit: No message)
+2020-12-25 13:04:20	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-25 13:04:51	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-25 13:05:32	<--	thiras (~thiras@unaffiliated/thiras) has quit (Ping timeout: 256 seconds)
+2020-12-25 13:09:29	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 258 seconds)
+2020-12-25 13:48:11	<--	DeadDred (~DeadDred@ns525917.ip-192-99-6.net) has quit (Quit: Ping timeout (120 seconds))
+2020-12-25 13:48:23	-->	DeadDred (~DeadDred@ns525917.ip-192-99-6.net) has joined #nginx
+2020-12-25 13:48:27	<--	indy (~indy@dsl-static-104.213-160-167.telecom.sk) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:50:19	<--	squirrel (~mj@unaffiliated/squirrel) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:50:19	<--	ekl (~ekl@unaffiliated/ekl) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:50:30	-->	ekl- (~ekl@unaffiliated/ekl) has joined #nginx
+2020-12-25 13:50:47	<--	badeball (~jonas@159.65.195.62) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:51:25	-->	badeball (~jonas@159.65.195.62) has joined #nginx
+2020-12-25 13:52:11	<--	nickd25 (~nickd25@unaffiliated/nickd25) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:53:19	-->	indy (~indy@dsl-static-104.213-160-167.telecom.sk) has joined #nginx
+2020-12-25 13:54:02	<--	Yatekii (~yatekii@huesser.dev) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:54:11	-->	squirrel (~mj@unaffiliated/squirrel) has joined #nginx
+2020-12-25 13:55:18	-->	nickd25 (~nickd25@2001:19f0:5c01:3d8:5400:1ff:fe4a:3970) has joined #nginx
+2020-12-25 13:55:18	<--	nickd25 (~nickd25@2001:19f0:5c01:3d8:5400:1ff:fe4a:3970) has quit (Changing host)
+2020-12-25 13:55:18	-->	nickd25 (~nickd25@unaffiliated/nickd25) has joined #nginx
+2020-12-25 13:55:27	-->	Yatekii (~yatekii@huesser.dev) has joined #nginx
+2020-12-25 14:05:42	<--	hata (~caffeine@hata.moe) has quit (Ping timeout: 260 seconds)
+2020-12-25 14:07:30	-->	hata (~caffeine@hata.moe) has joined #nginx
+2020-12-25 14:08:30	<--	eater (~eater@monika.eoc.io) has quit (Ping timeout: 260 seconds)
+2020-12-25 14:09:02	-->	eater (~eater@monika.eoc.io) has joined #nginx
+2020-12-25 14:09:44	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-25 14:16:03	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-25 14:16:24	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #nginx
+2020-12-25 14:22:31	<--	kerframil (~kerframil@gentoo/user/kerframil) has quit (Quit: WeeChat 3.0)
+2020-12-25 14:22:48	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Quit: real life interrupt)
+2020-12-25 14:33:24	-->	Sajesajama (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #nginx
+2020-12-25 14:36:03	<--	qassim (~me@s.qassim.uk) has quit (Ping timeout: 260 seconds)
+2020-12-25 14:36:13	-->	qassim (~me@s.qassim.uk) has joined #nginx
+2020-12-25 14:39:02	<--	killbash (~Geek@unaffiliated/geek) has quit (Ping timeout: 256 seconds)
+2020-12-25 15:46:37	--	irc: disconnected from server
+2020-12-25 15:47:15	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-25 15:47:15	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-25 15:47:15	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-25 15:47:15	--	Channel #nginx: 675 nicks (2 ops, 0 voices, 673 normals)
+2020-12-25 15:47:39	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-25 15:49:38	<--	alexweissman (~alexweiss@c-73-102-58-200.hsd1.in.comcast.net) has quit (Remote host closed the connection)
+2020-12-25 15:51:50	-->	alexweissman (~alexweiss@c-73-102-58-200.hsd1.in.comcast.net) has joined #nginx
+2020-12-26 06:21:47	--	irc: disconnected from server
+2020-12-26 06:22:25	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-26 06:22:25	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-26 06:22:25	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-26 06:22:25	--	Channel #nginx: 681 nicks (2 ops, 0 voices, 679 normals)
+2020-12-26 06:22:50	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-26 06:28:36	<--	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has quit (Ping timeout: 260 seconds)
+2020-12-26 06:31:43	-->	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has joined #nginx
+2020-12-26 06:37:40	-->	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has joined #nginx
+2020-12-26 06:38:22	<--	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-26 06:41:40	-->	blackmesa (~daniel@2a02:908:13c3:8640:4ca0:ba3c:1e06:ef32) has joined #nginx
+2020-12-26 06:45:01	-->	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has joined #nginx
+2020-12-26 06:46:49	<--	blackmesa (~daniel@2a02:908:13c3:8640:4ca0:ba3c:1e06:ef32) has quit (Ping timeout: 268 seconds)
+2020-12-26 07:00:20	<--	OrNix (~OrNix@77.106.248.107) has quit (Ping timeout: 256 seconds)
+2020-12-26 07:03:36	<--	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-26 07:12:33	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-26 07:17:26	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 264 seconds)
+2020-12-26 08:55:32	--	irc: disconnected from server
+2020-12-26 08:56:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-26 08:56:09	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-26 08:56:09	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-26 08:56:09	--	Channel #nginx: 680 nicks (2 ops, 0 voices, 678 normals)
+2020-12-26 08:56:17	<--	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-26 08:56:34	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-26 08:57:50	-->	clonak (~clonak@45.32.141.239) has joined #nginx
+2020-12-26 08:58:48	<--	jvb (josef@vybihal.cz) has quit (Ping timeout: 260 seconds)
+2020-12-26 08:59:02	-->	jvb (josef@vybihal.cz) has joined #nginx
+2020-12-26 09:04:55	--	sandy-claws is now known as poggers
+2020-12-26 09:06:17	<--	kolbrich (~quassel@185-118-198-140.clients.srvfarm.net) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-26 09:07:36	-->	veegee_ (~veegee@142.126.160.36) has joined #nginx
+2020-12-26 09:09:52	--	Swanta-Claus is now known as Swant
+2020-12-26 09:12:26	-->	kolbrich (~quassel@185-118-198-140.clients.srvfarm.net) has joined #nginx
+2020-12-26 09:13:23	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-26 09:15:25	-->	alexweissman (~alexweiss@c-73-102-58-200.hsd1.in.comcast.net) has joined #nginx
+2020-12-26 09:17:46	<--	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-26 09:17:55	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 268 seconds)
+2020-12-26 09:19:00	-->	MenschZwoNull_ (~MenschZwo@2a03:2260:200c:400:94c:ccf2:19cf:7fbe) has joined #nginx
+2020-12-26 09:34:09	<--	jvb (josef@vybihal.cz) has quit (Ping timeout: 244 seconds)
+2020-12-26 09:35:32	-->	jvb (josef@vybihal.cz) has joined #nginx
+2020-12-26 09:53:40	-->	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has joined #nginx
+2020-12-26 09:54:00	-->	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has joined #nginx
+2020-12-26 10:05:05	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2020-12-26 10:07:31	-->	Muimi (~ReedK0@unaffiliated/reedk0) has joined #nginx
+2020-12-26 10:09:36	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-26 10:24:56	<--	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-26 10:27:45	<--	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has quit (Ping timeout: 272 seconds)
+2020-12-26 10:36:30	<--	Xenguy (~Xenguy@devuan/community/Xenguy) has quit (Read error: No route to host)
+2020-12-26 10:37:58	<--	jvb (josef@vybihal.cz) has quit (Ping timeout: 260 seconds)
+2020-12-26 10:38:26	<--	uebera|| (ueberall_l@unaffiliated/ueberall) has quit (Ping timeout: 264 seconds)
+2020-12-26 10:38:52	--	poggers is now known as jess
+2020-12-26 10:41:35	-->	jvb (josef@vybihal.cz) has joined #nginx
+2020-12-26 10:43:02	-->	Xenguy (~Xenguy@devuan/community/Xenguy) has joined #nginx
+2020-12-26 10:47:52	<--	MenschZwoNull_ (~MenschZwo@2a03:2260:200c:400:94c:ccf2:19cf:7fbe) has quit (Ping timeout: 260 seconds)
+2020-12-26 10:48:02	<--	jvb (josef@vybihal.cz) has quit (Ping timeout: 244 seconds)
+2020-12-26 10:56:35	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Quit: real life interrupt)
+2020-12-26 11:12:35	-->	jvb (josef@vybihal.cz) has joined #nginx
+2020-12-26 11:14:19	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-26 11:16:35	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-26 11:17:29	<--	jvb (josef@vybihal.cz) has quit (Ping timeout: 244 seconds)
+2020-12-26 11:18:05	<--	geek (~Geek@unaffiliated/geek) has quit (Ping timeout: 240 seconds)
+2020-12-26 11:19:07	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 260 seconds)
+2020-12-26 11:29:51	-->	jvb (~josef@vybihal.cz) has joined #nginx
+2020-12-26 11:44:21	<--	jvb (~josef@vybihal.cz) has quit (Ping timeout: 244 seconds)
+2020-12-26 11:48:39	-->	Dreamer3 (~Dreamer3@cpe-96-28-189-235.kya.res.rr.com) has joined #nginx
+2020-12-26 11:52:30	-->	jvb (josef@vybihal.cz) has joined #nginx
+2020-12-26 12:00:22	<--	jvb (josef@vybihal.cz) has quit (Ping timeout: 244 seconds)
+2020-12-26 12:03:18	-->	locrian9 (~mike@99-153-255-194.lightspeed.irvnca.sbcglobal.net) has joined #nginx
+2020-12-26 12:04:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-26 12:11:05	<--	daniel11420 (~daniel114@unaffiliated/daniel11420) has quit (Ping timeout: 240 seconds)
+2020-12-26 12:20:22	-->	jvb (josef@vybihal.cz) has joined #nginx
+2020-12-26 12:23:47	-->	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has joined #nginx
+2020-12-26 12:24:58	<--	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has quit (Remote host closed the connection)
+2020-12-26 12:25:32	<--	jvb (josef@vybihal.cz) has quit (Read error: Connection reset by peer)
+2020-12-26 12:25:39	<--	kuku-kuku (~kuku-kuku@unaffiliated/kuku-kuku) has quit (Quit: Leaving)
+2020-12-26 12:26:36	-->	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has joined #nginx
+2020-12-26 12:26:56	<--	kerframil (~kerframil@gentoo/user/kerframil) has quit (Quit: WeeChat 3.0)
+2020-12-26 12:33:43	<--	frostschutz (~frostschu@55d4e87c.access.ecotel.net) has quit (Remote host closed the connection)
+2020-12-26 12:34:04	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #nginx
+2020-12-26 12:38:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-26 12:39:18	-->	Dunedan (~dunedan@unaffiliated/dunedan) has joined #nginx
+2020-12-26 12:41:11	-->	Surfer2011_ (~quassel@i59F7C1D3.versanet.de) has joined #nginx
+2020-12-26 12:42:46	<--	Dunedan_ (~dunedan@unaffiliated/dunedan) has quit (Ping timeout: 256 seconds)
+2020-12-26 12:43:53	<--	chachasmooth (~chachasmo@unaffiliated/chachasmooth) has quit (Ping timeout: 268 seconds)
+2020-12-26 12:43:53	<--	Surfer2011 (~quassel@87.123.119.91) has quit (Ping timeout: 256 seconds)
+2020-12-26 12:45:26	-->	chachasmooth (~chachasmo@unaffiliated/chachasmooth) has joined #nginx
+2020-12-26 12:57:57	<--	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-26 14:29:17	--	irc: disconnected from server
+2020-12-26 14:29:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-26 14:29:54	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-26 14:29:54	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-26 14:29:54	--	Channel #nginx: 674 nicks (2 ops, 0 voices, 672 normals)
+2020-12-26 14:30:09	-->	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has joined #nginx
+2020-12-26 14:30:19	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-26 14:45:32	<--	arcatech (~arcatech@2603-7000-a640-0025-c55c-6412-86a3-823e.res6.spectrum.com) has quit (Quit: Be back later.)
+2020-12-26 14:53:55	-->	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has joined #nginx
+2020-12-26 14:59:09	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-26 15:05:38	<--	Muimi (~ReedK0@unaffiliated/reedk0) has quit (Remote host closed the connection)
+2020-12-26 15:16:01	-->	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has joined #nginx
+2020-12-26 15:20:04	<--	thiras (~thiras@unaffiliated/thiras) has quit (Ping timeout: 240 seconds)
+2020-12-26 15:20:22	<--	xyt (~xyt@2601:643:8880:a0a0:b597:adb4:e8b9:b998) has quit (Ping timeout: 258 seconds)
+2020-12-26 15:22:13	<--	Aelius (~Aelius@unaffiliated/aelius) has quit (Quit: quit)
+2020-12-26 15:22:35	-->	Aelius (~Aelius@unaffiliated/aelius) has joined #nginx
+2020-12-26 15:26:26	-->	blackmesa (~daniel@2a02:908:13c3:8640:21bb:35d:6ba4:362b) has joined #nginx
+2020-12-26 15:27:54	<--	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-26 15:31:57	<--	tds (~tds@lounge.srv.home.timstallard.me.uk) has quit (Ping timeout: 260 seconds)
+2020-12-26 15:55:30	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-26 16:11:40	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-26 16:15:10	-->	Guest20 (~textual@103.215.168.1) has joined #nginx
+2020-12-26 16:15:25	<--	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has quit (Read error: Connection reset by peer)
+2020-12-26 16:16:12	-->	captaintofuburge (captaintof@gateway/vpn/privateinternetaccess/captaintofuburge) has joined #nginx
+2020-12-26 16:20:23	<--	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has quit (Ping timeout: 260 seconds)
+2020-12-26 16:29:54	-->	Jad (~Nashmi@91.186.232.162) has joined #nginx
+2020-12-26 16:30:01	<--	April- (~april@textual/helper/April-) has quit (Quit: Quitting)
+2020-12-26 16:30:55	-->	April- (~april@textual/helper/April-) has joined #nginx
+2020-12-26 16:42:02	<--	maxwilliamson (~maxwillia@gateway/tor-sasl/maxwilliamson) has quit (Remote host closed the connection)
+2020-12-26 16:42:54	-->	maxwilliamson (~maxwillia@gateway/tor-sasl/maxwilliamson) has joined #nginx
+2020-12-26 16:52:46	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-26 16:53:48	<--	Jad (~Nashmi@91.186.232.162) has quit (Quit: Benefits I derive from free­dom are largely the result of the uses of freedom by others, and mostly of those uses of freedom that I could never avail myself of.)
+2020-12-26 16:54:04	-->	Jad (~Nashmi@91.186.232.162) has joined #nginx
+2020-12-26 16:54:56	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-26 16:59:38	-->	longshot (~nobody@ip72-199-148-220.sd.sd.cox.net) has joined #nginx
+2020-12-26 17:02:02	-->	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has joined #nginx
+2020-12-26 17:02:02	<--	black_ant (~antilope@host81-150-177-52.in-addr.btopenworld.com) has quit (Changing host)
+2020-12-26 17:02:02	-->	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has joined #nginx
+2020-12-26 17:03:04	-->	rainmanj_ (~rainmanja@216.161.85.62) has joined #nginx
+2020-12-26 17:05:24	<--	rainmanjam (~rainmanja@216.161.85.62) has quit (Ping timeout: 240 seconds)
+2020-12-26 17:14:02	<--	blackmesa (~daniel@2a02:908:13c3:8640:21bb:35d:6ba4:362b) has quit (Ping timeout: 260 seconds)
+2020-12-26 17:22:14	-->	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has joined #nginx
+2020-12-26 17:24:01	-->	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has joined #nginx
+2020-12-26 17:38:04	<--	Teraii (~teraii@185.219.206.44) has quit (Ping timeout: 240 seconds)
+2020-12-26 17:46:21	-->	blackmesa (~daniel@2a02:908:13c3:8640:21bb:35d:6ba4:362b) has joined #nginx
+2020-12-26 17:48:50	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-26 17:50:14	-->	uebera|| (ueberall_l@unaffiliated/ueberall) has joined #nginx
+2020-12-26 17:51:41	<--	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-26 18:06:13	<--	sunri5e (~sunri5e@unaffiliated/sunri5e) has quit (Quit: goodbye)
+2020-12-26 18:07:39	<--	Xaldafax (~Xaldafax@cpe-104-34-193-119.socal.res.rr.com) has quit (Quit: Bye...)
+2020-12-26 18:19:41	<--	blackmesa (~daniel@2a02:908:13c3:8640:21bb:35d:6ba4:362b) has quit (Ping timeout: 260 seconds)
+2020-12-26 18:24:15	-->	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has joined #nginx
+2020-12-26 18:38:04	-->	xyt (~xyt@c-76-21-23-34.hsd1.ca.comcast.net) has joined #nginx
+2020-12-26 18:39:37	<--	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2020-12-26 18:40:16	<--	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has quit (Quit: Halcyon flies away.)
+2020-12-26 18:42:22	<--	xyt (~xyt@c-76-21-23-34.hsd1.ca.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-26 18:43:12	-->	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has joined #nginx
+2020-12-26 19:00:52	-->	Teraii (~teraii@juraii-s1-1.teraii.net) has joined #nginx
+2020-12-26 19:06:30	-->	normen (~normen@p200300d71740a400f425180eafa486c8.dip0.t-ipconnect.de) has joined #nginx
+2020-12-26 19:07:11	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-26 19:07:15	<--	Anthaas (~Anthaas@unaffiliated/anthaas) has quit (Ping timeout: 240 seconds)
+2020-12-26 19:09:36	-->	Anthaas (~Anthaas@unaffiliated/anthaas) has joined #nginx
+2020-12-26 19:14:25	<--	bvium (~avium@2607:5300:60:40bf::1) has quit (Ping timeout: 264 seconds)
+2020-12-26 19:19:41	-->	geek (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-26 19:23:06	<--	killbash (~Geek@unaffiliated/geek) has quit (Ping timeout: 246 seconds)
+2020-12-26 19:23:50	-->	killbash (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-26 19:25:53	<--	geek (~Geek@unaffiliated/geek) has quit (Ping timeout: 260 seconds)
+2020-12-26 19:43:04	-->	tds (~tds@lounge.srv.home.timstallard.me.uk) has joined #nginx
+2020-12-26 19:48:38	<--	Some_Person (someperson@2600:1700:d02:1c50:ce81:24dc:3854:f698) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-26 19:48:49	<--	jalalsfs (~jalalsfs@unaffiliated/jalalsfs) has quit (Remote host closed the connection)
+2020-12-26 19:50:41	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (Ping timeout: 260 seconds)
+2020-12-26 19:51:59	-->	Some_Person (someperson@2600:1700:d02:1c50:ce81:24dc:3854:f698) has joined #nginx
+2020-12-26 20:00:02	-->	jalalsfs (~jalalsfs@unaffiliated/jalalsfs) has joined #nginx
+2020-12-26 20:15:43	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-26 20:19:49	-->	frostschutz (~frostschu@55d4e4b4.access.ecotel.net) has joined #nginx
+2020-12-26 20:31:42	<--	Xenguy (~Xenguy@devuan/community/Xenguy) has quit (Read error: No route to host)
+2020-12-26 20:35:40	-->	Xenguy (~Xenguy@devuan/community/Xenguy) has joined #nginx
+2020-12-26 20:38:37	-->	xyt (~xyt@2601:643:8880:a0a0:3d9d:544e:d225:6983) has joined #nginx
+2020-12-26 20:42:36	-->	k_89 (~k@2405:201:400a:508a:49a:6277:b9c5:e1a8) has joined #nginx
+2020-12-26 20:43:06	k_89	I have to work on a SaaS where multiple users work on a document collaboratively. Another good to have thing would be a multi-az deployment with geoproximity routing policy. However this conflicts with a different requirement where users can be in different regions like Asia and North America and have to work on the same document. Do I need a custom load-balancer over here which routes the incoming connection to servers in a particular regio
+2020-12-26 20:43:06	k_89	n based on business-logic?
+2020-12-26 20:43:11	<--	xyt (~xyt@2601:643:8880:a0a0:3d9d:544e:d225:6983) has quit (Ping timeout: 260 seconds)
+2020-12-26 20:44:15	MTecknology	what part of that was an nginx question?
+2020-12-26 20:54:51	<--	k_89 (~k@2405:201:400a:508a:49a:6277:b9c5:e1a8) has quit (Quit: Leaving)
+2020-12-26 21:10:24	-->	blackmesa (~daniel@2a02:908:13c3:8640:21bb:35d:6ba4:362b) has joined #nginx
+2020-12-26 21:12:55	<--	CombatVet (~c4@gateway/tor-sasl/combatvet) has quit (Remote host closed the connection)
+2020-12-26 21:13:03	<--	j7k6 (~j7k6@gateway/tor-sasl/j7k6) has quit (Ping timeout: 240 seconds)
+2020-12-26 21:14:23	<--	likewhoa (~likewhoa@li1078-231.members.linode.com) has quit (Ping timeout: 260 seconds)
+2020-12-26 21:14:32	-->	Deknos (~deknos@unaffiliated/menace) has joined #nginx
+2020-12-26 21:14:35	<--	Deknos (~deknos@unaffiliated/menace) has left #nginx
+2020-12-26 21:15:16	-->	j7k6 (~j7k6@gateway/tor-sasl/j7k6) has joined #nginx
+2020-12-26 21:15:27	-->	CombatVet (~c4@gateway/tor-sasl/combatvet) has joined #nginx
+2020-12-27 09:05:28	--	irc: disconnected from server
+2020-12-27 09:06:24	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-27 09:06:24	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-27 09:06:24	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-27 09:06:24	--	Channel #nginx: 686 nicks (2 ops, 0 voices, 684 normals)
+2020-12-27 09:06:48	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-27 09:08:16	<--	kolbrich (~quassel@185-118-198-140.clients.srvfarm.net) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-27 09:09:11	-->	Muimi (~ReedK0@unaffiliated/reedk0) has joined #nginx
+2020-12-27 09:09:49	<--	blackmesa1 (~daniel@2a02:908:13c3:8640:3178:3a94:e795:6ff6) has quit (Ping timeout: 268 seconds)
+2020-12-27 09:11:31	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #nginx
+2020-12-27 09:14:29	-->	kolbrich (~quassel@185-118-198-140.clients.srvfarm.net) has joined #nginx
+2020-12-27 09:17:27	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 09:19:05	-->	geek (~Geek@unaffiliated/geek) has joined #nginx
+2020-12-27 09:22:07	<--	killbash (~Geek@unaffiliated/geek) has quit (Ping timeout: 265 seconds)
+2020-12-27 09:22:39	-->	MenschZwoNull_ (~MenschZwo@2a03:2260:200c:400:94c:ccf2:19cf:7fbe) has joined #nginx
+2020-12-27 09:28:06	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #nginx
+2020-12-27 09:34:01	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 09:39:05	<--	Anthaas (~Anthaas@unaffiliated/anthaas) has quit (Ping timeout: 240 seconds)
+2020-12-27 09:39:46	-->	Wulf4 (~Wulf@unaffiliated/wulf) has joined #nginx
+2020-12-27 09:40:50	-->	blackmesa1 (~daniel@2a02:908:13c3:8640:3178:3a94:e795:6ff6) has joined #nginx
+2020-12-27 09:41:08	-->	Anthaas (~Anthaas@unaffiliated/anthaas) has joined #nginx
+2020-12-27 09:42:37	<--	Wulf (~Wulf@unaffiliated/wulf) has quit (Ping timeout: 240 seconds)
+2020-12-27 09:42:37	--	Wulf4 is now known as Wulf
+2020-12-27 09:49:48	<--	VladTheImplier (~user@dynamic-077-011-163-198.77.11.pool.telefonica.de) has quit (Quit: ERC (IRC client for Emacs 27.1))
+2020-12-27 09:51:45	<--	blackmesa1 (~daniel@2a02:908:13c3:8640:3178:3a94:e795:6ff6) has quit (Ping timeout: 268 seconds)
+2020-12-27 09:55:49	-->	jayjo (jayjo@gateway/vpn/privateinternetaccess/jayjo) has joined #nginx
+2020-12-27 10:07:42	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #nginx
+2020-12-27 10:07:58	<--	lachesis (~lachesis@unaffiliated/lachesis) has quit (Ping timeout: 256 seconds)
+2020-12-27 10:08:14	-->	lachesis (~lachesis@unaffiliated/lachesis) has joined #nginx
+2020-12-27 10:12:52	<--	lachesis (~lachesis@unaffiliated/lachesis) has quit (Ping timeout: 260 seconds)
+2020-12-27 10:13:38	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 10:18:28	-->	lachesis (~lachesis@unaffiliated/lachesis) has joined #nginx
+2020-12-27 10:19:31	<--	jess (jess@freenode/staff/jess) has quit (Quit: Leaving)
+2020-12-27 10:23:26	<--	lachesis (~lachesis@unaffiliated/lachesis) has quit (Ping timeout: 264 seconds)
+2020-12-27 10:24:35	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #nginx
+2020-12-27 10:30:22	-->	MenschZwoNull__ (~MenschZwo@p200300c8574d230077328bb2964baf12.dip0.t-ipconnect.de) has joined #nginx
+2020-12-27 10:31:22	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 10:33:01	<--	MenschZwoNull_ (~MenschZwo@2a03:2260:200c:400:94c:ccf2:19cf:7fbe) has quit (Ping timeout: 272 seconds)
+2020-12-27 10:41:08	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #nginx
+2020-12-30 19:38:47	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-30 19:38:47	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-30 19:38:47	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-30 19:38:47	--	Channel #nginx: 676 nicks (2 ops, 0 voices, 674 normals)
+2020-12-30 19:39:05	<--	qgTG (~qgTG@unaffiliated/qgtg) has quit (Ping timeout: 240 seconds)
+2020-12-30 19:39:12	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-30 19:40:23	<--	Gokturk-Away (~Gokturk@89.205.139.22) has quit (Remote host closed the connection)
+2020-12-30 19:51:29	-->	normen (~normen@p200300d71740a400a11f099a6ed6e97f.dip0.t-ipconnect.de) has joined #nginx
+2020-12-30 20:04:50	<--	normen (~normen@p200300d71740a400a11f099a6ed6e97f.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2020-12-30 20:11:06	-->	normen (~normen@p200300d71740a400a11f099a6ed6e97f.dip0.t-ipconnect.de) has joined #nginx
+2020-12-30 20:37:23	-->	Xenguy (~Xenguy@devuan/community/Xenguy) has joined #nginx
+2020-12-30 20:39:38	<--	Xenguy__ (~Xenguy@devuan/community/Xenguy) has quit (Ping timeout: 264 seconds)
+2020-12-30 20:40:19	<--	GroovyNoodle (~NoodleNet@2a07-a880-4603-10c2-1e69-ad15-36de-7dfe.pool6.ovpn.com) has quit (Quit: Leaving)
+2020-12-30 20:45:32	-->	dar123 (~dar@2600:1700:38d0:1470:e84c:8da6:3c4:6177) has joined #nginx
+2020-12-30 20:49:11	-->	pouyan (~Thunderbi@p549c5787.dip0.t-ipconnect.de) has joined #nginx
+2020-12-30 20:52:28	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-30 20:54:34	<--	Xenguy (~Xenguy@devuan/community/Xenguy) has quit (Ping timeout: 256 seconds)
+2020-12-30 20:55:50	<--	pouyan (~Thunderbi@p549c5787.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2020-12-30 21:03:52	<--	Anthaas (~Anthaas@unaffiliated/anthaas) has quit (Ping timeout: 246 seconds)
+2020-12-30 21:06:33	-->	Anthaas (~Anthaas@unaffiliated/anthaas) has joined #nginx
+2020-12-30 21:09:17	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Read error: No route to host)
+2020-12-30 21:12:05	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #nginx
+2020-12-30 21:25:58	-->	TDT (~TDT@unaffiliated/tdt) has joined #nginx
+2020-12-30 21:30:44	TDT	Hey all.  I'm fairly new to Nginx, and am running into some issues regarding reverse proxies.  Did a few hours of research and testing, and haven't got anywhere.  The use case is that I have a single nginx container as the main point (myhost.mydomain), and other docker containers that have internal links. I verified the internal links are fine.  I'm trying to use "location /container1 {... }" to use proxy_pass to the other docker containers.  The initial
+2020-12-30 21:30:44	TDT	communication attempt is fine, but once that page loads, it's requesting assets that are on the root (/), which nginx (the main point) doesn't know how to deal with.  This is causing web applications to fail entirely.  I looked at rewrite rules to see if there's some way to rewrite the stream coming back, replacing any urls for resources from "/$asset" to "/container1/$asset".  I've found little luck about this.  My goal is to eventually keep those docker
+2020-12-30 21:30:44	TDT	containers hidden from direct access by a client, so I'd prefer not to redirect and to add SSL to the front end aspect of it.  Is there something that I can google that'll help me get past this problem?  I can provide what I've tested so far, if that's useful.
+2020-12-30 21:32:45	-->	Teraii_ (~teraii@pop.92-184-105-92.mobile.abo.orange.fr) has joined #nginx
+2020-12-30 21:33:37	<--	Teraii (~teraii@pop.92-184-105-3.mobile.abo.orange.fr) has quit (Ping timeout: 246 seconds)
+2020-12-30 21:33:39	--	Teraii_ is now known as Teraii
+2020-12-30 21:34:19	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-30 21:35:31	-->	bantu (~bantu@unaffiliated/bantu) has joined #nginx
+2020-12-30 21:37:22	<--	Teraii (~teraii@pop.92-184-105-92.mobile.abo.orange.fr) has quit (Client Quit)
+2020-12-30 21:37:38	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-30 21:40:59	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-30 21:41:19	-->	Teraii (~teraii@pop.92-184-105-92.mobile.abo.orange.fr) has joined #nginx
+2020-12-30 21:45:11	<--	Teraii (~teraii@pop.92-184-105-92.mobile.abo.orange.fr) has quit (Max SendQ exceeded)
+2020-12-30 21:46:07	-->	Teraii (~teraii@pop.92-184-105-92.mobile.abo.orange.fr) has joined #nginx
+2020-12-30 21:46:36	<--	daimon (znc@freebsd/lover/daemon) has quit (Excess Flood)
+2020-12-30 21:46:51	-->	daimon (znc@freebsd/lover/daemon) has joined #nginx
+2020-12-30 21:51:58	<--	Teraii (~teraii@pop.92-184-105-92.mobile.abo.orange.fr) has quit (Quit: %Ho Ishuudaa%)
+2020-12-30 21:53:34	bantu	Hello everyone. Is it possible to specify which signature algorithm (e.g. SHA256 vs SHA512) to use in ECDHE?
+2020-12-30 21:57:55	bantu	More specifically in ECDHE-ECDSA
+2020-12-30 22:02:28	-->	thiras (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-30 22:02:58	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-30 22:03:32	<--	dar123 (~dar@2600:1700:38d0:1470:e84c:8da6:3c4:6177) has quit (Ping timeout: 260 seconds)
+2020-12-30 22:04:50	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-30 22:08:06	-->	Gokturk-Away (~Gokturk@89.205.139.22) has joined #nginx
+2020-12-30 22:18:02	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-30 22:25:15	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #nginx
+2020-12-30 22:29:55	-->	gokugt91 (~gokugt91@ool-43505995.dyn.optonline.net) has joined #nginx
+2020-12-30 22:34:41	localhorst	The signature algo is part of the ssl cipher so you have you specify the ones you want with ssl_ciphers.
+2020-12-30 22:37:45	-->	IanWizard (uid1815@gateway/web/irccloud.com/x-dfnxskpxtvmgsgit) has joined #nginx
+2020-12-30 22:40:46	<--	AJ_Z0 (~AJ_Z0@pdpc/supporter/professional/ajz0) has quit (Ping timeout: 256 seconds)
+2020-12-30 22:42:02	<--	Gokturk-Away (~Gokturk@89.205.139.22) has quit (Ping timeout: 264 seconds)
+2020-12-30 22:42:42	-->	Gokturk-Away (~Gokturk@89.205.139.22) has joined #nginx
+2020-12-31 07:49:37	--	irc: disconnected from server
+2020-12-31 07:50:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-31 07:50:17	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-31 07:50:17	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-31 07:50:17	--	Channel #nginx: 682 nicks (2 ops, 0 voices, 680 normals)
+2020-12-31 07:50:42	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-31 09:21:23	--	irc: disconnected from server
+2020-12-31 09:21:59	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2020-12-31 09:21:59	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2020-12-31 09:21:59	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2020-12-31 09:21:59	--	Channel #nginx: 677 nicks (2 ops, 0 voices, 675 normals)
+2020-12-31 09:22:24	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2020-12-31 09:27:34	<--	pouyan (~Thunderbi@p549c5787.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-31 09:29:01	-->	pouyan (~Thunderbi@p549c5787.dip0.t-ipconnect.de) has joined #nginx
+2020-12-31 09:31:53	-->	Xenguy (~Xenguy@devuan/community/Xenguy) has joined #nginx
+2020-12-31 09:33:49	<--	sebito91 (~sborza@fedora/sborza) has quit (Quit: laterz)
+2020-12-31 09:35:11	-->	sebito91 (~sborza@fedora/sborza) has joined #nginx
+2020-12-31 09:42:37	-->	Muimi (~ReedK0@unaffiliated/reedk0) has joined #nginx
+2020-12-31 09:50:09	-->	Lutin (~Lutin@lfbn-lyo-1-1901-218.w90-65.abo.wanadoo.fr) has joined #nginx
+2020-12-31 09:50:26	<--	pouyan (~Thunderbi@p549c5787.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-31 09:50:55	-->	pouyan (~Thunderbi@p549c5787.dip0.t-ipconnect.de) has joined #nginx
+2020-12-31 09:52:11	<--	IanWizard (uid1815@gateway/web/irccloud.com/x-qphfbemdtlreuqll) has quit (Quit: Connection closed for inactivity)
+2020-12-31 10:01:22	<--	pouyan (~Thunderbi@p549c5787.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-31 10:10:56	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2020-12-31 10:15:54	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #nginx
+2020-12-31 10:21:53	FightingFalcon	MTecknology why are you so angry all the time?
+2020-12-31 10:22:38	MTecknology	This is not a social channel.
+2020-12-31 10:24:15	MTecknology	However, I basically summarized why I get frustrated.   23:53 < MTecknology> You are correct. I do not care to help people who choose to ignore what they are told and refuse to provide useful information.
+2020-12-31 10:24:33	FightingFalcon	We used to be friends in the past, talking in pm etc.
+2020-12-31 10:24:48	FightingFalcon	you changed
+2020-12-31 10:26:24	MTecknology	1) we were not friends 2) you must be thinking of someone else 3) As I said before, this is not a social channel. If you are looking for friends or social banter, there are other channels that are more appropriate.
+2020-12-31 10:29:11	FightingFalcon	I have logs
+2020-12-31 10:32:30	FightingFalcon	you once built a massive password management tool in bash which was designed around gpg.You've done a *lot* of web dev. The biggest web project was probably replacing an entire system of managing MS Office documents. You migrated it to a drupal site that allowed users to create change requests, an email was sent to the networking group, and then someone in the group could review the changes
+2020-12-31 10:32:33	FightingFalcon	correct?
+2020-12-31 10:32:42	<--	berglh (~quassel@ns1.bytefuse.net) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-31 10:37:01	<--	black_ant (~antilope@unaffiliated/black-ant/x-1505394) has quit (Ping timeout: 256 seconds)
+2020-12-31 10:38:20	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-31 10:39:43	-->	RamJett (~ramjett@cpe-172-248-48-247.socal.res.rr.com) has joined #nginx
+2020-12-31 10:39:46	-->	arcatech (~arcatech@2603-7000-a640-0025-1879-8ab6-a3c6-4783.res6.spectrum.com) has joined #nginx
+2020-12-31 10:46:57	-->	ChmEarl (~chmearl@unaffiliated/prymar56) has joined #nginx
+2020-12-31 10:51:20	-->	dar123 (~dar@2600:1700:38d0:1470:9003:abdd:ddd7:bd1e) has joined #nginx
+2020-12-31 10:51:25	<--	rainmanjam (~rainmanja@216.161.85.62) has quit (Ping timeout: 240 seconds)
+2020-12-31 10:59:34	-->	rainmanjam (~rainmanja@216.161.85.62) has joined #nginx
+2020-12-31 11:30:36	<--	thiras (~thiras@unaffiliated/thiras) has quit (Read error: Connection reset by peer)
+2020-12-31 11:30:53	-->	thiras (~thiras@unaffiliated/thiras) has joined #nginx
+2020-12-31 11:44:08	<--	ivan_ (~ivan18m@unaffiliated/ivan18m) has quit (Remote host closed the connection)
+2020-12-31 11:55:04	<--	Lutin (~Lutin@lfbn-lyo-1-1901-218.w90-65.abo.wanadoo.fr) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2020-12-31 11:57:38	-->	prion (~prion@142.167.179.124) has joined #nginx
+2020-12-31 11:58:05	pytorch	o o
+2020-12-31 12:04:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-31 12:06:31	<--	pytorch (~py@c-69-254-188-47.hsd1.fl.comcast.net) has quit (Quit: Leaving.)
+2020-12-31 12:08:57	--	irc: disconnected from server
+2021-01-01 11:08:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2021-01-01 11:08:09	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2021-01-01 11:08:09	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2021-01-01 11:08:09	--	Channel #nginx: 677 nicks (2 ops, 0 voices, 675 normals)
+2021-01-01 11:08:34	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2021-01-01 15:21:35	--	irc: disconnected from server
+2021-01-01 15:22:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2021-01-01 15:22:14	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2021-01-01 15:22:14	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2021-01-01 15:22:14	--	Channel #nginx: 676 nicks (2 ops, 0 voices, 674 normals)
+2021-01-01 15:22:39	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2021-01-01 15:31:11	--	irc: disconnected from server
+2021-01-12 23:09:42	-->	jungdongho (~jungdongh@115.23.138.101) has joined #nginx
+2021-01-12 23:09:42	--	Topic for #nginx is "[Stable: 1.18.0] [Mainline: 1.19.6] <+> Official IRC-based community support for nginx--primarily an HTTP and reverse proxy server. <+> Don't ask to ask; just ask a specific, clear, and concise question/problem/goal. Include configs on our !pastebin at https://paste.nginx.org/ (see: !whypbin). Be patient and wait for a response."
+2021-01-12 23:09:42	--	Topic set by thresh (~popa3d@videolan/developer/thresh) on Tue, 15 Dec 2020 23:54:48
+2021-01-12 23:09:42	--	Channel #nginx: 641 nicks (2 ops, 0 voices, 639 normals)
+2021-01-12 23:10:08	--	Channel created on Sat, 30 Jan 2010 16:48:24
+2021-01-12 23:25:43	<--	dantti (~dantti@191.162.219.191) has quit (Ping timeout: 256 seconds)
+2021-01-12 23:26:02	<--	fourstepper (~fourstepp@static.49.156.119.168.clients.your-server.de) has quit (Remote host closed the connection)
+2021-01-12 23:26:13	-->	fourstepper (~fourstepp@static.49.156.119.168.clients.your-server.de) has joined #nginx
+2021-01-12 23:26:22	--	irc: disconnected from server

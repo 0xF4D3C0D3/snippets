@@ -1,0 +1,458 @@
+2020-12-19 11:05:56	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-19 11:05:56	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-19 11:05:56	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-19 11:05:56	--	Channel #dns: 138 nicks (0 ops, 0 voices, 138 normals)
+2020-12-19 11:05:56	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-19 11:05:57	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-19 11:12:46	<--	pinheadmz (~pinheadmz@71.190.30.138) has quit (Ping timeout: 240 seconds)
+2020-12-19 11:13:35	-->	pinheadmz (~pinheadmz@71.190.30.138) has joined #dns
+2020-12-19 11:17:13	<--	mnathani (~mnathani@142.126.113.219) has quit
+2020-12-19 11:26:10	-->	rjsalts_ (~rjsalts@green.spectralmud.org) has joined #dns
+2020-12-19 11:26:38	-->	audiofreeze (~theology@unaffiliated/theology) has joined #dns
+2020-12-19 11:26:43	<--	Habbie (peter@lorentz.7bits.nl) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:18	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:19	<--	rjsalts (~rjsalts@green.spectralmud.org) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:35	<--	nxnja (~nxnja@185.11.167.215) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:28:37	-->	Habbie (peter@lorentz.7bits.nl) has joined #dns
+2020-12-19 11:55:48	--	irc: disconnected from server
+2020-12-19 11:57:31	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-19 11:57:31	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-19 11:57:31	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-19 11:57:31	--	Channel #dns: 136 nicks (0 ops, 0 voices, 136 normals)
+2020-12-19 11:57:32	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-19 11:57:44	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-19 12:47:53	--	irc: disconnected from server
+2020-12-20 03:36:55	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-20 03:36:55	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-20 03:36:55	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-20 03:36:55	--	Channel #dns: 138 nicks (0 ops, 0 voices, 138 normals)
+2020-12-20 03:36:55	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-20 03:37:08	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 03:56:27	<--	Kishar (~Marco@mob-5-90-100-66.net.vodafone.it) has quit (Ping timeout: 265 seconds)
+2020-12-20 04:03:27	-->	Kishar (~Marco@mob-5-90-100-66.net.vodafone.it) has joined #dns
+2020-12-20 04:06:51	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-20 04:15:34	<--	klonn (~klonn@p200300c7cf38344fa3c510c89eaf10ce.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-20 04:23:37	-->	podge (~podge@2001:8b0:ca70:32b2:25ad:72ad:e336:bfcc) has joined #dns
+2020-12-20 04:24:35	<--	podge (~podge@2001:8b0:ca70:32b2:25ad:72ad:e336:bfcc) has quit (Client Quit)
+2020-12-20 04:26:24	<--	PacKetSlayer (PacketSlay@hellomouse/member/packetslayer) has quit (Quit: Woosh!)
+2020-12-20 04:28:13	-->	PacKetSlayer (PacketSlay@hellomouse/member/packetslayer) has joined #dns
+2020-12-20 04:59:54	<--	petn-randall (~petn-rand@unaffiliated/petn-randall) has left #dns
+2020-12-20 05:17:43	<--	Lazydog (~Lazydog@dynamic-acs-24-101-165-210.zoominternet.net) has quit (Ping timeout: 260 seconds)
+2020-12-20 05:22:06	--	arooni_team_b is now known as arooni
+2020-12-20 05:31:02	-->	Lazydog (Lazydog@gateway/vpn/protonvpn/lazydog) has joined #dns
+2020-12-20 05:44:03	<--	Lazydog (Lazydog@gateway/vpn/protonvpn/lazydog) has quit (Ping timeout: 256 seconds)
+2020-12-20 05:48:57	<--	Hello71 (~Hello71@gateway/tor-sasl/hello71) has quit (Quit: Hello71)
+2020-12-20 05:54:24	--	irc: disconnected from server
+2020-12-20 05:54:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-20 05:54:57	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-20 05:54:57	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-20 05:54:57	--	Channel #dns: 133 nicks (0 ops, 0 voices, 133 normals)
+2020-12-20 05:54:58	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-20 05:55:13	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 05:55:48	-->	Hello71 (~Hello71@gateway/tor-sasl/hello71) has joined #dns
+2020-12-20 05:57:47	-->	Lazydog (~Lazydog@24.101.165.210) has joined #dns
+2020-12-20 06:00:41	--	irc: disconnected from server
+2020-12-20 06:18:28	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-20 06:18:28	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-20 06:18:28	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-20 06:18:28	--	Channel #dns: 135 nicks (0 ops, 0 voices, 135 normals)
+2020-12-20 06:18:28	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-20 06:18:41	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 06:20:42	-->	phenom_ (~primus@unaffiliated/phenom) has joined #dns
+2020-12-20 06:20:44	<--	phenom (~primus@unaffiliated/phenom) has quit (Ping timeout: 256 seconds)
+2020-12-20 16:45:13	--	irc: disconnected from server
+2020-12-20 16:45:50	--	irc: disconnected from server
+2020-12-20 16:46:26	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-20 16:46:26	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-20 16:46:26	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-20 16:46:26	--	Channel #dns: 133 nicks (0 ops, 0 voices, 133 normals)
+2020-12-20 16:46:26	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-20 16:47:12	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 16:58:34	--	irc: disconnected from server
+2020-12-20 16:59:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-20 16:59:34	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-20 16:59:34	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-20 16:59:34	--	Channel #dns: 133 nicks (0 ops, 0 voices, 133 normals)
+2020-12-20 16:59:35	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-20 16:59:48	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 17:03:20	--	irc: disconnected from server
+2020-12-20 17:03:50	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-20 17:03:50	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-20 17:03:50	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-20 17:03:50	--	Channel #dns: 133 nicks (0 ops, 0 voices, 133 normals)
+2020-12-20 17:03:51	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-20 17:04:03	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 18:37:03	-->	Deknos (~deknos@unaffiliated/menace) has joined #dns
+2020-12-20 20:58:22	--	irc: disconnected from server
+2020-12-20 20:59:12	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-20 20:59:12	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-20 20:59:12	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-20 20:59:13	--	Channel #dns: 133 nicks (0 ops, 0 voices, 133 normals)
+2020-12-20 20:59:13	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-20 20:59:58	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 21:56:37	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-20 22:40:35	-->	Kishar (~Marco@mob-5-90-97-150.net.vodafone.it) has joined #dns
+2020-12-20 22:49:37	-->	Deknos (~deknos@unaffiliated/menace) has joined #dns
+2020-12-20 23:24:06	<--	PacKetSlayer (PacketSlay@hellomouse/member/packetslayer) has quit (Quit: Woosh!)
+2020-12-20 23:25:39	-->	PacKetSlayer (PacketSlay@hellomouse/member/packetslayer) has joined #dns
+2020-12-20 23:32:38	<--	MasterdonX (~masterdon@45.9.249.248) has quit (Remote host closed the connection)
+2020-12-20 23:38:12	-->	MasterdonX (~masterdon@45.9.249.244) has joined #dns
+2020-12-21 00:32:29	<--	shokohsc (~shokohsc@117.238.142.88.rev.sfr.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 00:41:22	-->	shokohsc (~shokohsc@117.238.142.88.rev.sfr.net) has joined #dns
+2020-12-21 01:23:37	<--	Kishar (~Marco@mob-5-90-97-150.net.vodafone.it) has quit (Ping timeout: 240 seconds)
+2020-12-21 01:51:09	-->	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has joined #dns
+2020-12-21 02:04:09	<--	Jan\ (~kvirc@104.204.200.116) has quit (Ping timeout: 265 seconds)
+2020-12-21 02:09:48	-->	Jan\ (~kvirc@104.204.200.116) has joined #dns
+2020-12-21 02:09:54	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-21 02:40:30	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:de10:7c95:3101:97c2) has quit (Remote host closed the connection)
+2020-12-21 02:46:30	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-21 02:48:23	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #dns
+2020-12-21 03:17:43	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-21 03:22:25	<--	Guest20 (~textual@103.215.168.1) has quit (Ping timeout: 240 seconds)
+2020-12-21 06:08:51	<--	ircuser-1 (~Johnny@69.62.183.158) has quit (Quit: because)
+2020-12-21 06:08:55	<--	chasmo77 (~chas77@69.62.183.158) has quit (Quit: It's just that easy)
+2020-12-21 06:13:37	-->	audiocat (~theology@unaffiliated/theology) has joined #dns
+2020-12-21 06:55:54	<--	Poster|z (~poster@cpe-174-105-216-210.columbus.res.rr.com) has quit (Ping timeout: 256 seconds)
+2020-12-21 13:06:56	--	irc: disconnected from server
+2020-12-21 13:07:42	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-21 13:07:42	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-21 13:07:42	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-21 13:07:42	--	Channel #dns: 130 nicks (0 ops, 0 voices, 130 normals)
+2020-12-21 13:07:42	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-21 13:08:28	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-21 13:52:38	<--	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has quit (Quit: Ex-Chat)
+2020-12-21 13:56:13	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-21 14:08:16	-->	eelstrebor (~eelstrebo@198.178.29.136) has joined #dns
+2020-12-21 14:09:14	<--	eelstrebor (~eelstrebo@198.178.29.136) has quit (Max SendQ exceeded)
+2020-12-21 14:11:33	-->	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has joined #dns
+2020-12-21 14:39:19	-->	audioburn (~theology@unaffiliated/theology) has joined #dns
+2020-12-21 14:45:03	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 264 seconds)
+2020-12-22 05:26:07	--	irc: disconnected from server
+2020-12-22 05:26:55	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-22 05:26:55	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-22 05:26:55	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-22 05:26:55	--	Channel #dns: 129 nicks (0 ops, 0 voices, 129 normals)
+2020-12-22 05:26:55	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-22 05:27:41	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-22 06:08:23	<--	lunaphyte (~lunaphyte@unaffiliated/lunaphyte) has quit (Quit: leaving)
+2020-12-22 06:10:30	<--	rob0 (~rob0@Shibboleet.slackbuilds.org) has quit (Changing host)
+2020-12-22 06:10:30	-->	rob0 (~rob0@pdpc/valentine/postfixninja/rob0) has joined #dns
+2020-12-22 06:12:04	-->	lunaphyte (~lunaphyte@unaffiliated/lunaphyte) has joined #dns
+2020-12-22 06:30:52	-->	ircuser-1 (~Johnny@69.62.183.158) has joined #dns
+2020-12-22 06:31:42	-->	chasmo77 (~chas77@69.62.183.158) has joined #dns
+2020-12-22 07:08:15	-->	audioburn (~theology@unaffiliated/theology) has joined #dns
+2020-12-22 08:23:27	<--	chromis (sid150893@gateway/web/irccloud.com/x-qcdcgonxllfmcrlz) has quit (Ping timeout: 264 seconds)
+2020-12-22 08:23:28	<--	ErgoXX____ (sid219675@gateway/web/irccloud.com/x-lxbcuuyqttmhmsoz) has quit (Ping timeout: 272 seconds)
+2020-12-22 08:30:11	<--	Jan\ (~kvirc@104.204.200.116) has quit (Ping timeout: 265 seconds)
+2020-12-22 08:43:13	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-22 09:00:37	-->	echoSMILE (~censured@unaffiliated/echosmile) has joined #dns
+2020-12-22 09:07:12	-->	audioburn (~theology@unaffiliated/theology) has joined #dns
+2020-12-22 09:13:57	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 258 seconds)
+2020-12-22 09:51:53	-->	pepperoni (pepperoni@gateway/vpn/privateinternetaccess/pepperoni) has joined #dns
+2020-12-22 09:52:23	pepperoni	what should resolv.conf settings be if the router is set to use dns servers in the openvpn config?
+2020-12-22 09:52:45	pepperoni	would /etc/resolv.conf override the nameservers in the router if set?
+2020-12-22 10:16:36	SpiritHorse	usually it's the other way around, openvpn would update resolv.conf with the DNS spec'd in the openvpn config
+2020-12-22 10:16:45	SpiritHorse	and then replace it with orig on exit
+2020-12-22 10:35:04	pepperoni	ok, thanks, then that's certianly not happening, apparently my host network config file is setting resolv.conf
+2020-12-22 11:49:23	-->	jayjo (~jayjo@unaffiliated/jayjo) has joined #dns
+2020-12-22 11:49:45	<--	jayjo- (jayjo@gateway/vpn/privateinternetaccess/jayjo) has quit (Ping timeout: 240 seconds)
+2020-12-22 11:51:18	-->	jayjo- (jayjo@gateway/vpn/privateinternetaccess/jayjo) has joined #dns
+2020-12-22 11:55:30	<--	jayjo (~jayjo@unaffiliated/jayjo) has quit (Ping timeout: 268 seconds)
+2020-12-22 12:45:09	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #dns
+2020-12-22 12:48:07	<--	Surfer2011_ (~quassel@83.135.220.11) has quit (Ping timeout: 256 seconds)
+2020-12-22 12:59:54	-->	jayjo (jayjo@gateway/vpn/privateinternetaccess/jayjo) has joined #dns
+2020-12-22 13:01:56	<--	jayjo- (jayjo@gateway/vpn/privateinternetaccess/jayjo) has quit (Ping timeout: 240 seconds)
+2020-12-22 13:54:18	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-22 13:58:43	<--	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has quit (Quit: Ex-Chat)
+2020-12-22 14:06:44	rob0	Funny thing about all you VPN redirectors; you don't get how easy it is to manage your DNS.  All you have to do is pick a public DNS provider, like 8.8.8.8 or 1.1.1.1, but that ALONE in your resolv.conf, and don't let DHCP change it.
+2020-12-22 14:07:04	rob0	s/but/put/
+2020-12-22 15:02:02	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:61c4:522d:d31a:c4c6) has joined #dns
+2020-12-22 15:02:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 15:25:40	-->	Guest20 (~textual@192.146.154.3) has joined #dns
+2020-12-22 15:40:27	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:61c4:522d:d31a:c4c6) has quit (Ping timeout: 272 seconds)
+2020-12-22 15:42:45	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:6345:33f7:c51:d19a) has joined #dns
+2020-12-22 16:49:17	-->	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has joined #dns
+2020-12-22 17:02:42	<--	nutron (~nutron@unaffiliated/nutron) has quit (Ping timeout: 256 seconds)
+2020-12-22 17:17:45	-->	MarkS- (~mark@unaffiliated/mark21) has joined #dns
+2020-12-22 17:24:48	<--	koobs (~koobs@freebsd/developer/koobs) has quit (Ping timeout: 268 seconds)
+2020-12-22 17:38:23	-->	Guest20_ (~textual@103.215.168.1) has joined #dns
+2020-12-22 17:38:24	<--	Guest20 (~textual@192.146.154.3) has quit (Ping timeout: 256 seconds)
+2020-12-22 17:43:06	-->	koobs (~koobs@freebsd/developer/koobs) has joined #dns
+2020-12-22 19:04:53	<--	nag (nagyon@vasaconsulting.com) has quit (Quit: asdf)
+2020-12-22 19:05:32	-->	nag (nagyon@vasaconsulting.com) has joined #dns
+2020-12-22 19:19:37	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:6345:33f7:c51:d19a) has quit (Ping timeout: 260 seconds)
+2020-12-22 19:28:09	-->	chromis (sid150893@gateway/web/irccloud.com/x-yrzrsrqjpqbsjlno) has joined #dns
+2020-12-22 19:28:14	<--	Guest20_ (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 19:30:23	-->	ErgoXX____ (sid219675@gateway/web/irccloud.com/x-pejrdfsmpwyjejhy) has joined #dns
+2020-12-22 19:36:37	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:287a:c5bf:dcb9:e76a) has joined #dns
+2020-12-22 19:58:31	-->	Noti (~steffan@77-164-7-116.fixed.kpn.net) has joined #dns
+2020-12-22 20:04:56	<--	Noti (~steffan@77-164-7-116.fixed.kpn.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 20:15:50	<--	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has quit (Remote host closed the connection)
+2020-12-22 20:19:09	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-22 20:22:52	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #dns
+2020-12-22 20:24:38	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:287a:c5bf:dcb9:e76a) has quit (Ping timeout: 264 seconds)
+2020-12-22 20:57:58	-->	Noti (~steffan@185.2.243.3) has joined #dns
+2020-12-22 21:21:55	-->	ncuxo (~ncuxo@ip-109-42-113-117.web.vodafone.de) has joined #dns
+2020-12-22 21:24:16	<--	dob1 (~dob1@unaffiliated/dob1) has quit (Remote host closed the connection)
+2020-12-22 21:25:00	-->	dob1 (~dob1@unaffiliated/dob1) has joined #dns
+2020-12-22 21:36:43	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-22 22:32:37	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-22 22:32:54	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #dns
+2020-12-22 22:47:26	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-22 22:49:59	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #dns
+2020-12-22 22:58:53	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 23:15:05	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Ping timeout: 240 seconds)
+2020-12-22 23:15:41	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #dns
+2020-12-22 23:16:37	<--	dob1 (~dob1@unaffiliated/dob1) has quit (Remote host closed the connection)
+2020-12-22 23:17:33	-->	dob1 (~dob1@unaffiliated/dob1) has joined #dns
+2020-12-22 23:21:58	-->	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has joined #dns
+2020-12-22 23:25:36	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Ping timeout: 256 seconds)
+2020-12-22 23:26:36	-->	Surfer2011 (~quassel@i59F7A58C.versanet.de) has joined #dns
+2020-12-22 23:38:46	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-22 23:42:45	-->	rauldux (~rauldux@151.56.39.206) has joined #dns
+2020-12-22 23:44:36	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #dns
+2020-12-22 23:56:08	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:d540:ec64:3ce7:e485) has joined #dns
+2020-12-23 00:58:40	--	irc: disconnected from server
+2020-12-23 11:06:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-23 11:06:17	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-23 11:06:17	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-23 11:06:17	--	Channel #dns: 131 nicks (0 ops, 0 voices, 131 normals)
+2020-12-23 11:06:17	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-23 11:06:26	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-23 12:44:05	-->	Surfer2011_ (~quassel@i59F776AE.versanet.de) has joined #dns
+2020-12-23 12:47:01	<--	Surfer2011 (~quassel@i59F7A58C.versanet.de) has quit (Ping timeout: 256 seconds)
+2020-12-23 13:47:04	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-23 14:04:00	<--	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has quit (Quit: Ex-Chat)
+2020-12-23 15:21:07	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:922f:898f:c462:15ba) has joined #dns
+2020-12-23 15:28:15	<--	audiocat (~theology@unaffiliated/theology) has quit (Ping timeout: 240 seconds)
+2020-12-23 15:31:58	-->	Ericounet_ (~Eric@2a01:e0a:d0:3c20:2c7a:37ed:d870:d65) has joined #dns
+2020-12-23 15:33:32	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:922f:898f:c462:15ba) has quit (Ping timeout: 260 seconds)
+2020-12-23 15:54:53	<--	Ericounet_ (~Eric@2a01:e0a:d0:3c20:2c7a:37ed:d870:d65) has quit (Quit: Je m'en vais ...)
+2020-12-23 16:08:10	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:2c7a:37ed:d870:d65) has joined #dns
+2020-12-23 16:13:49	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:2c7a:37ed:d870:d65) has quit (Ping timeout: 264 seconds)
+2020-12-23 16:21:53	-->	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has joined #dns
+2020-12-23 17:00:39	<--	proteusguy (~proteusgu@cm-58-10-154-202.revip7.asianet.co.th) has quit (Ping timeout: 268 seconds)
+2020-12-23 17:05:22	--	irc: disconnected from server
+2020-12-23 17:05:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-23 17:05:57	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-23 17:05:57	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-23 17:05:57	--	Channel #dns: 130 nicks (0 ops, 0 voices, 130 normals)
+2020-12-23 17:05:57	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-23 17:06:06	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-23 17:13:33	-->	proteusguy (~proteusgu@cm-58-10-154-202.revip7.asianet.co.th) has joined #dns
+2020-12-23 17:22:02	-->	Starship8012 (~slevec@p5dd9d5e4.dip0.t-ipconnect.de) has joined #dns
+2020-12-23 18:03:49	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:2744:7e3c:a097:dd5f) has joined #dns
+2020-12-23 18:48:54	<--	qgTG (~qgTG@unaffiliated/qgtg) has quit (Quit: quit)
+2020-12-23 18:49:14	-->	qgTG (~qgTG@unaffiliated/qgtg) has joined #dns
+2020-12-23 19:01:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-23 20:47:10	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-23 20:58:46	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:2744:7e3c:a097:dd5f) has quit (Ping timeout: 260 seconds)
+2020-12-23 21:33:13	<--	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has quit (Quit: WeeChat 2.3)
+2020-12-23 21:49:43	-->	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has joined #dns
+2020-12-23 21:57:59	<--	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has quit (Quit: Ex-Chat)
+2020-12-24 06:11:04	--	irc: disconnected from server
+2020-12-24 06:11:38	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-24 06:11:38	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-24 06:11:38	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-24 06:11:38	--	Channel #dns: 133 nicks (0 ops, 0 voices, 133 normals)
+2020-12-24 06:11:39	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-24 06:11:48	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-24 07:10:14	<--	audiocat (~theology@unaffiliated/theology) has quit (Ping timeout: 264 seconds)
+2020-12-24 11:23:00	--	irc: disconnected from server
+2020-12-24 11:23:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-24 11:23:34	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-24 11:23:34	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-24 11:23:34	--	Channel #dns: 130 nicks (0 ops, 0 voices, 130 normals)
+2020-12-24 11:23:35	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-24 11:23:44	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-24 11:56:24	-->	audiocat (~theology@unaffiliated/theology) has joined #dns
+2020-12-24 19:00:38	--	irc: disconnected from server
+2020-12-24 19:01:12	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-24 19:01:12	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-24 19:01:12	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-24 19:01:12	--	Channel #dns: 131 nicks (0 ops, 0 voices, 131 normals)
+2020-12-24 19:01:13	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-24 19:01:22	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-24 19:42:02	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:d8fd:f2cd:c9:5c54) has quit (Ping timeout: 264 seconds)
+2020-12-24 19:43:07	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-24 20:23:59	<--	Starship8012 (~slevec@p5dd9d5e4.dip0.t-ipconnect.de) has quit (Quit: Nettalk6 - www.ntalk.de)
+2020-12-25 01:06:19	--	irc: disconnected from server
+2020-12-25 01:07:05	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-25 01:07:05	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-25 01:07:05	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-25 01:07:05	--	Channel #dns: 130 nicks (0 ops, 0 voices, 130 normals)
+2020-12-25 01:07:06	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-25 01:07:15	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-25 01:13:18	<--	pinheadmz (~pinheadmz@2601:194:8380:70c3:c12:1b13:52b1:d900) has quit (Quit: pinheadmz)
+2020-12-25 02:15:32	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-25 03:04:04	-->	Kishar (~Marco@84.33.119.77) has joined #dns
+2020-12-25 03:22:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-25 03:30:28	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:699e:ba5:4133:8a7d) has quit (Remote host closed the connection)
+2020-12-25 03:30:41	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:7036:6ffe:65aa:2dec) has joined #dns
+2020-12-25 03:32:01	<--	Kishar (~Marco@84.33.119.77) has quit (Remote host closed the connection)
+2020-12-25 03:45:57	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-25 03:52:12	-->	anemoiac (~anemoiac@23.226.128.210) has joined #dns
+2020-12-25 04:10:33	<--	anemoiac (~anemoiac@23.226.128.210) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-25 04:37:16	-->	Sajesajama (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #dns
+2020-12-25 04:37:43	-->	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has joined #dns
+2020-12-25 04:39:57	-->	Sajesajama_ (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #dns
+2020-12-25 04:41:48	<--	Sajesajama_ (Salsa@gateway/vpn/protonvpn/sajesajama) has quit (Remote host closed the connection)
+2020-12-25 06:58:26	--	irc: disconnected from server
+2020-12-25 06:59:05	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-25 06:59:05	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-25 06:59:05	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-25 06:59:05	--	Channel #dns: 130 nicks (0 ops, 0 voices, 130 normals)
+2020-12-25 06:59:07	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-25 06:59:14	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-25 08:33:32	-->	Jan\ (~kvirc@104.204.200.116) has joined #dns
+2020-12-25 08:49:30	<--	nitdega (~nitdega@2600:1700:3570:fa7f:2b66:cb62:ee92:789a) has quit (Read error: Connection reset by peer)
+2020-12-25 08:54:59	-->	nitdega (~nitdega@2600:1700:3570:fa7f:2b66:cb62:ee92:789a) has joined #dns
+2020-12-25 09:51:22	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-25 12:42:11	-->	Surfer2011 (~quassel@87.123.119.91) has joined #dns
+2020-12-25 12:44:34	<--	Surfer2011_ (~quassel@83.135.178.175) has quit (Ping timeout: 246 seconds)
+2020-12-25 12:55:31	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-25 13:49:14	-->	tomreyn_ (~tomreyn@archmage.megaglest.org) has joined #dns
+2020-12-25 13:49:51	<--	tomreyn (~tomreyn@megaglest/team/tomreyn) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:54:08	<--	eelstrebor (~eelstrebo@198-178-29-136.scb.ne.static.allophone.net) has quit (Quit: Ex-Chat)
+2020-12-25 14:01:21	<--	tomreyn_ (~tomreyn@archmage.megaglest.org) has quit (Changing host)
+2020-12-25 14:01:21	-->	tomreyn_ (~tomreyn@megaglest/team/tomreyn) has joined #dns
+2020-12-25 14:04:21	--	tomreyn_ is now known as tomreyn
+2020-12-25 14:09:44	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-25 14:16:03	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-25 14:16:24	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #dns
+2020-12-25 14:25:59	-->	audioburn (~theology@unaffiliated/theology) has joined #dns
+2020-12-25 14:33:25	-->	Sajesajama (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #dns
+2020-12-25 15:46:36	--	irc: disconnected from server
+2020-12-25 15:47:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-25 15:47:14	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-25 15:47:14	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-25 15:47:14	--	Channel #dns: 131 nicks (0 ops, 0 voices, 131 normals)
+2020-12-25 15:47:17	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-25 15:47:23	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-26 06:21:47	--	irc: disconnected from server
+2020-12-26 06:22:25	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-26 06:22:25	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-26 06:22:25	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-26 06:22:25	--	Channel #dns: 133 nicks (0 ops, 0 voices, 133 normals)
+2020-12-26 06:22:26	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-26 06:22:34	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-26 08:55:32	--	irc: disconnected from server
+2020-12-26 08:56:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-26 08:56:09	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-26 08:56:09	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-26 08:56:09	--	Channel #dns: 132 nicks (0 ops, 0 voices, 132 normals)
+2020-12-26 08:56:10	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-26 08:56:19	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-26 10:11:28	<--	kwork (~quassel@unaffiliated/kwork) has quit (Ping timeout: 256 seconds)
+2020-12-26 10:43:00	-->	pinheadmz (~pinheadmz@c-73-47-0-251.hsd1.ma.comcast.net) has joined #dns
+2020-12-26 11:25:02	<--	WaitAreUEvenACat (~theology@unaffiliated/theology) has quit (Ping timeout: 265 seconds)
+2020-12-26 11:29:52	<--	pinheadmz (~pinheadmz@c-73-47-0-251.hsd1.ma.comcast.net) has quit (Quit: pinheadmz)
+2020-12-26 11:33:42	-->	pinheadmz (~pinheadmz@2601:194:8380:70c3:5494:2cb7:e036:d6a3) has joined #dns
+2020-12-26 11:39:31	<--	pinheadmz (~pinheadmz@2601:194:8380:70c3:5494:2cb7:e036:d6a3) has quit (Quit: pinheadmz)
+2020-12-26 12:41:11	-->	Surfer2011_ (~quassel@i59F7C1D3.versanet.de) has joined #dns
+2020-12-26 12:43:53	<--	Surfer2011 (~quassel@87.123.119.91) has quit (Ping timeout: 256 seconds)
+2020-12-26 14:29:17	--	irc: disconnected from server
+2020-12-26 14:29:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-26 14:29:54	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-26 14:29:54	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-26 14:29:54	--	Channel #dns: 129 nicks (0 ops, 0 voices, 129 normals)
+2020-12-26 14:29:55	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-26 14:30:03	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-26 15:31:57	<--	tds (~tds@lounge.srv.home.timstallard.me.uk) has quit (Ping timeout: 260 seconds)
+2020-12-26 15:45:43	-->	emilengler (~emilengle@stratum0/entity/emilengler) has joined #dns
+2020-12-26 15:55:27	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-26 16:11:40	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-26 16:14:09	-->	Guest20 (~textual@103.215.168.1) has joined #dns
+2020-12-26 16:14:52	emilengler	Is the data transmitted over the DNS protocol always in 7-bit ASCII?
+2020-12-26 16:15:32	Peng	Which data? No.
+2020-12-26 16:17:45	emilengler	Peng: Just in general. Also I would consider Punycode as ASCII here. Just wanna be sure if storing protocol in an 8-bit signed char is ok
+2020-12-26 16:17:53	emilengler	protocol data*
+2020-12-26 16:20:39	Peng	"the data" is really vague. But, as I said, no.
+2020-12-26 16:21:01	Peng	Most aspects of DNS is or can be non-ASCII on the wire.
+2020-12-26 16:21:50	Peng	Labels are arbitrary binary data, but case insensitive in a way equivalent to ASCII.
+2020-12-26 16:37:28	-->	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has joined #dns
+2020-12-26 16:51:25	<--	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has quit (Remote host closed the connection)
+2020-12-26 16:51:38	-->	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has joined #dns
+2020-12-26 17:08:03	-->	Kishar (~Marco@84.33.119.77) has joined #dns
+2020-12-26 17:09:40	<--	emilengler (~emilengle@stratum0/entity/emilengler) has quit (Quit: Leaving)
+2020-12-26 17:10:01	<--	audioburn (~theology@unaffiliated/theology) has quit (Remote host closed the connection)
+2020-12-26 17:10:23	<--	Ericounet (~Eric@2a01:e0a:d0:3c20:5748:168b:db61:696c) has quit (Remote host closed the connection)
+2020-12-26 17:14:04	-->	Ericounet (~Eric@2a01:e0a:d0:3c20:d9da:d159:caf6:43dc) has joined #dns
+2020-12-26 17:32:24	<--	koobs (~koobs@freebsd/developer/koobs) has quit (Ping timeout: 240 seconds)
+2020-12-26 18:58:55	<--	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has quit (Remote host closed the connection)
+2020-12-26 18:59:09	-->	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has joined #dns
+2020-12-26 19:07:11	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-26 19:27:25	<--	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has quit (Remote host closed the connection)
+2020-12-26 19:27:40	-->	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has joined #dns
+2020-12-26 19:42:52	-->	tds (~tds@lounge.srv.home.timstallard.me.uk) has joined #dns
+2020-12-26 19:47:47	<--	Kishar (~Marco@84.33.119.77) has quit (Quit: WeeChat 2.3)
+2020-12-26 19:53:25	<--	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has quit (Remote host closed the connection)
+2020-12-26 19:53:39	-->	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has joined #dns
+2020-12-26 20:06:25	<--	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has quit (Remote host closed the connection)
+2020-12-26 20:06:39	-->	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has joined #dns
+2020-12-26 20:15:20	<--	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has quit (Remote host closed the connection)
+2020-12-26 20:15:39	-->	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has joined #dns
+2020-12-26 20:30:55	<--	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has quit (Remote host closed the connection)
+2020-12-26 20:31:09	-->	ShapeShifter499 (~ShapeShif@unaffiliated/shapeshifter499) has joined #dns
+2020-12-27 09:05:27	--	irc: disconnected from server
+2020-12-27 09:06:23	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-27 09:06:23	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-27 09:06:23	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-27 09:06:23	--	Channel #dns: 130 nicks (0 ops, 0 voices, 130 normals)
+2020-12-27 09:06:25	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-27 09:06:32	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-27 09:55:49	-->	jayjo (jayjo@gateway/vpn/privateinternetaccess/jayjo) has joined #dns
+2020-12-27 09:56:02	<--	pinheadmz (~pinheadmz@2601:194:8380:70c3:a55c:e472:eaa4:f3ee) has quit (Quit: pinheadmz)
+2020-12-27 10:33:45	-->	koobs (~koobs@freebsd/developer/koobs) has joined #dns
+2020-12-30 19:38:46	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-30 19:38:46	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-30 19:38:46	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-30 19:38:46	--	Channel #dns: 133 nicks (0 ops, 0 voices, 133 normals)
+2020-12-30 19:38:47	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-30 19:38:56	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-30 19:39:05	<--	qgTG (~qgTG@unaffiliated/qgtg) has quit (Ping timeout: 240 seconds)
+2020-12-30 19:43:58	-->	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has joined #dns
+2020-12-30 19:53:14	<--	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has quit (Quit: WeeChat 2.3)
+2020-12-30 19:53:33	-->	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has joined #dns
+2020-12-30 19:54:05	<--	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has quit (Client Quit)
+2020-12-30 19:55:28	-->	Kishar (~Marco@net-93-147-12-220.cust.vodafonedsl.it) has joined #dns
+2020-12-30 21:29:04	<--	emilengler (~emilengle@stratum0/entity/emilengler) has quit (Quit: Leaving)
+2020-12-30 22:17:27	<--	pinheadmz (~pinheadmz@68.161.139.178) has quit (Quit: pinheadmz)
+2020-12-30 22:18:02	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-31 07:49:33	--	irc: disconnected from server
+2020-12-31 07:50:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-31 07:50:17	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-31 07:50:17	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-31 07:50:17	--	Channel #dns: 132 nicks (0 ops, 0 voices, 132 normals)
+2020-12-31 07:50:18	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-31 07:50:26	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-31 09:21:22	--	irc: disconnected from server
+2020-12-31 09:21:59	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2020-12-31 09:21:59	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2020-12-31 09:21:59	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2020-12-31 09:21:59	--	Channel #dns: 131 nicks (0 ops, 0 voices, 131 normals)
+2020-12-31 09:22:00	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2020-12-31 09:22:08	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-31 12:08:57	--	irc: disconnected from server
+2021-01-01 11:08:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2021-01-01 11:08:09	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2021-01-01 11:08:09	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2021-01-01 11:08:09	--	Channel #dns: 130 nicks (0 ops, 0 voices, 130 normals)
+2021-01-01 11:08:10	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2021-01-01 11:08:19	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2021-01-01 15:21:35	--	irc: disconnected from server
+2021-01-01 15:22:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2021-01-01 15:22:14	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2021-01-01 15:22:14	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2021-01-01 15:22:14	--	Channel #dns: 130 nicks (0 ops, 0 voices, 130 normals)
+2021-01-01 15:22:14	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2021-01-01 15:22:24	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2021-01-01 15:24:45	<--	hendry (~hendry@210.23.22.2) has quit (Ping timeout: 240 seconds)
+2021-01-01 15:31:11	--	irc: disconnected from server
+2021-01-12 23:09:42	-->	jungdongho (~jungdongh@115.23.138.101) has joined #dns
+2021-01-12 23:09:42	--	Topic for #dns is "Get help with DNS related problems or issues here || See http://dns-channel.github.io for software versions and more"
+2021-01-12 23:09:42	--	Topic set by twkm on Tue, 29 Jan 2019 00:09:37
+2021-01-12 23:09:42	--	Channel #dns: 135 nicks (0 ops, 0 voices, 135 normals)
+2021-01-12 23:09:43	--	PvNotice(ChanServ): You keep using CNAME records. "I dont think they mean what you think they mean" -Inigo Montoya
+2021-01-12 23:09:52	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2021-01-12 23:26:22	--	irc: disconnected from server

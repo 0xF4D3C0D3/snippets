@@ -1,0 +1,28 @@
+2020-12-19 07:41:35	jungdongho	help
+2020-12-19 07:41:35	--	NickServ: ***** NickServ Help *****
+2020-12-19 07:41:35	--	NickServ: NickServ allows users to 'register' a nickname, and stop
+2020-12-19 07:41:35	--	NickServ: others from using that nick. NickServ allows the owner of a
+2020-12-19 07:41:35	--	NickServ: nickname to disconnect a user from the network that is using
+2020-12-19 07:41:35	--	NickServ: their nickname.
+2020-12-19 07:41:35	--	NickServ:  
+2020-12-19 07:41:35	--	NickServ: For more information on a command, type:
+2020-12-19 07:41:35	--	NickServ: /msg NickServ help <command>
+2020-12-19 07:41:35	--	NickServ: For a verbose listing of all commands, type:
+2020-12-19 07:41:35	--	NickServ: /msg NickServ help commands
+2020-12-19 07:41:35	--	NickServ:  
+2020-12-19 07:41:35	--	NickServ: The following commands are available:
+2020-12-19 07:41:35	--	NickServ: GHOST           Reclaims use of a nickname.
+2020-12-19 07:41:35	--	NickServ: GROUP           Adds a nickname to your account.
+2020-12-19 07:41:35	--	NickServ: IDENTIFY        Identifies to services for a nickname.
+2020-12-19 07:41:35	--	NickServ: INFO            Displays information on registrations.
+2020-12-19 07:41:35	--	NickServ: LISTCHANS       Lists channels that you have access to.
+2020-12-19 07:41:35	--	NickServ: REGISTER        Registers a nickname.
+2020-12-19 07:41:35	--	NickServ: RELEASE         Releases a services enforcer.
+2020-12-19 07:41:35	--	NickServ: SENDPASS        Email registration passwords.
+2020-12-19 07:41:35	--	NickServ: SET             Sets various control flags.
+2020-12-19 07:41:35	--	NickServ: UNGROUP         Removes a nickname from your account.
+2020-12-19 07:41:35	--	NickServ:  
+2020-12-19 07:41:35	--	NickServ: Other commands: ACC, ACCESS, CERT, DROP, HELP, LISTLOGINS, 
+2020-12-19 07:41:35	--	NickServ:                 LISTOWNMAIL, LOGOUT, REGAIN, SETPASS, STATUS, 
+2020-12-19 07:41:35	--	NickServ:                 TAXONOMY, VACATION, VERIFY
+2020-12-19 07:41:35	--	NickServ: ***** End of Help *****

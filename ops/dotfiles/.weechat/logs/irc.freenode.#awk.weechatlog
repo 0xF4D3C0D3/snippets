@@ -1,0 +1,204 @@
+2020-12-19 11:04:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-19 11:04:35	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-19 11:04:35	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-19 11:04:35	--	Channel #awk: 115 nicks (0 ops, 0 voices, 115 normals)
+2020-12-19 11:04:35	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-19 11:04:36	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-19 11:25:33	<--	uplime (nchambers@learnprogramming/staff/nchambers) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:26:09	-->	uplime (nchambers@learnprogramming/staff/nchambers) has joined #awk
+2020-12-19 11:27:18	<--	geirha (~geirha@gina.it.ntnu.no) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:28:50	-->	geirha (~geirha@gina.it.ntnu.no) has joined #awk
+2020-12-19 11:55:47	--	irc: disconnected from server
+2020-12-19 11:57:31	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-19 11:57:31	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-19 11:57:31	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-19 11:57:31	--	Channel #awk: 115 nicks (0 ops, 0 voices, 115 normals)
+2020-12-19 11:57:32	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-19 11:57:36	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-19 12:04:05	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-19 12:24:35	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-19 12:32:03	<--	phillbush (~phillbush@179.214.32.124) has quit (Quit: Leaving)
+2020-12-19 12:47:53	--	irc: disconnected from server
+2020-12-20 03:36:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-20 03:36:54	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-20 03:36:54	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-20 03:36:54	--	Channel #awk: 122 nicks (0 ops, 0 voices, 122 normals)
+2020-12-20 03:36:55	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-20 03:37:00	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-20 04:06:51	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-20 04:17:12	<--	e36freak (~e36freak@unaffiliated/e36freak) has quit (Ping timeout: 256 seconds)
+2020-12-20 04:18:49	-->	e36freak (~e36freak@unaffiliated/e36freak) has joined #awk
+2020-12-20 05:00:48	<--	GoldenBear (~gb@95.57.207.203) has quit (Ping timeout: 260 seconds)
+2020-12-20 05:07:14	-->	GoldenBear (~gb@95.57.207.203) has joined #awk
+2020-12-20 05:38:59	<--	code-witch (~code-witc@150.129.88.5) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-20 05:54:24	--	irc: disconnected from server
+2020-12-20 05:54:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-20 05:54:57	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-20 05:54:57	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-20 05:54:57	--	Channel #awk: 120 nicks (0 ops, 0 voices, 120 normals)
+2020-12-20 05:54:58	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-20 05:55:05	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-20 05:58:02	<--	fanta1 (~fanta1@p200300f76f0a720029b5d9e1a679817f.dip0.t-ipconnect.de) has quit (Quit: fanta1)
+2020-12-20 06:00:41	--	irc: disconnected from server
+2020-12-20 06:18:28	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-20 06:18:28	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-20 06:18:28	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-20 06:18:28	--	Channel #awk: 119 nicks (0 ops, 0 voices, 119 normals)
+2020-12-20 06:18:28	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-20 06:18:33	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-20 16:45:13	--	irc: disconnected from server
+2020-12-20 16:45:50	--	irc: disconnected from server
+2020-12-20 16:46:18	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-20 16:46:18	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-20 16:46:18	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-20 16:46:18	--	Channel #awk: 113 nicks (0 ops, 0 voices, 113 normals)
+2020-12-20 16:46:18	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-20 16:47:04	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-20 16:57:34	<--	std0ut79 (~rodsM8FHD@172.58.35.140) has quit (Read error: Connection reset by peer)
+2020-12-20 16:57:40	-->	std0ut79 (~rodsM8FHD@172.58.35.140) has joined #awk
+2020-12-20 16:58:34	--	irc: disconnected from server
+2020-12-20 16:59:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-20 16:59:34	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-20 16:59:34	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-20 16:59:34	--	Channel #awk: 113 nicks (0 ops, 0 voices, 113 normals)
+2020-12-20 16:59:35	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-20 16:59:40	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-20 17:03:20	--	irc: disconnected from server
+2020-12-20 17:03:50	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-20 17:03:50	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-20 17:03:50	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-20 17:03:50	--	Channel #awk: 113 nicks (0 ops, 0 voices, 113 normals)
+2020-12-20 17:03:51	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-20 17:03:55	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-20 17:04:30	<--	edlou (uid413273@gateway/web/irccloud.com/x-mlxuzsznaqnxtuce) has quit (Quit: Connection closed for inactivity)
+2020-12-20 18:02:07	<--	std0ut79 (~rodsM8FHD@172.58.35.140) has quit (Read error: Connection reset by peer)
+2020-12-20 18:03:25	-->	std0ut79 (~rodsM8FHD@172.58.35.140) has joined #awk
+2020-12-20 20:58:22	--	irc: disconnected from server
+2020-12-20 20:59:04	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-20 20:59:04	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-20 20:59:04	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-20 20:59:05	--	Channel #awk: 116 nicks (0 ops, 0 voices, 116 normals)
+2020-12-20 20:59:05	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-20 20:59:50	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-20 21:11:35	<--	code-witch (~code-witc@150.129.88.5) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-20 21:16:46	-->	code-witch (~code-witc@150.129.88.5) has joined #awk
+2020-12-20 21:34:49	<--	code-witch (~code-witc@150.129.88.5) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-20 21:52:16	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #awk
+2020-12-20 21:56:31	-->	Guest20 (~textual@103.215.168.1) has joined #awk
+2020-12-20 21:57:40	-->	code-witch (~code-witc@150.129.88.5) has joined #awk
+2020-12-20 22:26:23	-->	spiri (~spiri@unaffiliated/spiri) has joined #awk
+2020-12-20 22:45:47	<--	code-witch (~code-witc@150.129.88.5) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-20 23:00:22	-->	edlou (uid413273@gateway/web/irccloud.com/x-tsmbyvbgwxuqhiqz) has joined #awk
+2020-12-20 23:03:20	-->	phillbush (~phillbush@179.214.32.124) has joined #awk
+2020-12-20 23:09:44	-->	simbioz (~simbioz@unaffiliated/simbioz) has joined #awk
+2020-12-20 23:13:43	-->	code-witch (~code-witc@150.129.88.5) has joined #awk
+2020-12-20 23:32:33	<--	GoldenBear (~gb@95.57.207.203) has quit (Remote host closed the connection)
+2020-12-20 23:38:14	-->	GoldenBear (~gb@95.57.207.195) has joined #awk
+2020-12-21 00:04:13	-->	rodsM8FHD2 (~rodsM8FHD@172.58.35.140) has joined #awk
+2020-12-21 00:04:24	<--	std0ut79 (~rodsM8FHD@172.58.35.140) has quit (Ping timeout: 260 seconds)
+2020-12-21 00:24:10	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #awk
+2020-12-21 00:49:05	<--	aliss (~ypm@159.red-83-35-215.dynamicip.rima-tde.net) has quit (Quit: WeeChat 3.0)
+2020-12-21 00:54:52	-->	aliss (~ypm@159.red-83-35-215.dynamicip.rima-tde.net) has joined #awk
+2020-12-21 01:37:10	-->	ChmEarl (~chmearl@unaffiliated/prymar56) has joined #awk
+2020-12-21 01:42:52	<--	pr3d4t0r (~zhenya01@varenka.cime.net) has quit (Quit: WeeChat 2.8)
+2020-12-21 01:46:17	-->	pr3d4t0r (~zhenya01@varenka.cime.net) has joined #awk
+2020-12-21 02:09:54	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-21 02:25:40	<--	aliss (~ypm@159.red-83-35-215.dynamicip.rima-tde.net) has quit (Quit: dinner)
+2020-12-21 02:28:51	<--	ccx^xmpp (a9e9603b49@srv2.blesmrt.net) has quit (Ping timeout: 264 seconds)
+2020-12-21 02:35:24	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #awk
+2020-12-21 03:10:55	-->	netman (~netman@185.94.249.222) has joined #awk
+2020-12-21 03:13:20	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Remote host closed the connection)
+2020-12-21 03:18:15	-->	Guest20 (~textual@103.215.168.1) has joined #awk
+2020-12-21 03:22:25	<--	Guest20 (~textual@103.215.168.1) has quit (Ping timeout: 240 seconds)
+2020-12-21 03:36:20	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-21 04:03:06	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Remote host closed the connection)
+2020-12-21 04:03:41	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #awk
+2020-12-21 04:05:26	--	Nicks #awk: [[RMS] _val_ AJ_Z0 amosbird annihilannic AS AT-x310 aucotsi axisys bleb blink bolt boubou bougyman Camusensei ccl CcxWrk Celmor[m]1 chasmo77 ChmEarl code-witch codedmart crose demiurge demonbane devster31 dionys DJ-ArcAngel DK2 dlb76 donofrio dornick dysfigured e36freak earnestly eb0t eblip edlou Ekho enzotib epony eruditass fanta1 feliks fford filotek folivora funabashi Gabi gavlee geirha genpaku ghoti gigetoo gnomon GoldenBear goulix hvxgr ibex izabera jacobian jan6 jungdongho kerframil Kumool likewhoa ljharb llua maedox mawk Media_Thor mete milkii mingdao mknod mnrmnaugh mute n-st natechan netman nmz no-n odc olspookishmagus OMGOMG Patsie paul Peasant65 phillbush pr3d4t0r psych094[m] quesker radkos RadoQ rodsM8FHD2 semitones senzilla shbot simbioz simpl_e spiri sptz sze tag tm trn ullbeking uplime user282069 vlm waldo323 weylin wuseman wwilliam xelxebar xxzz yeti yitz yokel znf }ls{]
+2020-12-21 04:05:26	--	Channel #awk: 121 nicks (0 ops, 0 voices, 121 normals)
+2020-12-21 04:20:04	-->	aliss (~ypm@159.red-83-35-215.dynamicip.rima-tde.net) has joined #awk
+2020-12-21 04:20:28	<--	aliss (~ypm@159.red-83-35-215.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-21 04:20:49	-->	aliss (~ypm@159.red-83-35-215.dynamicip.rima-tde.net) has joined #awk
+2020-12-21 04:25:44	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 256 seconds)
+2020-12-21 04:26:22	<--	spiri (~spiri@unaffiliated/spiri) has quit (Quit: Leaving)
+2020-12-21 04:32:01	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #awk
+2020-12-21 04:43:05	<--	aliss (~ypm@159.red-83-35-215.dynamicip.rima-tde.net) has quit (Ping timeout: 256 seconds)
+2020-12-21 04:44:28	<--	code-witch (~code-witc@150.129.88.5) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-21 05:06:18	<--	wuseman (~wuseman@unaffiliated/wuseman) has quit (Remote host closed the connection)
+2020-12-21 05:16:43	-->	aliss (~ypm@159.red-83-35-215.dynamicip.rima-tde.net) has joined #awk
+2020-12-21 05:26:24	-->	wuseman (~wuseman@unaffiliated/wuseman) has joined #awk
+2020-12-21 05:28:48	<--	dionys (dionys@gateway/shell/blinkenshell.org/x-uyltobwfoexpwewh) has quit (Quit: dionys)
+2020-12-21 05:29:07	-->	dionys (dionys@gateway/shell/blinkenshell.org/x-cmbyynfwnzrwdxod) has joined #awk
+2020-12-21 05:31:53	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #awk
+2020-12-21 05:53:13	-->	waldo323_ (~waldo323@d149-67-45-83.clv.wideopenwest.com) has joined #awk
+2020-12-21 05:54:25	<--	waldo323 (~waldo323@d149-67-45-83.clv.wideopenwest.com) has quit (Ping timeout: 240 seconds)
+2020-12-21 06:06:13	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #awk
+2020-12-21 06:08:55	<--	chasmo77 (~chas77@69.62.183.158) has quit (Quit: It's just that easy)
+2020-12-21 06:10:43	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-21 06:13:20	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 268 seconds)
+2020-12-21 06:15:13	<--	fanta1 (~fanta1@p200300f76f0d90001d7a528accb54cd0.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-21 06:37:08	<--	AT-x310 (~AT-x310@atoulouse-156-1-28-106.w86-222.abo.wanadoo.fr) has quit (Ping timeout: 246 seconds)
+2020-12-21 06:39:20	-->	AT-x310 (~AT-x310@abordeaux-651-1-87-83.w90-5.abo.wanadoo.fr) has joined #awk
+2020-12-21 06:50:05	-->	client35 (adae5d3b@gateway/web/cgi-irc/kiwiirc.com/ip.173.174.93.59) has joined #awk
+2020-12-21 06:56:27	<--	rodsM8FHD2 (~rodsM8FHD@172.58.35.140) has quit (Read error: Connection reset by peer)
+2020-12-21 13:06:55	--	irc: disconnected from server
+2020-12-21 13:07:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-21 13:07:34	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-21 13:07:34	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-21 13:07:34	--	Channel #awk: 115 nicks (0 ops, 0 voices, 115 normals)
+2020-12-21 13:07:34	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-21 13:08:20	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-21 13:14:32	<--	tm (~sinnlos@unaffiliated/tm) has quit (Ping timeout: 265 seconds)
+2020-12-21 13:17:29	-->	tm (~sinnlos@unaffiliated/tm) has joined #awk
+2020-12-21 13:17:55	-->	vlm (~vlm@gateway/tor-sasl/vlm) has joined #awk
+2020-12-21 13:39:41	-->	code-witch (~code-witc@150.129.88.5) has joined #awk
+2020-12-21 13:58:40	-->	Guest20 (~textual@103.215.168.1) has joined #awk
+2020-12-21 14:01:02	<--	fford (~fford@unaffiliated/fford) has quit (Quit: WeeChat 1.5)
+2020-12-21 14:05:53	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Quit: real life interrupt)
+2020-12-21 14:11:44	<--	donofrio (~donofrio@host-252.subnet-17.med.umich.edu) has quit (Remote host closed the connection)
+2020-12-21 14:23:46	-->	earnestly (~earnestly@unaffiliated/earnestly) has joined #awk
+2020-12-21 14:40:57	<--	GoldenBear (~gb@95.57.207.195) has quit (Ping timeout: 240 seconds)
+2020-12-21 14:46:23	-->	GoldenBear (~gb@95.57.207.195) has joined #awk
+2020-12-21 14:48:36	<--	phillbush (~phillbush@179.214.32.124) has quit (Remote host closed the connection)
+2020-12-21 14:48:57	-->	phillbush (~phillbush@179.214.32.124) has joined #awk
+2020-12-21 14:50:43	<--	ChmEarl (~chmearl@unaffiliated/prymar56) has quit (Quit: Leaving)
+2020-12-22 05:26:07	--	irc: disconnected from server
+2020-12-22 05:26:47	-->	jungdongho (~jungdongh@115.23.138.101) has joined #awk
+2020-12-22 05:26:47	--	Topic for #awk is "Paste at: http://gist.github.com or http://ix.io | Wiki: http://awk.freeshell.org/ | Reference: http://xrl.us/gnuref | FAQ: http://xrl.us/4wkf4q | POSIX: http://xrl.us/awk1p | Regex: #regex | e36freak's libs: https://github.com/e36freak/awk-libs | HTML input?  Use scrapy instead - http://scrapy.org | Please ask your question and be patient, someone will get to you."
+2020-12-22 05:26:47	--	Topic set by e36freak (~e36freak@unaffiliated/e36freak) on Sat, 23 Mar 2019 12:41:19
+2020-12-22 05:26:47	--	Channel #awk: 121 nicks (0 ops, 0 voices, 121 normals)
+2020-12-22 05:26:47	--	PvNotice(ChanServ): Welcome to #awk.  Please ask your question clearly, and someone will help you out as soon as possible.  This is not an extremely active channel, so please be patient. You WILL be helped, though.  In the meantime, feel free to run '/topic' and look through the available information, your question may be answered there
+2020-12-22 05:27:33	--	Channel created on Sun, 26 Nov 2006 15:42:48
+2020-12-22 05:59:01	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Remote host closed the connection)
+2020-12-22 05:59:26	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #awk
+2020-12-22 06:04:36	<--	spiri (~spiri@unaffiliated/spiri) has quit (Ping timeout: 240 seconds)
+2020-12-22 06:05:36	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Remote host closed the connection)
+2020-12-22 06:05:55	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #awk
+2020-12-22 06:26:55	-->	phillbush (~phillbush@179.214.32.124) has joined #awk
+2020-12-22 06:31:00	-->	chasmo77 (~chas77@69.62.183.158) has joined #awk
+2020-12-22 06:32:29	-->	std0ut79 (~rodsM8FHD@172.58.35.140) has joined #awk
+2020-12-22 06:33:00	<--	maedox (sid2021@gateway/web/irccloud.com/x-jbuqolqmmtoplfle) has quit (Ping timeout: 258 seconds)
+2020-12-22 06:33:29	<--	OMGOMG (~bobrobert@nami.ifi.uio.no) has quit (Ping timeout: 256 seconds)
+2020-12-22 06:34:03	-->	maedox (sid2021@gateway/web/irccloud.com/x-gdrzjdmwklehduxp) has joined #awk
+2020-12-22 06:34:53	-->	OMGOMG (~bobrobert@nami.ifi.uio.no) has joined #awk
+2020-12-22 06:55:38	<--	peaceguy (~peaceguy@unaffiliated/peaceguy) has quit (Quit: leaving)
+2020-12-22 07:50:50	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #awk
+2020-12-22 07:57:42	<--	phillbush (~phillbush@179.214.32.124) has quit (Quit: Leaving)
+2020-12-22 08:20:07	<--	aliss (~ypm@39.red-88-22-57.staticip.rima-tde.net) has quit (Remote host closed the connection)
+2020-12-22 08:20:28	-->	aliss (~ypm@39.red-88-22-57.staticip.rima-tde.net) has joined #awk
+2020-12-22 08:23:27	<--	maedox (sid2021@gateway/web/irccloud.com/x-gdrzjdmwklehduxp) has quit (Ping timeout: 264 seconds)
+2020-12-22 08:56:47	-->	phillbush (~phillbush@179.214.32.124) has joined #awk
+2020-12-22 09:11:11	<--	aliss (~ypm@39.red-88-22-57.staticip.rima-tde.net) has quit (Quit: nini)
+2020-12-22 09:29:17	<--	NeoCron (~neocron_@p200300c4cf43fe00741fa2c6e5a278dc.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-22 09:35:25	-->	irc_user (uid423822@gateway/web/irccloud.com/x-zpqgavcurwhmhgkg) has joined #awk
+2020-12-22 09:53:03	<--	crose (~weechat@2001:41d0:fe1d:5300:3512:16d2:5d96:3072) has quit (Quit: WeeChat 3.0-dev)
+2020-12-22 10:16:50	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 268 seconds)
+2020-12-22 10:21:13	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #awk
+2020-12-22 10:27:13	<--	Patsie (patsie@patsie.nl) has quit (Ping timeout: 264 seconds)
+2020-12-22 10:35:39	<--	phillbush (~phillbush@179.214.32.124) has quit (Remote host closed the connection)
+2020-12-22 11:04:28	-->	client35 (4c1e6056@gateway/web/cgi-irc/kiwiirc.com/ip.76.30.96.86) has joined #awk
+2020-12-22 11:13:45	<--	}ls{ (~kalle@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2020-12-22 11:29:43	-->	}ls{ (~kalle@unaffiliated/ls/x-8089558) has joined #awk
+2020-12-22 12:03:03	<--	vlm (~vlm@gateway/tor-sasl/vlm) has quit (Ping timeout: 240 seconds)
+2020-12-22 12:12:44	<--	simbioz (~simbioz@unaffiliated/simbioz) has quit (Remote host closed the connection)
+2020-12-22 12:13:45	-->	simbioz (~simbioz@unaffiliated/simbioz) has joined #awk
+2020-12-22 12:16:36	<--	earnestly (~earnestly@unaffiliated/earnestly) has quit (Ping timeout: 240 seconds)

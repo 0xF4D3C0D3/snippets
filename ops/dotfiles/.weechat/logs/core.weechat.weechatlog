@@ -1,0 +1,1831 @@
+2020-12-19 03:57:20		New key binding (context "default"): meta2-1;5P => /bar scroll buflist * -100%
+2020-12-19 03:57:20		New key binding (context "default"): meta2-1;5Q => /bar scroll buflist * +100%
+2020-12-19 03:57:20		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2020-12-19 03:57:20		New key binding (context "default"): meta2-1;3Q => /bar scroll buflist * e
+2020-12-19 03:57:20		New key binding (context "default"): meta2-1;3P => /bar scroll buflist * b
+2020-12-19 03:57:20		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2020-12-19 03:57:20		New key binding (context "default"): meta-B => /buflist toggle
+2020-12-19 03:57:20		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2020-12-19 03:57:20		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2020-12-19 03:57:20		New key binding (context "default"): meta-meta2-12~ => /bar scroll buflist * e
+2020-12-19 03:57:20		New key binding (context "default"): meta-meta2-11~ => /bar scroll buflist * b
+2020-12-19 03:57:20		New key binding (context "default"): meta2-12^ => /bar scroll buflist * +100%
+2020-12-19 03:57:20		New key binding (context "default"): meta2-12~ => /bar scroll buflist * +100%
+2020-12-19 03:57:20		New key binding (context "default"): meta2-11^ => /bar scroll buflist * -100%
+2020-12-19 03:57:20		New key binding (context "default"): meta2-11~ => /bar scroll buflist * -100%
+2020-12-19 03:57:20		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 03:57:41		No server
+2020-12-19 03:57:46		No server
+2020-12-19 03:58:10	=!=	No help available, "irc.server.*" is not a command or an option
+2020-12-19 03:58:22	=!=	irc: unable to add temporary server "freenode" because the addition of temporary servers with command /connect is currently disabled
+2020-12-19 03:58:22	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2020-12-19 03:58:48	=!=	irc: unable to add temporary server "chat.freenoed.net" because the addition of temporary servers with command /connect is currently disabled
+2020-12-19 03:58:48	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2020-12-19 03:59:08		irc: server added: freenode
+2020-12-19 04:05:00		[irc]  /list  [-server <server>] [-re <regex>] [<channel>[,<channel>...]] [<target>]
+2020-12-19 04:05:00		list channels and their topic
+2020-12-19 04:05:00		 server: send to this server (internal name)
+2020-12-19 04:05:00		  regex: POSIX extended regular expression used to filter results (case insensitive, can start by "(?-i)" to become case sensitive)
+2020-12-19 04:05:00		channel: channel to list
+2020-12-19 04:05:00		 target: server name
+2020-12-19 04:05:00		Examples:
+2020-12-19 04:05:00		  list all channels on server (can be very slow on large networks):
+2020-12-19 04:05:00		    /list
+2020-12-19 04:05:00		  list channel #weechat:
+2020-12-19 04:05:00		    /list #weechat
+2020-12-19 04:05:00		  list all channels beginning with "#weechat" (can be very slow on large networks):
+2020-12-19 04:05:00		    /list -re #weechat.*
+2020-12-19 04:12:43	=!=	Error: unknown command "/channel" (type /help for help)
+2020-12-19 04:12:45		[core]
+2020-12-19 04:12:45		  away     debug    key      proxy    set      window 
+2020-12-19 04:12:45		  bar      eval     layout   quit     unset  
+2020-12-19 04:12:45		  buffer   filter   mouse    reload   upgrade
+2020-12-19 04:12:45		  color    help     mute     repeat   uptime 
+2020-12-19 04:12:45		  command  history  plugin   save     version
+2020-12-19 04:12:45		  cursor   input    print    secure   wait   
+2020-12-19 04:12:45		[fifo]
+2020-12-19 04:12:45		  fifo
+2020-12-19 04:12:45		[buflist]
+2020-12-19 04:12:45		  buflist
+2020-12-19 04:12:45		[xfer]
+2020-12-19 04:12:45		  me  xfer
+2020-12-19 04:12:45		[ruby]
+2020-12-19 04:12:45		  ruby
+2020-12-19 04:12:45		[lua]
+2020-12-19 04:12:45		  lua
+2020-12-19 04:12:45		[perl]
+2020-12-19 04:12:45		  perl
+2020-12-19 04:12:45		[relay]
+2020-12-19 04:12:45		  relay
+2020-12-19 04:12:45		[fset]
+2020-12-19 04:12:45		  fset
+2020-12-19 04:12:45		[python]
+2020-12-19 04:12:45		  python
+2020-12-19 04:12:45		[charset]
+2020-12-19 04:12:45		  charset
+2020-12-19 04:12:45		[logger]
+2020-12-19 04:12:45		  logger
+2020-12-19 04:12:45		[guile]
+2020-12-19 04:12:45		  guile
+2020-12-19 04:12:45		[trigger]
+2020-12-19 04:12:45		  trigger
+2020-12-19 04:12:45		[irc]
+2020-12-19 04:12:45		  admin       ison        part        squit     
+2020-12-19 04:12:45		  allchan     join        ping        stats     
+2020-12-19 04:12:45		  allpv       kick        pong        summon    
+2020-12-19 04:12:45		  allserv     kickban     query       time      
+2020-12-19 04:12:45		  ban         kill        quiet       topic     
+2020-12-19 04:12:45		  cap         links       quote       trace     
+2020-12-19 04:12:45		  connect     list        reconnect   unban     
+2020-12-19 04:12:45		  ctcp        lusers      rehash      unquiet   
+2020-12-19 04:12:45		  cycle       map         remove      userhost  
+2020-12-19 04:12:45		  dcc         me          restart     users     
+2020-12-19 04:12:45		  dehalfop    mode        sajoin      version   
+2020-12-19 04:12:45		  deop        motd        samode      voice     
+2020-12-19 04:12:45		  devoice     msg         sanick      wallchops 
+2020-12-19 04:12:45		  die         names       sapart      wallops   
+2020-12-19 04:12:45		  disconnect  nick        saquit      who       
+2020-12-19 04:12:45		  halfop      notice      server      whois     
+2020-12-19 04:12:45		  ignore      notify      service     whowas    
+2020-12-19 04:12:45		  info        op          servlist  
+2020-12-19 04:12:45		  invite      oper        squery    
+2020-12-19 04:12:45		[alias]
+2020-12-19 04:12:45		  AAWAY    CHAT     K        N        UB       WII    
+2020-12-19 04:12:45		  alias    CL       KB       Q        UMODE    WM     
+2020-12-19 04:12:45		  ANICK    CLOSE    LEAVE    REDRAW   V        WW     
+2020-12-19 04:12:45		  BEEP     EXIT     M        SAY      W      
+2020-12-19 04:12:45		  BYE      IG       MSGBUF   SIGNOFF  WC     
+2020-12-19 04:12:45		  C        J        MUB      T        WI     
+2020-12-19 04:12:45		[tcl]
+2020-12-19 04:12:45		  tcl
+2020-12-19 04:12:45		[script]
+2020-12-19 04:12:45		  script
+2020-12-19 04:12:45		[exec]
+2020-12-19 04:12:45		  exec
+2020-12-19 04:12:57	=!=	Too few arguments for command "/nick" (help on command: /help nick)
+2020-12-19 04:13:11		[irc]  /nick  [-all] <nick>
+2020-12-19 04:13:11		change current nick
+2020-12-19 04:13:11		-all: set new nick for all connected servers
+2020-12-19 04:13:11		nick: new nick
+2020-12-19 04:16:27		Option changed: irc.server.freenode.username = "jungdongho"  (default if null: "jungdongho")
+2020-12-19 04:16:40		Option changed: irc.server.freenode.realname = "jungdongho"  (default if null: "")
+2020-12-19 04:16:43	=!=	Error: option "irc.server.freenode.realnam" not found
+2020-12-19 04:16:57		Option changed: irc.server.freenode.autoconnect = on  (default if null: off)
+2020-12-19 04:19:09		Option changed: irc.server.freenode.sasl_username = "jungdongho"  (default if null: "")
+2020-12-19 04:19:27		Option changed: irc.server.freenode.sasl_password = "wjdehdgh"  (default if null: "")
+2020-12-19 04:20:07		Passphrase added
+2020-12-19 04:20:33		Secured data "freenode_password" set
+2020-12-19 04:20:33		Options saved to sec.conf
+2020-12-19 04:21:03		Option changed: irc.server.freenode.sasl_password = "${sec.data.freenode_password}"  (default if null: "")
+2020-12-19 04:45:40	=!=	irc: server "freenode" already exists, can't add it!
+2020-12-19 04:45:54	=!=	irc: you can not delete server "freenode" because you are connected to. Try "/disconnect freenode" before.
+2020-12-19 04:46:04		irc: server freenode has been deleted
+2020-12-19 04:46:26		irc: server added: freenode
+2020-12-19 04:57:43		script: downloading list of scripts...
+2020-12-19 04:57:46		script: 364 scripts for WeeChat 2.9
+2020-12-19 04:57:48		python: loading script "/home/jungdongho/.weechat/python/grep.py"
+2020-12-19 04:57:48		python: registered script "grep", version 0.8.4 (Search in buffers and logs)
+2020-12-19 04:58:36		[core]  /key  list|listdefault|listdiff [<context>]
+2020-12-19 04:58:36		              bind <key> [<command> [<args>]]
+2020-12-19 04:58:36		              bindctxt <context> <key> [<command> [<args>]]
+2020-12-19 04:58:36		              unbind <key>
+2020-12-19 04:58:36		              unbindctxt <context> <key>
+2020-12-19 04:58:36		              reset <key>
+2020-12-19 04:58:36		              resetctxt <context> <key>
+2020-12-19 04:58:36		              resetall -yes [<context>]
+2020-12-19 04:58:36		              missing [<context>]
+2020-12-19 04:58:36		bind/unbind keys
+2020-12-19 04:58:36		       list: list all current keys (without argument, this list is displayed)
+2020-12-19 04:58:36		listdefault: list default keys
+2020-12-19 04:58:36		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2020-12-19 04:58:36		    context: name of context ("default" or "search")
+2020-12-19 04:58:36		       bind: bind a command to a key or display command bound to key (for context "default")
+2020-12-19 04:58:36		   bindctxt: bind a command to a key or display command bound to key, for given context
+2020-12-19 04:58:36		    command: command (many commands can be separated by semicolons)
+2020-12-19 04:58:36		     unbind: remove a key binding (for context "default")
+2020-12-19 04:58:36		 unbindctxt: remove a key binding for given context
+2020-12-19 04:58:36		      reset: reset a key to default binding (for context "default")
+2020-12-19 04:58:36		  resetctxt: reset a key to default binding, for given context
+2020-12-19 04:58:36		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2020-12-19 04:58:36		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2020-12-19 04:58:36		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2020-12-19 04:58:36		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2020-12-19 04:58:36		          *: any area on screen
+2020-12-19 04:58:36		       chat: chat area (any buffer)
+2020-12-19 04:58:36		  chat(xxx): chat area for buffer with name "xxx" (full name including plugin)
+2020-12-19 04:58:36		     bar(*): any bar
+2020-12-19 04:58:36		   bar(xxx): bar "xxx"
+2020-12-19 04:58:36		    item(*): any bar item
+2020-12-19 04:58:36		  item(xxx): bar item "xxx"
+2020-12-19 04:58:36		Wildcard "*" is allowed in key to match many mouse events.
+2020-12-19 04:58:36		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2020-12-19 04:58:36		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2020-12-19 04:58:36		Examples:
+2020-12-19 04:58:36		  key alt-t to toggle nicklist bar:
+2020-12-19 04:58:36		    /key bind meta-t /bar toggle nicklist
+2020-12-19 04:58:36		  key alt-r to jump to #weechat IRC channel:
+2020-12-19 04:58:36		    /key bind meta-r /buffer #weechat
+2020-12-19 04:58:36		  restore default binding for key alt-r:
+2020-12-19 04:58:36		    /key reset meta-r
+2020-12-19 04:58:36		  key "tab" to stop search in buffer:
+2020-12-19 04:58:36		    /key bindctxt search ctrl-I /input search_stop
+2020-12-19 04:58:36		  middle button of mouse on a nick to retrieve info on nick:
+2020-12-19 04:58:36		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2020-12-19 04:58:50		[core]  /key  list|listdefault|listdiff [<context>]
+2020-12-19 04:58:50		              bind <key> [<command> [<args>]]
+2020-12-19 04:58:50		              bindctxt <context> <key> [<command> [<args>]]
+2020-12-19 04:58:50		              unbind <key>
+2020-12-19 04:58:50		              unbindctxt <context> <key>
+2020-12-19 04:58:50		              reset <key>
+2020-12-19 04:58:50		              resetctxt <context> <key>
+2020-12-19 04:58:50		              resetall -yes [<context>]
+2020-12-19 04:58:50		              missing [<context>]
+2020-12-19 04:58:50		bind/unbind keys
+2020-12-19 04:58:50		       list: list all current keys (without argument, this list is displayed)
+2020-12-19 04:58:50		listdefault: list default keys
+2020-12-19 04:58:50		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2020-12-19 04:58:50		    context: name of context ("default" or "search")
+2020-12-19 04:58:50		       bind: bind a command to a key or display command bound to key (for context "default")
+2020-12-19 04:58:50		   bindctxt: bind a command to a key or display command bound to key, for given context
+2020-12-19 04:58:50		    command: command (many commands can be separated by semicolons)
+2020-12-19 04:58:50		     unbind: remove a key binding (for context "default")
+2020-12-19 04:58:50		 unbindctxt: remove a key binding for given context
+2020-12-19 04:58:50		      reset: reset a key to default binding (for context "default")
+2020-12-19 04:58:50		  resetctxt: reset a key to default binding, for given context
+2020-12-19 04:58:50		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2020-12-19 04:58:50		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2020-12-19 04:58:50		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2020-12-19 04:58:50		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2020-12-19 04:58:50		          *: any area on screen
+2020-12-19 04:58:50		       chat: chat area (any buffer)
+2020-12-19 04:58:50		  chat(xxx): chat area for buffer with name "xxx" (full name including plugin)
+2020-12-19 04:58:50		     bar(*): any bar
+2020-12-19 04:58:50		   bar(xxx): bar "xxx"
+2020-12-19 04:58:50		    item(*): any bar item
+2020-12-19 04:58:50		  item(xxx): bar item "xxx"
+2020-12-19 04:58:50		Wildcard "*" is allowed in key to match many mouse events.
+2020-12-19 04:58:50		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2020-12-19 04:58:50		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2020-12-19 04:58:50		Examples:
+2020-12-19 04:58:50		  key alt-t to toggle nicklist bar:
+2020-12-19 04:58:50		    /key bind meta-t /bar toggle nicklist
+2020-12-19 04:58:50		  key alt-r to jump to #weechat IRC channel:
+2020-12-19 04:58:50		    /key bind meta-r /buffer #weechat
+2020-12-19 04:58:50		  restore default binding for key alt-r:
+2020-12-19 04:58:50		    /key reset meta-r
+2020-12-19 04:58:50		  key "tab" to stop search in buffer:
+2020-12-19 04:58:50		    /key bindctxt search ctrl-I /input search_stop
+2020-12-19 04:58:50		  middle button of mouse on a nick to retrieve info on nick:
+2020-12-19 04:58:50		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2020-12-19 05:02:17		[script]  /script  list [-o|-ol|-i|-il]
+2020-12-19 05:02:17		                   search <text>
+2020-12-19 05:02:17		                   show <script>
+2020-12-19 05:02:17		                   load|unload|reload <script> [<script>...]
+2020-12-19 05:02:17		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2020-12-19 05:02:17		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2020-12-19 05:02:17		                   upgrade
+2020-12-19 05:02:17		                   update
+2020-12-19 05:02:17		WeeChat script manager
+2020-12-19 05:02:17		          list: list loaded scripts (all languages)
+2020-12-19 05:02:17		            -o: send list of loaded scripts to buffer (string in English)
+2020-12-19 05:02:17		           -ol: send list of loaded scripts to buffer (translated string)
+2020-12-19 05:02:17		            -i: copy list of loaded scripts in command line (for sending to buffer) (string in English)
+2020-12-19 05:02:17		           -il: copy list of loaded scripts in command line (for sending to buffer) (translated string)
+2020-12-19 05:02:17		        search: search scripts by tags, language (python, perl, ...), filename extension (py, pl, ...) or text; result is displayed on scripts buffer
+2020-12-19 05:02:17		          show: show detailed info about a script
+2020-12-19 05:02:17		          load: load script(s)
+2020-12-19 05:02:17		        unload: unload script(s)
+2020-12-19 05:02:17		        reload: reload script(s)
+2020-12-19 05:02:17		      autoload: autoload the script
+2020-12-19 05:02:17		    noautoload: do not autoload the script
+2020-12-19 05:02:17		toggleautoload: toggle autoload
+2020-12-19 05:02:17		       install: install/upgrade script(s)
+2020-12-19 05:02:17		        remove: remove script(s)
+2020-12-19 05:02:17		 installremove: install or remove script(s), depending on current state
+2020-12-19 05:02:17		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2020-12-19 05:02:17		            -q: quiet mode: do not display messages
+2020-12-19 05:02:17		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2020-12-19 05:02:17		        update: update local scripts cache
+2020-12-19 05:02:17		Without argument, this command opens a buffer with list of scripts.
+2020-12-19 05:02:17		On script buffer, the possible status for each script are:
+2020-12-19 05:02:17		  * i a H r N
+2020-12-19 05:02:17		  | | | | | |
+2020-12-19 05:02:17		  | | | | | obsolete (new version available)
+2020-12-19 05:02:17		  | | | | running (loaded)
+2020-12-19 05:02:17		  | | | held
+2020-12-19 05:02:17		  | | autoloaded
+2020-12-19 05:02:17		  | installed
+2020-12-19 05:02:17		  popular script
+2020-12-19 05:02:17		Keys on script buffer:
+2020-12-19 05:02:17		  alt+i  install script
+2020-12-19 05:02:17		  alt+r  remove script
+2020-12-19 05:02:17		  alt+l  load script
+2020-12-19 05:02:17		  alt+L  reload script
+2020-12-19 05:02:17		  alt+u  unload script
+2020-12-19 05:02:17		  alt+A  autoload script
+2020-12-19 05:02:17		  alt+h  (un)hold script
+2020-12-19 05:02:17		  alt+v  view script
+2020-12-19 05:02:17		Input allowed on script buffer:
+2020-12-19 05:02:17		  i/r/l/L/u/A/h/v  action on script (same as keys above)
+2020-12-19 05:02:17		  q                close buffer
+2020-12-19 05:02:17		  $                refresh buffer
+2020-12-19 05:02:17		  s:x,y            sort buffer using keys x and y (see /help script.look.sort)
+2020-12-19 05:02:17		  s:               reset sort (use default sort)
+2020-12-19 05:02:17		  word(s)          filter scripts: search word(s) in scripts (description, tags, ...)
+2020-12-19 05:02:17		  *                remove filter
+2020-12-19 05:02:17		Mouse actions on script buffer:
+2020-12-19 05:02:17		  wheel         scroll list
+2020-12-19 05:02:17		  left button   select script
+2020-12-19 05:02:17		  right button  install/remove script
+2020-12-19 05:02:17		Examples:
+2020-12-19 05:02:17		  /script search url
+2020-12-19 05:02:17		  /script install go.py urlserver.py
+2020-12-19 05:02:17		  /script remove go.py
+2020-12-19 05:02:17		  /script hold urlserver.py
+2020-12-19 05:02:17		  /script reload urlserver
+2020-12-19 05:02:17		  /script upgrade
+2020-12-19 05:03:08		python: loading script "/home/jungdongho/.weechat/python/autosort.py"
+2020-12-19 05:03:08		python: registered script "autosort", version 3.9 (Flexible automatic (or manual) buffer sorting based on eval expressions.)
+2020-12-19 05:03:10		perl: loading script "/home/jungdongho/.weechat/perl/multiline.pl"
+2020-12-19 05:03:10		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/multiline.pl line 240.
+2020-12-19 05:03:10		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/multiline.pl line 240.
+2020-12-19 05:03:10		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/multiline.pl line 240.
+2020-12-19 05:03:10	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/multiline.pl"
+2020-12-19 05:03:12		perl: loading script "/home/jungdongho/.weechat/perl/highmon.pl"
+2020-12-19 05:03:12		perl: registered script "highmon", version 2.7 (Highlight Monitor)
+2020-12-19 05:03:12		This appears to be the first time highmon has been run. For help and common set up hints see /highmon help
+2020-12-19 05:03:14		python: loading script "/home/jungdongho/.weechat/python/colorize_nicks.py"
+2020-12-19 05:03:14		python: registered script "colorize_nicks", version 27 (Use the weechat nick colors in the chat area)
+2020-12-19 05:03:15		python: loading script "/home/jungdongho/.weechat/python/go.py"
+2020-12-19 05:03:15		python: registered script "go", version 2.6 (Quick jump to buffers)
+2020-12-19 05:03:17		python: loading script "/home/jungdongho/.weechat/python/text_item.py"
+2020-12-19 05:03:17		python: registered script "text_item", version 0.9 (add a plain text or evaluated content to item bar)
+2020-12-19 05:03:40	=!=	Error: unknown command "/clost" (type /help for help)
+2020-12-19 05:03:43		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2020-12-19 05:04:02	=!=	Error: unknown command "/clear" (type /help for help)
+2020-12-19 05:07:55	=!=	irc: already connected to server "freenode"!
+2020-12-19 05:11:18	=!=	irc: command "msg" must be executed on connected irc server
+2020-12-19 05:11:28	=!=	irc: command "msg" must be executed on connected irc server
+2020-12-19 05:15:48		[irc]  /list  [-server <server>] [-re <regex>] [<channel>[,<channel>...]] [<target>]
+2020-12-19 05:15:48		list channels and their topic
+2020-12-19 05:15:48		 server: send to this server (internal name)
+2020-12-19 05:15:48		  regex: POSIX extended regular expression used to filter results (case insensitive, can start by "(?-i)" to become case sensitive)
+2020-12-19 05:15:48		channel: channel to list
+2020-12-19 05:15:48		 target: server name
+2020-12-19 05:15:48		Examples:
+2020-12-19 05:15:48		  list all channels on server (can be very slow on large networks):
+2020-12-19 05:15:48		    /list
+2020-12-19 05:15:48		  list channel #weechat:
+2020-12-19 05:15:48		    /list #weechat
+2020-12-19 05:15:48		  list all channels beginning with "#weechat" (can be very slow on large networks):
+2020-12-19 05:15:48		    /list -re #weechat.*
+2020-12-19 06:20:06	=!=	Too few arguments for command "/nick" (help on command: /help nick)
+2020-12-19 06:28:15		[core]  /filter  list
+2020-12-19 06:28:15		                 enable|disable|toggle [<name>|@]
+2020-12-19 06:28:15		                 add|addreplace <name> <buffer>[,<buffer>...] <tags> <regex>
+2020-12-19 06:28:15		                 rename <name> <new_name>
+2020-12-19 06:28:15		                 del <name>|-all
+2020-12-19 06:28:15		filter messages in buffers, to hide/show them according to tags or regex
+2020-12-19 06:28:15		      list: list all filters
+2020-12-19 06:28:15		    enable: enable filters (filters are enabled by default)
+2020-12-19 06:28:15		   disable: disable filters
+2020-12-19 06:28:15		    toggle: toggle filters
+2020-12-19 06:28:15		      name: filter name ("@" = enable/disable all filters in current buffer)
+2020-12-19 06:28:15		       add: add a filter
+2020-12-19 06:28:15		addreplace: add or replace an existing filter
+2020-12-19 06:28:15		    rename: rename a filter
+2020-12-19 06:28:15		       del: delete a filter
+2020-12-19 06:28:15		      -all: delete all filters
+2020-12-19 06:28:15		    buffer: comma separated list of buffers where filter is active:
+2020-12-19 06:28:15		            - this is full name including plugin (example: "irc.freenode.#weechat" or "irc.server.freenode")
+2020-12-19 06:28:15		            - "*" means all buffers
+2020-12-19 06:28:15		            - a name starting with '!' is excluded
+2020-12-19 06:28:15		            - wildcard "*" is allowed
+2020-12-19 06:28:15		   tags: comma separated list of tags, for example "irc_join,irc_part,irc_quit"
+2020-12-19 06:28:15		            - logical "and": use "+" between tags (for example: "nick_toto+irc_action")
+2020-12-19 06:28:15		            - wildcard "*" is allowed
+2020-12-19 06:28:15		            - if tag starts with '!', then it is excluded and must NOT be in message
+2020-12-19 06:28:15		  regex: POSIX extended regular expression to search in line
+2020-12-19 06:28:15		            - use '\t' to separate prefix from message, special chars like '|' must be escaped: '\|'
+2020-12-19 06:28:15		            - if regex starts with '!', then matching result is reversed (use '\!' to start with '!')
+2020-12-19 06:28:15		            - two regular expressions are created: one for prefix and one for message
+2020-12-19 06:28:15		            - regex are case insensitive, they can start by "(?-i)" to become case sensitive
+2020-12-19 06:28:15		The default key alt+'=' toggles filtering on/off globally and alt+'-' toggles filtering on/off in the current buffer.
+2020-12-19 06:28:15		Tags most commonly used:
+2020-12-19 06:28:15		  no_filter, no_highlight, no_log, log0..log9 (log level),
+2020-12-19 06:28:15		  notify_none, notify_message, notify_private, notify_highlight,
+2020-12-19 06:28:15		  self_msg, nick_xxx (xxx is nick in message), prefix_nick_ccc (ccc is color of nick),
+2020-12-19 06:28:15		  host_xxx (xxx is username + host in message),
+2020-12-19 06:28:15		  irc_xxx (xxx is command name or number, see /server raw or /debug tags),
+2020-12-19 06:28:15		  irc_numeric, irc_error, irc_action, irc_ctcp, irc_ctcp_reply, irc_smart_filter, away_info.
+2020-12-19 06:28:15		To see tags for lines in buffers: /debug tags
+2020-12-19 06:28:15		Examples:
+2020-12-19 06:28:15		  use IRC smart filter on all buffers:
+2020-12-19 06:28:15		    /filter add irc_smart * irc_smart_filter *
+2020-12-19 06:28:15		  use IRC smart filter on all buffers except those with "#weechat" in name:
+2020-12-19 06:28:15		    /filter add irc_smart *,!*#weechat* irc_smart_filter *
+2020-12-19 06:28:15		  filter all IRC join/part/quit messages:
+2020-12-19 06:28:15		    /filter add joinquit * irc_join,irc_part,irc_quit *
+2020-12-19 06:28:15		  filter nicks displayed when joining channels or with /names:
+2020-12-19 06:28:15		    /filter add nicks * irc_366 *
+2020-12-19 06:28:15		  filter nick "toto" on IRC channel #weechat:
+2020-12-19 06:28:15		    /filter add toto irc.freenode.#weechat nick_toto *
+2020-12-19 06:28:15		  filter IRC join/action messages from nick "toto":
+2020-12-19 06:28:15		    /filter add toto * nick_toto+irc_join,nick_toto+irc_action *
+2020-12-19 06:28:15		  filter lines containing "weechat sucks" on IRC channel #weechat:
+2020-12-19 06:28:15		    /filter add sucks irc.freenode.#weechat * weechat sucks
+2020-12-19 06:28:15		  filter lines that are strictly equal to "WeeChat sucks" on all buffers:
+2020-12-19 06:28:15		    /filter add sucks2 * * (?-i)^WeeChat sucks$
+2020-12-19 06:28:51		Message filtering enabled
+2020-12-19 06:28:51		No message filter defined
+2020-12-19 06:29:13		Filter "irc_smart" added:
+2020-12-19 06:29:13		  [irc_smart] buffer: * / tags: irc_smart_filter / regex: * 
+2020-12-19 07:05:06	=!=	Error: unknown command "/F11" (type /help for help)
+2020-12-19 07:05:08	=!=	Error: unknown command "/11" (type /help for help)
+2020-12-19 07:29:49		script: script "s" not found
+2020-12-19 07:48:44		Highmon Help
+2020-12-19 07:48:44		/highmon [help] | [monitor [channel [server]]] | [clean default|orphan|all] | clearbar
+2020-12-19 07:48:44		 Command wrapper for highmon commands
+2020-12-19 07:48:44		/highmon clean default|orphan|all will clean the config section of default 'on' entries, channels you are no longer joined, or both
+2020-12-19 07:48:44		/highmon clearbar will clear the contents of highmon's bar output
+2020-12-19 07:48:44		/highmon monitor [channel] [server] is used to toggle a highlight monitoring on and off, this can be used in the channel buffer for the channel you wish to toggle, or be given with arguments e.g. /highmon monitor #weechat freenode
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.alignment
+2020-12-19 07:48:44		 The config setting "alignment" can be changed to;
+2020-12-19 07:48:44		 "channel", "schannel", "nchannel", "channel,nick", "schannel,nick", "nchannel,nick"
+2020-12-19 07:48:44		 to change how the monitor appears
+2020-12-19 07:48:44		 The 'channel'  value will show: "#weechat"
+2020-12-19 07:48:44		 The 'schannel' value will show: "6"
+2020-12-19 07:48:44		 The 'nchannel' value will show: "6:#weechat"
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.short_names
+2020-12-19 07:48:44		 Setting this to 'on' will trim the network name from highmon, ala buffers.pl
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.merge_private
+2020-12-19 07:48:44		 Setting this to 'on' will merge private messages to highmon's display
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.color_buf
+2020-12-19 07:48:44		 This turns colored buffer names on or off, you can also set a single fixed color by using a weechat color name.
+2020-12-19 07:48:44		 This must be a valid color name, or weechat will likely do unexpected things :)
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.hotlist_show
+2020-12-19 07:48:44		Setting this to 'on' will let the highmon buffer appear in hotlists (status bar/buffer.pl)
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.away_only
+2020-12-19 07:48:44		Setting this to 'on' will only put messages in the highmon buffer when you set your status to away
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.logging
+2020-12-19 07:48:44		 Toggles logging status for highmon buffer (default: off)
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.output
+2020-12-19 07:48:44		 Changes where output method of highmon; takes either "bar" or "buffer" (default; buffer)
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.bar_lines
+2020-12-19 07:48:44		 Changes the amount of lines the output bar will hold.
+2020-12-19 07:48:44		 (Only appears once output has been set to bar, defaults to 10)
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.bar_scrolldown
+2020-12-19 07:48:44		 Toggles the bar scrolling at the bottom when new highlights are received
+2020-12-19 07:48:44		 (Only appears once output has been set to bar, defaults to off)
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.nick_prefix
+2020-12-19 07:48:44		/set plugins.var.perl.highmon.nick_suffix
+2020-12-19 07:48:44		 Sets the prefix and suffix chars in the highmon buffer
+2020-12-19 07:48:44		 (Defaults to <> if nothing set, and blank if there is)
+2020-12-19 07:48:44		servername.#channel
+2020-12-19 07:48:44		 servername is the internal name for the server (set when you use /server add)
+2020-12-19 07:48:44		 #channel is the channel name, (where # is whatever channel type that channel happens to be)
+2020-12-19 07:48:44		Optional, set up tweaks; Hide the status and input lines on highmon
+2020-12-19 07:48:44		/set weechat.bar.status.conditions "${window.buffer.full_name} != perl.highmon"
+2020-12-19 07:48:44		/set weechat.bar.input.conditions "${window.buffer.full_name} != perl.highmon"
+2020-12-19 08:01:04		[core]
+2020-12-19 08:01:04		  away     eval     mouse    repeat   version
+2020-12-19 08:01:04		  bar      filter   mute     save     wait   
+2020-12-19 08:01:04		  buffer   help     plugin   secure   window 
+2020-12-19 08:01:04		  color    history  print    set    
+2020-12-19 08:01:04		  command  input    proxy    unset  
+2020-12-19 08:01:04		  cursor   key      quit     upgrade
+2020-12-19 08:01:04		  debug    layout   reload   uptime 
+2020-12-19 08:01:04		[fifo]
+2020-12-19 08:01:04		  fifo
+2020-12-19 08:01:04		[buflist]
+2020-12-19 08:01:04		  buflist
+2020-12-19 08:01:04		[xfer]
+2020-12-19 08:01:04		  me  xfer
+2020-12-19 08:01:04		[ruby]
+2020-12-19 08:01:04		  ruby
+2020-12-19 08:01:04		[lua]
+2020-12-19 08:01:04		  lua
+2020-12-19 08:01:04		[perl]
+2020-12-19 08:01:04		  highclean  highmon  perl
+2020-12-19 08:01:04		[relay]
+2020-12-19 08:01:04		  relay
+2020-12-19 08:01:04		[fset]
+2020-12-19 08:01:04		  fset
+2020-12-19 08:01:04		[python]
+2020-12-19 08:01:04		  autosort   grep       python   
+2020-12-19 08:01:04		  go         logs       text_item
+2020-12-19 08:01:04		[charset]
+2020-12-19 08:01:04		  charset
+2020-12-19 08:01:04		[logger]
+2020-12-19 08:01:04		  logger
+2020-12-19 08:01:04		[guile]
+2020-12-19 08:01:04		  guile
+2020-12-19 08:01:04		[trigger]
+2020-12-19 08:01:04		  trigger
+2020-12-19 08:01:04		[irc]
+2020-12-19 08:01:04		  admin       ison        part        squit     
+2020-12-19 08:01:04		  allchan     join        ping        stats     
+2020-12-19 08:01:04		  allpv       kick        pong        summon    
+2020-12-19 08:01:04		  allserv     kickban     query       time      
+2020-12-19 08:01:04		  ban         kill        quiet       topic     
+2020-12-19 08:01:04		  cap         links       quote       trace     
+2020-12-19 08:01:04		  connect     list        reconnect   unban     
+2020-12-19 08:01:04		  ctcp        lusers      rehash      unquiet   
+2020-12-19 08:01:04		  cycle       map         remove      userhost  
+2020-12-19 08:01:04		  dcc         me          restart     users     
+2020-12-19 08:01:04		  dehalfop    mode        sajoin      version   
+2020-12-19 08:01:04		  deop        motd        samode      voice     
+2020-12-19 08:01:04		  devoice     msg         sanick      wallchops 
+2020-12-19 08:01:04		  die         names       sapart      wallops   
+2020-12-19 08:01:04		  disconnect  nick        saquit      who       
+2020-12-19 08:01:04		  halfop      notice      server      whois     
+2020-12-19 08:01:04		  ignore      notify      service     whowas    
+2020-12-19 08:01:04		  info        op          servlist  
+2020-12-19 08:01:04		  invite      oper        squery    
+2020-12-19 08:01:04		[alias]
+2020-12-19 08:01:04		  AAWAY    CL       LEAVE    SAY      WC     
+2020-12-19 08:01:04		  alias    CLOSE    M        SIGNOFF  WI     
+2020-12-19 08:01:04		  ANICK    EXIT     MSGBUF   T        WII    
+2020-12-19 08:01:04		  BEEP     IG       MUB      UB       WM     
+2020-12-19 08:01:04		  BYE      J        N        UMODE    WW     
+2020-12-19 08:01:04		  C        K        Q        V      
+2020-12-19 08:01:04		  CHAT     KB       REDRAW   W      
+2020-12-19 08:01:04		[tcl]
+2020-12-19 08:01:04		  tcl
+2020-12-19 08:01:04		[script]
+2020-12-19 08:01:04		  script
+2020-12-19 08:01:04		[exec]
+2020-12-19 08:01:04		  exec
+2020-12-19 08:01:13		[core]  /key  list|listdefault|listdiff [<context>]
+2020-12-19 08:01:13		              bind <key> [<command> [<args>]]
+2020-12-19 08:01:13		              bindctxt <context> <key> [<command> [<args>]]
+2020-12-19 08:01:13		              unbind <key>
+2020-12-19 08:01:13		              unbindctxt <context> <key>
+2020-12-19 08:01:13		              reset <key>
+2020-12-19 08:01:13		              resetctxt <context> <key>
+2020-12-19 08:01:13		              resetall -yes [<context>]
+2020-12-19 08:01:13		              missing [<context>]
+2020-12-19 08:01:13		bind/unbind keys
+2020-12-19 08:01:13		       list: list all current keys (without argument, this list is displayed)
+2020-12-19 08:01:13		listdefault: list default keys
+2020-12-19 08:01:13		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2020-12-19 08:01:13		    context: name of context ("default" or "search")
+2020-12-19 08:01:13		       bind: bind a command to a key or display command bound to key (for context "default")
+2020-12-19 08:01:13		   bindctxt: bind a command to a key or display command bound to key, for given context
+2020-12-19 08:01:13		    command: command (many commands can be separated by semicolons)
+2020-12-19 08:01:13		     unbind: remove a key binding (for context "default")
+2020-12-19 08:01:13		 unbindctxt: remove a key binding for given context
+2020-12-19 08:01:13		      reset: reset a key to default binding (for context "default")
+2020-12-19 08:01:13		  resetctxt: reset a key to default binding, for given context
+2020-12-19 08:01:13		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2020-12-19 08:01:13		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2020-12-19 08:01:13		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2020-12-19 08:01:13		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2020-12-19 08:01:13		          *: any area on screen
+2020-12-19 08:01:13		       chat: chat area (any buffer)
+2020-12-19 08:01:13		  chat(xxx): chat area for buffer with name "xxx" (full name including plugin)
+2020-12-19 08:01:13		     bar(*): any bar
+2020-12-19 08:01:13		   bar(xxx): bar "xxx"
+2020-12-19 08:01:13		    item(*): any bar item
+2020-12-19 08:01:13		  item(xxx): bar item "xxx"
+2020-12-19 08:01:13		Wildcard "*" is allowed in key to match many mouse events.
+2020-12-19 08:01:13		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2020-12-19 08:01:13		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2020-12-19 08:01:13		Examples:
+2020-12-19 08:01:13		  key alt-t to toggle nicklist bar:
+2020-12-19 08:01:13		    /key bind meta-t /bar toggle nicklist
+2020-12-19 08:01:13		  key alt-r to jump to #weechat IRC channel:
+2020-12-19 08:01:13		    /key bind meta-r /buffer #weechat
+2020-12-19 08:01:13		  restore default binding for key alt-r:
+2020-12-19 08:01:13		    /key reset meta-r
+2020-12-19 08:01:13		  key "tab" to stop search in buffer:
+2020-12-19 08:01:13		    /key bindctxt search ctrl-I /input search_stop
+2020-12-19 08:01:13		  middle button of mouse on a nick to retrieve info on nick:
+2020-12-19 08:01:13		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2020-12-19 08:02:19		256 key bindings for context "default":
+2020-12-19 08:02:19		  ctrl-? => /input delete_previous_char
+2020-12-19 08:02:19		  ctrl-A => /input move_beginning_of_line
+2020-12-19 08:02:19		  ctrl-B => /input move_previous_char
+2020-12-19 08:02:19		  ctrl-C_ => /input insert \x1F
+2020-12-19 08:02:19		  ctrl-Cb => /input insert \x02
+2020-12-19 08:02:19		  ctrl-Cc => /input insert \x03
+2020-12-19 08:02:19		  ctrl-Ci => /input insert \x1D
+2020-12-19 08:02:19		  ctrl-Co => /input insert \x0F
+2020-12-19 08:02:19		  ctrl-Cv => /input insert \x16
+2020-12-19 08:02:19		  ctrl-D => /input delete_next_char
+2020-12-19 08:02:19		  ctrl-E => /input move_end_of_line
+2020-12-19 08:02:19		  ctrl-F => /input move_next_char
+2020-12-19 08:02:19		  ctrl-H => /input delete_previous_char
+2020-12-19 08:02:19		  ctrl-I => /input complete_next
+2020-12-19 08:02:19		  ctrl-J => /input return
+2020-12-19 08:02:19		  ctrl-K => /input delete_end_of_line
+2020-12-19 08:02:19		  ctrl-L => /window refresh
+2020-12-19 08:02:19		  ctrl-M => /input return
+2020-12-19 08:02:19		  ctrl-N => /buffer +1
+2020-12-19 08:02:19		  ctrl-P => /buffer -1
+2020-12-19 08:02:19		  ctrl-R => /input search_text_here
+2020-12-19 08:02:19		  ctrl-Sctrl-U => /input set_unread
+2020-12-19 08:02:19		  ctrl-T => /input transpose_chars
+2020-12-19 08:02:19		  ctrl-U => /input delete_beginning_of_line
+2020-12-19 08:02:19		  ctrl-W => /input delete_previous_word
+2020-12-19 08:02:19		  ctrl-X => /input switch_active_buffer
+2020-12-19 08:02:19		  ctrl-Y => /input clipboard_paste
+2020-12-19 08:02:19		  meta-ctrl-M => /input insert \n
+2020-12-19 08:02:19		  meta-meta-OP => /bar scroll buflist * b
+2020-12-19 08:02:19		  meta-meta-OQ => /bar scroll buflist * e
+2020-12-19 08:02:19		  meta-meta2-11~ => /bar scroll buflist * b
+2020-12-19 08:02:19		  meta-meta2-12~ => /bar scroll buflist * e
+2020-12-19 08:02:19		  meta-meta2-1~ => /window scroll_top
+2020-12-19 08:02:19		  meta-meta2-23~ => /bar scroll nicklist * b
+2020-12-19 08:02:19		  meta-meta2-24~ => /bar scroll nicklist * e
+2020-12-19 08:02:19		  meta-meta2-4~ => /window scroll_bottom
+2020-12-19 08:02:19		  meta-meta2-5~ => /window scroll_up
+2020-12-19 08:02:19		  meta-meta2-6~ => /window scroll_down
+2020-12-19 08:02:19		  meta-meta2-7~ => /window scroll_top
+2020-12-19 08:02:19		  meta-meta2-8~ => /window scroll_bottom
+2020-12-19 08:02:19		  meta-meta2-A => /buffer -1
+2020-12-19 08:02:19		  meta-meta2-B => /buffer +1
+2020-12-19 08:02:19		  meta-meta2-C => /buffer +1
+2020-12-19 08:02:19		  meta-meta2-D => /buffer -1
+2020-12-19 08:02:19		  meta-- => /filter toggle @
+2020-12-19 08:02:19		  meta-/ => /input jump_last_buffer_displayed
+2020-12-19 08:02:19		  meta-0 => /buffer *10
+2020-12-19 08:02:19		  meta-1 => /buffer *1
+2020-12-19 08:02:19		  meta-2 => /buffer *2
+2020-12-19 08:02:19		  meta-3 => /buffer *3
+2020-12-19 08:02:19		  meta-4 => /buffer *4
+2020-12-19 08:02:19		  meta-5 => /buffer *5
+2020-12-19 08:02:19		  meta-6 => /buffer *6
+2020-12-19 08:02:19		  meta-7 => /buffer *7
+2020-12-19 08:02:19		  meta-8 => /buffer *8
+2020-12-19 08:02:19		  meta-9 => /buffer *9
+2020-12-19 08:02:19		  meta-< => /input jump_previously_visited_buffer
+2020-12-19 08:02:19		  meta-= => /filter toggle
+2020-12-19 08:02:19		  meta-> => /input jump_next_visited_buffer
+2020-12-19 08:02:19		  meta-B => /buflist toggle
+2020-12-19 08:02:19		  meta-N => /bar toggle nicklist
+2020-12-19 08:02:19		  meta-OA => /input history_global_previous
+2020-12-19 08:02:19		  meta-OB => /input history_global_next
+2020-12-19 08:02:19		  meta-OC => /input move_next_word
+2020-12-19 08:02:19		  meta-OD => /input move_previous_word
+2020-12-19 08:02:19		  meta-OF => /input move_end_of_line
+2020-12-19 08:02:19		  meta-OH => /input move_beginning_of_line
+2020-12-19 08:02:19		  meta-OP => /bar scroll buflist * -100%
+2020-12-19 08:02:19		  meta-OQ => /bar scroll buflist * +100%
+2020-12-19 08:02:19		  meta-Oa => /input history_global_previous
+2020-12-19 08:02:19		  meta-Ob => /input history_global_next
+2020-12-19 08:02:19		  meta-Oc => /input move_next_word
+2020-12-19 08:02:19		  meta-Od => /input move_previous_word
+2020-12-19 08:02:19		  meta2-11^ => /bar scroll buflist * -100%
+2020-12-19 08:02:19		  meta2-11~ => /bar scroll buflist * -100%
+2020-12-19 08:02:19		  meta2-12^ => /bar scroll buflist * +100%
+2020-12-19 08:02:19		  meta2-12~ => /bar scroll buflist * +100%
+2020-12-19 08:02:19		  meta2-15~ => /buffer -1
+2020-12-19 08:02:19		  meta2-17~ => /buffer +1
+2020-12-19 08:02:19		  meta2-18~ => /window -1
+2020-12-19 08:02:19		  meta2-19~ => /window +1
+2020-12-19 08:02:19		  meta2-1;3A => /buffer -1
+2020-12-19 08:02:19		  meta2-1;3B => /buffer +1
+2020-12-19 08:02:19		  meta2-1;3C => /buffer +1
+2020-12-19 08:02:19		  meta2-1;3D => /buffer -1
+2020-12-19 08:02:19		  meta2-1;3F => /window scroll_bottom
+2020-12-19 08:02:19		  meta2-1;3H => /window scroll_top
+2020-12-19 08:02:19		  meta2-1;3P => /bar scroll buflist * b
+2020-12-19 08:02:19		  meta2-1;3Q => /bar scroll buflist * e
+2020-12-19 08:02:19		  meta2-1;5A => /input history_global_previous
+2020-12-19 08:02:19		  meta2-1;5B => /input history_global_next
+2020-12-19 08:02:19		  meta2-1;5C => /input move_next_word
+2020-12-19 08:02:19		  meta2-1;5D => /input move_previous_word
+2020-12-19 08:02:19		  meta2-1;5P => /bar scroll buflist * -100%
+2020-12-19 08:02:19		  meta2-1;5Q => /bar scroll buflist * +100%
+2020-12-19 08:02:19		  meta2-1~ => /input move_beginning_of_line
+2020-12-19 08:02:19		  meta2-200~ => /input paste_start
+2020-12-19 08:02:19		  meta2-201~ => /input paste_stop
+2020-12-19 08:02:19		  meta2-20~ => /bar scroll title * -30%
+2020-12-19 08:02:19		  meta2-21~ => /bar scroll title * +30%
+2020-12-19 08:02:19		  meta2-23;3~ => /bar scroll nicklist * b
+2020-12-19 08:02:19		  meta2-23;5~ => /bar scroll nicklist * -100%
+2020-12-19 08:02:19		  meta2-23^ => /bar scroll nicklist * -100%
+2020-12-19 08:02:19		  meta2-23~ => /bar scroll nicklist * -100%
+2020-12-19 08:02:19		  meta2-24;3~ => /bar scroll nicklist * e
+2020-12-19 08:02:19		  meta2-24;5~ => /bar scroll nicklist * +100%
+2020-12-19 08:02:19		  meta2-24^ => /bar scroll nicklist * +100%
+2020-12-19 08:02:19		  meta2-24~ => /bar scroll nicklist * +100%
+2020-12-19 08:02:19		  meta2-3~ => /input delete_next_char
+2020-12-19 08:02:19		  meta2-4~ => /input move_end_of_line
+2020-12-19 08:02:19		  meta2-5;3~ => /window scroll_up
+2020-12-19 08:02:19		  meta2-5~ => /window page_up
+2020-12-19 08:02:19		  meta2-6;3~ => /window scroll_down
+2020-12-19 08:02:19		  meta2-6~ => /window page_down
+2020-12-19 08:02:19		  meta2-7~ => /input move_beginning_of_line
+2020-12-19 08:02:19		  meta2-8~ => /input move_end_of_line
+2020-12-19 08:02:19		  meta2-A => /input history_previous
+2020-12-19 08:02:19		  meta2-B => /input history_next
+2020-12-19 08:02:19		  meta2-C => /input move_next_char
+2020-12-19 08:02:19		  meta2-D => /input move_previous_char
+2020-12-19 08:02:19		  meta2-F => /input move_end_of_line
+2020-12-19 08:02:19		  meta2-G => /window page_down
+2020-12-19 08:02:19		  meta2-H => /input move_beginning_of_line
+2020-12-19 08:02:19		  meta2-I => /window page_up
+2020-12-19 08:02:19		  meta2-Z => /input complete_previous
+2020-12-19 08:02:19		  meta2-[E => /buffer -1
+2020-12-19 08:02:19		  meta-_ => /input redo
+2020-12-19 08:02:19		  meta-a => /input jump_smart
+2020-12-19 08:02:19		  meta-b => /input move_previous_word
+2020-12-19 08:02:19		  meta-d => /input delete_next_word
+2020-12-19 08:02:19		  meta-f => /input move_next_word
+2020-12-19 08:02:19		  meta-h => /input hotlist_clear
+2020-12-19 08:02:19		  meta-jmeta-f => /buffer -
+2020-12-19 08:02:19		  meta-jmeta-l => /buffer +
+2020-12-19 08:02:19		  meta-jmeta-r => /server raw
+2020-12-19 08:02:19		  meta-jmeta-s => /server jump
+2020-12-19 08:02:19		  meta-j01 => /buffer *1
+2020-12-19 08:02:19		  meta-j02 => /buffer *2
+2020-12-19 08:02:19		  meta-j03 => /buffer *3
+2020-12-19 08:02:19		  meta-j04 => /buffer *4
+2020-12-19 08:02:19		  meta-j05 => /buffer *5
+2020-12-19 08:02:19		  meta-j06 => /buffer *6
+2020-12-19 08:02:19		  meta-j07 => /buffer *7
+2020-12-19 08:02:19		  meta-j08 => /buffer *8
+2020-12-19 08:02:19		  meta-j09 => /buffer *9
+2020-12-19 08:02:19		  meta-j10 => /buffer *10
+2020-12-19 08:02:19		  meta-j11 => /buffer *11
+2020-12-19 08:02:19		  meta-j12 => /buffer *12
+2020-12-19 08:02:19		  meta-j13 => /buffer *13
+2020-12-19 08:02:19		  meta-j14 => /buffer *14
+2020-12-19 08:02:19		  meta-j15 => /buffer *15
+2020-12-19 08:02:19		  meta-j16 => /buffer *16
+2020-12-19 08:02:19		  meta-j17 => /buffer *17
+2020-12-19 08:02:19		  meta-j18 => /buffer *18
+2020-12-19 08:02:19		  meta-j19 => /buffer *19
+2020-12-19 08:02:19		  meta-j20 => /buffer *20
+2020-12-19 08:02:19		  meta-j21 => /buffer *21
+2020-12-19 08:02:19		  meta-j22 => /buffer *22
+2020-12-19 08:02:19		  meta-j23 => /buffer *23
+2020-12-19 08:02:19		  meta-j24 => /buffer *24
+2020-12-19 08:02:19		  meta-j25 => /buffer *25
+2020-12-19 08:02:19		  meta-j26 => /buffer *26
+2020-12-19 08:02:19		  meta-j27 => /buffer *27
+2020-12-19 08:02:19		  meta-j28 => /buffer *28
+2020-12-19 08:02:19		  meta-j29 => /buffer *29
+2020-12-19 08:02:19		  meta-j30 => /buffer *30
+2020-12-19 08:02:19		  meta-j31 => /buffer *31
+2020-12-19 08:02:19		  meta-j32 => /buffer *32
+2020-12-19 08:02:19		  meta-j33 => /buffer *33
+2020-12-19 08:02:19		  meta-j34 => /buffer *34
+2020-12-19 08:02:19		  meta-j35 => /buffer *35
+2020-12-19 08:02:19		  meta-j36 => /buffer *36
+2020-12-19 08:02:19		  meta-j37 => /buffer *37
+2020-12-19 08:02:19		  meta-j38 => /buffer *38
+2020-12-19 08:02:19		  meta-j39 => /buffer *39
+2020-12-19 08:02:19		  meta-j40 => /buffer *40
+2020-12-19 08:02:19		  meta-j41 => /buffer *41
+2020-12-19 08:02:19		  meta-j42 => /buffer *42
+2020-12-19 08:02:19		  meta-j43 => /buffer *43
+2020-12-19 08:02:19		  meta-j44 => /buffer *44
+2020-12-19 08:02:19		  meta-j45 => /buffer *45
+2020-12-19 08:02:19		  meta-j46 => /buffer *46
+2020-12-19 08:02:19		  meta-j47 => /buffer *47
+2020-12-19 08:02:19		  meta-j48 => /buffer *48
+2020-12-19 08:02:19		  meta-j49 => /buffer *49
+2020-12-19 08:02:19		  meta-j50 => /buffer *50
+2020-12-19 08:02:19		  meta-j51 => /buffer *51
+2020-12-19 08:02:19		  meta-j52 => /buffer *52
+2020-12-19 08:02:19		  meta-j53 => /buffer *53
+2020-12-19 08:02:19		  meta-j54 => /buffer *54
+2020-12-19 08:02:19		  meta-j55 => /buffer *55
+2020-12-19 08:02:19		  meta-j56 => /buffer *56
+2020-12-19 08:02:19		  meta-j57 => /buffer *57
+2020-12-19 08:02:19		  meta-j58 => /buffer *58
+2020-12-19 08:02:19		  meta-j59 => /buffer *59
+2020-12-19 08:02:19		  meta-j60 => /buffer *60
+2020-12-19 08:02:19		  meta-j61 => /buffer *61
+2020-12-19 08:02:19		  meta-j62 => /buffer *62
+2020-12-19 08:02:19		  meta-j63 => /buffer *63
+2020-12-19 08:02:19		  meta-j64 => /buffer *64
+2020-12-19 08:02:19		  meta-j65 => /buffer *65
+2020-12-19 08:02:19		  meta-j66 => /buffer *66
+2020-12-19 08:02:19		  meta-j67 => /buffer *67
+2020-12-19 08:02:19		  meta-j68 => /buffer *68
+2020-12-19 08:02:19		  meta-j69 => /buffer *69
+2020-12-19 08:02:19		  meta-j70 => /buffer *70
+2020-12-19 08:02:19		  meta-j71 => /buffer *71
+2020-12-19 08:02:19		  meta-j72 => /buffer *72
+2020-12-19 08:02:19		  meta-j73 => /buffer *73
+2020-12-19 08:02:19		  meta-j74 => /buffer *74
+2020-12-19 08:02:19		  meta-j75 => /buffer *75
+2020-12-19 08:02:19		  meta-j76 => /buffer *76
+2020-12-19 08:02:19		  meta-j77 => /buffer *77
+2020-12-19 08:02:19		  meta-j78 => /buffer *78
+2020-12-19 08:02:19		  meta-j79 => /buffer *79
+2020-12-19 08:02:19		  meta-j80 => /buffer *80
+2020-12-19 08:02:19		  meta-j81 => /buffer *81
+2020-12-19 08:02:19		  meta-j82 => /buffer *82
+2020-12-19 08:02:19		  meta-j83 => /buffer *83
+2020-12-19 08:02:19		  meta-j84 => /buffer *84
+2020-12-19 08:02:19		  meta-j85 => /buffer *85
+2020-12-19 08:02:19		  meta-j86 => /buffer *86
+2020-12-19 08:02:19		  meta-j87 => /buffer *87
+2020-12-19 08:02:19		  meta-j88 => /buffer *88
+2020-12-19 08:02:19		  meta-j89 => /buffer *89
+2020-12-19 08:02:19		  meta-j90 => /buffer *90
+2020-12-19 08:02:19		  meta-j91 => /buffer *91
+2020-12-19 08:02:19		  meta-j92 => /buffer *92
+2020-12-19 08:02:19		  meta-j93 => /buffer *93
+2020-12-19 08:02:19		  meta-j94 => /buffer *94
+2020-12-19 08:02:19		  meta-j95 => /buffer *95
+2020-12-19 08:02:19		  meta-j96 => /buffer *96
+2020-12-19 08:02:19		  meta-j97 => /buffer *97
+2020-12-19 08:02:19		  meta-j98 => /buffer *98
+2020-12-19 08:02:19		  meta-j99 => /buffer *99
+2020-12-19 08:02:19		  meta-k => /input grab_key_command
+2020-12-19 08:02:19		  meta-l => /window bare
+2020-12-19 08:02:19		  meta-m => /mute mouse toggle
+2020-12-19 08:02:19		  meta-n => /window scroll_next_highlight
+2020-12-19 08:02:19		  meta-p => /window scroll_previous_highlight
+2020-12-19 08:02:19		  meta-r => /input delete_line
+2020-12-19 08:02:19		  meta-s => /mute spell toggle
+2020-12-19 08:02:19		  meta-u => /window scroll_unread
+2020-12-19 08:02:19		  meta-wmeta-meta2-A => /window up
+2020-12-19 08:02:19		  meta-wmeta-meta2-B => /window down
+2020-12-19 08:02:19		  meta-wmeta-meta2-C => /window right
+2020-12-19 08:02:19		  meta-wmeta-meta2-D => /window left
+2020-12-19 08:02:19		  meta-wmeta2-1;3A => /window up
+2020-12-19 08:02:19		  meta-wmeta2-1;3B => /window down
+2020-12-19 08:02:19		  meta-wmeta2-1;3C => /window right
+2020-12-19 08:02:19		  meta-wmeta2-1;3D => /window left
+2020-12-19 08:02:19		  meta-wmeta-b => /window balance
+2020-12-19 08:02:19		  meta-wmeta-s => /window swap
+2020-12-19 08:02:19		  meta-x => /input zoom_merged_buffer
+2020-12-19 08:02:19		  meta-z => /window zoom
+2020-12-19 08:02:19		  ctrl-_ => /input undo
+2020-12-19 08:02:19		8 key bindings for context "search":
+2020-12-19 08:02:19		  ctrl-I => /input search_switch_where
+2020-12-19 08:02:19		  ctrl-J => /input search_stop_here
+2020-12-19 08:02:19		  ctrl-M => /input search_stop_here
+2020-12-19 08:02:19		  ctrl-Q => /input search_stop
+2020-12-19 08:02:19		  ctrl-R => /input search_switch_regex
+2020-12-19 08:02:19		  meta2-A => /input search_previous
+2020-12-19 08:02:19		  meta2-B => /input search_next
+2020-12-19 08:02:19		  meta-c => /input search_switch_case
+2020-12-19 08:02:19		22 key bindings for context "cursor":
+2020-12-19 08:02:19		  ctrl-J => /cursor stop
+2020-12-19 08:02:19		  ctrl-M => /cursor stop
+2020-12-19 08:02:19		  meta-meta2-A => /cursor move area_up
+2020-12-19 08:02:19		  meta-meta2-B => /cursor move area_down
+2020-12-19 08:02:19		  meta-meta2-C => /cursor move area_right
+2020-12-19 08:02:19		  meta-meta2-D => /cursor move area_left
+2020-12-19 08:02:19		  meta2-1;3A => /cursor move area_up
+2020-12-19 08:02:19		  meta2-1;3B => /cursor move area_down
+2020-12-19 08:02:19		  meta2-1;3C => /cursor move area_right
+2020-12-19 08:02:19		  meta2-1;3D => /cursor move area_left
+2020-12-19 08:02:19		  meta2-A => /cursor move up
+2020-12-19 08:02:19		  meta2-B => /cursor move down
+2020-12-19 08:02:19		  meta2-C => /cursor move right
+2020-12-19 08:02:19		  meta2-D => /cursor move left
+2020-12-19 08:02:19		  @item(buffer_nicklist):K => /window ${_window_number};/kickban ${nick}
+2020-12-19 08:02:19		  @item(buffer_nicklist):b => /window ${_window_number};/ban ${nick}
+2020-12-19 08:02:19		  @item(buffer_nicklist):k => /window ${_window_number};/kick ${nick}
+2020-12-19 08:02:19		  @item(buffer_nicklist):q => /window ${_window_number};/query ${nick};/cursor stop
+2020-12-19 08:02:19		  @item(buffer_nicklist):w => /window ${_window_number};/whois ${nick}
+2020-12-19 08:02:19		  @chat:Q => hsignal:chat_quote_time_prefix_message;/cursor stop
+2020-12-19 08:02:19		  @chat:m => hsignal:chat_quote_message;/cursor stop
+2020-12-19 08:02:19		  @chat:q => hsignal:chat_quote_prefix_message;/cursor stop
+2020-12-19 08:02:19		38 key bindings for context "mouse":
+2020-12-19 08:02:19		  @bar(buflist):ctrl-wheeldown => hsignal:buflist_mouse
+2020-12-19 08:02:19		  @bar(buflist):ctrl-wheelup => hsignal:buflist_mouse
+2020-12-19 08:02:19		  @bar(input):button2 => /input grab_mouse_area
+2020-12-19 08:02:19		  @bar(nicklist):button1-gesture-down => /bar scroll nicklist ${_window_number} +100%
+2020-12-19 08:02:19		  @bar(nicklist):button1-gesture-down-long => /bar scroll nicklist ${_window_number} e
+2020-12-19 08:02:19		  @bar(nicklist):button1-gesture-up => /bar scroll nicklist ${_window_number} -100%
+2020-12-19 08:02:19		  @bar(nicklist):button1-gesture-up-long => /bar scroll nicklist ${_window_number} b
+2020-12-19 08:02:19		  @chat(fset.fset):button1 => /window ${_window_number};/fset -go ${_chat_line_y}
+2020-12-19 08:02:19		  @chat(fset.fset):button2* => hsignal:fset_mouse
+2020-12-19 08:02:19		  @chat(fset.fset):wheeldown => /fset -down 5
+2020-12-19 08:02:19		  @chat(fset.fset):wheelup => /fset -up 5
+2020-12-19 08:02:19		  @chat(script.scripts):button1 => /window ${_window_number};/script go ${_chat_line_y}
+2020-12-19 08:02:19		  @chat(script.scripts):button2 => /window ${_window_number};/script go ${_chat_line_y};/script installremove -q ${script_name_with_extension}
+2020-12-19 08:02:19		  @chat(script.scripts):wheeldown => /script down 5
+2020-12-19 08:02:19		  @chat(script.scripts):wheelup => /script up 5
+2020-12-19 08:02:19		  @item(buffer_nicklist):button1 => /window ${_window_number};/query ${nick}
+2020-12-19 08:02:19		  @item(buffer_nicklist):button1-gesture-left => /window ${_window_number};/kick ${nick}
+2020-12-19 08:02:19		  @item(buffer_nicklist):button1-gesture-left-long => /window ${_window_number};/kickban ${nick}
+2020-12-19 08:02:19		  @item(buffer_nicklist):button2 => /window ${_window_number};/whois ${nick}
+2020-12-19 08:02:19		  @item(buffer_nicklist):button2-gesture-left => /window ${_window_number};/ban ${nick}
+2020-12-19 08:02:19		  @item(buflist):button1* => hsignal:buflist_mouse
+2020-12-19 08:02:19		  @item(buflist):button2* => hsignal:buflist_mouse
+2020-12-19 08:02:19		  @item(buflist2):button1* => hsignal:buflist_mouse
+2020-12-19 08:02:19		  @item(buflist2):button2* => hsignal:buflist_mouse
+2020-12-19 08:02:19		  @item(buflist3):button1* => hsignal:buflist_mouse
+2020-12-19 08:02:19		  @item(buflist3):button2* => hsignal:buflist_mouse
+2020-12-19 08:02:19		  @bar:wheeldown => /bar scroll ${_bar_name} ${_window_number} +20%
+2020-12-19 08:02:19		  @bar:wheelup => /bar scroll ${_bar_name} ${_window_number} -20%
+2020-12-19 08:02:19		  @chat:button1 => /window ${_window_number}
+2020-12-19 08:02:19		  @chat:button1-gesture-left => /window ${_window_number};/buffer -1
+2020-12-19 08:02:19		  @chat:button1-gesture-left-long => /window ${_window_number};/buffer 1
+2020-12-19 08:02:19		  @chat:button1-gesture-right => /window ${_window_number};/buffer +1
+2020-12-19 08:02:19		  @chat:button1-gesture-right-long => /window ${_window_number};/input jump_last_buffer
+2020-12-19 08:02:19		  @chat:ctrl-wheeldown => /window scroll_horiz -window ${_window_number} +10%
+2020-12-19 08:02:19		  @chat:ctrl-wheelup => /window scroll_horiz -window ${_window_number} -10%
+2020-12-19 08:02:19		  @chat:wheeldown => /window scroll_down -window ${_window_number}
+2020-12-19 08:02:19		  @chat:wheelup => /window scroll_up -window ${_window_number}
+2020-12-19 08:02:19		  @*:button3 => /cursor go ${_x},${_y}
+2020-12-19 08:04:17		[alias]  /CL  
+2020-12-19 08:04:17		buffer clear
+2020-12-19 08:04:27		[core]
+2020-12-19 08:04:27		  away     eval     mouse    repeat   version
+2020-12-19 08:04:27		  bar      filter   mute     save     wait   
+2020-12-19 08:04:27		  buffer   help     plugin   secure   window 
+2020-12-19 08:04:27		  color    history  print    set    
+2020-12-19 08:04:27		  command  input    proxy    unset  
+2020-12-19 08:04:27		  cursor   key      quit     upgrade
+2020-12-19 08:04:27		  debug    layout   reload   uptime 
+2020-12-19 08:04:27		[fifo]
+2020-12-19 08:04:27		  fifo
+2020-12-19 08:04:27		[buflist]
+2020-12-19 08:04:27		  buflist
+2020-12-19 08:04:27		[xfer]
+2020-12-19 08:04:27		  me  xfer
+2020-12-19 08:04:27		[ruby]
+2020-12-19 08:04:27		  ruby
+2020-12-19 08:04:27		[lua]
+2020-12-19 08:04:27		  lua
+2020-12-19 08:04:27		[perl]
+2020-12-19 08:04:27		  highclean  highmon  perl
+2020-12-19 08:04:27		[relay]
+2020-12-19 08:04:27		  relay
+2020-12-19 08:04:27		[fset]
+2020-12-19 08:04:27		  fset
+2020-12-19 08:04:27		[python]
+2020-12-19 08:04:27		  autosort   grep       python   
+2020-12-19 08:04:27		  go         logs       text_item
+2020-12-19 08:04:27		[charset]
+2020-12-19 08:04:27		  charset
+2020-12-19 08:04:27		[logger]
+2020-12-19 08:04:27		  logger
+2020-12-19 08:04:27		[guile]
+2020-12-19 08:04:27		  guile
+2020-12-19 08:04:27		[trigger]
+2020-12-19 08:04:27		  trigger
+2020-12-19 08:04:27		[irc]
+2020-12-19 08:04:27		  admin       ison        part        squit     
+2020-12-19 08:04:27		  allchan     join        ping        stats     
+2020-12-19 08:04:27		  allpv       kick        pong        summon    
+2020-12-19 08:04:27		  allserv     kickban     query       time      
+2020-12-19 08:04:27		  ban         kill        quiet       topic     
+2020-12-19 08:04:27		  cap         links       quote       trace     
+2020-12-19 08:04:27		  connect     list        reconnect   unban     
+2020-12-19 08:04:27		  ctcp        lusers      rehash      unquiet   
+2020-12-19 08:04:27		  cycle       map         remove      userhost  
+2020-12-19 08:04:27		  dcc         me          restart     users     
+2020-12-19 08:04:27		  dehalfop    mode        sajoin      version   
+2020-12-19 08:04:27		  deop        motd        samode      voice     
+2020-12-19 08:04:27		  devoice     msg         sanick      wallchops 
+2020-12-19 08:04:27		  die         names       sapart      wallops   
+2020-12-19 08:04:27		  disconnect  nick        saquit      who       
+2020-12-19 08:04:27		  halfop      notice      server      whois     
+2020-12-19 08:04:27		  ignore      notify      service     whowas    
+2020-12-19 08:04:27		  info        op          servlist  
+2020-12-19 08:04:27		  invite      oper        squery    
+2020-12-19 08:04:27		[alias]
+2020-12-19 08:04:27		  AAWAY    CL       LEAVE    SAY      WC     
+2020-12-19 08:04:27		  alias    CLOSE    M        SIGNOFF  WI     
+2020-12-19 08:04:27		  ANICK    EXIT     MSGBUF   T        WII    
+2020-12-19 08:04:27		  BEEP     IG       MUB      UB       WM     
+2020-12-19 08:04:27		  BYE      J        N        UMODE    WW     
+2020-12-19 08:04:27		  C        K        Q        V      
+2020-12-19 08:04:27		  CHAT     KB       REDRAW   W      
+2020-12-19 08:04:27		[tcl]
+2020-12-19 08:04:27		  tcl
+2020-12-19 08:04:27		[script]
+2020-12-19 08:04:27		  script
+2020-12-19 08:04:27		[exec]
+2020-12-19 08:04:27		  exec
+2020-12-19 08:17:08		python: loading script "/home/jungdongho/.weechat/python/aesthetic.py"
+2020-12-19 08:17:08		python: registered script "aesthetic", version 1.0.6 (Make messages more A E S T H E T I C A L L Y pleasing.)
+2020-12-19 08:19:39		python: unloading script "aesthetic"
+2020-12-19 08:19:39		python: script "aesthetic" unloaded
+2020-12-19 08:19:39		python: loading script "/home/jungdongho/.weechat/python/aesthetic.py"
+2020-12-19 08:19:39		python: registered script "aesthetic", version 1.0.6 (Make messages more A E S T H E T I C A L L Y pleasing.)
+2020-12-19 08:20:02		python: unloading script "aesthetic"
+2020-12-19 08:20:02		python: script removed: /home/jungdongho/.weechat/python/autoload/aesthetic.py
+2020-12-19 08:20:02		python: script removed: /home/jungdongho/.weechat/python/aesthetic.py
+2020-12-19 08:24:46	freenode#weechat	<trygveaa> jungdongho: what do you mean by outputs? do you want gaps between messages?
+2020-12-19 08:27:42		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 08:27:42		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 08:27:42		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 08:27:42	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 08:27:42		perl scripts loaded: highmon
+2020-12-19 08:27:43		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 08:27:43		script: 364 scripts for WeeChat 2.9
+2020-12-19 08:27:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 09:03:41		[core]
+2020-12-19 09:03:41		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2020-12-19 09:03:41		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2020-12-19 09:03:41		[fifo]
+2020-12-19 09:03:41		  fifo
+2020-12-19 09:03:41		[buflist]
+2020-12-19 09:03:41		  buflist
+2020-12-19 09:03:41		[xfer]
+2020-12-19 09:03:41		  me  xfer
+2020-12-19 09:03:41		[ruby]
+2020-12-19 09:03:41		  ruby
+2020-12-19 09:03:41		[lua]
+2020-12-19 09:03:41		  lua
+2020-12-19 09:03:41		[perl]
+2020-12-19 09:03:41		  highclean  highmon  perl
+2020-12-19 09:03:41		[relay]
+2020-12-19 09:03:41		  relay
+2020-12-19 09:03:41		[fset]
+2020-12-19 09:03:41		  fset
+2020-12-19 09:03:41		[python]
+2020-12-19 09:03:41		  autosort  go  grep  logs  python  text_item
+2020-12-19 09:03:41		[charset]
+2020-12-19 09:03:41		  charset
+2020-12-19 09:03:41		[logger]
+2020-12-19 09:03:41		  logger
+2020-12-19 09:03:41		[guile]
+2020-12-19 09:03:41		  guile
+2020-12-19 09:03:41		[trigger]
+2020-12-19 09:03:41		  trigger
+2020-12-19 09:03:41		[irc]
+2020-12-19 09:03:41		  admin       ctcp        disconnect  kick        me          notify      quiet       samode      squery      unban       wallops   
+2020-12-19 09:03:41		  allchan     cycle       halfop      kickban     mode        op          quote       sanick      squit       unquiet     who       
+2020-12-19 09:03:41		  allpv       dcc         ignore      kill        motd        oper        reconnect   sapart      stats       userhost    whois     
+2020-12-19 09:03:41		  allserv     dehalfop    info        links       msg         part        rehash      saquit      summon      users       whowas    
+2020-12-19 09:03:41		  ban         deop        invite      list        names       ping        remove      server      time        version   
+2020-12-19 09:03:41		  cap         devoice     ison        lusers      nick        pong        restart     service     topic       voice     
+2020-12-19 09:03:41		  connect     die         join        map         notice      query       sajoin      servlist    trace       wallchops 
+2020-12-19 09:03:41		[alias]
+2020-12-19 09:03:41		  AAWAY    ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII      WW     
+2020-12-19 09:03:41		  alias    BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WM     
+2020-12-19 09:03:41		[tcl]
+2020-12-19 09:03:41		  tcl
+2020-12-19 09:03:41		[script]
+2020-12-19 09:03:41		  script
+2020-12-19 09:03:41		[exec]
+2020-12-19 09:03:41		  exec
+2020-12-19 09:04:09		[irc]  /voice  <nick> [<nick>...]
+2020-12-19 09:04:09		give voice to nick(s)
+2020-12-19 09:04:09		nick: nick or mask (wildcard "*" is allowed)
+2020-12-19 09:04:09		   *: give voice to everybody on channel
+2020-12-19 09:04:29		[irc]  /wallchops  [<channel>] <text>
+2020-12-19 09:04:29		send a notice to channel ops
+2020-12-19 09:04:29		channel: channel name
+2020-12-19 09:04:29		   text: text to send
+2020-12-19 09:05:00		[irc]  /die  [<target>]
+2020-12-19 09:05:00		shutdown the server
+2020-12-19 09:05:00		target: server name
+2020-12-19 09:05:07		[irc]  /cap  ls
+2020-12-19 09:05:07		             list
+2020-12-19 09:05:07		             req|ack [<capability> [<capability>...]]
+2020-12-19 09:05:07		             end
+2020-12-19 09:05:07		client capability negotiation
+2020-12-19 09:05:07		   ls: list the capabilities supported by the server
+2020-12-19 09:05:07		 list: list the capabilities currently enabled
+2020-12-19 09:05:07		  req: request a capability
+2020-12-19 09:05:07		  ack: acknowledge capabilities which require client-side acknowledgement
+2020-12-19 09:05:07		  end: end the capability negotiation
+2020-12-19 09:05:07		Without argument, "ls" and "list" are sent.
+2020-12-19 09:05:07		Capabilities supported by WeeChat are: account-notify, away-notify, cap-notify, chghost, extended-join, invite-notify, multi-prefix, server-time, userhost-in-names.
+2020-12-19 09:05:07		The capabilities to automatically enable on servers can be set in option irc.server_default.capabilities (or by server in option irc.server.xxx.capabilities).
+2020-12-19 09:05:07		Examples:
+2020-12-19 09:05:07		   /cap
+2020-12-19 09:05:07		   /cap req multi-prefix away-notify
+2020-12-19 09:05:13		[core]
+2020-12-19 09:05:13		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2020-12-19 09:05:13		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2020-12-19 09:05:13		[fifo]
+2020-12-19 09:05:13		  fifo
+2020-12-19 09:05:13		[buflist]
+2020-12-19 09:05:13		  buflist
+2020-12-19 09:05:13		[xfer]
+2020-12-19 09:05:13		  me  xfer
+2020-12-19 09:05:13		[ruby]
+2020-12-19 09:05:13		  ruby
+2020-12-19 09:05:13		[lua]
+2020-12-19 09:05:13		  lua
+2020-12-19 09:05:13		[perl]
+2020-12-19 09:05:13		  highclean  highmon  perl
+2020-12-19 09:05:13		[relay]
+2020-12-19 09:05:13		  relay
+2020-12-19 09:05:13		[fset]
+2020-12-19 09:05:13		  fset
+2020-12-19 09:05:13		[python]
+2020-12-19 09:05:13		  autosort  go  grep  logs  python  text_item
+2020-12-19 09:05:13		[charset]
+2020-12-19 09:05:13		  charset
+2020-12-19 09:05:13		[logger]
+2020-12-19 09:05:13		  logger
+2020-12-19 09:05:13		[guile]
+2020-12-19 09:05:13		  guile
+2020-12-19 09:05:13		[trigger]
+2020-12-19 09:05:13		  trigger
+2020-12-19 09:05:13		[irc]
+2020-12-19 09:05:13		  admin       ctcp        disconnect  kick        me          notify      quiet       samode      squery      unban       wallops   
+2020-12-19 09:05:13		  allchan     cycle       halfop      kickban     mode        op          quote       sanick      squit       unquiet     who       
+2020-12-19 09:05:13		  allpv       dcc         ignore      kill        motd        oper        reconnect   sapart      stats       userhost    whois     
+2020-12-19 09:05:13		  allserv     dehalfop    info        links       msg         part        rehash      saquit      summon      users       whowas    
+2020-12-19 09:05:13		  ban         deop        invite      list        names       ping        remove      server      time        version   
+2020-12-19 09:05:13		  cap         devoice     ison        lusers      nick        pong        restart     service     topic       voice     
+2020-12-19 09:05:13		  connect     die         join        map         notice      query       sajoin      servlist    trace       wallchops 
+2020-12-19 09:05:13		[alias]
+2020-12-19 09:05:13		  AAWAY    ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII      WW     
+2020-12-19 09:05:13		  alias    BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WM     
+2020-12-19 09:05:13		[tcl]
+2020-12-19 09:05:13		  tcl
+2020-12-19 09:05:13		[script]
+2020-12-19 09:05:13		  script
+2020-12-19 09:05:13		[exec]
+2020-12-19 09:05:13		  exec
+2020-12-19 09:05:17		[irc]  /deop  <nick> [<nick>...]
+2020-12-19 09:05:17		              * -yes
+2020-12-19 09:05:17		remove channel operator status from nick(s)
+2020-12-19 09:05:17		nick: nick or mask (wildcard "*" is allowed)
+2020-12-19 09:05:17		   *: remove channel operator status from everybody on channel except yourself
+2020-12-19 09:05:23		[irc]  /map  
+2020-12-19 09:05:23		show a graphical map of the IRC network
+2020-12-19 09:05:42		[irc]  /part  [<channel>[,<channel>...]] [<message>]
+2020-12-19 09:05:42		leave a channel
+2020-12-19 09:05:42		channel: channel name to leave
+2020-12-19 09:05:42		message: part message (displayed to other users)
+2020-12-19 09:06:04		[alias]  /WC  
+2020-12-19 09:06:04		window close
+2020-12-19 09:06:41		[irc]  /ison  <nick> [<nick>...]
+2020-12-19 09:06:41		check if a nick is currently on IRC
+2020-12-19 09:06:41		nick: nick
+2020-12-19 09:06:46		[irc]  /ping  <target1> [<target2>]
+2020-12-19 09:06:46		send a ping to server
+2020-12-19 09:06:46		target1: server
+2020-12-19 09:06:46		target2: forward ping to this server
+2020-12-19 09:06:50		[irc]  /pong  <daemon> [<daemon2>]
+2020-12-19 09:06:50		answer to a ping message
+2020-12-19 09:06:50		 daemon: daemon who has responded to Ping message
+2020-12-19 09:06:50		daemon2: forward message to this daemon
+2020-12-19 09:06:56		[core]
+2020-12-19 09:06:56		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2020-12-19 09:06:56		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2020-12-19 09:06:56		[fifo]
+2020-12-19 09:06:56		  fifo
+2020-12-19 09:06:56		[buflist]
+2020-12-19 09:06:56		  buflist
+2020-12-19 09:06:56		[xfer]
+2020-12-19 09:06:56		  me  xfer
+2020-12-19 09:06:56		[ruby]
+2020-12-19 09:06:56		  ruby
+2020-12-19 09:06:56		[lua]
+2020-12-19 09:06:56		  lua
+2020-12-19 09:06:56		[perl]
+2020-12-19 09:06:56		  highclean  highmon  perl
+2020-12-19 09:06:56		[relay]
+2020-12-19 09:06:56		  relay
+2020-12-19 09:06:56		[fset]
+2020-12-19 09:06:56		  fset
+2020-12-19 09:06:56		[python]
+2020-12-19 09:06:56		  autosort  go  grep  logs  python  text_item
+2020-12-19 09:06:56		[charset]
+2020-12-19 09:06:56		  charset
+2020-12-19 09:06:56		[logger]
+2020-12-19 09:06:56		  logger
+2020-12-19 09:06:56		[guile]
+2020-12-19 09:06:56		  guile
+2020-12-19 09:06:56		[trigger]
+2020-12-19 09:06:56		  trigger
+2020-12-19 09:06:56		[irc]
+2020-12-19 09:06:56		  admin       ctcp        disconnect  kick        me          notify      quiet       samode      squery      unban       wallops   
+2020-12-19 09:06:56		  allchan     cycle       halfop      kickban     mode        op          quote       sanick      squit       unquiet     who       
+2020-12-19 09:06:56		  allpv       dcc         ignore      kill        motd        oper        reconnect   sapart      stats       userhost    whois     
+2020-12-19 09:06:56		  allserv     dehalfop    info        links       msg         part        rehash      saquit      summon      users       whowas    
+2020-12-19 09:06:56		  ban         deop        invite      list        names       ping        remove      server      time        version   
+2020-12-19 09:06:56		  cap         devoice     ison        lusers      nick        pong        restart     service     topic       voice     
+2020-12-19 09:06:56		  connect     die         join        map         notice      query       sajoin      servlist    trace       wallchops 
+2020-12-19 09:06:56		[alias]
+2020-12-19 09:06:56		  AAWAY    ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII      WW     
+2020-12-19 09:06:56		  alias    BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WM     
+2020-12-19 09:06:56		[tcl]
+2020-12-19 09:06:56		  tcl
+2020-12-19 09:06:56		[script]
+2020-12-19 09:06:56		  script
+2020-12-19 09:06:56		[exec]
+2020-12-19 09:06:56		  exec
+2020-12-19 09:07:03		[xfer]  /me  <message>
+2020-12-19 09:07:03		send a CTCP action to remote host
+2020-12-19 09:07:03		message: message to send
+2020-12-19 09:07:03		[irc]  /me  <message>
+2020-12-19 09:07:03		send a CTCP action to the current channel
+2020-12-19 09:07:03		message: message to send
+2020-12-19 09:07:14		[irc]  /quote  [-server <server>] <data>
+2020-12-19 09:07:14		send raw data to server without parsing
+2020-12-19 09:07:14		server: send to this server (internal name)
+2020-12-19 09:07:14		  data: raw data to send
+2020-12-19 09:07:27		[irc]  /time  [<target>]
+2020-12-19 09:07:27		query local time from server
+2020-12-19 09:07:27		target: query time from specified server
+2020-12-19 09:09:05		[irc]  /join  [-noswitch] [-server <server>] [<channel1>[,<channel2>...]] [<key1>[,<key2>...]]
+2020-12-19 09:09:05		join a channel
+2020-12-19 09:09:05		-noswitch: do not switch to new buffer
+2020-12-19 09:09:05		   server: send to this server (internal name)
+2020-12-19 09:09:05		  channel: channel name to join
+2020-12-19 09:09:05		      key: key to join the channel (channels with a key must be the first in list)
+2020-12-19 09:09:05		Examples:
+2020-12-19 09:09:05		  /join #weechat
+2020-12-19 09:09:05		  /join #protectedchan,#weechat key
+2020-12-19 09:09:05		  /join -server freenode #weechat
+2020-12-19 09:09:05		  /join -noswitch #weechat
+2020-12-19 09:10:04		Option changed: irc.server.freenode.autojoin = "##linux,#python"  (default if null: "")
+2020-12-19 09:10:21		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:10:21		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:10:21		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:10:21	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 09:10:21		perl scripts loaded: highmon
+2020-12-19 09:10:21		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 09:10:21		script: 364 scripts for WeeChat 2.9
+2020-12-19 09:10:21		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 09:10:31	=!=	Too few arguments for command "/secure passphrase" (help on command: /help secure)
+2020-12-19 09:10:38		Passphrase changed
+2020-12-19 09:10:38		Options saved to sec.conf
+2020-12-19 09:10:46		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:10:46		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:10:46		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:10:46	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 09:10:46		perl scripts loaded: highmon
+2020-12-19 09:10:46		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 09:10:46		script: 364 scripts for WeeChat 2.9
+2020-12-19 09:10:46		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 09:11:50		Option changed: irc.server.freenode.autoconnect = on  (default if null: off)
+2020-12-19 09:11:54		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:11:54		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:11:54		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:11:54	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 09:11:54		perl scripts loaded: highmon
+2020-12-19 09:11:54		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 09:11:54		script: 364 scripts for WeeChat 2.9
+2020-12-19 09:11:54		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 09:13:50		Option changed: irc.server.freenode.command_delay = 2  (default if null: 0)
+2020-12-19 09:14:11		Option changed: irc.server.freenode.command = "/msg nickserv identify b2ngbc600!"  (default if null: "")
+2020-12-19 09:14:17		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:14:17		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:14:17		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:14:17	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 09:14:17		perl scripts loaded: highmon
+2020-12-19 09:14:17		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 09:14:17		script: 364 scripts for WeeChat 2.9
+2020-12-19 09:14:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 09:15:34		Option changed: irc.server.freenode.command_delay = 5  (default if null: 0)
+2020-12-19 09:15:56		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:15:56		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:15:56		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:15:56	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 09:15:56		perl scripts loaded: highmon
+2020-12-19 09:15:56		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 09:15:56		script: 364 scripts for WeeChat 2.9
+2020-12-19 09:15:56		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 09:16:31		Option changed: irc.server.freenode.command_delay = 0  (default if null: 0)
+2020-12-19 09:16:37		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:16:37		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:16:37		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:16:37	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 09:16:37		perl scripts loaded: highmon
+2020-12-19 09:16:37		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 09:16:37		script: 364 scripts for WeeChat 2.9
+2020-12-19 09:16:37		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 09:19:06		Option changed: irc.server.freenode.command_delay = 15  (default if null: 0)
+2020-12-19 09:19:13		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:19:13		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:19:13		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 09:19:13	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 09:19:13		perl scripts loaded: highmon
+2020-12-19 09:19:13		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 09:19:13		script: 364 scripts for WeeChat 2.9
+2020-12-19 09:19:13		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-19 11:55:15		Option changed: irc.server.freenode.autojoin = "#archlinux,#archlinux-devops,#awk,##aws,#bash,##C,#dns,#docker,#git,#go-nuts,#i3,##infra-talk,##kernel,##linux,##networking,#nginx,#osdev,#postgresql,#python,#reddit-sysadmin,#sql,#systemd,#wirewhark"  (default if null: "")
+2020-12-19 11:57:08		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 11:57:08		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 11:57:08		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-19 11:57:08	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-19 11:57:08		perl scripts loaded: highmon
+2020-12-19 11:57:08		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-19 11:57:08		script: 364 scripts for WeeChat 2.9
+2020-12-19 11:57:08		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-20 03:36:31		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 03:36:31		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 03:36:31		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 03:36:31	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-20 03:36:31		perl scripts loaded: highmon
+2020-12-20 03:36:32		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-20 03:36:32		script: 364 scripts for WeeChat 2.9
+2020-12-20 03:36:32		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-20 05:48:56	=!=	Error with command "/alias wi" (help on command: /help alias)
+2020-12-20 05:49:09		All aliases:
+2020-12-20 05:49:09		  AAWAY => allserv /away
+2020-12-20 05:49:09		  ANICK => allserv /nick
+2020-12-20 05:49:09		  BEEP => print -beep
+2020-12-20 05:49:09		  BYE => quit
+2020-12-20 05:49:09		  C => buffer clear
+2020-12-20 05:49:09		  CHAT => dcc chat
+2020-12-20 05:49:09		  CL => buffer clear
+2020-12-20 05:49:09		  CLOSE => buffer close
+2020-12-20 05:49:09		  EXIT => quit
+2020-12-20 05:49:09		  IG => ignore
+2020-12-20 05:49:09		  J => join
+2020-12-20 05:49:09		  K => kick
+2020-12-20 05:49:09		  KB => kickban
+2020-12-20 05:49:09		  LEAVE => part
+2020-12-20 05:49:09		  M => msg
+2020-12-20 05:49:09		  MSGBUF => command -buffer $1 * /input send $2-  (completion: %(buffers_plugins_names))
+2020-12-20 05:49:09		  MUB => unban *
+2020-12-20 05:49:09		  N => names
+2020-12-20 05:49:09		  Q => query
+2020-12-20 05:49:09		  REDRAW => window refresh
+2020-12-20 05:49:09		  SAY => msg *
+2020-12-20 05:49:09		  SIGNOFF => quit
+2020-12-20 05:49:09		  T => topic
+2020-12-20 05:49:09		  UB => unban
+2020-12-20 05:49:09		  UMODE => mode $nick
+2020-12-20 05:49:09		  V => command core version
+2020-12-20 05:49:09		  W => who
+2020-12-20 05:49:09		  WC => window close
+2020-12-20 05:49:09		  WI => whois
+2020-12-20 05:49:09		  WII => whois $1 $1
+2020-12-20 05:49:09		  WM => window merge
+2020-12-20 05:49:09		  WW => whowas
+2020-12-20 05:49:11	=!=	Error with command "/alias wi" (help on command: /help alias)
+2020-12-20 05:49:13	=!=	Error with command "/alias WI" (help on command: /help alias)
+2020-12-20 05:49:16		[alias]  /alias  list [<alias>]
+2020-12-20 05:49:16		                 add <alias> [<command>[;<command>...]]
+2020-12-20 05:49:16		                 addcompletion <completion> <alias> [<command>[;<command>...]]
+2020-12-20 05:49:16		                 del <alias> [<alias>...]
+2020-12-20 05:49:16		list, add or remove command aliases
+2020-12-20 05:49:16		         list: list aliases (without argument, this list is displayed)
+2020-12-20 05:49:16		          add: add an alias
+2020-12-20 05:49:16		addcompletion: add an alias with a custom completion
+2020-12-20 05:49:16		          del: delete an alias
+2020-12-20 05:49:16		   completion: completion for alias: by default completion is done with target command
+2020-12-20 05:49:16		               note: you can use %%command to use completion of an existing command
+2020-12-20 05:49:16		        alias: name of alias
+2020-12-20 05:49:16		      command: command name with arguments (many commands can be separated by semicolons)
+2020-12-20 05:49:16		Note: in command, special variables are replaced:
+2020-12-20 05:49:16		        $n: argument 'n' (between 1 and 9)
+2020-12-20 05:49:16		       $-m: arguments from 1 to 'm'
+2020-12-20 05:49:16		       $n-: arguments from 'n' to last
+2020-12-20 05:49:16		      $n-m: arguments from 'n' to 'm'
+2020-12-20 05:49:16		        $*: all arguments
+2020-12-20 05:49:16		        $~: last argument
+2020-12-20 05:49:16		      $var: where "var" is a local variable of buffer (see /buffer localvar)
+2020-12-20 05:49:16		            examples: $nick, $channel, $server, $plugin, $name
+2020-12-20 05:49:16		Examples:
+2020-12-20 05:49:16		  alias /split to split window horizontally:
+2020-12-20 05:49:16		    /alias add split /window splith
+2020-12-20 05:49:16		  alias /hello to say "hello" on all channels but not on #weechat:
+2020-12-20 05:49:16		    /alias add hello /allchan -exclude=#weechat msg * hello
+2020-12-20 05:49:16		  alias /forcejoin to send IRC command "forcejoin" with completion of /sajoin:
+2020-12-20 05:49:16		    /alias addcompletion %%sajoin forcejoin /quote forcejoin
+2020-12-20 05:51:02		[alias]  /WI  
+2020-12-20 05:51:02		whois
+2020-12-20 05:54:34		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 05:54:34		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 05:54:34		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 05:54:34	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-20 05:54:34		perl scripts loaded: highmon
+2020-12-20 05:54:34		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-20 05:54:34		script: downloading list of scripts...
+2020-12-20 05:54:34		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-20 05:54:37		script: 364 scripts for WeeChat 2.9
+2020-12-20 06:18:02		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 06:18:02		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 06:18:02		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 06:18:02	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-20 06:18:02		perl scripts loaded: highmon
+2020-12-20 06:18:02		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-20 06:18:02		script: 364 scripts for WeeChat 2.9
+2020-12-20 06:18:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-20 16:51:06		Scripts loaded:
+2020-12-20 16:51:06		 * ia   highmon.pl 2.7 (Highlight Monitor)
+2020-12-20 16:51:06		 * ia   autosort.py 3.9 (Flexible automatic (or manual) buffer sorting based on eval expressions.)
+2020-12-20 16:51:06		 * ia   colorize_nicks.py 27 (Use the weechat nick colors in the chat area)
+2020-12-20 16:51:06		 * ia   go.py 2.6 (Quick jump to buffers)
+2020-12-20 16:51:06		 * ia   grep.py 0.8.4 (Search in buffers and logs)
+2020-12-20 16:51:06		 * ia   text_item.py 0.9 (add a plain text or evaluated content to item bar)
+2020-12-20 16:52:46		[core]  /key  list|listdefault|listdiff [<context>]
+2020-12-20 16:52:46		              bind <key> [<command> [<args>]]
+2020-12-20 16:52:46		              bindctxt <context> <key> [<command> [<args>]]
+2020-12-20 16:52:46		              unbind <key>
+2020-12-20 16:52:46		              unbindctxt <context> <key>
+2020-12-20 16:52:46		              reset <key>
+2020-12-20 16:52:46		              resetctxt <context> <key>
+2020-12-20 16:52:46		              resetall -yes [<context>]
+2020-12-20 16:52:46		              missing [<context>]
+2020-12-20 16:52:46		bind/unbind keys
+2020-12-20 16:52:46		       list: list all current keys (without argument, this list is displayed)
+2020-12-20 16:52:46		listdefault: list default keys
+2020-12-20 16:52:46		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2020-12-20 16:52:46		    context: name of context ("default" or "search")
+2020-12-20 16:52:46		       bind: bind a command to a key or display command bound to key (for context "default")
+2020-12-20 16:52:46		   bindctxt: bind a command to a key or display command bound to key, for given context
+2020-12-20 16:52:46		    command: command (many commands can be separated by semicolons)
+2020-12-20 16:52:46		     unbind: remove a key binding (for context "default")
+2020-12-20 16:52:46		 unbindctxt: remove a key binding for given context
+2020-12-20 16:52:46		      reset: reset a key to default binding (for context "default")
+2020-12-20 16:52:46		  resetctxt: reset a key to default binding, for given context
+2020-12-20 16:52:46		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2020-12-20 16:52:46		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2020-12-20 16:52:46		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2020-12-20 16:52:46		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2020-12-20 16:52:46		          *: any area on screen
+2020-12-20 16:52:46		       chat: chat area (any buffer)
+2020-12-20 16:52:46		  chat(xxx): chat area for buffer with name "xxx" (full name including plugin)
+2020-12-20 16:52:46		     bar(*): any bar
+2020-12-20 16:52:46		   bar(xxx): bar "xxx"
+2020-12-20 16:52:46		    item(*): any bar item
+2020-12-20 16:52:46		  item(xxx): bar item "xxx"
+2020-12-20 16:52:46		Wildcard "*" is allowed in key to match many mouse events.
+2020-12-20 16:52:46		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2020-12-20 16:52:46		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2020-12-20 16:52:46		Examples:
+2020-12-20 16:52:46		  key alt-t to toggle nicklist bar:
+2020-12-20 16:52:46		    /key bind meta-t /bar toggle nicklist
+2020-12-20 16:52:46		  key alt-r to jump to #weechat IRC channel:
+2020-12-20 16:52:46		    /key bind meta-r /buffer #weechat
+2020-12-20 16:52:46		  restore default binding for key alt-r:
+2020-12-20 16:52:46		    /key reset meta-r
+2020-12-20 16:52:46		  key "tab" to stop search in buffer:
+2020-12-20 16:52:46		    /key bindctxt search ctrl-I /input search_stop
+2020-12-20 16:52:46		  middle button of mouse on a nick to retrieve info on nick:
+2020-12-20 16:52:46		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2020-12-20 16:52:55		[core]  /key  list|listdefault|listdiff [<context>]
+2020-12-20 16:52:55		              bind <key> [<command> [<args>]]
+2020-12-20 16:52:55		              bindctxt <context> <key> [<command> [<args>]]
+2020-12-20 16:52:55		              unbind <key>
+2020-12-20 16:52:55		              unbindctxt <context> <key>
+2020-12-20 16:52:55		              reset <key>
+2020-12-20 16:52:55		              resetctxt <context> <key>
+2020-12-20 16:52:55		              resetall -yes [<context>]
+2020-12-20 16:52:55		              missing [<context>]
+2020-12-20 16:52:55		bind/unbind keys
+2020-12-20 16:52:55		       list: list all current keys (without argument, this list is displayed)
+2020-12-20 16:52:55		listdefault: list default keys
+2020-12-20 16:52:55		   listdiff: list differences between current and default keys (keys added, redefined or deleted)
+2020-12-20 16:52:55		    context: name of context ("default" or "search")
+2020-12-20 16:52:55		       bind: bind a command to a key or display command bound to key (for context "default")
+2020-12-20 16:52:55		   bindctxt: bind a command to a key or display command bound to key, for given context
+2020-12-20 16:52:55		    command: command (many commands can be separated by semicolons)
+2020-12-20 16:52:55		     unbind: remove a key binding (for context "default")
+2020-12-20 16:52:55		 unbindctxt: remove a key binding for given context
+2020-12-20 16:52:55		      reset: reset a key to default binding (for context "default")
+2020-12-20 16:52:55		  resetctxt: reset a key to default binding, for given context
+2020-12-20 16:52:55		   resetall: restore bindings to the default values and delete ALL personal bindings (use carefully!)
+2020-12-20 16:52:55		    missing: add missing keys (using default bindings), useful after installing new WeeChat version
+2020-12-20 16:52:55		When binding a command to a key, it is recommended to use key alt+k (or Esc then k), and then press the key to bind: this will insert key code in command line.
+2020-12-20 16:52:55		For context "mouse" (possible in context "cursor" too), key has format: "@area:key" or "@area1>area2:key" where area can be:
+2020-12-20 16:52:55		          *: any area on screen
+2020-12-20 16:52:55		       chat: chat area (any buffer)
+2020-12-20 16:52:55		  chat(xxx): chat area for buffer with name "xxx" (full name including plugin)
+2020-12-20 16:52:55		     bar(*): any bar
+2020-12-20 16:52:55		   bar(xxx): bar "xxx"
+2020-12-20 16:52:55		    item(*): any bar item
+2020-12-20 16:52:55		  item(xxx): bar item "xxx"
+2020-12-20 16:52:55		Wildcard "*" is allowed in key to match many mouse events.
+2020-12-20 16:52:55		A special value for command with format "hsignal:name" can be used for context mouse, this will send the hsignal "name" with the focus hashtable as argument.
+2020-12-20 16:52:55		Another special value "-" can be used to disable key (it will be ignored when looking for keys).
+2020-12-20 16:52:55		Examples:
+2020-12-20 16:52:55		  key alt-t to toggle nicklist bar:
+2020-12-20 16:52:55		    /key bind meta-t /bar toggle nicklist
+2020-12-20 16:52:55		  key alt-r to jump to #weechat IRC channel:
+2020-12-20 16:52:55		    /key bind meta-r /buffer #weechat
+2020-12-20 16:52:55		  restore default binding for key alt-r:
+2020-12-20 16:52:55		    /key reset meta-r
+2020-12-20 16:52:55		  key "tab" to stop search in buffer:
+2020-12-20 16:52:55		    /key bindctxt search ctrl-I /input search_stop
+2020-12-20 16:52:55		  middle button of mouse on a nick to retrieve info on nick:
+2020-12-20 16:52:55		    /key bindctxt mouse @item(buffer_nicklist):button3 /msg nickserv info ${nick}
+2020-12-20 16:55:38		256 key bindings for context "default":
+2020-12-20 16:55:38		  ctrl-? => /input delete_previous_char
+2020-12-20 16:55:38		  ctrl-A => /input move_beginning_of_line
+2020-12-20 16:55:38		  ctrl-B => /input move_previous_char
+2020-12-20 16:55:38		  ctrl-C_ => /input insert \x1F
+2020-12-20 16:55:38		  ctrl-Cb => /input insert \x02
+2020-12-20 16:55:38		  ctrl-Cc => /input insert \x03
+2020-12-20 16:55:38		  ctrl-Ci => /input insert \x1D
+2020-12-20 16:55:38		  ctrl-Co => /input insert \x0F
+2020-12-20 16:55:38		  ctrl-Cv => /input insert \x16
+2020-12-20 16:55:38		  ctrl-D => /input delete_next_char
+2020-12-20 16:55:38		  ctrl-E => /input move_end_of_line
+2020-12-20 16:55:38		  ctrl-F => /input move_next_char
+2020-12-20 16:55:38		  ctrl-H => /input delete_previous_char
+2020-12-20 16:55:38		  ctrl-I => /input complete_next
+2020-12-20 16:55:38		  ctrl-J => /input return
+2020-12-20 16:55:38		  ctrl-K => /input delete_end_of_line
+2020-12-20 16:55:38		  ctrl-L => /window refresh
+2020-12-20 16:55:38		  ctrl-M => /input return
+2020-12-20 16:55:38		  ctrl-N => /buffer +1
+2020-12-20 16:55:38		  ctrl-P => /buffer -1
+2020-12-20 16:55:38		  ctrl-R => /input search_text_here
+2020-12-20 16:55:38		  ctrl-Sctrl-U => /input set_unread
+2020-12-20 16:55:38		  ctrl-T => /input transpose_chars
+2020-12-20 16:55:38		  ctrl-U => /input delete_beginning_of_line
+2020-12-20 16:55:38		  ctrl-W => /input delete_previous_word
+2020-12-20 16:55:38		  ctrl-X => /input switch_active_buffer
+2020-12-20 16:55:38		  ctrl-Y => /input clipboard_paste
+2020-12-20 16:55:38		  meta-ctrl-M => /input insert \n
+2020-12-20 16:55:38		  meta-meta-OP => /bar scroll buflist * b
+2020-12-20 16:55:38		  meta-meta-OQ => /bar scroll buflist * e
+2020-12-20 16:55:38		  meta-meta2-11~ => /bar scroll buflist * b
+2020-12-20 16:55:38		  meta-meta2-12~ => /bar scroll buflist * e
+2020-12-20 16:55:38		  meta-meta2-1~ => /window scroll_top
+2020-12-20 16:55:38		  meta-meta2-23~ => /bar scroll nicklist * b
+2020-12-20 16:55:38		  meta-meta2-24~ => /bar scroll nicklist * e
+2020-12-20 16:55:38		  meta-meta2-4~ => /window scroll_bottom
+2020-12-20 16:55:38		  meta-meta2-5~ => /window scroll_up
+2020-12-20 16:55:38		  meta-meta2-6~ => /window scroll_down
+2020-12-20 16:55:38		  meta-meta2-7~ => /window scroll_top
+2020-12-20 16:55:38		  meta-meta2-8~ => /window scroll_bottom
+2020-12-20 16:55:38		  meta-meta2-A => /buffer -1
+2020-12-20 16:55:38		  meta-meta2-B => /buffer +1
+2020-12-20 16:55:38		  meta-meta2-C => /buffer +1
+2020-12-20 16:55:38		  meta-meta2-D => /buffer -1
+2020-12-20 16:55:38		  meta-- => /filter toggle @
+2020-12-20 16:55:38		  meta-/ => /input jump_last_buffer_displayed
+2020-12-20 16:55:38		  meta-0 => /buffer *10
+2020-12-20 16:55:38		  meta-1 => /buffer *1
+2020-12-20 16:55:38		  meta-2 => /buffer *2
+2020-12-20 16:55:38		  meta-3 => /buffer *3
+2020-12-20 16:55:38		  meta-4 => /buffer *4
+2020-12-20 16:55:38		  meta-5 => /buffer *5
+2020-12-20 16:55:38		  meta-6 => /buffer *6
+2020-12-20 16:55:38		  meta-7 => /buffer *7
+2020-12-20 16:55:38		  meta-8 => /buffer *8
+2020-12-20 16:55:38		  meta-9 => /buffer *9
+2020-12-20 16:55:38		  meta-< => /input jump_previously_visited_buffer
+2020-12-20 16:55:38		  meta-= => /filter toggle
+2020-12-20 16:55:38		  meta-> => /input jump_next_visited_buffer
+2020-12-20 16:55:38		  meta-B => /buflist toggle
+2020-12-20 16:55:38		  meta-N => /bar toggle nicklist
+2020-12-20 16:55:38		  meta-OA => /input history_global_previous
+2020-12-20 16:55:38		  meta-OB => /input history_global_next
+2020-12-20 16:55:38		  meta-OC => /input move_next_word
+2020-12-20 16:55:38		  meta-OD => /input move_previous_word
+2020-12-20 16:55:38		  meta-OF => /input move_end_of_line
+2020-12-20 16:55:38		  meta-OH => /input move_beginning_of_line
+2020-12-20 16:55:38		  meta-OP => /bar scroll buflist * -100%
+2020-12-20 16:55:38		  meta-OQ => /bar scroll buflist * +100%
+2020-12-20 16:55:38		  meta-Oa => /input history_global_previous
+2020-12-20 16:55:38		  meta-Ob => /input history_global_next
+2020-12-20 16:55:38		  meta-Oc => /input move_next_word
+2020-12-20 16:55:38		  meta-Od => /input move_previous_word
+2020-12-20 16:55:38		  meta2-11^ => /bar scroll buflist * -100%
+2020-12-20 16:55:38		  meta2-11~ => /bar scroll buflist * -100%
+2020-12-20 16:55:38		  meta2-12^ => /bar scroll buflist * +100%
+2020-12-20 16:55:38		  meta2-12~ => /bar scroll buflist * +100%
+2020-12-20 16:55:38		  meta2-15~ => /buffer -1
+2020-12-20 16:55:38		  meta2-17~ => /buffer +1
+2020-12-20 16:55:38		  meta2-18~ => /window -1
+2020-12-20 16:55:38		  meta2-19~ => /window +1
+2020-12-20 16:55:38		  meta2-1;3A => /buffer -1
+2020-12-20 16:55:38		  meta2-1;3B => /buffer +1
+2020-12-20 16:55:38		  meta2-1;3C => /buffer +1
+2020-12-20 16:55:38		  meta2-1;3D => /buffer -1
+2020-12-20 16:55:38		  meta2-1;3F => /window scroll_bottom
+2020-12-20 16:55:38		  meta2-1;3H => /window scroll_top
+2020-12-20 16:55:38		  meta2-1;3P => /bar scroll buflist * b
+2020-12-20 16:55:38		  meta2-1;3Q => /bar scroll buflist * e
+2020-12-20 16:55:38		  meta2-1;5A => /input history_global_previous
+2020-12-20 16:55:38		  meta2-1;5B => /input history_global_next
+2020-12-20 16:55:38		  meta2-1;5C => /input move_next_word
+2020-12-20 16:55:38		  meta2-1;5D => /input move_previous_word
+2020-12-20 16:55:38		  meta2-1;5P => /bar scroll buflist * -100%
+2020-12-20 16:55:38		  meta2-1;5Q => /bar scroll buflist * +100%
+2020-12-20 16:55:38		  meta2-1~ => /input move_beginning_of_line
+2020-12-20 16:55:38		  meta2-200~ => /input paste_start
+2020-12-20 16:55:38		  meta2-201~ => /input paste_stop
+2020-12-20 16:55:38		  meta2-20~ => /bar scroll title * -30%
+2020-12-20 16:55:38		  meta2-21~ => /bar scroll title * +30%
+2020-12-20 16:55:38		  meta2-23;3~ => /bar scroll nicklist * b
+2020-12-20 16:55:38		  meta2-23;5~ => /bar scroll nicklist * -100%
+2020-12-20 16:55:38		  meta2-23^ => /bar scroll nicklist * -100%
+2020-12-20 16:55:38		  meta2-23~ => /bar scroll nicklist * -100%
+2020-12-20 16:55:38		  meta2-24;3~ => /bar scroll nicklist * e
+2020-12-20 16:55:38		  meta2-24;5~ => /bar scroll nicklist * +100%
+2020-12-20 16:55:38		  meta2-24^ => /bar scroll nicklist * +100%
+2020-12-20 16:55:38		  meta2-24~ => /bar scroll nicklist * +100%
+2020-12-20 16:55:38		  meta2-3~ => /input delete_next_char
+2020-12-20 16:55:38		  meta2-4~ => /input move_end_of_line
+2020-12-20 16:55:38		  meta2-5;3~ => /window scroll_up
+2020-12-20 16:55:38		  meta2-5~ => /window page_up
+2020-12-20 16:55:38		  meta2-6;3~ => /window scroll_down
+2020-12-20 16:55:38		  meta2-6~ => /window page_down
+2020-12-20 16:55:38		  meta2-7~ => /input move_beginning_of_line
+2020-12-20 16:55:38		  meta2-8~ => /input move_end_of_line
+2020-12-20 16:55:38		  meta2-A => /input history_previous
+2020-12-20 16:55:38		  meta2-B => /input history_next
+2020-12-20 16:55:38		  meta2-C => /input move_next_char
+2020-12-20 16:55:38		  meta2-D => /input move_previous_char
+2020-12-20 16:55:38		  meta2-F => /input move_end_of_line
+2020-12-20 16:55:38		  meta2-G => /window page_down
+2020-12-20 16:55:38		  meta2-H => /input move_beginning_of_line
+2020-12-20 16:55:38		  meta2-I => /window page_up
+2020-12-20 16:55:38		  meta2-Z => /input complete_previous
+2020-12-20 16:55:38		  meta2-[E => /buffer -1
+2020-12-20 16:55:38		  meta-_ => /input redo
+2020-12-20 16:55:38		  meta-a => /input jump_smart
+2020-12-20 16:55:38		  meta-b => /input move_previous_word
+2020-12-20 16:55:38		  meta-d => /input delete_next_word
+2020-12-20 16:55:38		  meta-f => /input move_next_word
+2020-12-20 16:55:38		  meta-h => /input hotlist_clear
+2020-12-20 16:55:38		  meta-jmeta-f => /buffer -
+2020-12-20 16:55:38		  meta-jmeta-l => /buffer +
+2020-12-20 16:55:38		  meta-jmeta-r => /server raw
+2020-12-20 16:55:38		  meta-jmeta-s => /server jump
+2020-12-20 16:55:38		  meta-j01 => /buffer *1
+2020-12-20 16:55:38		  meta-j02 => /buffer *2
+2020-12-20 16:55:38		  meta-j03 => /buffer *3
+2020-12-20 16:55:38		  meta-j04 => /buffer *4
+2020-12-20 16:55:38		  meta-j05 => /buffer *5
+2020-12-20 16:55:38		  meta-j06 => /buffer *6
+2020-12-20 16:55:38		  meta-j07 => /buffer *7
+2020-12-20 16:55:38		  meta-j08 => /buffer *8
+2020-12-20 16:55:38		  meta-j09 => /buffer *9
+2020-12-20 16:55:38		  meta-j10 => /buffer *10
+2020-12-20 16:55:38		  meta-j11 => /buffer *11
+2020-12-20 16:55:38		  meta-j12 => /buffer *12
+2020-12-20 16:55:38		  meta-j13 => /buffer *13
+2020-12-20 16:55:38		  meta-j14 => /buffer *14
+2020-12-20 16:55:38		  meta-j15 => /buffer *15
+2020-12-20 16:55:38		  meta-j16 => /buffer *16
+2020-12-20 16:55:38		  meta-j17 => /buffer *17
+2020-12-20 16:55:38		  meta-j18 => /buffer *18
+2020-12-20 16:55:38		  meta-j19 => /buffer *19
+2020-12-20 16:55:38		  meta-j20 => /buffer *20
+2020-12-20 16:55:38		  meta-j21 => /buffer *21
+2020-12-20 16:55:38		  meta-j22 => /buffer *22
+2020-12-20 16:55:38		  meta-j23 => /buffer *23
+2020-12-20 16:55:38		  meta-j24 => /buffer *24
+2020-12-20 16:55:38		  meta-j25 => /buffer *25
+2020-12-20 16:55:38		  meta-j26 => /buffer *26
+2020-12-20 16:55:38		  meta-j27 => /buffer *27
+2020-12-20 16:55:38		  meta-j28 => /buffer *28
+2020-12-20 16:55:38		  meta-j29 => /buffer *29
+2020-12-20 16:55:38		  meta-j30 => /buffer *30
+2020-12-20 16:55:38		  meta-j31 => /buffer *31
+2020-12-20 16:55:38		  meta-j32 => /buffer *32
+2020-12-20 16:55:38		  meta-j33 => /buffer *33
+2020-12-20 16:55:38		  meta-j34 => /buffer *34
+2020-12-20 16:55:38		  meta-j35 => /buffer *35
+2020-12-20 16:55:38		  meta-j36 => /buffer *36
+2020-12-20 16:55:38		  meta-j37 => /buffer *37
+2020-12-20 16:55:38		  meta-j38 => /buffer *38
+2020-12-20 16:55:38		  meta-j39 => /buffer *39
+2020-12-20 16:55:38		  meta-j40 => /buffer *40
+2020-12-20 16:55:38		  meta-j41 => /buffer *41
+2020-12-20 16:55:38		  meta-j42 => /buffer *42
+2020-12-20 16:55:38		  meta-j43 => /buffer *43
+2020-12-20 16:55:38		  meta-j44 => /buffer *44
+2020-12-20 16:55:38		  meta-j45 => /buffer *45
+2020-12-20 16:55:38		  meta-j46 => /buffer *46
+2020-12-20 16:55:38		  meta-j47 => /buffer *47
+2020-12-20 16:55:38		  meta-j48 => /buffer *48
+2020-12-20 16:55:38		  meta-j49 => /buffer *49
+2020-12-20 16:55:38		  meta-j50 => /buffer *50
+2020-12-20 16:55:38		  meta-j51 => /buffer *51
+2020-12-20 16:55:38		  meta-j52 => /buffer *52
+2020-12-20 16:55:38		  meta-j53 => /buffer *53
+2020-12-20 16:55:38		  meta-j54 => /buffer *54
+2020-12-20 16:55:38		  meta-j55 => /buffer *55
+2020-12-20 16:55:38		  meta-j56 => /buffer *56
+2020-12-20 16:55:38		  meta-j57 => /buffer *57
+2020-12-20 16:55:38		  meta-j58 => /buffer *58
+2020-12-20 16:55:38		  meta-j59 => /buffer *59
+2020-12-20 16:55:38		  meta-j60 => /buffer *60
+2020-12-20 16:55:38		  meta-j61 => /buffer *61
+2020-12-20 16:55:38		  meta-j62 => /buffer *62
+2020-12-20 16:55:38		  meta-j63 => /buffer *63
+2020-12-20 16:55:38		  meta-j64 => /buffer *64
+2020-12-20 16:55:38		  meta-j65 => /buffer *65
+2020-12-20 16:55:38		  meta-j66 => /buffer *66
+2020-12-20 16:55:38		  meta-j67 => /buffer *67
+2020-12-20 16:55:38		  meta-j68 => /buffer *68
+2020-12-20 16:55:38		  meta-j69 => /buffer *69
+2020-12-20 16:55:38		  meta-j70 => /buffer *70
+2020-12-20 16:55:38		  meta-j71 => /buffer *71
+2020-12-20 16:55:38		  meta-j72 => /buffer *72
+2020-12-20 16:55:38		  meta-j73 => /buffer *73
+2020-12-20 16:55:38		  meta-j74 => /buffer *74
+2020-12-20 16:55:38		  meta-j75 => /buffer *75
+2020-12-20 16:55:38		  meta-j76 => /buffer *76
+2020-12-20 16:55:38		  meta-j77 => /buffer *77
+2020-12-20 16:55:38		  meta-j78 => /buffer *78
+2020-12-20 16:55:38		  meta-j79 => /buffer *79
+2020-12-20 16:55:38		  meta-j80 => /buffer *80
+2020-12-20 16:55:38		  meta-j81 => /buffer *81
+2020-12-20 16:55:38		  meta-j82 => /buffer *82
+2020-12-20 16:55:38		  meta-j83 => /buffer *83
+2020-12-20 16:55:38		  meta-j84 => /buffer *84
+2020-12-20 16:55:38		  meta-j85 => /buffer *85
+2020-12-20 16:55:38		  meta-j86 => /buffer *86
+2020-12-20 16:55:38		  meta-j87 => /buffer *87
+2020-12-20 16:55:38		  meta-j88 => /buffer *88
+2020-12-20 16:55:38		  meta-j89 => /buffer *89
+2020-12-20 16:55:38		  meta-j90 => /buffer *90
+2020-12-20 16:55:38		  meta-j91 => /buffer *91
+2020-12-20 16:55:38		  meta-j92 => /buffer *92
+2020-12-20 16:55:38		  meta-j93 => /buffer *93
+2020-12-20 16:55:38		  meta-j94 => /buffer *94
+2020-12-20 16:55:38		  meta-j95 => /buffer *95
+2020-12-20 16:55:38		  meta-j96 => /buffer *96
+2020-12-20 16:55:38		  meta-j97 => /buffer *97
+2020-12-20 16:55:38		  meta-j98 => /buffer *98
+2020-12-20 16:55:38		  meta-j99 => /buffer *99
+2020-12-20 16:55:38		  meta-k => /input grab_key_command
+2020-12-20 16:55:38		  meta-l => /window bare
+2020-12-20 16:55:38		  meta-m => /mute mouse toggle
+2020-12-20 16:55:38		  meta-n => /window scroll_next_highlight
+2020-12-20 16:55:38		  meta-p => /window scroll_previous_highlight
+2020-12-20 16:55:38		  meta-r => /input delete_line
+2020-12-20 16:55:38		  meta-s => /mute spell toggle
+2020-12-20 16:55:38		  meta-u => /window scroll_unread
+2020-12-20 16:55:38		  meta-wmeta-meta2-A => /window up
+2020-12-20 16:55:38		  meta-wmeta-meta2-B => /window down
+2020-12-20 16:55:38		  meta-wmeta-meta2-C => /window right
+2020-12-20 16:55:38		  meta-wmeta-meta2-D => /window left
+2020-12-20 16:55:38		  meta-wmeta2-1;3A => /window up
+2020-12-20 16:55:38		  meta-wmeta2-1;3B => /window down
+2020-12-20 16:55:38		  meta-wmeta2-1;3C => /window right
+2020-12-20 16:55:38		  meta-wmeta2-1;3D => /window left
+2020-12-20 16:55:38		  meta-wmeta-b => /window balance
+2020-12-20 16:55:38		  meta-wmeta-s => /window swap
+2020-12-20 16:55:38		  meta-x => /input zoom_merged_buffer
+2020-12-20 16:55:38		  meta-z => /window zoom
+2020-12-20 16:55:38		  ctrl-_ => /input undo
+2020-12-20 16:55:38		8 key bindings for context "search":
+2020-12-20 16:55:38		  ctrl-I => /input search_switch_where
+2020-12-20 16:55:38		  ctrl-J => /input search_stop_here
+2020-12-20 16:55:38		  ctrl-M => /input search_stop_here
+2020-12-20 16:55:38		  ctrl-Q => /input search_stop
+2020-12-20 16:55:38		  ctrl-R => /input search_switch_regex
+2020-12-20 16:55:38		  meta2-A => /input search_previous
+2020-12-20 16:55:38		  meta2-B => /input search_next
+2020-12-20 16:55:38		  meta-c => /input search_switch_case
+2020-12-20 16:55:38		22 key bindings for context "cursor":
+2020-12-20 16:55:38		  ctrl-J => /cursor stop
+2020-12-20 16:55:38		  ctrl-M => /cursor stop
+2020-12-20 16:55:38		  meta-meta2-A => /cursor move area_up
+2020-12-20 16:55:38		  meta-meta2-B => /cursor move area_down
+2020-12-20 16:55:38		  meta-meta2-C => /cursor move area_right
+2020-12-20 16:55:38		  meta-meta2-D => /cursor move area_left
+2020-12-20 16:55:38		  meta2-1;3A => /cursor move area_up
+2020-12-20 16:55:38		  meta2-1;3B => /cursor move area_down
+2020-12-20 16:55:38		  meta2-1;3C => /cursor move area_right
+2020-12-20 16:55:38		  meta2-1;3D => /cursor move area_left
+2020-12-20 16:55:38		  meta2-A => /cursor move up
+2020-12-20 16:55:38		  meta2-B => /cursor move down
+2020-12-20 16:55:38		  meta2-C => /cursor move right
+2020-12-20 16:55:38		  meta2-D => /cursor move left
+2020-12-20 16:55:38		  @item(buffer_nicklist):K => /window ${_window_number};/kickban ${nick}
+2020-12-20 16:55:38		  @item(buffer_nicklist):b => /window ${_window_number};/ban ${nick}
+2020-12-20 16:55:38		  @item(buffer_nicklist):k => /window ${_window_number};/kick ${nick}
+2020-12-20 16:55:38		  @item(buffer_nicklist):q => /window ${_window_number};/query ${nick};/cursor stop
+2020-12-20 16:55:38		  @item(buffer_nicklist):w => /window ${_window_number};/whois ${nick}
+2020-12-20 16:55:38		  @chat:Q => hsignal:chat_quote_time_prefix_message;/cursor stop
+2020-12-20 16:55:38		  @chat:m => hsignal:chat_quote_message;/cursor stop
+2020-12-20 16:55:38		  @chat:q => hsignal:chat_quote_prefix_message;/cursor stop
+2020-12-20 16:55:38		38 key bindings for context "mouse":
+2020-12-20 16:55:38		  @bar(buflist):ctrl-wheeldown => hsignal:buflist_mouse
+2020-12-20 16:55:38		  @bar(buflist):ctrl-wheelup => hsignal:buflist_mouse
+2020-12-20 16:55:38		  @bar(input):button2 => /input grab_mouse_area
+2020-12-20 16:55:38		  @bar(nicklist):button1-gesture-down => /bar scroll nicklist ${_window_number} +100%
+2020-12-20 16:55:38		  @bar(nicklist):button1-gesture-down-long => /bar scroll nicklist ${_window_number} e
+2020-12-20 16:55:38		  @bar(nicklist):button1-gesture-up => /bar scroll nicklist ${_window_number} -100%
+2020-12-20 16:55:38		  @bar(nicklist):button1-gesture-up-long => /bar scroll nicklist ${_window_number} b
+2020-12-20 16:55:38		  @chat(fset.fset):button1 => /window ${_window_number};/fset -go ${_chat_line_y}
+2020-12-20 16:55:38		  @chat(fset.fset):button2* => hsignal:fset_mouse
+2020-12-20 16:55:38		  @chat(fset.fset):wheeldown => /fset -down 5
+2020-12-20 16:55:38		  @chat(fset.fset):wheelup => /fset -up 5
+2020-12-20 16:55:38		  @chat(script.scripts):button1 => /window ${_window_number};/script go ${_chat_line_y}
+2020-12-20 16:55:38		  @chat(script.scripts):button2 => /window ${_window_number};/script go ${_chat_line_y};/script installremove -q ${script_name_with_extension}
+2020-12-20 16:55:38		  @chat(script.scripts):wheeldown => /script down 5
+2020-12-20 16:55:38		  @chat(script.scripts):wheelup => /script up 5
+2020-12-20 16:55:38		  @item(buffer_nicklist):button1 => /window ${_window_number};/query ${nick}
+2020-12-20 16:55:38		  @item(buffer_nicklist):button1-gesture-left => /window ${_window_number};/kick ${nick}
+2020-12-20 16:55:38		  @item(buffer_nicklist):button1-gesture-left-long => /window ${_window_number};/kickban ${nick}
+2020-12-20 16:55:38		  @item(buffer_nicklist):button2 => /window ${_window_number};/whois ${nick}
+2020-12-20 16:55:38		  @item(buffer_nicklist):button2-gesture-left => /window ${_window_number};/ban ${nick}
+2020-12-20 16:55:38		  @item(buflist):button1* => hsignal:buflist_mouse
+2020-12-20 16:55:38		  @item(buflist):button2* => hsignal:buflist_mouse
+2020-12-20 16:55:38		  @item(buflist2):button1* => hsignal:buflist_mouse
+2020-12-20 16:55:38		  @item(buflist2):button2* => hsignal:buflist_mouse
+2020-12-20 16:55:38		  @item(buflist3):button1* => hsignal:buflist_mouse
+2020-12-20 16:55:38		  @item(buflist3):button2* => hsignal:buflist_mouse
+2020-12-20 16:55:38		  @bar:wheeldown => /bar scroll ${_bar_name} ${_window_number} +20%
+2020-12-20 16:55:38		  @bar:wheelup => /bar scroll ${_bar_name} ${_window_number} -20%
+2020-12-20 16:55:38		  @chat:button1 => /window ${_window_number}
+2020-12-20 16:55:38		  @chat:button1-gesture-left => /window ${_window_number};/buffer -1
+2020-12-20 16:55:38		  @chat:button1-gesture-left-long => /window ${_window_number};/buffer 1
+2020-12-20 16:55:38		  @chat:button1-gesture-right => /window ${_window_number};/buffer +1
+2020-12-20 16:55:38		  @chat:button1-gesture-right-long => /window ${_window_number};/input jump_last_buffer
+2020-12-20 16:55:38		  @chat:ctrl-wheeldown => /window scroll_horiz -window ${_window_number} +10%
+2020-12-20 16:55:38		  @chat:ctrl-wheelup => /window scroll_horiz -window ${_window_number} -10%
+2020-12-20 16:55:38		  @chat:wheeldown => /window scroll_down -window ${_window_number}
+2020-12-20 16:55:38		  @chat:wheelup => /window scroll_up -window ${_window_number}
+2020-12-20 16:55:38		  @*:button3 => /cursor go ${_x},${_y}
+2020-12-20 16:59:10		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 16:59:10		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 16:59:10		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 16:59:10	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-20 16:59:10		perl scripts loaded: highmon
+2020-12-20 16:59:10		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-20 16:59:10		script: 364 scripts for WeeChat 2.9
+2020-12-20 16:59:11		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-20 17:03:25		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 17:03:25		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 17:03:25		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-20 17:03:25	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-20 17:03:25		perl scripts loaded: highmon
+2020-12-20 17:03:25		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-20 17:03:25		script: 364 scripts for WeeChat 2.9
+2020-12-20 17:03:25		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-20 17:05:33		Option changed: weechat.bar.nicklist.hidden = on  (default: off)
+2020-12-21 03:58:38	=!=	Too few arguments for command "/notice" (help on command: /help notice)
+2020-12-21 03:58:41	=!=	Too few arguments for command "/notice" (help on command: /help notice)
+2020-12-21 03:58:42	=!=	Too few arguments for command "/notice" (help on command: /help notice)
+2020-12-21 04:27:05		[core]  /quit  [-yes] [<arguments>]
+2020-12-21 04:27:05		quit WeeChat
+2020-12-21 04:27:05		     -yes: required if option "weechat.look.confirm_quit" is enabled
+2020-12-21 04:27:05		arguments: text sent with signal "quit"
+2020-12-21 04:27:05		           (for example irc plugin uses this text to send quit message to server)
+2020-12-21 04:27:05		By default when quitting the configuration files are saved (see option "weechat.look.save_config_on_exit") and the current layout can be saved (see option "weechat.look.save_layout_on_exit").
+2020-12-22 12:23:12		Option changed: irc.server.freenode.autojoin = "#archlinux,#archlinux-devops,##aws,#bash,##C,#dns,#docker,#git,#go-nuts,#i3,##kernel,##linux,##networking,#nginx,#osdev,#postgresql,#python,#reddit-sysadmin,#sql,#systemd"  (default if null: "")
+2020-12-22 13:38:08		Option changed: irc.server.freenode.autojoin = "#archlinux,#archlinux-devops,#bash,##C,#dns,#docker,#git,#go-nuts,#i3,##kernel,##linux,##networking,#nginx,#osdev,#postgresql,#python,#reddit-sysadmin,#sql,#systemd"  (default if null: "")
+2020-12-23 11:05:50		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-23 11:05:50		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-23 11:05:50		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-23 11:05:50	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-23 11:05:50		perl scripts loaded: highmon
+2020-12-23 11:05:50		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-23 11:05:51		script: 364 scripts for WeeChat 3.0
+2020-12-23 11:05:51		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-12-25 14:06:29		[irc]  /names  [<channel>[,<channel>...]]
+2020-12-25 14:06:29		list nicks on channels
+2020-12-25 14:06:29		channel: channel name
+2020-12-30 19:38:18		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-30 19:38:18		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-30 19:38:18		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2020-12-30 19:38:18	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2020-12-30 19:38:18		perl scripts loaded: highmon
+2020-12-30 19:38:19		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2020-12-30 19:38:19		script: 364 scripts for WeeChat 3.0
+2020-12-30 19:38:19		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2021-01-01 11:07:44		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2021-01-01 11:07:44		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2021-01-01 11:07:44		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2021-01-01 11:07:44	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2021-01-01 11:07:44		perl scripts loaded: highmon
+2021-01-01 11:07:45		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2021-01-01 11:07:45		script: 364 scripts for WeeChat 3.0
+2021-01-01 11:07:45		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2021-01-12 23:09:18		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2021-01-12 23:09:18		perl: error: Can't locate Pod/Select.pm in @INC (you may need to install the Pod::Select module) (@INC contains: /usr/lib/perl5/5.32/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/5.32/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/5.32/core_perl /usr/share/perl5/core_perl) at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2021-01-12 23:09:18		BEGIN failed--compilation aborted at /home/jungdongho/.weechat/perl/autoload/multiline.pl line 240.
+2021-01-12 23:09:18	=!=	perl: function "register" not found (or failed) in file "/home/jungdongho/.weechat/perl/autoload/multiline.pl"
+2021-01-12 23:09:18		perl scripts loaded: highmon
+2021-01-12 23:09:18		python scripts loaded: autosort, colorize_nicks, go, grep, text_item
+2021-01-12 23:09:18		script: 364 scripts for WeeChat 3.0
+2021-01-12 23:09:18		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer

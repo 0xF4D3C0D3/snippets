@@ -1,0 +1,970 @@
+2020-12-19 11:25:47	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-19 11:25:47	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-19 11:25:47	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-19 11:25:47	--	Channel #sql: 162 nicks (0 ops, 0 voices, 162 normals)
+2020-12-19 11:25:49	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-19 11:26:38	-->	audiofreeze (~theology@unaffiliated/theology) has joined #sql
+2020-12-19 11:27:07	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-19 11:27:18	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:18	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:19	<--	Suchiman (uid3778@about/csharp/regular/suchiman) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:19	--	ac3Takwas is now known as acetakwas
+2020-12-19 11:27:25	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-19 11:28:17	-->	Suchiman (uid3778@about/csharp/regular/suchiman) has joined #sql
+2020-12-19 11:46:57	<--	MrZeus_ (~MrZeus@90.218.41.119) has quit (Ping timeout: 240 seconds)
+2020-12-19 11:53:18	<--	internecine1 (~interneci@unaffiliated/internecine) has quit (Ping timeout: 268 seconds)
+2020-12-19 11:55:48	--	irc: disconnected from server
+2020-12-19 11:57:31	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-19 11:57:31	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-19 11:57:31	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-19 11:57:31	--	Channel #sql: 159 nicks (0 ops, 0 voices, 159 normals)
+2020-12-19 11:58:12	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-19 11:58:47	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-19 11:59:05	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-19 12:36:07	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-19 12:37:24	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-19 12:42:45	<--	Sheilong (uid293653@gateway/web/irccloud.com/x-lgxaqgimsgvlotpk) has quit
+2020-12-19 12:42:58	<--	lilgopher (~lilgopher@c-73-51-174-246.hsd1.il.comcast.net) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-19 12:47:54	--	irc: disconnected from server
+2020-12-20 03:36:55	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-20 03:36:55	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-20 03:36:55	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-20 03:36:55	--	Channel #sql: 164 nicks (0 ops, 0 voices, 164 normals)
+2020-12-20 03:37:36	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 03:44:25	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Ping timeout: 240 seconds)
+2020-12-20 03:50:13	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-20 03:51:10	<--	Atque (~Atque@unaffiliated/atque) has quit (Quit: ...)
+2020-12-20 03:51:17	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-20 03:52:26	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 03:59:02	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 04:01:02	<--	j9 (~j9@2600:8806:6402:d500:58c7:c615:c83f:2b0) has quit (Remote host closed the connection)
+2020-12-20 04:04:56	-->	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has joined #sql
+2020-12-20 04:05:32	-->	cd (~cd@unaffiliated/cd) has joined #sql
+2020-12-20 04:09:23	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-20 04:09:47	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 04:11:39	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-20 04:12:22	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-20 04:18:23	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 04:18:38	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 04:26:24	<--	PacKetSlayer (PacketSlay@hellomouse/member/packetslayer) has quit (Quit: Woosh!)
+2020-12-20 04:28:13	-->	PacKetSlayer (PacketSlay@hellomouse/member/packetslayer) has joined #sql
+2020-12-20 04:38:06	-->	horsepatat (~horsepata@212.3.197.5) has joined #sql
+2020-12-20 04:45:50	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-20 04:45:50	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-20 04:52:46	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-20 04:53:40	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 04:54:06	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-20 04:54:49	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 04:58:58	-->	incognito (~relativit@unaffiliated/incognito) has joined #sql
+2020-12-20 04:59:23	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-20 05:48:37	-->	uks (~uksio@p200300cb1f0baf34add1ddff2f221ea4.dip0.t-ipconnect.de) has joined #sql
+2020-12-20 05:50:37	<--	uksio (~uksio@p200300cb1f0bafcce8cf91ac44b4b1db.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-20 05:54:24	--	irc: disconnected from server
+2020-12-20 05:54:58	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-20 05:54:58	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-20 05:54:58	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-20 05:54:58	--	Channel #sql: 166 nicks (0 ops, 0 voices, 166 normals)
+2020-12-20 05:55:41	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 05:56:10	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 268 seconds)
+2020-12-20 05:56:29	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 06:00:42	--	irc: disconnected from server
+2020-12-20 06:18:28	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-20 06:18:28	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-20 06:18:28	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-20 06:18:28	--	Channel #sql: 167 nicks (0 ops, 0 voices, 167 normals)
+2020-12-20 06:19:09	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 16:45:15	--	irc: disconnected from server
+2020-12-20 16:45:50	--	irc: disconnected from server
+2020-12-20 16:46:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-20 16:46:54	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-20 16:46:54	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-20 16:46:54	--	Channel #sql: 159 nicks (0 ops, 0 voices, 159 normals)
+2020-12-20 16:47:40	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 16:58:35	--	irc: disconnected from server
+2020-12-20 16:59:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-20 16:59:35	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-20 16:59:35	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-20 16:59:35	--	Channel #sql: 159 nicks (0 ops, 0 voices, 159 normals)
+2020-12-20 17:00:16	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 17:03:20	--	irc: disconnected from server
+2020-12-20 17:03:51	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-20 17:03:51	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-20 17:03:51	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-20 17:03:51	--	Channel #sql: 159 nicks (0 ops, 0 voices, 159 normals)
+2020-12-20 17:04:32	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 17:11:23	-->	cowsay (~quassel@47.188.37.226) has joined #sql
+2020-12-20 17:11:59	<--	Xgc (~Jon@98.1.126.42) has quit (Ping timeout: 260 seconds)
+2020-12-20 17:12:32	<--	cowsay_ (~quassel@47.188.37.226) has quit (Ping timeout: 256 seconds)
+2020-12-20 17:21:12	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2020-12-20 17:21:33	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-20 17:22:07	-->	karakedi (~eAC53C340@unaffiliated/orphan) has joined #sql
+2020-12-20 17:30:51	-->	mrig (~mrig@unaffiliated/mrig) has joined #sql
+2020-12-20 17:32:39	-->	Xgc (~Jon@98.1.126.42) has joined #sql
+2020-12-20 17:44:55	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 17:45:10	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 18:06:27	-->	Bideford (~Bideford@unaffiliated/bideford) has joined #sql
+2020-12-20 18:17:25	<--	MrZeus_ (~MrZeus@90.218.41.119) has quit (Ping timeout: 240 seconds)
+2020-12-20 18:41:32	<--	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has quit (Quit: Leaving)
+2020-12-20 18:46:53	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 18:47:12	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 18:49:04	-->	palasso_ (~palasso@unaffiliated/palasso) has joined #sql
+2020-12-20 18:50:17	<--	palasso_ (~palasso@unaffiliated/palasso) has quit (Client Quit)
+2020-12-20 18:51:50	<--	palasso (~palasso@unaffiliated/palasso) has quit (Ping timeout: 264 seconds)
+2020-12-20 18:58:04	-->	palasso (~palasso@unaffiliated/palasso) has joined #sql
+2020-12-20 20:58:23	--	irc: disconnected from server
+2020-12-20 20:59:40	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-20 20:59:40	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-20 20:59:40	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-20 20:59:41	--	Channel #sql: 162 nicks (0 ops, 0 voices, 162 normals)
+2020-12-20 20:59:54	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-20 21:00:31	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-20 21:22:50	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 21:23:08	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 21:41:53	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #sql
+2020-12-20 21:54:03	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 21:54:18	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 21:56:27	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 22:03:00	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined #sql
+2020-12-20 22:09:30	-->	horsepatat (~horsepata@212.3.197.5) has joined #sql
+2020-12-20 22:25:14	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 22:25:29	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 22:28:24	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Ping timeout: 240 seconds)
+2020-12-20 22:34:18	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-20 22:34:50	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-20 22:35:36	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 22:36:51	-->	Atque (~Atque@unaffiliated/atque) has joined #sql
+2020-12-20 22:47:37	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #sql
+2020-12-20 22:52:35	-->	pulsar12 (~pulsar12@bl16-92-51.dsl.telepac.pt) has joined #sql
+2020-12-20 22:56:14	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-20 23:24:06	<--	PacKetSlayer (PacketSlay@hellomouse/member/packetslayer) has quit (Quit: Woosh!)
+2020-12-20 23:25:39	-->	PacKetSlayer (PacketSlay@hellomouse/member/packetslayer) has joined #sql
+2020-12-20 23:30:30	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-20 23:32:16	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-20 23:32:33	<--	titanbiscuit (~tbisk@104.200.131.166) has quit (Remote host closed the connection)
+2020-12-20 23:37:20	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Quit: shibboleth)
+2020-12-20 23:37:37	-->	titanbiscuit (~tbisk@104.200.131.173) has joined #sql
+2020-12-20 23:52:24	<--	mrig (~mrig@unaffiliated/mrig) has quit (Quit: WeeChat 3.0)
+2020-12-20 23:58:16	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-20 23:59:51	<--	karakedi (~eAC53C340@unaffiliated/orphan) has quit (Remote host closed the connection)
+2020-12-21 00:03:14	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Read error: Connection reset by peer)
+2020-12-21 00:03:26	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 00:11:59	<--	Atque (~Atque@unaffiliated/atque) has quit (Ping timeout: 268 seconds)
+2020-12-21 00:19:16	-->	palasso_ (~palasso@unaffiliated/palasso) has joined #sql
+2020-12-21 00:19:23	<--	palasso (~palasso@unaffiliated/palasso) has quit (Ping timeout: 268 seconds)
+2020-12-21 00:23:14	-->	Atque (~Atque@unaffiliated/atque) has joined #sql
+2020-12-21 00:27:08	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Quit: Leaving)
+2020-12-21 00:32:29	<--	shokohsc (~shokohsc@117.238.142.88.rev.sfr.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 00:42:28	-->	shokohsc (~shokohsc@117.238.142.88.rev.sfr.net) has joined #sql
+2020-12-21 00:52:02	-->	mrig (~mrig@unaffiliated/mrig) has joined #sql
+2020-12-21 01:07:45	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-21 01:10:14	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 01:31:58	<--	horsepatat (~horsepata@212.3.197.5) has quit (Read error: Connection reset by peer)
+2020-12-21 01:41:10	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 01:41:27	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 02:12:25	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 02:12:43	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 02:27:14	<--	ohama (~ohama@cicolina.org) has quit (Ping timeout: 246 seconds)
+2020-12-21 02:34:57	-->	ohama (ohama@cicolina.org) has joined #sql
+2020-12-21 02:35:24	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #sql
+2020-12-21 02:37:39	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-21 02:47:05	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 272 seconds)
+2020-12-21 02:47:24	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 02:51:38	-->	Sheilong (uid293653@gateway/web/irccloud.com/x-bsavlyquljvibkoo) has joined #sql
+2020-12-21 03:01:16	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2020-12-21 03:01:39	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-21 03:06:56	-->	cd (~cd@unaffiliated/cd) has joined #sql
+2020-12-21 03:10:01	<--	Dotz0cat (~Dotz0cat@h121.232.31.71.dynamic.ip.windstream.net) has quit (Read error: Connection reset by peer)
+2020-12-21 03:11:51	-->	Dotz0cat (~Dotz0cat@h108.82.187.173.dynamic.ip.windstream.net) has joined #sql
+2020-12-21 03:14:20	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #sql
+2020-12-21 03:17:05	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-21 03:19:24	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 03:34:52	<--	neo4 (~Thunderbi@232-93-201-46.pool.ukrtel.net) has quit (Ping timeout: 268 seconds)
+2020-12-21 03:36:20	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-21 03:49:20	-->	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has joined #sql
+2020-12-21 03:49:38	<--	Atque (~Atque@unaffiliated/atque) has quit (Quit: ...)
+2020-12-21 04:02:52	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Remote host closed the connection)
+2020-12-21 04:04:37	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-21 04:07:30	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #sql
+2020-12-21 04:10:44	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Ping timeout: 240 seconds)
+2020-12-21 04:12:26	-->	tips (~tips@pool-173-72-12-154.cmdnnj.fios.verizon.net) has joined #sql
+2020-12-21 04:15:22	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-21 04:20:46	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 04:21:01	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 04:27:56	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Quit: shibboleth)
+2020-12-21 04:38:50	--	palasso_ is now known as palasso
+2020-12-21 04:51:10	<--	jadesoturi (~jadesotur@unaffiliated/kfj) has quit (Quit: Even death needs to sleep sometimes...)
+2020-12-21 04:55:39	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 272 seconds)
+2020-12-21 04:55:47	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 04:55:49	-->	jadesoturi (~jadesotur@unaffiliated/kfj) has joined #sql
+2020-12-21 05:02:04	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Ping timeout: 240 seconds)
+2020-12-21 05:23:15	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 05:23:30	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 05:31:53	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #sql
+2020-12-21 05:42:44	<--	gxt (~gxt@gateway/tor-sasl/gxt) has quit (Ping timeout: 240 seconds)
+2020-12-21 05:48:14	-->	uksio (~uksio@p200300cb1f0baf4524660c986771a14f.dip0.t-ipconnect.de) has joined #sql
+2020-12-21 05:51:28	<--	uks (~uksio@p200300cb1f0baf34add1ddff2f221ea4.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-21 06:06:13	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #sql
+2020-12-21 06:10:43	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-21 06:13:20	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 268 seconds)
+2020-12-21 06:13:36	-->	audiocat (~theology@unaffiliated/theology) has joined #sql
+2020-12-21 06:31:12	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2020-12-21 06:31:32	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-21 06:41:55	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2020-12-21 06:42:16	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-21 06:52:05	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-21 06:52:16	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 13:06:58	--	irc: disconnected from server
+2020-12-21 13:08:10	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-21 13:08:10	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-21 13:08:10	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-21 13:08:10	--	Channel #sql: 166 nicks (0 ops, 0 voices, 166 normals)
+2020-12-21 13:08:45	<--	Dotz0cat (~Dotz0cat@h108.82.187.173.dynamic.ip.windstream.net) has quit (Ping timeout: 240 seconds)
+2020-12-21 13:08:56	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-21 13:10:23	-->	Dotz0cat (~Dotz0cat@h154.234.31.71.dynamic.ip.windstream.net) has joined #sql
+2020-12-21 13:26:46	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Remote host closed the connection)
+2020-12-21 13:30:05	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-21 13:41:38	<--	quartz12 (~Nick@185.236.200.210) has quit (Ping timeout: 256 seconds)
+2020-12-21 13:52:25	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 13:52:39	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-21 14:10:24	<--	Akimb (~Akimb@86.100.13.100) has quit (Read error: Connection reset by peer)
+2020-12-21 14:17:24	<--	audioburn (~theology@unaffiliated/theology) has quit (Remote host closed the connection)
+2020-12-21 14:17:45	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-21 14:23:45	-->	audiofreeze (~theology@unaffiliated/theology) has joined #sql
+2020-12-21 14:26:17	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-21 14:26:23	<--	tips_ (~tips@pool-173-72-12-154.cmdnnj.fios.verizon.net) has quit (Read error: Connection reset by peer)
+2020-12-21 14:28:54	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-21 14:36:33	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined #sql
+2020-12-21 14:39:18	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-21 14:45:03	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 264 seconds)
+2020-12-22 05:26:08	--	irc: disconnected from server
+2020-12-22 05:27:23	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-22 05:27:23	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-22 05:27:23	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-22 05:27:23	--	Channel #sql: 173 nicks (0 ops, 0 voices, 173 normals)
+2020-12-22 05:28:14	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-22 05:30:05	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:31:12	<--	waveform (~quassel@waveform.plus.com) has quit (Read error: Connection reset by peer)
+2020-12-22 05:31:58	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 05:36:33	<--	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2020-12-22 05:38:20	-->	Dotz0cat_ (~Dotz0cat@h213.90.213.151.dynamic.ip.windstream.net) has joined #sql
+2020-12-22 05:39:10	-->	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has joined #sql
+2020-12-22 05:40:57	<--	Dotz0cat (~Dotz0cat@h28.238.31.71.dynamic.ip.windstream.net) has quit (Ping timeout: 260 seconds)
+2020-12-22 05:40:58	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Remote host closed the connection)
+2020-12-22 05:41:17	-->	audiofreeze (~theology@unaffiliated/theology) has joined #sql
+2020-12-22 05:42:20	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:43:12	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 05:48:16	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:49:17	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 05:50:57	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 05:51:56	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 05:53:33	-->	Tazmainian (~Tazmain@unaffiliated/tazmain) has joined #sql
+2020-12-22 06:08:51	-->	theology (~theology@unaffiliated/theology) has joined #sql
+2020-12-22 06:09:29	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 06:10:25	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 06:11:17	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-22 06:11:41	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:13:53	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 06:14:46	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:19:03	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 06:21:41	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:32:29	<--	snazzybouche (sid305269@gateway/web/irccloud.com/x-yyrgqtvuioilyvbr) has quit (Ping timeout: 244 seconds)
+2020-12-22 06:32:29	<--	kevinsjoberg (sid345682@gateway/web/irccloud.com/x-kcpfovymefpashww) has quit (Ping timeout: 244 seconds)
+2020-12-22 06:33:00	<--	nem8 (sid113421@gateway/web/irccloud.com/x-dstjgylicqrmepax) has quit (Ping timeout: 244 seconds)
+2020-12-22 06:34:02	-->	snazzybouche (sid305269@gateway/web/irccloud.com/x-iiygunribvqzquyu) has joined #sql
+2020-12-22 06:34:03	-->	kevinsjoberg (sid345682@gateway/web/irccloud.com/x-jgszywhkdddleiev) has joined #sql
+2020-12-22 06:34:10	-->	nem8 (sid113421@gateway/web/irccloud.com/x-dnrdnmhkpgpvqwso) has joined #sql
+2020-12-22 06:40:01	-->	Akimb (~Akimb@86.100.13.100) has joined #sql
+2020-12-22 06:41:56	<--	split-brain (~split_bra@37-48-0-21.nat.epc.tmcz.cz) has left #sql
+2020-12-22 06:42:04	<--	Akimb (~Akimb@86.100.13.100) has quit (Read error: Connection reset by peer)
+2020-12-22 06:42:59	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 06:50:36	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-22 06:53:55	<--	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has quit (Quit: Leaving...)
+2020-12-22 06:55:33	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Read error: Connection reset by peer)
+2020-12-22 06:55:43	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-22 07:07:55	<--	astronavt (~astronavt@unaffiliated/astronavt) has quit (Remote host closed the connection)
+2020-12-22 07:08:15	-->	astronavt (~astronavt@unaffiliated/astronavt) has joined #sql
+2020-12-22 07:08:15	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-22 07:17:20	-->	neo4 (~Thunderbi@232-93-201-46.pool.ukrtel.net) has joined #sql
+2020-12-22 07:21:49	<--	neo4 (~Thunderbi@232-93-201-46.pool.ukrtel.net) has quit (Ping timeout: 264 seconds)
+2020-12-22 07:22:29	-->	spacesuitdiver (~spacesuit@47.188.196.174) has joined #sql
+2020-12-22 07:37:12	-->	uksio (~uksio@p200300cb1f0baf836da0666a9ecedada.dip0.t-ipconnect.de) has joined #sql
+2020-12-22 07:40:25	<--	uks (~uksio@p200300cb1f0baf4524660c986771a14f.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-22 07:41:27	<--	Bideford (~Bideford@unaffiliated/bideford) has quit (Quit: Quit - Bye)
+2020-12-22 07:48:49	<--	theology (~theology@unaffiliated/theology) has quit (Ping timeout: 264 seconds)
+2020-12-22 07:48:53	<--	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2020-12-22 07:50:50	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #sql
+2020-12-22 07:51:56	-->	audiofreeze (~theology@unaffiliated/theology) has joined #sql
+2020-12-22 07:54:10	-->	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has joined #sql
+2020-12-22 07:58:34	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Ping timeout: 246 seconds)
+2020-12-22 08:14:27	<--	Tazmainian (~Tazmain@unaffiliated/tazmain) has quit (Quit: Leaving)
+2020-12-22 08:19:42	<--	karakedi (~eAC53C340@unaffiliated/orphan) has quit (Remote host closed the connection)
+2020-12-22 08:21:31	<--	kevinsjoberg (sid345682@gateway/web/irccloud.com/x-jgszywhkdddleiev) has quit (Ping timeout: 268 seconds)
+2020-12-22 08:23:26	<--	nem8 (sid113421@gateway/web/irccloud.com/x-dnrdnmhkpgpvqwso) has quit (Ping timeout: 264 seconds)
+2020-12-22 08:43:13	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-22 08:56:10	-->	audiofreeze (~theology@unaffiliated/theology) has joined #sql
+2020-12-22 09:00:52	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Ping timeout: 246 seconds)
+2020-12-22 09:05:10	-->	audiofreeze (~theology@unaffiliated/theology) has joined #sql
+2020-12-22 09:07:12	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-22 09:08:16	<--	pulsar12 (~pulsar12@bl16-92-51.dsl.telepac.pt) has quit (Quit: Leaving)
+2020-12-22 09:13:57	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 258 seconds)
+2020-12-22 09:21:31	-->	css (~css@unaffiliated/css) has joined #sql
+2020-12-22 09:29:17	<--	NeoCron (~neocron_@p200300c4cf43fe00741fa2c6e5a278dc.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-22 09:29:35	<--	quartz12 (~Nick@cpe-172-91-223-131.socal.res.rr.com) has quit (Quit: Leaving)
+2020-12-22 09:30:49	-->	Dotz0cat (~Dotz0cat@h15.210.213.151.dynamic.ip.windstream.net) has joined #sql
+2020-12-22 09:32:36	<--	Dotz0cat_ (~Dotz0cat@h213.90.213.151.dynamic.ip.windstream.net) has quit (Ping timeout: 272 seconds)
+2020-12-22 09:32:39	-->	quartz12 (~Nick@185.152.67.144) has joined #sql
+2020-12-22 09:52:08	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined #sql
+2020-12-22 10:10:59	<--	Sheilong (uid293653@gateway/web/irccloud.com/x-exdojaqirdkfmvpz) has quit (Quit: Connection closed for inactivity)
+2020-12-22 10:12:40	<--	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2020-12-22 10:14:00	-->	Sheilong (uid293653@gateway/web/irccloud.com/x-duufhsmgfmkrtnrr) has joined #sql
+2020-12-22 10:15:04	-->	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has joined #sql
+2020-12-22 10:19:36	-->	td001 (~Tower@172.245.134.58) has joined #sql
+2020-12-22 10:19:56	-->	MrZeus (MrZeus@gateway/vpn/mullvad/mrzeus) has joined #sql
+2020-12-22 10:24:22	-->	MrZeus__ (~MrZeus@2a02:c7f:70d0:6a00:a943:d894:1691:5afa) has joined #sql
+2020-12-22 10:27:25	<--	MrZeus (MrZeus@gateway/vpn/mullvad/mrzeus) has quit (Ping timeout: 240 seconds)
+2020-12-22 10:27:59	-->	MrZeus (MrZeus@gateway/vpn/mullvad/mrzeus) has joined #sql
+2020-12-22 10:28:13	<--	MrZeus_ (MrZeus@gateway/vpn/mullvad/mrzeus) has quit (Ping timeout: 272 seconds)
+2020-12-22 10:30:30	<--	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2020-12-22 10:50:15	<--	MrZeus__ (~MrZeus@2a02:c7f:70d0:6a00:a943:d894:1691:5afa) has quit (Read error: Connection reset by peer)
+2020-12-22 10:54:13	<--	MrZeus (MrZeus@gateway/vpn/mullvad/mrzeus) has quit (Ping timeout: 264 seconds)
+2020-12-22 11:19:40	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-22 11:21:35	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Ping timeout: 268 seconds)
+2020-12-22 11:42:11	quartz12	This question is asking me to "Briefly explain what a cursor is, and the functions/use cases they solve". I'm reading the wikipedia article on cursors, but it makes no sense. What are they used for?
+2020-12-22 12:03:21	Xgc	quartz12: Find an example use.  We can discuss it.
+2020-12-22 12:03:53	quartz12	Xgc: OK
+2020-12-22 12:15:50	quartz12	Xgc: I think I got it. Sometimes wikipedia does not do the best job of explaining it.
+2020-12-22 12:40:00	<--	Sheilong (uid293653@gateway/web/irccloud.com/x-duufhsmgfmkrtnrr) has quit
+2020-12-22 12:49:04	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 13:49:23	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Ping timeout: 240 seconds)
+2020-12-22 13:55:07	<--	Xgc (~Jon@98.1.126.42) has quit (Read error: Connection reset by peer)
+2020-12-22 13:58:22	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-22 14:01:18	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined #sql
+2020-12-22 14:10:00	<--	palasso (~palasso@unaffiliated/palasso) has quit (Quit: No Ping reply in 180 seconds.)
+2020-12-22 14:10:44	-->	palasso (~palasso@unaffiliated/palasso) has joined #sql
+2020-12-22 14:14:01	<--	CarlenWhite (~CarlenWhi@85.sub-174-202-132.myvzw.com) has quit (Ping timeout: 264 seconds)
+2020-12-22 14:14:24	-->	CarlenWhite (~CarlenWhi@85.sub-174-202-132.myvzw.com) has joined #sql
+2020-12-22 14:53:27	-->	s3nd1v0g1us (~patr0clus@unaffiliated/patr0clus) has joined #sql
+2020-12-22 14:59:15	<--	s3nd1v0g1us (~patr0clus@unaffiliated/patr0clus) has quit (Quit: WeeChat 2.8)
+2020-12-22 15:00:23	<--	quartz12 (~Nick@185.152.67.144) has quit (Quit: Leaving)
+2020-12-22 15:01:39	-->	s3nd1v0g1us (~patr0clus@unaffiliated/patr0clus) has joined #sql
+2020-12-22 15:01:47	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-22 15:03:40	<--	s3nd1v0g1us (~patr0clus@unaffiliated/patr0clus) has quit (Client Quit)
+2020-12-22 15:04:57	-->	Rashad (~textual@79.173.203.103) has joined #sql
+2020-12-22 15:19:26	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Remote host closed the connection)
+2020-12-22 15:26:51	<--	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has quit (Quit: Leaving)
+2020-12-22 15:31:55	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-22 15:32:35	-->	mexen (~mexen@165.56.181.125) has joined #sql
+2020-12-22 15:36:47	<--	css (~css@unaffiliated/css) has quit (Quit: .)
+2020-12-22 15:41:08	-->	Akimb (~Akimb@82-135-197-171.static.zebra.lt) has joined #sql
+2020-12-22 15:44:43	-->	deksar (~deksar@unaffiliated/deksar) has joined #sql
+2020-12-22 15:44:50	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2020-12-22 15:45:18	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-22 16:01:06	-->	Akimbas123 (~Akimb@82-135-197-171.static.zebra.lt) has joined #sql
+2020-12-22 16:03:08	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2020-12-22 16:03:27	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-22 16:05:09	<--	Akimb (~Akimb@82-135-197-171.static.zebra.lt) has quit (Ping timeout: 272 seconds)
+2020-12-22 16:08:07	<--	Akimbas123 (~Akimb@82-135-197-171.static.zebra.lt) has quit (Read error: Connection reset by peer)
+2020-12-22 16:08:12	-->	horsepatat (~horsepata@80.89.77.243) has joined #sql
+2020-12-22 16:09:08	-->	Akimbas123 (~Akimb@82-135-197-171.static.zebra.lt) has joined #sql
+2020-12-22 16:19:53	-->	onizu (uid373383@gateway/web/irccloud.com/x-hmmadpptowopoazk) has joined #sql
+2020-12-22 16:29:25	<--	Akimbas123 (~Akimb@82-135-197-171.static.zebra.lt) has quit (Read error: Connection reset by peer)
+2020-12-22 16:29:47	-->	Akimbas123 (~Akimb@82-135-197-171.static.zebra.lt) has joined #sql
+2020-12-22 16:39:33	-->	jmer (~jammy@unaffiliated/jmer) has joined #sql
+2020-12-22 16:41:00	<--	Akimbas123 (~Akimb@82-135-197-171.static.zebra.lt) has quit (Read error: Connection reset by peer)
+2020-12-22 16:42:12	-->	Akimbas123 (~Akimb@82-135-197-171.static.zebra.lt) has joined #sql
+2020-12-22 16:42:24	<--	Akimbas123 (~Akimb@82-135-197-171.static.zebra.lt) has quit (Remote host closed the connection)
+2020-12-22 17:01:46	<--	cd (~cd@unaffiliated/cd) has quit (Ping timeout: 246 seconds)
+2020-12-22 17:07:23	-->	cd (~cd@unaffiliated/cd) has joined #sql
+2020-12-22 17:20:56	-->	mrig (~mrig@unaffiliated/mrig) has joined #sql
+2020-12-22 17:28:46	<--	mrig (~mrig@unaffiliated/mrig) has quit (Quit: WeeChat 3.0)
+2020-12-22 17:29:16	-->	karakedi (~eAC53C340@unaffiliated/orphan) has joined #sql
+2020-12-22 17:34:38	<--	Rashad (~textual@79.173.203.103) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-22 17:43:05	-->	Bideford (~Bideford@unaffiliated/bideford) has joined #sql
+2020-12-22 17:44:16	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 240 seconds)
+2020-12-22 17:44:25	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #sql
+2020-12-22 17:44:34	<--	CarlenWhite (~CarlenWhi@85.sub-174-202-132.myvzw.com) has quit (Ping timeout: 260 seconds)
+2020-12-22 17:47:28	-->	CarlenWhite (~CarlenWhi@85.sub-174-202-132.myvzw.com) has joined #sql
+2020-12-22 18:13:43	<--	mexen (~mexen@165.56.181.125) has quit (Ping timeout: 272 seconds)
+2020-12-22 18:34:16	<--	Qriist (~Qriist@unaffiliated/qriist) has quit (Ping timeout: 240 seconds)
+2020-12-22 18:36:55	<--	cd (~cd@unaffiliated/cd) has quit (Quit: cd)
+2020-12-22 18:43:14	<--	bpmedley (~bpm@2601:246:8101:4eb0:9d5e:8ff7:5cb2:13f6) has quit (Ping timeout: 264 seconds)
+2020-12-22 19:27:16	-->	nem8 (sid113421@gateway/web/irccloud.com/x-weukhosphlnkbwvu) has joined #sql
+2020-12-22 19:30:37	-->	kevinsjoberg (sid345682@gateway/web/irccloud.com/x-anhldrabsaetnqsz) has joined #sql
+2020-12-22 19:33:28	-->	Rashad (~textual@91.186.242.253) has joined #sql
+2020-12-22 19:40:45	<--	Rashad (~textual@91.186.242.253) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-22 19:47:20	-->	Xgc (~Jon@98.1.126.42) has joined #sql
+2020-12-22 19:58:31	-->	Noti (~steffan@77-164-7-116.fixed.kpn.net) has joined #sql
+2020-12-22 19:59:58	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-22 20:04:22	-->	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has joined #sql
+2020-12-22 20:04:56	<--	Noti (~steffan@77-164-7-116.fixed.kpn.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 20:31:25	<--	deksar (~deksar@unaffiliated/deksar) has quit (Ping timeout: 246 seconds)
+2020-12-22 20:31:36	-->	deksar (~deksar@unaffiliated/deksar) has joined #sql
+2020-12-22 20:32:39	-->	MrZeus (MrZeus@gateway/vpn/mullvad/mrzeus) has joined #sql
+2020-12-22 20:55:59	-->	Thedarkb (~beno@80.233.34.145) has joined #sql
+2020-12-22 20:57:06	Thedarkb	Hi, I'm wondering if it's advisable to have a table with no primary key but a foreign key?
+2020-12-22 20:57:58	-->	Noti (~steffan@185.2.243.3) has joined #sql
+2020-12-22 21:22:07	-->	Sheilong (uid293653@gateway/web/irccloud.com/x-tihixihqvmmwogqg) has joined #sql
+2020-12-22 21:24:16	<--	dob1 (~dob1@unaffiliated/dob1) has quit (Remote host closed the connection)
+2020-12-22 21:25:00	-->	dob1 (~dob1@unaffiliated/dob1) has joined #sql
+2020-12-22 21:29:28	Azrael_-	it's advisable for every table to have a primary key. if there are links it is the same for foreign keys
+2020-12-22 21:34:26	-->	MrZeus_ (MrZeus@gateway/vpn/mullvad/mrzeus) has joined #sql
+2020-12-22 21:36:13	<--	MrZeus (MrZeus@gateway/vpn/mullvad/mrzeus) has quit (Ping timeout: 264 seconds)
+2020-12-22 21:37:26	-->	Rashad (~textual@91.186.240.22) has joined #sql
+2020-12-22 21:42:28	<--	Rashad (~textual@91.186.240.22) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-22 21:48:21	-->	MrZeus__ (MrZeus@gateway/vpn/mullvad/mrzeus) has joined #sql
+2020-12-22 21:51:42	<--	MrZeus_ (MrZeus@gateway/vpn/mullvad/mrzeus) has quit (Ping timeout: 256 seconds)
+2020-12-22 22:02:36	-->	MrZeus_ (~MrZeus@2a02:c7f:70d0:6a00:c94a:a5d:c804:f6d2) has joined #sql
+2020-12-22 22:04:04	-->	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:dc97:fa20:3bc3:b5ef) has joined #sql
+2020-12-22 22:05:56	<--	MrZeus__ (MrZeus@gateway/vpn/mullvad/mrzeus) has quit (Ping timeout: 240 seconds)
+2020-12-22 22:07:25	<--	MrZeus_ (~MrZeus@2a02:c7f:70d0:6a00:c94a:a5d:c804:f6d2) has quit (Ping timeout: 272 seconds)
+2020-12-22 22:12:20	-->	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has joined #sql
+2020-12-22 22:17:26	<--	SwiftMatt (~Objective@2601:282:4300:3e:d932:d9b0:b418:165c) has quit (Ping timeout: 264 seconds)
+2020-12-22 22:23:55	-->	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has joined #sql
+2020-12-22 22:30:48	<--	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has quit (Quit: Leaving...)
+2020-12-22 22:33:52	<--	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:dc97:fa20:3bc3:b5ef) has quit (Read error: Connection reset by peer)
+2020-12-22 22:36:03	-->	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:d018:3618:4604:d9b1) has joined #sql
+2020-12-22 22:37:51	<--	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:d018:3618:4604:d9b1) has quit (Read error: Connection reset by peer)
+2020-12-22 22:39:20	-->	MrZeus (~MrZeus@90.218.41.119) has joined #sql
+2020-12-22 22:51:12	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-22 22:57:57	-->	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has joined #sql
+2020-12-22 22:59:10	<--	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has quit (Quit: Leaving)
+2020-12-22 22:59:42	-->	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has joined #sql
+2020-12-22 23:05:12	-->	Ytui (b91cfb01@ip-185-28-251-1.mynet.com.pl) has joined #sql
+2020-12-22 23:08:25	<--	horsepatat (~horsepata@80.89.77.243) has quit (Ping timeout: 240 seconds)
+2020-12-22 23:09:57	Ytui	Hello i have two tables, one has 100 columns, two 40 columns(MS SQL). I would like to select(with left join) all columns, all rows(its is simply, i know)
+2020-12-22 23:09:57	Ytui	do that in one select? it is possible?
+2020-12-22 23:10:06	-->	phonemic (~phonemic@104-60-219-66.lightspeed.nsvltn.sbcglobal.net) has joined #sql
+2020-12-22 23:16:37	<--	dob1 (~dob1@unaffiliated/dob1) has quit (Remote host closed the connection)
+2020-12-22 23:17:33	-->	dob1 (~dob1@unaffiliated/dob1) has joined #sql
+2020-12-22 23:17:50	Xgc	Ytui: Why left join?  You didn't provide any useful detail about the tables.
+2020-12-22 23:18:21	Xgc	Ytui: What is the relationship between the tables?
+2020-12-22 23:21:47	Ytui	Xgc: Num column. It's is not foreign key, tables don't have foreign keys at all, but join is possible using num column
+2020-12-22 23:23:00	<--	phonemic (~phonemic@104-60-219-66.lightspeed.nsvltn.sbcglobal.net) has quit (Quit: WeeChat 2.3)
+2020-12-22 23:25:16	Xgc	Ytui: That's not enough detail.  Sure.  You can try a left join.  If you like the result, use it.
+2020-12-22 23:27:28	Xgc	Joins without the necessary indexes can behave badly.
+2020-12-22 23:27:54	Xgc	Also, you might not get all the data you wanted with just a left join.  Hard to tell without detail.
+2020-12-22 23:31:36	-->	Rashad (~textual@91.186.241.172) has joined #sql
+2020-12-22 23:34:15	-->	mrig (~mrig@unaffiliated/mrig) has joined #sql
+2020-12-22 23:35:22	Ytui	Xgc: but it is possible to do in one select? skipping the indexes, I'm not gonna get the data and etc...
+2020-12-22 23:36:38	Xgc	Ytui: You didn't provide enough detail to answer.  You can try... or you can provide the missing detail.
+2020-12-22 23:37:03	Ytui	so what detail do you need?
+2020-12-22 23:40:34	Xgc	Ytui: The relationship between the tables, 1 to 1, 0|1 to 1, 0|n to 1, 0|1 to 0|1, plus other detail, like is num nullable, etc.
+2020-12-22 23:41:45	Xgc	Ytui: The specific kind of relationship will determine the answer.  A left join alone might not be sufficient.
+2020-12-22 23:43:22	Xgc	Ytui: If you're not sure, just explain what the rows in each table represent.  Maybe I can guess from that detail.
+2020-12-22 23:43:49	-->	Atque (~Atque_@unaffiliated/atque) has joined #sql
+2020-12-22 23:44:30	Xgc	Ytui: Can there be a row in table A that has no match in table B?  Can there be a row in table B that has no match in table A?
+2020-12-22 23:46:31	Xgc	Maybe num isn't really the related key and you're just making a more fundamental mistake.
+2020-12-22 23:47:56	Xgc	The fact that you're asking the question makes the prior fundamental mistake much more likely.
+2020-12-22 23:49:14	<--	Ytui (b91cfb01@ip-185-28-251-1.mynet.com.pl) has quit (Ping timeout: 245 seconds)
+2020-12-22 23:54:45	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 240 seconds)
+2020-12-22 23:55:06	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #sql
+2020-12-22 23:59:13	<--	guideX (~guideX@unaffiliated/guidex) has left #sql ("Leaving")
+2020-12-23 00:11:20	-->	bpmedley (~bpm@2601:246:8101:4eb0:56a:899e:1a28:6068) has joined #sql
+2020-12-23 00:20:32	-->	Lionyx (~Lionyx@187.23.161.114) has joined #sql
+2020-12-23 00:22:02	Lionyx	Hello there. I am in the need of learning PLSQL. Google send me all around. I was wondering you good people could point me in the right direction for a quick training place :)
+2020-12-23 00:22:11	<--	Rashad (~textual@91.186.241.172) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 00:26:59	Lionyx	Is this like "the place"? https://www.oracle.com/database/technologies/appdev/plsql.html
+2020-12-23 00:27:29	<--	Thedarkb (~beno@80.233.34.145) has quit (Remote host closed the connection)
+2020-12-23 00:42:10	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-23 00:43:19	<--	audioburn (~theology@unaffiliated/theology) has quit (Remote host closed the connection)
+2020-12-23 00:43:40	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-23 00:44:50	-->	neo4 (~Thunderbi@232-93-201-46.pool.ukrtel.net) has joined #sql
+2020-12-23 00:47:03	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-23 00:53:19	<--	audioburn (~theology@unaffiliated/theology) has quit (Remote host closed the connection)
+2020-12-23 00:53:42	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-23 00:58:41	--	irc: disconnected from server
+2020-12-23 11:06:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-23 11:06:17	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-23 11:06:17	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-23 11:06:17	--	Channel #sql: 163 nicks (0 ops, 0 voices, 163 normals)
+2020-12-23 11:06:52	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-23 11:08:12	-->	karakedi (~eAC53C340@unaffiliated/orphan) has joined #sql
+2020-12-23 11:11:18	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-23 11:11:43	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:15:36	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-23 11:15:48	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:19:02	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-23 11:20:28	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:23:12	<--	theology (~theology@unaffiliated/theology) has quit (Quit: Leaving)
+2020-12-23 11:23:20	<--	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:3912:8ff8:9db3:ed43) has quit (Ping timeout: 268 seconds)
+2020-12-23 11:23:33	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-23 11:28:14	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-23 11:44:25	<--	Sheilong (uid293653@gateway/web/irccloud.com/x-rkgukjcpotfcdltb) has quit
+2020-12-23 12:06:04	-->	tnewman (~tnewman@1-171-221-155.dynamic-ip.hinet.net) has joined #sql
+2020-12-23 12:37:37	<--	quartz12 (~Nick@185.236.200.212) has quit (Quit: Leaving)
+2020-12-23 12:49:29	<--	spacesuitdiver (~spacesuit@47.188.196.174) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 13:00:18	-->	spacesuitdiver (~spacesuit@47.188.196.174) has joined #sql
+2020-12-23 13:04:25	-->	neo4 (~Thunderbi@232-93-201-46.pool.ukrtel.net) has joined #sql
+2020-12-23 13:22:54	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 258 seconds)
+2020-12-23 13:33:31	<--	spacesuitdiver (~spacesuit@47.188.196.174) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-23 14:08:33	-->	imsky (~imsky@2604:2000:f103:5a00:424:8982:35cc:6568) has joined #sql
+2020-12-23 14:15:27	<--	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has quit (Quit: Leaving)
+2020-12-23 14:30:37	<--	imsky (~imsky@2604:2000:f103:5a00:424:8982:35cc:6568) has quit (Ping timeout: 264 seconds)
+2020-12-23 15:03:28	-->	`St0ner (~services@unaffiliated/st0ner/x-2473686) has joined #sql
+2020-12-23 15:10:52	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-23 15:14:36	<--	deksar (~deksar@unaffiliated/deksar) has quit (Ping timeout: 264 seconds)
+2020-12-23 15:23:54	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2020-12-23 15:24:15	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-23 15:28:15	<--	audiocat (~theology@unaffiliated/theology) has quit (Ping timeout: 240 seconds)
+2020-12-23 15:33:53	-->	horsepatat (~horsepata@80.89.77.243) has joined #sql
+2020-12-23 15:34:04	-->	Akimb (~Akimb@82-135-197-171.static.zebra.lt) has joined #sql
+2020-12-23 15:34:11	<--	sauvin (sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2020-12-23 15:34:32	-->	sauvin (sauvin@about/linux/staff/sauvin) has joined #sql
+2020-12-23 16:28:41	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-23 16:30:51	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Remote host closed the connection)
+2020-12-23 16:31:18	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-23 16:38:34	-->	jmer (~jammy@unaffiliated/jmer) has joined #sql
+2020-12-23 17:05:22	--	irc: disconnected from server
+2020-12-23 17:05:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-23 17:05:57	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-23 17:05:57	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-23 17:05:57	--	Channel #sql: 165 nicks (0 ops, 0 voices, 165 normals)
+2020-12-23 17:06:32	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-23 17:11:07	<--	Disconsented (~quassel@disconsented.com) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-23 17:21:11	-->	Disconsented (~quassel@disconsented.com) has joined #sql
+2020-12-23 17:22:18	-->	mrig (~mrig@unaffiliated/mrig) has joined #sql
+2020-12-23 17:40:22	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-23 17:56:48	<--	Raptors (Raptors@2a03:94e0:2102:1442::2441) has quit (Remote host closed the connection)
+2020-12-23 17:58:32	-->	Rashad (~textual@79.173.203.103) has joined #sql
+2020-12-23 18:00:05	<--	`St0ner (~services@unaffiliated/st0ner/x-2473686) has quit (Read error: Connection reset by peer)
+2020-12-23 18:00:55	<--	mawk (mawk@serveur.io) has quit (Quit: ZNC - https://znc.in)
+2020-12-23 18:01:11	-->	mawk (mawk@serveur.io) has joined #sql
+2020-12-23 18:02:26	-->	`St0ner (~services@unaffiliated/st0ner/x-2473686) has joined #sql
+2020-12-23 18:11:19	-->	Bideford (~Bideford@unaffiliated/bideford) has joined #sql
+2020-12-23 18:12:26	-->	Raptors (Raptors@2a03:94e0:2102:1442::2441) has joined #sql
+2020-12-23 18:28:28	<--	Azrael_- (~aweoi@51.154.62.124) has quit (Read error: Connection reset by peer)
+2020-12-23 18:42:22	<--	Rashad (~textual@79.173.203.103) has quit (Read error: Connection reset by peer)
+2020-12-23 18:44:37	-->	Rashad (~textual@79.173.203.103) has joined #sql
+2020-12-23 18:48:46	<--	^pH (~ph@mail.magicshells.com) has quit (Quit: ZNC 1.7.0 - https://znc.in)
+2020-12-23 18:48:57	<--	Samian (~s@65.144.6.61) has quit (Ping timeout: 256 seconds)
+2020-12-23 18:49:03	-->	^pH (~ph@mail.magicshells.com) has joined #sql
+2020-12-23 19:10:23	-->	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has joined #sql
+2020-12-23 19:17:42	<--	cd (~cd@unaffiliated/cd) has quit (Quit: cd)
+2020-12-23 19:29:28	-->	samuel02 (uid56682@gateway/web/irccloud.com/x-zsadhlotvcxusjlm) has joined #sql
+2020-12-23 19:40:25	-->	MrZeus (~MrZeus@185.206.227.141) has joined #sql
+2020-12-23 20:23:37	<--	horsepatat (~horsepata@80.89.77.243) has quit (Read error: Connection reset by peer)
+2020-12-23 20:55:00	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined #sql
+2020-12-23 21:23:23	-->	MrZeus_ (~MrZeus@185.206.227.141) has joined #sql
+2020-12-23 21:24:26	<--	Akimb (~Akimb@82-135-197-171.static.zebra.lt) has quit (Read error: Connection reset by peer)
+2020-12-23 21:25:31	-->	MrZeus__ (~MrZeus@185.206.227.141) has joined #sql
+2020-12-23 21:25:35	<--	MrZeus (~MrZeus@185.206.227.141) has quit (Ping timeout: 240 seconds)
+2020-12-23 21:27:35	<--	MrZeus_ (~MrZeus@185.206.227.141) has quit (Ping timeout: 240 seconds)
+2020-12-23 21:39:13	<--	samuel02 (uid56682@gateway/web/irccloud.com/x-zsadhlotvcxusjlm) has quit (Quit: Connection closed for inactivity)
+2020-12-23 21:51:24	-->	schne1der (~schneider@unaffiliated/schneider) has joined #sql
+2020-12-23 22:02:21	<--	Laskolnyk (~wasyl@unaffiliated/wasyl) has quit (Quit: changing kernels)
+2020-12-23 22:03:31	-->	Laskolnyk (~wasyl@unaffiliated/wasyl) has joined #sql
+2020-12-24 06:11:05	--	irc: disconnected from server
+2020-12-24 06:11:39	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-24 06:11:39	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-24 06:11:39	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-24 06:11:39	--	Channel #sql: 169 nicks (0 ops, 0 voices, 169 normals)
+2020-12-24 06:12:14	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-24 06:13:10	-->	imsky (~imsky@2603-7000-5641-8200-0193-6871-87cb-a2b7.res6.spectrum.com) has joined #sql
+2020-12-24 06:20:30	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-24 06:32:37	<--	td001 (~Tower@172.245.134.58) has quit (Quit: I'm outta here!)
+2020-12-24 06:33:31	-->	td001 (~Tower@172.245.134.58) has joined #sql
+2020-12-24 06:42:05	-->	Jigsod (~fogmarble@99-98-249-25.lightspeed.irvnca.sbcglobal.net) has joined #sql
+2020-12-24 07:08:02	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-24 07:10:14	<--	audiocat (~theology@unaffiliated/theology) has quit (Ping timeout: 264 seconds)
+2020-12-24 07:10:56	<--	ahylight (~ahylight@lfbn-orl-1-1527-239.w90-63.abo.wanadoo.fr) has quit (Quit: Leaving)
+2020-12-24 07:24:20	<--	td001 (~Tower@172.245.134.58) has quit (Quit: I'm outta here!)
+2020-12-24 07:25:26	-->	td001 (~Tower@172.245.134.58) has joined #sql
+2020-12-24 07:46:08	<--	Bideford (~Bideford@unaffiliated/bideford) has quit (Quit: Quit - Bye)
+2020-12-24 08:01:08	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-24 11:23:01	--	irc: disconnected from server
+2020-12-24 11:23:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-24 11:23:35	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-24 11:23:35	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-24 11:23:35	--	Channel #sql: 166 nicks (0 ops, 0 voices, 166 normals)
+2020-12-24 11:24:10	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-24 11:56:24	-->	audiocat (~theology@unaffiliated/theology) has joined #sql
+2020-12-24 12:08:37	<--	imsky (~imsky@2603-7000-5641-8200-0193-6871-87cb-a2b7.res6.spectrum.com) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-24 12:17:00	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 264 seconds)
+2020-12-24 12:30:56	<--	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:794f:ccd9:b4cd:c4b4) has quit (Ping timeout: 260 seconds)
+2020-12-24 19:00:38	--	irc: disconnected from server
+2020-12-24 19:01:13	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-24 19:01:13	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-24 19:01:13	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-24 19:01:13	--	Channel #sql: 168 nicks (0 ops, 0 voices, 168 normals)
+2020-12-24 19:01:48	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-24 19:09:02	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 260 seconds)
+2020-12-24 19:09:43	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-24 19:19:43	<--	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has quit (Remote host closed the connection)
+2020-12-24 19:20:05	-->	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has joined #sql
+2020-12-24 19:24:33	-->	Rashad (~textual@79.173.203.103) has joined #sql
+2020-12-24 19:27:49	<--	Rashad (~textual@79.173.203.103) has quit (Client Quit)
+2020-12-24 19:30:46	-->	Rashad (~textual@79.173.203.103) has joined #sql
+2020-12-24 19:32:18	<--	Rashad (~textual@79.173.203.103) has quit (Client Quit)
+2020-12-24 19:34:15	-->	Rashad (~textual@79.173.203.103) has joined #sql
+2020-12-24 19:36:51	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-24 19:37:10	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-24 19:40:59	<--	Samian (~s@65.144.6.61) has quit (Ping timeout: 272 seconds)
+2020-12-24 20:07:35	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-24 20:07:51	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-24 20:11:37	<--	mrig (~mrig@unaffiliated/mrig) has quit (Quit: WeeChat 3.0)
+2020-12-24 20:16:43	-->	mrig (~mrig@unaffiliated/mrig) has joined #sql
+2020-12-24 20:24:59	<--	Rashad (~textual@79.173.203.103) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-24 20:26:52	-->	MrZeus (~MrZeus@194.37.96.125) has joined #sql
+2020-12-24 20:38:46	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-24 20:39:03	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-24 20:47:39	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-24 20:49:09	<--	rayyyy1 (~nanoz@gateway/tor-sasl/nanoz) has quit (Remote host closed the connection)
+2020-12-24 20:52:06	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Client Quit)
+2020-12-25 01:06:22	--	irc: disconnected from server
+2020-12-25 01:07:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-25 01:07:06	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-25 01:07:06	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-25 01:07:06	--	Channel #sql: 173 nicks (0 ops, 0 voices, 173 normals)
+2020-12-25 01:07:42	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-25 01:10:21	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-25 01:14:27	-->	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has joined #sql
+2020-12-25 01:38:43	<--	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has quit (Ping timeout: 256 seconds)
+2020-12-25 01:50:36	<--	imsky (~imsky@2603-7000-5641-8200-4442-4edd-7d08-559d.res6.spectrum.com) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 01:53:49	-->	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has joined #sql
+2020-12-25 02:01:50	<--	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has quit (Read error: Connection reset by peer)
+2020-12-25 02:03:50	-->	imsky (~imsky@2603-7000-5641-8200-4442-4edd-7d08-559d.res6.spectrum.com) has joined #sql
+2020-12-25 02:03:54	-->	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has joined #sql
+2020-12-25 02:05:24	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-25 02:05:44	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 02:10:49	<--	imsky (~imsky@2603-7000-5641-8200-4442-4edd-7d08-559d.res6.spectrum.com) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-25 02:14:36	<--	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has quit (Ping timeout: 264 seconds)
+2020-12-25 02:18:30	<--	macbook (~macbook@cpc101496-gill19-2-0-cust142.20-1.cable.virginm.net) has quit (Quit: macbook)
+2020-12-25 02:20:55	<--	e2 (e2@sponsored.by.bnc4you.xyz) has left #sql ("No boundaries on the net!")
+2020-12-25 02:24:38	-->	wunderbar (~wunderbar@c-7e78524e.016-77-73746f43.bbcust.telenor.se) has joined #sql
+2020-12-25 02:34:29	-->	macbook (~macbook@cpc101496-gill19-2-0-cust142.20-1.cable.virginm.net) has joined #sql
+2020-12-25 02:47:18	<--	macbook (~macbook@cpc101496-gill19-2-0-cust142.20-1.cable.virginm.net) has quit (Quit: macbook)
+2020-12-25 02:57:56	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #sql
+2020-12-25 02:59:11	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-25 03:05:08	-->	Kexoni (~Kexoni@unaffiliated/kexoni) has joined #sql
+2020-12-25 03:06:26	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-25 03:06:40	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 03:08:07	<--	Sleepy63 (~Sleepy63@47.185.218.67) has quit (Ping timeout: 272 seconds)
+2020-12-25 03:12:04	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-25 03:21:08	<--	dornick (~dornick@unaffiliated/j-wright/x-9145068) has quit (Ping timeout: 256 seconds)
+2020-12-25 03:24:34	-->	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has joined #sql
+2020-12-25 03:28:48	-->	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has joined #sql
+2020-12-25 03:29:15	<--	wunderbar (~wunderbar@c-7e78524e.016-77-73746f43.bbcust.telenor.se) has quit (Ping timeout: 240 seconds)
+2020-12-25 03:30:55	<--	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has quit (Ping timeout: 256 seconds)
+2020-12-25 03:38:00	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-25 03:38:15	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 03:39:04	-->	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has joined #sql
+2020-12-25 03:42:53	<--	Sheilong (uid293653@gateway/web/irccloud.com/x-eoacigssonweyiuu) has quit (Quit: Connection closed for inactivity)
+2020-12-25 03:51:30	-->	anemoiac (~anemoiac@23.226.128.210) has joined #sql
+2020-12-25 03:51:48	-->	macbook (~macbook@cpc101496-gill19-2-0-cust142.20-1.cable.virginm.net) has joined #sql
+2020-12-25 03:51:48	-->	dornick (~dornick@unaffiliated/j-wright/x-9145068) has joined #sql
+2020-12-25 03:58:05	-->	Sleepy63 (~Sleepy63@47.185.218.67) has joined #sql
+2020-12-25 04:00:49	<--	Atque (~Atque_@unaffiliated/atque) has quit (Quit: ...)
+2020-12-25 04:03:51	<--	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has quit (Ping timeout: 272 seconds)
+2020-12-25 04:10:33	<--	anemoiac (~anemoiac@23.226.128.210) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-25 04:12:04	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-25 04:12:23	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 04:13:00	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-25 04:15:17	-->	neo4 (~Thunderbi@232-93-201-46.pool.ukrtel.net) has joined #sql
+2020-12-25 04:17:38	<--	dornick (~dornick@unaffiliated/j-wright/x-9145068) has quit (Quit: .)
+2020-12-25 04:23:11	-->	dornick (~dornick@unaffiliated/j-wright/x-9145068) has joined #sql
+2020-12-25 04:23:37	<--	dornick (~dornick@unaffiliated/j-wright/x-9145068) has quit (Remote host closed the connection)
+2020-12-25 04:27:58	-->	Sheilong (uid293653@gateway/web/irccloud.com/x-dkfzyfmbutdgutbh) has joined #sql
+2020-12-25 04:34:09	-->	dornick (~dornick@unaffiliated/j-wright/x-9145068) has joined #sql
+2020-12-25 04:34:46	-->	MrZeus_ (~MrZeus@81.92.205.29) has joined #sql
+2020-12-25 04:37:41	-->	Tazmainian (~Tazmain@unaffiliated/tazmain) has joined #sql
+2020-12-25 04:38:21	<--	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:b5e0:9604:e60:ea15) has quit (Ping timeout: 260 seconds)
+2020-12-25 04:47:53	<--	Sleepy63 (~Sleepy63@47.185.218.67) has quit (Ping timeout: 268 seconds)
+2020-12-25 06:58:27	--	irc: disconnected from server
+2020-12-25 06:59:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-25 06:59:06	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-25 06:59:06	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-25 06:59:06	--	Channel #sql: 174 nicks (0 ops, 0 voices, 174 normals)
+2020-12-25 06:59:40	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-25 07:02:20	<--	RusAlex (~Chel@unaffiliated/rusalex) has quit (Ping timeout: 268 seconds)
+2020-12-25 07:03:16	-->	RusAlex (~Chel@unaffiliated/rusalex) has joined #sql
+2020-12-25 07:20:15	<--	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has quit (Quit: Leaving)
+2020-12-25 07:21:39	<--	Azrael_- (~aweoi@51.154.62.124) has quit (Disconnected by services)
+2020-12-25 07:29:53	<--	acidjnk_new (~acidjnk@p200300d0c704e766c945272cf742f08c.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-25 07:30:59	<--	Sleepy63 (~Sleepy63@47.185.218.67) has quit (Ping timeout: 256 seconds)
+2020-12-25 07:33:03	-->	Azrael_- (~aweoi@51.154.62.124) has joined #sql
+2020-12-25 07:40:34	<--	macbook (~macbook@cpc101496-gill19-2-0-cust142.20-1.cable.virginm.net) has quit (Ping timeout: 268 seconds)
+2020-12-25 07:46:24	-->	Sleepy63 (~Sleepy63@47.185.218.67) has joined #sql
+2020-12-25 07:49:05	<--	palasso (~palasso@unaffiliated/palasso) has quit (Remote host closed the connection)
+2020-12-25 07:51:47	-->	palasso (~palasso@unaffiliated/palasso) has joined #sql
+2020-12-25 07:57:42	<--	Bideford (~Bideford@unaffiliated/bideford) has quit (Quit: Quit - Bye)
+2020-12-25 07:59:45	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-25 08:06:09	<--	MrMobius (~MrMobius@208.58.206.154) has quit (Read error: No route to host)
+2020-12-25 08:06:51	<--	Kexoni (~Kexoni@unaffiliated/kexoni) has quit
+2020-12-25 08:08:20	<--	Rashad (~textual@2a01:9700:1299:d600:c4ac:c1ab:f229:c0be) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 08:11:34	-->	MrMobius (~MrMobius@208.58.206.154) has joined #sql
+2020-12-25 08:21:14	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-25 08:21:31	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 08:22:54	-->	Rashad (~textual@2a01:9700:1299:d600:c4ac:c1ab:f229:c0be) has joined #sql
+2020-12-25 08:23:56	<--	mrig (~mrig@unaffiliated/mrig) has quit (Quit: WeeChat 3.0)
+2020-12-25 08:30:52	-->	wunderba_ (~wunderbar@c-da74524e.016-77-73746f43.bbcust.telenor.se) has joined #sql
+2020-12-25 08:33:52	<--	wunderbar (~wunderbar@m83-185-39-184.cust.tele2.se) has quit (Ping timeout: 256 seconds)
+2020-12-25 08:36:21	-->	acidjnk_new (~acidjnk@p200300d0c704e766c945272cf742f08c.dip0.t-ipconnect.de) has joined #sql
+2020-12-25 08:52:30	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Read error: Connection reset by peer)
+2020-12-25 08:53:42	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 09:21:06	<--	Rashad (~textual@2a01:9700:1299:d600:c4ac:c1ab:f229:c0be) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 09:35:04	-->	MrZeus__ (~MrZeus@2a02:c7f:70d0:6a00:b5e0:9604:e60:ea15) has joined #sql
+2020-12-25 09:36:37	-->	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:486:bbee:4406:12aa) has joined #sql
+2020-12-25 09:38:25	<--	MrZeus_ (~MrZeus@81.92.205.29) has quit (Ping timeout: 240 seconds)
+2020-12-25 09:39:42	<--	MrZeus__ (~MrZeus@2a02:c7f:70d0:6a00:b5e0:9604:e60:ea15) has quit (Ping timeout: 260 seconds)
+2020-12-25 09:42:33	-->	MrZeus_ (~MrZeus@2a02:c7f:70d0:6a00:f1e1:b374:c9d9:6928) has joined #sql
+2020-12-25 09:43:47	<--	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:486:bbee:4406:12aa) has quit (Ping timeout: 260 seconds)
+2020-12-25 09:47:39	<--	MrZeus_ (~MrZeus@2a02:c7f:70d0:6a00:f1e1:b374:c9d9:6928) has quit (Ping timeout: 272 seconds)
+2020-12-25 09:47:52	<--	audioburn (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-25 09:51:22	<--	audiofreeze (~theology@unaffiliated/theology) has quit (Ping timeout: 260 seconds)
+2020-12-25 09:56:51	<--	Sheilong (uid293653@gateway/web/irccloud.com/x-dkfzyfmbutdgutbh) has quit (Quit: Connection closed for inactivity)
+2020-12-25 10:03:49	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-25 10:03:55	-->	cd (~cd@unaffiliated/cd) has joined #sql
+2020-12-25 10:06:03	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-25 10:07:34	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-25 10:08:44	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-25 10:09:37	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 10:12:03	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-25 10:12:37	<--	Tazmainian (~Tazmain@unaffiliated/tazmain) has quit (Read error: Connection reset by peer)
+2020-12-25 10:14:17	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:17:09	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-25 10:19:15	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:37:55	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-25 10:42:07	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:45:19	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-25 10:45:54	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:47:46	<--	neo4 (~Thunderbi@232-93-201-46.pool.ukrtel.net) has quit (Remote host closed the connection)
+2020-12-25 11:05:30	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-25 11:07:24	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-25 11:07:40	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 11:22:34	<--	acidjnk_new (~acidjnk@p200300d0c704e766c945272cf742f08c.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-25 11:38:07	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 256 seconds)
+2020-12-25 12:07:17	-->	Dotz0cat (~Dotz0cat@h170.82.187.173.dynamic.ip.windstream.net) has joined #sql
+2020-12-25 12:28:52	-->	donxfive (~donxfive@216-164-24-155.s1177.c3-0.atw-cbr1.atw.pa.cable.rcncustomer.com) has joined #sql
+2020-12-25 12:29:32	<--	donxfive (~donxfive@216-164-24-155.s1177.c3-0.atw-cbr1.atw.pa.cable.rcncustomer.com) has quit (Client Quit)
+2020-12-25 13:26:40	-->	jaziz (~jaziz@unaffiliated/jaziz) has joined #sql
+2020-12-25 13:26:47	<--	jaziz (~jaziz@unaffiliated/jaziz) has left #sql ("Leaving")
+2020-12-25 13:43:30	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-25 13:47:22	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 13:50:19	<--	vancz (~vancz@unaffiliated/vancz) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:50:32	-->	vancz (~vancz@unaffiliated/vancz) has joined #sql
+2020-12-25 14:18:15	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-25 14:18:33	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-25 14:25:59	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2020-12-25 15:46:38	--	irc: disconnected from server
+2020-12-25 15:47:16	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-25 15:47:16	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-25 15:47:16	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-25 15:47:16	--	Channel #sql: 162 nicks (0 ops, 0 voices, 162 normals)
+2020-12-25 15:47:49	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-26 06:21:48	--	irc: disconnected from server
+2020-12-26 06:22:26	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-26 06:22:26	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-26 06:22:26	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-26 06:22:26	--	Channel #sql: 169 nicks (0 ops, 0 voices, 169 normals)
+2020-12-26 06:23:00	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-26 06:27:44	-->	uksio (~uksio@p200300cb1f0baf1ea15763d0de9706e3.dip0.t-ipconnect.de) has joined #sql
+2020-12-26 06:31:00	<--	uks (~uksio@p200300cb1f0bafa8f865de1f74c96aab.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-26 06:36:19	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 06:36:35	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 06:59:37	<--	ASHR (~ASHR@cpe-76-178-141-122.natnow.res.rr.com) has quit (Ping timeout: 264 seconds)
+2020-12-26 07:07:28	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 07:07:44	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 08:55:32	--	irc: disconnected from server
+2020-12-26 08:56:10	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-26 08:56:10	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-26 08:56:10	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-26 08:56:10	--	Channel #sql: 170 nicks (0 ops, 0 voices, 170 normals)
+2020-12-26 08:56:36	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-26 08:56:44	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-26 08:57:39	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 09:09:52	--	Swanta-Claus is now known as Swant
+2020-12-26 09:20:50	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-26 09:25:57	<--	CarlenWhite (~CarlenWhi@78.sub-174-202-97.myvzw.com) has quit (Ping timeout: 260 seconds)
+2020-12-26 09:26:02	-->	CarlenWhite_Err (~CarlenWhi@14.sub-174-202-129.myvzw.com) has joined #sql
+2020-12-26 09:26:26	--	CarlenWhite_Err is now known as CarlenWhite
+2020-12-26 09:44:01	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 09:44:19	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 10:02:13	<--	acidjnk_new (~acidjnk@p200300d0c704e768e5ab7a2f7255b0f1.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-26 10:02:36	<--	uksio (~uksio@p200300cb1f0baf1ea15763d0de9706e3.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-26 10:04:30	-->	uks (~uksio@p200300cb1f0baf1e88d52ebb2bfecad7.dip0.t-ipconnect.de) has joined #sql
+2020-12-26 10:15:22	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 10:15:37	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 10:50:24	<--	ASHR (~ASHR@cpe-76-178-141-122.natnow.res.rr.com) has quit (Ping timeout: 256 seconds)
+2020-12-26 11:15:32	<--	mytec (~mytec@ip68-9-156-249.ri.ri.cox.net) has quit (Quit: Leaving)
+2020-12-26 11:18:27	-->	Dotz0cat_ (~Dotz0cat@h190.184.39.162.static.ip.windstream.net) has joined #sql
+2020-12-26 11:19:58	<--	Dotz0cat (~Dotz0cat@h5.231.19.98.static.ip.windstream.net) has quit (Ping timeout: 260 seconds)
+2020-12-26 11:25:02	<--	WaitAreUEvenACat (~theology@unaffiliated/theology) has quit (Ping timeout: 265 seconds)
+2020-12-26 12:10:23	-->	yipster (49d0ca49@c-73-208-202-73.hsd1.il.comcast.net) has joined #sql
+2020-12-26 12:11:10	yipster	why would a select query be crashing the dbms program?
+2020-12-26 12:11:18	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 12:11:32	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 12:13:09	yipster	no one has any thoughts?
+2020-12-26 12:13:15	yipster	or no one is awake?
+2020-12-26 12:21:56	-->	ASHR (~ASHR@cpe-76-178-141-122.natnow.res.rr.com) has joined #sql
+2020-12-26 12:24:54	-->	trinityblade (~textual@adsl-76-211-177-0.dsl.wlfrct.sbcglobal.net) has joined #sql
+2020-12-26 14:29:17	--	irc: disconnected from server
+2020-12-26 14:29:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-26 14:29:54	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-26 14:29:54	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-26 14:29:54	--	Channel #sql: 167 nicks (0 ops, 0 voices, 167 normals)
+2020-12-26 14:30:29	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-26 14:36:09	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 14:36:26	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 14:37:23	yipster	Xgc, make sense now?
+2020-12-26 14:43:04	-->	karakedi (~eAC53C340@unaffiliated/orphan) has joined #sql
+2020-12-26 14:48:53	<--	ASHR (~ASHR@cpe-76-178-141-122.natnow.res.rr.com) has quit (Quit: Leaving)
+2020-12-26 15:10:15	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-26 15:10:57	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 15:25:21	yipster	oh, come on
+2020-12-26 15:35:27	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined #sql
+2020-12-26 15:45:01	<--	yipster (49d0ca49@c-73-208-202-73.hsd1.il.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 15:45:50	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-26 16:43:18	<--	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:9dc7:9636:33c2:9b2b) has quit (Ping timeout: 272 seconds)
+2020-12-26 16:52:46	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-26 16:55:37	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-26 17:00:40	<--	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has quit (Quit: Leaving)
+2020-12-26 17:10:01	<--	audioburn (~theology@unaffiliated/theology) has quit (Remote host closed the connection)
+2020-12-26 17:24:56	--	FestiveCup is now known as D[_]
+2020-12-26 17:30:47	-->	Rashad (~textual@2a01:9700:11b5:6500:55bb:5e09:c002:6ac3) has joined #sql
+2020-12-26 18:01:00	<--	cd (~cd@unaffiliated/cd) has quit (Quit: cd)
+2020-12-26 18:09:19	<--	Rashad (~textual@2a01:9700:11b5:6500:55bb:5e09:c002:6ac3) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-26 18:31:01	-->	Bideford (~Bideford@unaffiliated/bideford) has joined #sql
+2020-12-26 18:50:50	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 18:51:05	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 18:53:05	-->	Rashad (~textual@2a01:9700:11b5:6500:55bb:5e09:c002:6ac3) has joined #sql
+2020-12-26 18:59:00	<--	incognito (~relativit@unaffiliated/incognito) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2020-12-26 19:12:08	-->	mrig (~mrig@unaffiliated/mrig) has joined #sql
+2020-12-26 19:18:48	<--	Orlando^ (~kenny@178.74.16.236) has quit (Ping timeout: 264 seconds)
+2020-12-26 19:21:24	-->	Orlando^ (~kenny@178.74.16.236) has joined #sql
+2020-12-26 19:21:58	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 19:22:13	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 19:28:23	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Ping timeout: 240 seconds)
+2020-12-26 19:37:52	-->	ysch (~ysch@5.nat3.avantnet.ru) has joined #sql
+2020-12-26 19:39:36	-->	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has joined #sql
+2020-12-26 19:41:15	-->	acidjnk_new (~acidjnk@p200300d0c704e714e5ab7a2f7255b0f1.dip0.t-ipconnect.de) has joined #sql
+2020-12-26 19:48:52	-->	palasso_ (~palasso@unaffiliated/palasso) has joined #sql
+2020-12-26 19:48:56	<--	karakedi (~eAC53C340@unaffiliated/orphan) has quit (Ping timeout: 260 seconds)
+2020-12-26 19:50:15	<--	palasso (~palasso@unaffiliated/palasso) has quit (Ping timeout: 240 seconds)
+2020-12-26 19:53:09	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 19:53:23	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 19:53:46	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Remote host closed the connection)
+2020-12-26 19:54:19	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined #sql
+2020-12-26 20:11:23	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Ping timeout: 240 seconds)
+2020-12-26 20:12:36	-->	bboy (~game0@151.255.173.247) has joined #sql
+2020-12-26 20:14:16	-->	horsepatat (~horsepata@212.3.199.47) has joined #sql
+2020-12-26 20:15:56	bboy	Hi guys I'm wana trying to create database architecture for website visitors. I have now one table which save the user count and everytime the user visited the site it will increase by one. But the issue here I want to get the people count per month and per 3 month and per year. So I'm just trying to know what is the best way to make database arch for this
+2020-12-26 20:19:29	-->	Tazmainian (~Tazmain@unaffiliated/tazmain) has joined #sql
+2020-12-26 20:24:18	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 20:24:33	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 20:29:12	-->	onizu (uid373383@gateway/web/irccloud.com/x-hrnecgipktnxozbi) has joined #sql
+2020-12-26 20:33:47	<--	Rashad (~textual@2a01:9700:11b5:6500:55bb:5e09:c002:6ac3) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-26 20:51:03	-->	fandre1986 (bc2f593f@gateway/web/cgi-irc/kiwiirc.com/ip.188.47.89.63) has joined #sql
+2020-12-26 20:55:47	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-26 20:56:02	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-26 20:57:48	-->	Rashad (~textual@2a01:9700:11b5:6500:b905:c082:e92b:dd6c) has joined #sql
+2020-12-26 20:58:43	-->	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:44cf:739f:a83c:46e3) has joined #sql
+2020-12-26 21:02:20	<--	Tazmainian (~Tazmain@unaffiliated/tazmain) has quit (Quit: Leaving)
+2020-12-26 21:04:14	<--	Rashad (~textual@2a01:9700:11b5:6500:b905:c082:e92b:dd6c) has quit (Ping timeout: 272 seconds)
+2020-12-26 21:07:17	<--	horsepatat (~horsepata@212.3.199.47) has quit (Read error: Connection reset by peer)
+2020-12-26 21:08:45	-->	MrZeus_ (~MrZeus@2a02:c7f:70d0:6a00:4d19:2b84:9e59:6e48) has joined #sql
+2020-12-26 21:10:20	<--	Orlando^ (~kenny@178.74.16.236) has quit (Ping timeout: 256 seconds)
+2020-12-26 21:10:34	<--	MrZeus (~MrZeus@2a02:c7f:70d0:6a00:44cf:739f:a83c:46e3) has quit (Ping timeout: 272 seconds)
+2020-12-26 21:12:44	-->	Orlando^ (~kenny@178.74.16.236) has joined #sql
+2020-12-27 09:05:28	--	irc: disconnected from server
+2020-12-27 09:06:24	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-27 09:06:24	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-27 09:06:24	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-27 09:06:24	--	Channel #sql: 171 nicks (0 ops, 0 voices, 171 normals)
+2020-12-27 09:06:58	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-27 09:10:51	-->	macbook (~macbook@cpc101496-gill19-2-0-cust142.20-1.cable.virginm.net) has joined #sql
+2020-12-27 09:17:42	-->	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has joined #sql
+2020-12-27 09:36:35	<--	Akimb (~Akimb@78-58-31-17.static.zebra.lt) has quit (Ping timeout: 256 seconds)
+2020-12-27 09:55:49	-->	ASHR (~ASHR@cpe-76-178-141-122.natnow.res.rr.com) has joined #sql
+2020-12-27 10:08:26	<--	Dotz0cat_ (~Dotz0cat@h190.184.39.162.static.ip.windstream.net) has quit (Ping timeout: 272 seconds)
+2020-12-27 10:23:02	<--	jennie (~mint@unaffiliated/jennie) has quit (Ping timeout: 264 seconds)
+2020-12-30 19:38:47	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-30 19:38:47	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-30 19:38:47	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-30 19:38:47	--	Channel #sql: 169 nicks (0 ops, 0 voices, 169 normals)
+2020-12-30 19:39:22	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-30 19:50:56	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-30 19:51:11	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-30 20:12:43	-->	schne1der (~schneider@unaffiliated/schneider) has joined #sql
+2020-12-30 20:19:00	<--	schne1der (~schneider@unaffiliated/schneider) has quit (Ping timeout: 265 seconds)
+2020-12-30 20:21:15	-->	schne1der (~schneider@unaffiliated/schneider) has joined #sql
+2020-12-30 20:21:28	-->	cd (~cd@unaffiliated/cd) has joined #sql
+2020-12-30 20:22:06	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-30 20:22:20	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-30 20:53:19	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Read error: Connection reset by peer)
+2020-12-30 20:53:30	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-30 20:58:42	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Remote host closed the connection)
+2020-12-30 20:59:07	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined #sql
+2020-12-30 21:12:13	-->	onizu (uid373383@gateway/web/irccloud.com/x-datnvliqavhbzzma) has joined #sql
+2020-12-30 21:25:33	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-30 21:25:49	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-30 21:34:19	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-30 21:38:03	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-30 21:40:59	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-30 21:44:32	<--	horsepatat (~horsepata@80.89.79.153) has quit (Read error: Connection reset by peer)
+2020-12-30 21:56:43	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-30 21:56:58	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-30 21:59:48	<--	Rashad (~textual@94.249.51.168) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-30 22:03:33	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-30 22:04:50	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-30 22:19:49	-->	Rashad (~textual@94.249.51.168) has joined #sql
+2020-12-30 22:25:45	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #sql
+2020-12-31 07:49:38	--	irc: disconnected from server
+2020-12-31 07:50:18	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-31 07:50:18	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-31 07:50:18	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-31 07:50:18	--	Channel #sql: 170 nicks (0 ops, 0 voices, 170 normals)
+2020-12-31 07:50:52	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-31 09:21:23	--	irc: disconnected from server
+2020-12-31 09:22:00	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2020-12-31 09:22:00	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2020-12-31 09:22:00	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2020-12-31 09:22:00	--	Channel #sql: 169 nicks (0 ops, 0 voices, 169 normals)
+2020-12-31 09:22:34	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2020-12-31 09:38:28	<--	acidjnk_new (~acidjnk@p200300d0c704e799613ed27d32309497.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-31 09:57:38	-->	tekk (me@my.name.is.mike.al) has joined #sql
+2020-12-31 10:01:31	-->	AmVarPG (~amvarpg@pool-100-36-155-137.washdc.fios.verizon.net) has joined #sql
+2020-12-31 10:07:27	<--	AmVarPG (~amvarpg@pool-100-36-155-137.washdc.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2020-12-31 10:14:11	<--	lilgopher (~lilgopher@c-73-51-174-246.hsd1.il.comcast.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-31 10:17:40	-->	jdubu7 (jdubu7@gateway/vpn/protonvpn/jdubu7) has joined #sql
+2020-12-31 10:19:40	-->	lilgopher (~lilgopher@c-73-51-174-246.hsd1.il.comcast.net) has joined #sql
+2020-12-31 10:24:22	<--	jdubu7 (jdubu7@gateway/vpn/protonvpn/jdubu7) has quit (Quit: Leaving)
+2020-12-31 10:24:35	-->	jdubu7 (jdubu7@gateway/vpn/protonvpn/jdubu7) has joined #sql
+2020-12-31 10:26:09	-->	trinityblade (~textual@adsl-76-211-177-0.dsl.wlfrct.sbcglobal.net) has joined #sql
+2020-12-31 10:28:01	<--	jdubu7 (jdubu7@gateway/vpn/protonvpn/jdubu7) has quit (Client Quit)
+2020-12-31 10:28:15	-->	jdubu7 (jdubu7@gateway/vpn/protonvpn/jdubu7) has joined #sql
+2020-12-31 10:28:18	<--	MrZeus (~MrZeus@90.218.41.119) has quit (Ping timeout: 256 seconds)
+2020-12-31 10:38:45	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-31 10:39:01	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-31 10:51:36	<--	jdubu7 (jdubu7@gateway/vpn/protonvpn/jdubu7) has quit (Quit: Leaving)
+2020-12-31 11:09:53	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Read error: Connection reset by peer)
+2020-12-31 11:10:44	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-31 11:16:56	<--	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has quit (Quit: Leaving)
+2020-12-31 11:25:34	<--	Mrbuck (~Mrbuck@gateway/tor-sasl/mrbuck) has quit (Quit: WeeChat 2.9)
+2020-12-31 11:40:49	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Remote host closed the connection)
+2020-12-31 11:41:04	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2020-12-31 12:03:36	-->	AmVarPG (~amvarpg@pool-100-36-155-137.washdc.fios.verizon.net) has joined #sql
+2020-12-31 12:08:58	--	irc: disconnected from server
+2021-01-01 11:08:10	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2021-01-01 11:08:10	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2021-01-01 11:08:10	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2021-01-01 11:08:10	--	Channel #sql: 165 nicks (0 ops, 0 voices, 165 normals)
+2021-01-01 11:08:44	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2021-01-01 11:18:20	<--	MrZeus_ (~MrZeus@90.218.41.119) has quit (Ping timeout: 265 seconds)
+2021-01-01 11:25:26	<--	ASHR (~ASHR@cpe-76-178-141-122.natnow.res.rr.com) has quit (Ping timeout: 272 seconds)
+2021-01-01 15:21:36	--	irc: disconnected from server
+2021-01-01 15:22:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2021-01-01 15:22:14	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2021-01-01 15:22:14	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2021-01-01 15:22:14	--	Channel #sql: 162 nicks (0 ops, 0 voices, 162 normals)
+2021-01-01 15:22:49	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2021-01-01 15:29:04	-->	audioburn (~theology@unaffiliated/theology) has joined #sql
+2021-01-01 15:31:11	--	irc: disconnected from server
+2021-01-12 23:09:43	-->	jungdongho (~jungdongh@115.23.138.101) has joined #sql
+2021-01-12 23:09:43	--	Topic for #sql is "Welcome to #sql! || Ask any general SQL questions here, but tell us which RDBMS you are using (MySQL, Postgres, etc..) || Must Identify to Nickserv for now || Don't paste: use https://gist.github.com/ or http://db-fiddle.com"
+2021-01-12 23:09:43	--	Topic set by ||cw on Tue, 02 Oct 2018 05:08:08
+2021-01-12 23:09:43	--	Channel #sql: 181 nicks (0 ops, 0 voices, 181 normals)
+2021-01-12 23:10:18	--	Channel created on Sun, 26 Nov 2006 15:42:55
+2021-01-12 23:10:38	<--	horsepatat (~horsepata@212.3.199.163) has quit (Ping timeout: 272 seconds)
+2021-01-12 23:12:20	<--	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has quit (Ping timeout: 256 seconds)
+2021-01-12 23:12:55	-->	beatleboy07 (~beatleboy@c-24-17-50-149.hsd1.wa.comcast.net) has joined #sql
+2021-01-12 23:26:22	--	irc: disconnected from server

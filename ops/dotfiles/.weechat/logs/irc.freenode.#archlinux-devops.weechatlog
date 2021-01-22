@@ -1,0 +1,1211 @@
+2020-12-19 11:04:11	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-19 11:04:11	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-19 11:04:11	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-19 11:04:12	--	Channel #archlinux-devops: 134 nicks (1 op, 0 voices, 133 normals)
+2020-12-19 11:04:13	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-19 11:27:14	<--	Ultrasauce_ (~sauce@omae.wa.mou.shindei.ru) has quit (Read error: Connection reset by peer)
+2020-12-19 11:27:17	-->	Ultrasauce (~sauce@omae.wa.mou.shindei.ru) has joined #archlinux-devops
+2020-12-19 11:55:47	--	irc: disconnected from server
+2020-12-19 11:57:30	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-19 11:57:30	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-19 11:57:30	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-19 11:57:31	--	Channel #archlinux-devops: 134 nicks (1 op, 0 voices, 133 normals)
+2020-12-19 11:57:34	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-19 12:03:40	<--	lizr (~lizr@1.83.104.51) has quit (Ping timeout: 256 seconds)
+2020-12-19 12:04:29	-->	lizr (~lizr@1.83.104.51) has joined #archlinux-devops
+2020-12-19 12:22:05	-->	xirhtogal (~lagothrix@unaffiliated/lagothrix) has joined #archlinux-devops
+2020-12-19 12:22:05	<--	lagothrix (~lagothrix@unaffiliated/lagothrix) has quit (Killed (card.freenode.net (Nickname regained by services)))
+2020-12-19 12:22:05	--	xirhtogal is now known as lagothrix
+2020-12-19 12:37:11	-->	Nact (~l@host-85-27-112-179.dynamic.voo.be) has joined #archlinux-devops
+2020-12-19 12:47:53	--	irc: disconnected from server
+2020-12-20 03:36:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-20 03:36:54	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-20 03:36:54	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-20 03:36:54	--	Channel #archlinux-devops: 133 nicks (1 op, 0 voices, 132 normals)
+2020-12-20 03:36:58	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-20 03:54:35	-->	Nact (~l@host-85-27-126-227.dynamic.voo.be) has joined #archlinux-devops
+2020-12-20 04:04:19	<--	lizr (~lizr@1.83.104.51) has quit (Ping timeout: 256 seconds)
+2020-12-20 04:06:41	-->	lizr (~lizr@1.83.107.148) has joined #archlinux-devops
+2020-12-20 04:11:57	jelle	grazzolni|M: finally fixed this aur stuff https://gitlab.archlinux.org/archlinux/infrastructure/-/merge_requests/204
+2020-12-20 04:11:58	phrik	Title: Fix python module deployment issues (!204) · Merge Requests · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-20 04:22:24	grazzolni|M	jelle: nice
+2020-12-20 04:22:46	grazzolni|M	On Monday I'll create the wiki machine
+2020-12-20 04:29:32	<--	orhun (~orhun@78.175.234.168) has quit (Quit: zZz)
+2020-12-20 04:30:09	-->	orhun (~orhun@78.175.234.168) has joined #archlinux-devops
+2020-12-20 05:00:48	<--	GoldenBear (~gb@95.57.207.203) has quit (Ping timeout: 260 seconds)
+2020-12-20 05:07:13	-->	GoldenBear (~gb@95.57.207.203) has joined #archlinux-devops
+2020-12-20 05:09:55	freswa	wCPO: It's deployed, but either I fucked up the change or we still need to disable the smtp rule
+2020-12-20 05:18:59	wCPO	freswa: did you remove the old rule before deploying?
+2020-12-20 05:23:01	jelle	grazzolni|M: tested it on aur-dev, still need to test python3.9 it self with the aur
+2020-12-20 05:31:16	<--	Nact (~l@host-85-27-126-227.dynamic.voo.be) has quit (Remote host closed the connection)
+2020-12-20 05:54:24	--	irc: disconnected from server
+2020-12-20 05:54:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-20 05:54:57	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-20 05:54:57	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-20 05:54:57	--	Channel #archlinux-devops: 133 nicks (1 op, 0 voices, 132 normals)
+2020-12-20 05:55:03	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-20 06:00:41	--	irc: disconnected from server
+2020-12-20 06:18:28	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-20 06:18:28	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-20 06:18:28	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-20 06:18:28	--	Channel #archlinux-devops: 133 nicks (1 op, 0 voices, 132 normals)
+2020-12-20 06:18:31	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-20 16:45:13	--	irc: disconnected from server
+2020-12-20 16:45:50	--	irc: disconnected from server
+2020-12-20 16:46:16	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-20 16:46:16	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-20 16:46:16	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-20 16:46:16	--	Channel #archlinux-devops: 133 nicks (1 op, 0 voices, 132 normals)
+2020-12-20 16:47:02	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-20 16:58:34	--	irc: disconnected from server
+2020-12-20 16:59:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-20 16:59:34	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-20 16:59:34	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-20 16:59:34	--	Channel #archlinux-devops: 133 nicks (1 op, 0 voices, 132 normals)
+2020-12-20 16:59:38	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-20 17:03:20	--	irc: disconnected from server
+2020-12-20 17:03:50	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-20 17:03:50	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-20 17:03:50	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-20 17:03:50	--	Channel #archlinux-devops: 133 nicks (1 op, 0 voices, 132 normals)
+2020-12-20 17:03:53	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-20 20:58:22	--	irc: disconnected from server
+2020-12-20 20:59:02	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-20 20:59:02	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-20 20:59:02	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-20 20:59:03	--	Channel #archlinux-devops: 133 nicks (1 op, 0 voices, 132 normals)
+2020-12-20 20:59:48	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-20 21:13:43	wCPO	svenstaro: hmmm... I only checked negative caching (nxdomain) and according to the log it is cached for 3600 sec
+2020-12-20 21:13:52	wCPO	Very confusing
+2020-12-20 21:14:42	wCPO	svenstaro: systemd-resolved don't listen on 127.0.0.1. I assume it was just a typo?
+2020-12-20 21:33:07	wCPO	I will do some more testing when I get home (~60 min)
+2020-12-20 21:51:35	-->	lizr (~lizr@1.83.106.166) has joined #archlinux-devops
+2020-12-20 22:04:16	freswa	jelle: the outage was caused by hetzner
+2020-12-20 22:05:01	jelle	freswa: oic
+2020-12-20 22:05:04	jelle	ohh gotcha
+2020-12-20 22:36:26	wCPO	freswa: regarding: https://gitlab.archlinux.org/archlinux/infrastructure/-/merge_requests/191 . I would suggest deploy it, test with https://aykevl.nl/apps/mta-sts/ and then merge
+2020-12-20 22:36:27	phrik	Title: Setup TLS-RPT + MTA-STS in testing mode (!191) · Merge Requests · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-20 22:38:00	wCPO	https://www.hetzner.com/ revoked certificate hmmm
+2020-12-20 22:38:00	phrik	Title: Dedicated Root Server, VPS & Hosting - Hetzner Online GmbH (at www.hetzner.com)
+2020-12-20 22:43:11	jelle	wCPO: hmm?
+2020-12-20 22:43:55	wCPO	jelle: Firefox Nightly reports the certificate is revoked..
+2020-12-20 22:44:03	jelle	wCPO: oh works fine on chrome :D
+2020-12-20 22:44:07	jelle	*chromium
+2020-12-20 22:45:16	wCPO	Yeh, I also tested with chromium.. It is weird and Firefox provides very little information
+2020-12-20 22:45:40	jelle	:)
+2020-12-20 23:00:57	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-20 23:08:10	wCPO	jelle: so crlite thinks the certificate is revoked.. The disadvantage of running nightly :/
+2020-12-20 23:08:55	jelle	crl's :DD
+2020-12-20 23:09:03	nl6720	https://archlinux.org/img/* images return 404 in https://archlinux.org/people/developers/ (and other people pages)
+2020-12-20 23:09:04	phrik	Title: Arch Linux - Developers (at archlinux.org)
+2020-12-20 23:09:43	jelle	nice, some stuff missing in migration :D
+2020-12-20 23:30:41	metalmatze	First MR for Prometheus stuff from me :)
+2020-12-20 23:30:41	metalmatze	https://gitlab.archlinux.org/archlinux/infrastructure/-/merge_requests/205
+2020-12-20 23:30:41	metalmatze	More is on the way
+2020-12-20 23:30:43	phrik	Title: Move pacman alerts into separate group in Prometheus (!205) · Merge Requests · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-20 23:31:00	jelle	nice
+2020-12-20 23:32:33	<--	GoldenBear (~gb@95.57.207.203) has quit (Remote host closed the connection)
+2020-12-20 23:34:21	wCPO	svenstaro: I just did some testing: https://gitlab.archlinux.org/archlinux/infrastructure/-/merge_requests/181/diffs#note_9107 TLDR: I can't reproduce the described behavior
+2020-12-20 23:34:22	phrik	Title: Enable gitlab pages (!181) · Merge Requests · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-20 23:38:14	-->	GoldenBear (~gb@95.57.207.195) has joined #archlinux-devops
+2020-12-20 23:38:22	wCPO	svenstaro: can you add https://gitlab.com/gitlab-org/gitlab/-/issues/293817 to the arch issue?
+2020-12-20 23:38:24	phrik	Title: Improve "domain verification" speed by querying the authoritative nameservers (#293817) · Issues · GitLab.org / GitLab · GitLab (at gitlab.com)
+2020-12-21 00:22:04	<--	FFY00_ (ffy00@archlinux/trusteduser/ffy00) has quit (Quit: FFY00_)
+2020-12-21 00:22:05	<--	lordheavy (lcarlier@archlinux/developer/lordheavy) has quit (Quit: lordheavy)
+2020-12-21 00:22:05	<--	anatolik (anatolik@gateway/shell/archlinux/x-rxpwbloesomehloa) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-21 00:22:05	<--	City-busz (bgyorgy@archlinux/trusteduser/city-busz) has quit (Quit: http://quassel-irc.org - Csevegjen kényelmesen. Bárhol.)
+2020-12-21 00:22:05	<--	alad (alad@archlinux/trusteduser/alad) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-21 00:22:05	<--	svetlemodry (jlichtblau@archlinux/trusteduser/drag0nl0rd) has quit (Quit: Connection reset by beer)
+2020-12-21 00:22:15	-->	Jogdand (~Jogdand@106.79.212.172) has joined #archlinux-devops
+2020-12-21 00:22:17	-->	alad (alad@archlinux/trusteduser/alad) has joined #archlinux-devops
+2020-12-21 00:22:18	-->	City-busz (bgyorgy@archlinux/trusteduser/city-busz) has joined #archlinux-devops
+2020-12-21 00:22:18	-->	lordheavy (lcarlier@archlinux/developer/lordheavy) has joined #archlinux-devops
+2020-12-21 00:22:19	-->	FFY00_ (ffy00@archlinux/trusteduser/ffy00) has joined #archlinux-devops
+2020-12-21 00:44:20	wCPO	jelle: https://gitlab.archlinux.org/archlinux/infrastructure/-/merge_requests/206
+2020-12-21 00:44:22	phrik	Title: Setup monitoring of SMTP STARTTLS, SMTP Submissionss, IMAPS and POP3S (!206) · Merge Requests · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-21 00:46:09	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 00:46:30	-->	sudoforge (~sudoforge@c-73-243-238-132.hsd1.co.comcast.net) has joined #archlinux-devops
+2020-12-21 00:46:45	jelle	wCPO: didn't we disable 465
+2020-12-21 00:46:57	jelle	oh wait that's smtp
+2020-12-21 00:50:27	wCPO	jelle: we have disabled imap, pop3 but for some reason we didn't disable SMTP submission over port 587 with starttls.. freswa: why didn't we deprecate <-- ?
+2020-12-21 00:52:38	freswa	wCPO: for what server? apollo?
+2020-12-21 00:53:32	wCPO	freswa: mail.archlinux.org
+2020-12-21 00:56:14	freswa	wCPO: cause it's much more in use than IMAP port 143
+2020-12-21 00:58:47	wCPO	freswa: should we announce a deprecation date?
+2020-12-21 01:02:22	freswa	we'll do that after the opensmtpd stuff
+2020-12-21 01:04:02	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-21 01:05:22	wCPO	roger, I have added it to the monitoring MR
+2020-12-21 01:12:16	grazzolni|M	jelle: mind if I create a branch specifically for terraform changes and I add branch deletion protection to it?
+2020-12-21 01:12:30	jelle	you can, I don't like it
+2020-12-21 01:12:36	jelle	we just need to merge ASAP
+2020-12-21 01:12:49	jelle	create new server -> MR -> merge :)
+2020-12-21 01:13:31	grazzolni|M	jelle: that works for new servers only, but doesn't for migrations, where you need to change dns going in and back
+2020-12-21 01:13:52	grazzolni|M	I don't like it either, but at least it's a way to not block each other's work
+2020-12-21 01:14:13	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 01:14:30	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-21 01:15:08	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Client Quit)
+2020-12-21 01:15:22	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-21 01:18:14	grazzolni|M	jelle: btw, archlinux.org/pacman ain't working, I'm running the task now
+2020-12-21 01:18:21	jelle	cool
+2020-12-21 01:18:25	jelle	grazzolni|M: I copied the profile pics
+2020-12-21 01:18:59	grazzolni|M	jelle: argh
+2020-12-21 01:19:04	grazzolni|M	the art work too?
+2020-12-21 01:19:08	grazzolni|M	forgot completely about those
+2020-12-21 01:19:12	jelle	grazzolni|M: uhh that seemed fine or did I forgot?
+2020-12-21 01:19:21	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Client Quit)
+2020-12-21 01:19:29	grazzolni|M	jelle: I don't remember if the art is part of git or not
+2020-12-21 01:19:35	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-21 01:20:02	<--	just1602 (~just1602@199.58.80.143) has quit (Ping timeout: 264 seconds)
+2020-12-21 01:33:28	wCPO	freswa: https://gitlab.archlinux.org/archlinux/infrastructure/-/merge_requests/207
+2020-12-21 01:33:29	phrik	Title: Migrate all services to use implicit TLS for SMTP Submission (!207) · Merge Requests · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-21 01:49:07	grazzolni|M	jelle: created a terraform branch
+2020-12-21 01:57:17	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 01:58:20	jelle	grazzolni|M: merged
+2020-12-21 01:58:43	grazzolni|M	jelle: that was fast =D
+2020-12-21 01:58:55	jelle	grazzolni|M: yeah, I wanna keep things fun <3
+2020-12-21 01:59:11	grazzolni|M	jelle: makes sense
+2020-12-21 01:59:12	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-21 01:59:40	grazzolni|M	jelle: anyway, I've copied the missing archlinux.org dir from apollo. it contained robots.txt and a bunc of other stuff
+2020-12-21 01:59:56	jelle	grazzolni|M: robots.txt is not in our ansible?!
+2020-12-21 02:00:13	grazzolni|M	jelle: not that I can see.
+2020-12-21 02:00:22	jelle	hmm we should fix that :)
+2020-12-21 02:00:24	grazzolni|M	the site effectively went without it for 2 days
+2020-12-21 02:06:23	grazzolni|M	jelle: I'll try to prepare everything for the wiki migration today still
+2020-12-21 02:06:29	grazzolni|M	and perhaps do it tomorrow/tuesday
+2020-12-21 02:46:30	<--	Jogdand (~Jogdand@106.79.212.172) has quit (Read error: Connection reset by peer)
+2020-12-21 02:50:29	-->	Jogdand (~Jogdand@106.79.212.172) has joined #archlinux-devops
+2020-12-21 03:06:35	<--	Jogdand (~Jogdand@106.79.212.172) has quit (Read error: Connection reset by peer)
+2020-12-21 03:07:59	alad	who do I need to bribe to add my blagh to planet.archlinux.org
+2020-12-21 03:08:50	jelle	alad: yourself
+2020-12-21 03:08:59	alad	:O
+2020-12-21 03:09:02	alad	how's that?
+2020-12-21 03:09:04	jelle	alad: go to your profile on archweb and add your website and website_rss
+2020-12-21 03:09:10	alad	did that some hours ago :O
+2020-12-21 03:09:17	jelle	alad: :OO
+2020-12-21 03:09:31	alad	oh shit, nevermind - I see my name in the right column
+2020-12-21 03:09:32	alad	:OOOO
+2020-12-21 03:09:35	alad	thx
+2020-12-21 03:09:35	jelle	:O
+2020-12-21 03:10:00	jelle	ich bin alad
+2020-12-21 03:10:22	alad	it seems my post doesn't appear in the feed, maybe I malformed the RSS
+2020-12-21 03:10:23	felixonmars|T	minä olen alad
+2020-12-21 03:10:30	alad	oi
+2020-12-21 03:10:50	-->	Jogdand (~Jogdand@106.79.212.172) has joined #archlinux-devops
+2020-12-21 03:10:58	jelle	alad: Dec 20 18:01:51 archlinux.org python[389101]: 2020-12-20 18:01:51 -> ERROR: feed: 'https://pkgbuild.com/~alad/rss.xml' has no published or updated date
+2020-12-21 03:11:02	jelle	u wot m8
+2020-12-21 03:14:27	Foxboron	mmm grazzolni|M did you see the arch-general mail? svn2git towards git.a.o is not being updated
+2020-12-21 03:14:43	jelle	Foxboron: how is that on grazzolni|M :O
+2020-12-21 03:14:49	jelle	alad: seems I don't support your rss format
+2020-12-21 03:14:51	grazzolni|M	it's not
+2020-12-21 03:15:02	jelle	better poke foutrelis :DD
+2020-12-21 03:15:12	grazzolni|M	but we can check
+2020-12-21 03:15:18	Foxboron	I could only recall archweb being the major thing that happened the past few days
+2020-12-21 03:15:25	grazzolni|M	to be quite honest, we should ditch git.al.org soon
+2020-12-21 03:15:32	jelle	Foxboron: it's unrelated :)
+2020-12-21 03:15:39	grazzolni|M	Foxboron: yeah, archweb doesn't even come close to that
+2020-12-21 03:16:19	Foxboron	I assume git.a.o can be killed when the legal stuff has been cleared for gitlab
+2020-12-21 03:16:25	<--	Jogdand (~Jogdand@106.79.212.172) has quit (Ping timeout: 240 seconds)
+2020-12-21 03:16:26	 *	foutrelis appears
+2020-12-21 03:17:12	grazzolni|M	Foxboron: why though? it always has been RO for users
+2020-12-21 03:17:45	foutrelis	as long as arch-svntogit on gemini is happieh, im happieh, going to check the svntogit mirror service on luna tho
+2020-12-21 03:18:03	jelle	I did reboot that box recently
+2020-12-21 03:18:05	Foxboron	grazzolni|M: are you thinking about svn2git or git.a.o as a whole now?
+2020-12-21 03:18:31	jelle	git.a.o as a whole will go away :)
+2020-12-21 03:18:43	Foxboron	Yes, but not until gitlab is open
+2020-12-21 03:18:52	jelle	yes
+2020-12-21 03:18:56	Foxboron	So I'm confused why grazzolni|M claims otherwise :p
+2020-12-21 03:19:06	jelle	I don't think he does
+2020-12-21 03:19:08	-->	Jogdand (~Jogdand@106.79.212.61) has joined #archlinux-devops
+2020-12-21 03:19:23	Foxboron	That's what I'm trying to clear up :)
+2020-12-21 03:19:45	foutrelis	did Dec 17 20:19:56 luna.archlinux.org systemd[1]: svntogit-mirror@packages.timer: Succeeded.
+2020-12-21 03:19:48	foutrelis	Dec 17 20:19:56 luna.archlinux.org systemd[1]: Stopped Update svntogit/packages mirror every 5mi
+2020-12-21 03:19:51	foutrelis	._.
+2020-12-21 03:19:54	foutrelis	did i forget to enable the timer?
+2020-12-21 03:19:59	jelle	just trust devops, we are professionals
+2020-12-21 03:20:06	jelle	foutrelis is a prime example!
+2020-12-21 03:20:21	 *	foutrelis thinks
+2020-12-21 03:20:24	Foxboron	Where do submit my unprefessionalism complaint?
+2020-12-21 03:20:26	grazzolni|M	Foxboron: I just said that there isn't a hard dependency on gitlab being open with us killing git.al.org
+2020-12-21 03:20:32	jelle	🐹
+2020-12-21 03:20:39	jelle	Foxboron: drama@archlinux.org
+2020-12-21 03:20:43	Foxboron	grazzolni|M: what. There is? It contains the working branches for *several* developers
+2020-12-21 03:20:53	Foxboron	grazzolni|M: most importantly pacman
+2020-12-21 03:21:45	foutrelis	ok, I just did: systemctl enable --now svntogit-mirror@{packages,community}.timer
+2020-12-21 03:21:48	foutrelis	they should update now
+2020-12-21 03:21:55	jelle	foutrelis: ^_^
+2020-12-21 03:21:58	Foxboron	foutrelis: <3 I can reply on the arch-general thread if you want
+2020-12-21 03:22:09	grazzolni|M	Foxboron: they can all be migrated before gitlab being open
+2020-12-21 03:22:22	Foxboron	grazzolni|M: Allan has explicitly said that is not happening
+2020-12-21 03:22:29	grazzolni|M	foutrelis: why weren't those enabled?
+2020-12-21 03:22:31	foutrelis	Foxboron: im not on it im afraid :(
+2020-12-21 03:22:35	Foxboron	foutrelis: I fix
+2020-12-21 03:22:41	foutrelis	Foxboron: <3
+2020-12-21 03:23:04	foutrelis	grazzolni|M: don't really remember, most likely I started the timers but didn't enable them
+2020-12-21 03:23:30	jelle	foutrelis: allan can't hold us hostage :)
+2020-12-21 03:23:31	grazzolni|M	foutrelis: they should be on ansible too.
+2020-12-21 03:23:47	foutrelis	grazzolni|M: it's luna so not ansible'd
+2020-12-21 03:24:10	Foxboron	jelle: Allan is the best example I have. But this is about everyone that has git.a.o as their upstream. You can't just ignore their wishes
+2020-12-21 03:24:32	jelle	I'm not gonna participate in this discussion :)
+2020-12-21 03:26:18	 *	foutrelis makes a mental note to create an MR folding sogrep into dbscripts 🦔
+2020-12-21 03:26:39	jelle	foutrelis: sogrep into dbscripts?
+2020-12-21 03:26:46	foutrelis	ye
+2020-12-21 03:26:52	jelle	you mean merge the role or?
+2020-12-21 03:26:54	grazzolni|M	foutrelis: ah right, it's on luna. argh
+2020-12-21 03:27:18	foutrelis	jelle: you enabled mirrors to sync the links dbs, so it's kind of redundant
+2020-12-21 03:27:33	jelle	foutrelis: hmmmmm
+2020-12-21 03:27:55	foutrelis	I mean dragon runs both createlinks and would also sync the links dbs from gemini if the syncrepo role was re-applied to it
+2020-12-21 03:28:09	jelle	dragon runs createlinks hmm
+2020-12-21 03:28:17	foutrelis	ye, it shouldn't now
+2020-12-21 03:28:30	jelle	I see
+2020-12-21 03:28:31	foutrelis	createlinks only makes sense for gemini, no?
+2020-12-21 03:28:41	jelle	I kinda don't like the dbscripts role containing svntogit
+2020-12-21 03:28:51	jelle	it's huge to run
+2020-12-21 03:29:33	foutrelis	could tags be used to exclude those tasks?
+2020-12-21 03:29:35	grazzolni|M	jelle: slow
+2020-12-21 03:30:52	foutrelis	jelle: or, it's going away anyway when we migrate to git :P
+2020-12-21 03:30:58	jelle	foutrelis: :P
+2020-12-21 03:34:18	foutrelis	so, I think only dragon and gemini have sogrep, I should be able to create an MR to merge sogrep into dbscripts in the next few days
+2020-12-21 03:34:29	grazzolni|M	jelle: almost forgot, can you do a double check backups are working on al.org?
+2020-12-21 03:34:50	jelle	grazzolni|M: can check tomorrow
+2020-12-21 03:34:56	grazzolni|M	jelle: ok
+2020-12-21 03:35:17	grazzolni|M	from what I saw it's working, but doesn't hurt to double check
+2020-12-21 03:35:36	jelle	will do
+2020-12-21 03:46:36	jelle	ok time to fix nginx
+2020-12-21 03:48:04	grazzolni|M	jelle: what's broken/
+2020-12-21 03:48:05	grazzolni|M	?
+2020-12-21 03:48:17	jelle	grazzolni|M: got some performance issue with rebuilderd and proxy pass
+2020-12-21 03:48:26	grazzolni|M	ah, I see
+2020-12-21 03:48:38	jelle	grazzolni|M: if the response is too big from rebuilderd it's like 3 x slower
+2020-12-21 03:53:55	jelle	grazzolni|M: I think I need to tweak the proxy_buffering cache
+2020-12-21 03:55:23	-->	Nact (~l@host-85-27-120-131.dynamic.voo.be) has joined #archlinux-devops
+2020-12-21 03:59:32	grazzolni|M	jelle: hmmm
+2020-12-21 04:03:34	grazzolni|M	jelle: ah, also, how can we grow the disk on al.org?
+2020-12-21 04:03:43	<--	lizr (~lizr@1.83.106.166) has quit (Ping timeout: 272 seconds)
+2020-12-21 04:05:05	jelle	hmm do we want to enable tcp_nopush?
+2020-12-21 04:05:13	jelle	grazzolni|M: I forgot iirc it's first growpart?
+2020-12-21 04:05:36	-->	lizr (~lizr@1.83.104.254) has joined #archlinux-devops
+2020-12-21 04:12:20	grazzolni|M	jelle: no idea. but yeah, you probably need to grow the partition first
+2020-12-21 04:13:35	jelle	yup
+2020-12-21 04:19:42	<--	Nact (~l@host-85-27-120-131.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-21 04:36:02	<--	Jogdand (~Jogdand@106.79.212.61) has quit (Ping timeout: 246 seconds)
+2020-12-21 05:13:14	grazzolni|M	jelle: wiki migration will take the time to dump, copy, and update the db
+2020-12-21 05:13:26	grazzolni|M	I've already have the wiki running on the new machine =D
+2020-12-21 05:46:00	jelle	np
+2020-12-21 05:46:02	jelle	grazzolni|M: nice!
+2020-12-21 05:46:08	jelle	runs smoothly?
+2020-12-21 05:50:46	grazzolni|M	jelle: yeah
+2020-12-21 05:51:14	grazzolni|M	But let's see if a cpx11 Will be enough
+2020-12-21 05:52:45	wCPO	Isn't the wiki heavily cached? 🤔
+2020-12-21 05:52:56	jelle	wCPO: welll
+2020-12-21 05:53:15	jelle	wCPO: I had to tweak it a bit to cache better :P
+2020-12-21 05:54:35	jelle	I added fastcgi cache so the static jquery/css loaded via php isn't hitting php-fpm
+2020-12-21 05:59:45	grazzolni|M	wCPO: it is, but a cx11 with just one processor won't cut it
+2020-12-21 06:23:28	-->	just1602 (~justin@199.58.80.143) has joined #archlinux-devops
+2020-12-21 06:48:12	alad	jelle: no idea
+2020-12-21 06:48:22	alad	I wrote the RSS by hand while vaguely understanding the spec
+2020-12-21 06:53:03	demize	Which RSS feed would that be?  :o
+2020-12-21 06:54:19	demize	Oh, https://pkgbuild.com/~alad/rss.xml is indeed not valid RSS, date isn't valid.
+2020-12-21 06:54:20	phrik	Title: EKEYREVOKEDaurutils 3.0 released (at pkgbuild.com)
+2020-12-21 06:54:35	alad	rip
+2020-12-21 06:54:56	demize	Should be Thu, not Th.
+2020-12-21 06:54:59	alad	><
+2020-12-21 06:55:00	alad	thx
+2020-12-21 06:55:09	demize	^_^
+2020-12-21 06:55:56	dmc	artisanal XML
+2020-12-21 13:06:55	--	irc: disconnected from server
+2020-12-21 13:07:32	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-21 13:07:32	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-21 13:07:32	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-21 13:07:32	--	Channel #archlinux-devops: 132 nicks (1 op, 0 voices, 131 normals)
+2020-12-21 13:08:18	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-21 13:30:03	<--	xenrox (~xenrox@unaffiliated/xenrox) has quit (Remote host closed the connection)
+2020-12-21 13:32:19	-->	xenrox (~xenrox@unaffiliated/xenrox) has joined #archlinux-devops
+2020-12-21 14:21:39	-->	keiser5 (~keiser@83.25.87.71.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-21 14:23:35	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Ping timeout: 268 seconds)
+2020-12-21 14:23:36	--	keiser5 is now known as keiser
+2020-12-21 14:27:36	-->	lizr (~lizr@1.83.105.165) has joined #archlinux-devops
+2020-12-21 14:40:57	<--	GoldenBear (~gb@95.57.207.195) has quit (Ping timeout: 240 seconds)
+2020-12-21 14:46:23	-->	GoldenBear (~gb@95.57.207.195) has joined #archlinux-devops
+2020-12-22 05:26:07	--	irc: disconnected from server
+2020-12-22 05:26:45	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-22 05:26:45	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-22 05:26:45	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-22 05:26:45	--	Channel #archlinux-devops: 134 nicks (1 op, 0 voices, 133 normals)
+2020-12-22 05:27:31	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-22 05:28:43	jelle	grazzolni|M: kinda wonder if it's enough, we'll see
+2020-12-22 05:29:09	grazzolni|M	jelle: yeah, I've also removed the backup I've copied from apollo
+2020-12-22 05:29:16	grazzolni|M	to reduce the size
+2020-12-22 05:29:33	jelle	grazzolni|M: 50% free sounds good enough
+2020-12-22 05:29:40	grazzolni|M	jelle: yeah
+2020-12-22 05:30:36	jelle	grazzolni|M: hmm need help with the borg magic
+2020-12-22 05:30:47	jelle	so lemme think again
+2020-12-22 05:30:52	jelle	it lacks the hostkey
+2020-12-22 05:30:53	grazzolni|M	jelle: what happened?
+2020-12-22 05:31:00	jelle	grazzolni|M: you re-ran borg roles right?
+2020-12-22 05:31:16	grazzolni|M	jelle: re-ran the full book now
+2020-12-22 05:31:25	jelle	grazzolni|M: it ran already or?
+2020-12-22 05:31:30	grazzolni|M	but I didn't ran those other roles
+2020-12-22 05:31:36	grazzolni|M	jelle: it finished, yes
+2020-12-22 05:31:40	jelle	hmmmmm
+2020-12-22 05:31:49	grazzolni|M	so I guess we need to run the other tasks, and re-run the book with -t borg
+2020-12-22 05:34:39	jelle	grazzolni|M: no
+2020-12-22 05:34:56	jelle	grazzolni|M: I think what is not happening is sync hostkeys
+2020-12-22 05:35:04	jelle	lemme find it
+2020-12-22 05:35:23	grazzolni|M	jelle: ah, could be
+2020-12-22 05:35:35	jelle	grazzolni|M: yes!
+2020-12-22 05:35:48	jelle	grazzolni|M: /etc/ssh/ssh_known_hosts is missing
+2020-12-22 05:37:09	jelle	grazzolni|M: ok, now it's there
+2020-12-22 05:37:23	jelle	grazzolni|M: starting borg back
+2020-12-22 05:39:06	grazzolni|M	jelle: okido
+2020-12-22 05:39:22	grazzolni|M	Good thing is that we also get a backup of the db with it
+2020-12-22 05:39:33	jelle	AAAAAA
+2020-12-22 05:39:43	jelle	I think we need to run the borg role again ^_^
+2020-12-22 05:41:21	jelle	grazzolni|M: can you do that, did you check if a repo was created?
+2020-12-22 05:44:14	jelle	grazzolni|M: merged the PR!
+2020-12-22 05:47:13	jelle	I don't hope you mind me fixing it ^_^
+2020-12-22 05:48:10	grazzolni|M	no
+2020-12-22 05:48:13	grazzolni|M	not at all
+2020-12-22 05:48:13	jelle	grazzolni|M: hmm shit rsync.net role fails
+2020-12-22 05:48:38	jelle	borg stuff is going to work ^_^
+2020-12-22 05:48:45	jelle	at least for our hetzner box
+2020-12-22 05:49:38	jelle	d7", "gid": 985, "group": "users", "mode": "0600", "msg": "chown failed: [Errno 1] Operation not permitted: b'/tmp/ansible.alg_n3rw'", "owner": "jelle", "path": "/tmp/ansible.alg_n3rw", "size": 18875, "state": "file", "uid": 1000}
+2020-12-22 05:49:40	jelle	hmmmm
+2020-12-22 05:51:14	 *	jelle hopes reurnning fixes
+2020-12-22 05:51:22	jelle	nop
+2020-12-22 05:52:22	grazzolni|M	jelle: wtf
+2020-12-22 05:52:26	grazzolni|M	that's where?
+2020-12-22 05:52:32	jelle	  copy: content="{{ lookup('template', 'authorized_keys.j2') }}" dest="{{ tempfile.path }}" owner=root group=root mode=0644
+2020-12-22 05:52:39	jelle	how did you fix this for archlinux.org o.o
+2020-12-22 05:52:52	jelle	as for all I can see, this never works?
+2020-12-22 05:53:52	grazzolni|M	jelle: you ran sync ssh hosts right? for al.org, then I ran the book again
+2020-12-22 05:54:03	grazzolni|M	or is it the case also al.org isn't working?
+2020-12-22 05:54:06	jelle	grazzolni|M: well for the wiki
+2020-12-22 05:54:10	jelle	I don't know sec
+2020-12-22 05:54:36	jelle	I can fix
+2020-12-22 05:56:08	<--	alerque (~caleb@176.33.233.159) has quit (Quit: WeeChat 2.9)
+2020-12-22 06:01:46	jelle	ok
+2020-12-22 06:19:29	jelle	grazzolni|M: backups are fine now
+2020-12-22 06:20:21	 *	jelle is away :)
+2020-12-22 06:33:00	<--	jleclanche (sid155154@HearthSim/Founder/Adys) has quit (Ping timeout: 244 seconds)
+2020-12-22 06:33:57	-->	jleclanche (sid155154@HearthSim/Founder/Adys) has joined #archlinux-devops
+2020-12-22 06:48:54	grazzolni|M	jelle: thanks
+2020-12-22 07:00:21	jelle	grazzolni|M: really nice that it runs fine on a cxp11
+2020-12-22 07:00:51	jelle	saves us some money I think, not sure how much apollo costs
+2020-12-22 07:01:01	grazzolni|M	jelle: yeah, it's nice
+2020-12-22 07:01:17	jelle	4.22*2 now
+2020-12-22 07:01:44	jelle	conf can go to gitlab pages and then a patchwork cx11 I gues
+2020-12-22 07:02:02	jelle	I thin apollo is around 50/60 ~ month
+2020-12-22 07:02:10	jelle	time for bed :)
+2020-12-22 07:07:23	<--	CrypticSquared (~CrypticS_@unaffiliated/crypticsquared) has quit (Ping timeout: 240 seconds)
+2020-12-22 07:07:43	-->	CrypticSquared (~CrypticS_@unaffiliated/crypticsquared) has joined #archlinux-devops
+2020-12-22 07:08:04	<--	Frenn_ (~Frenetick@gateway/tor-sasl/freneticks) has quit (Ping timeout: 240 seconds)
+2020-12-22 07:08:37	<--	dp (~phillid@oh.not.bad.aye.yeah.nah.nz) has quit (Ping timeout: 240 seconds)
+2020-12-22 07:10:30	-->	Frenn_ (~Frenetick@gateway/tor-sasl/freneticks) has joined #archlinux-devops
+2020-12-22 07:11:02	-->	dp (~phillid@oh.not.bad.aye.yeah.nah.nz) has joined #archlinux-devops
+2020-12-22 07:22:31	grazzolni|M	jelle: I can migrate patchwork this week too
+2020-12-22 07:22:54	grazzolni|M	I'll change dns tomorrow
+2020-12-22 07:23:11	grazzolni|M	And create the machine
+2020-12-22 07:28:48	kevr	pretty good coverage, almost there! https://gitlab.archlinux.org/kevr/aurweb/-/jobs/11843
+2020-12-22 07:28:49	phrik	Title: test (#11843) · Jobs · kevr / aurweb · GitLab (at gitlab.archlinux.org)
+2020-12-22 07:29:01	kevr	MR pretty soon, then onto user auth/sso
+2020-12-22 07:29:18	kevr	https://gitlab.archlinux.org/kevr/aurweb/-/boards
+2020-12-22 07:29:19	phrik	Title: Development · Boards · kevr / aurweb · GitLab (at gitlab.archlinux.org)
+2020-12-22 07:32:04	kevr	i think i'll just have folks create the DB models as they need them when porting routes so we could progressively implement them.
+2020-12-22 07:32:20	kevr	rather not put up a model wall when we may not even need some of them.
+2020-12-22 07:33:45	kevr	as far as the first user auth step goes: i'm gonna be porting over the same auth tactic used in aurweb's php; previously there was worked started on aurweb.routers.sso, that intends to introduce some oauth/sso integration into fastapi, however i'm not touching any of that yet until after the base port is complete.
+2020-12-22 07:34:03	kevr	s/worked started/work started/
+2020-12-22 07:48:50	kevr	lol that's sick, gitlab gives a diff for edits made to an issue :D
+2020-12-22 08:01:40	<--	orhun (~orhun@78.175.234.168) has quit (Ping timeout: 265 seconds)
+2020-12-22 08:24:06	wCPO	grazzolni|M: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues/62 can we close the issue?
+2020-12-22 08:24:07	phrik	Title: Migrate archwiki to a new VPS (#62) · Issues · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-22 08:28:54	grazzolni|M	Yes
+2020-12-22 08:36:07	wCPO	done
+2020-12-22 09:09:43	-->	sudoforge (~sudoforge@c-73-243-238-132.hsd1.co.comcast.net) has joined #archlinux-devops
+2020-12-22 11:18:22	-->	lizr (~lizr@1.83.106.126) has joined #archlinux-devops
+2020-12-22 12:20:02	-->	xirhtogal (~lagothrix@unaffiliated/lagothrix) has joined #archlinux-devops
+2020-12-22 12:20:02	--	lagothrix is now known as Guest79707
+2020-12-22 12:20:02	<--	Guest79707 (~lagothrix@unaffiliated/lagothrix) has quit (Killed (orwell.freenode.net (Nickname regained by services)))
+2020-12-22 12:20:02	--	xirhtogal is now known as lagothrix
+2020-12-22 13:56:48	<--	foutrelis (~foutrelis@archlinux/developer/foutrelis) has quit (Quit: leaving)
+2020-12-22 14:00:40	-->	foutrelis (~foutrelis@archlinux/developer/foutrelis) has joined #archlinux-devops
+2020-12-22 14:48:32	<--	Nact (~l@host-85-27-120-131.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-22 15:20:23	<--	sudoforge (~sudoforge@c-73-243-238-132.hsd1.co.comcast.net) has quit (Quit: 404)
+2020-12-22 16:48:24	-->	astylian (~astylian@46-229-72.internethome.cytanet.com.cy) has joined #archlinux-devops
+2020-12-22 17:07:49	-->	kevr` (~kevr@unaffiliated/kevr) has joined #archlinux-devops
+2020-12-22 17:08:29	<--	kevr (~kevr@unaffiliated/kevr) has quit (Ping timeout: 272 seconds)
+2020-12-22 17:11:48	<--	kevr` (~kevr@unaffiliated/kevr) has quit (Client Quit)
+2020-12-22 17:12:44	-->	kevr (~kevr@unaffiliated/kevr) has joined #archlinux-devops
+2020-12-22 17:48:52	<--	andyrtr (~andyrtr@archlinux/developer/andyrtr) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-12-22 17:50:19	-->	andyrtr (~andyrtr@archlinux/developer/andyrtr) has joined #archlinux-devops
+2020-12-22 18:50:23	Foxboron	https://bugs.archlinux.org/task/69064
+2020-12-22 18:50:24	phrik	Title: FS#69064 : Mirror Status Check (at bugs.archlinux.org)
+2020-12-22 18:50:33	Foxboron	cc Bluewind freswa
+2020-12-22 18:50:50	Foxboron	errr... this might be because of the archweb migration? cc grazzolni|M
+2020-12-22 18:50:56	jelle	why not ping everyone :P
+2020-12-22 18:51:17	Bluewind	Foxboron: not much I can do about that
+2020-12-22 18:51:24	Foxboron	jelle: Because i'd give people headsup
+2020-12-22 18:51:29	Bluewind	ah, I see
+2020-12-22 18:51:32	Foxboron	Bluewind: I'm aware, but i thought you wanted to know :)
+2020-12-22 18:51:59	Bluewind	in that case thanks! ;)
+2020-12-22 18:52:03	Foxboron	jelle: err, give people a chance to reponse*
+2020-12-22 18:52:05	Foxboron	response*
+2020-12-22 18:52:24	Foxboron	respond* I need more coffeee
+2020-12-22 18:55:59	svenstaro	hey people my Internet is back
+2020-12-22 19:04:07	jelle	svenstaro: :O
+2020-12-22 19:16:43	-->	orhun (~orhun@78.175.233.165) has joined #archlinux-devops
+2020-12-22 20:05:38	hashworks	svenstaro: Why did it left?
+2020-12-22 20:05:46	grazzolni|M	Foxboron: most likely not related to the archweb migration. the mirror check runs on gemini
+2020-12-22 20:05:56	svenstaro	hashworks: my router kept rebooting
+2020-12-22 20:06:23	hashworks	Time for a new router!
+2020-12-22 20:06:33	hashworks	One with Arch maybe?
+2020-12-22 20:06:34	hashworks	:P
+2020-12-22 20:07:15	Foxboron	grazzolni|M: Hmmm
+2020-12-22 20:07:34	Foxboron	hashworks: (I have been contemplating buying HW for my own router and try run dd-wrt or package up the stuff I'd need to make it a router)
+2020-12-22 20:09:06	jelle	grazzolni|M: yup, pinging that domain from ip4 fails
+2020-12-22 20:09:08	hashworks	Some people over at #archlinux.de use PC Engines APU4D4 Systemboards
+2020-12-22 20:09:22	jelle	ping -4 ftp.wrz.de
+2020-12-22 20:09:24	jelle	PING  (217.243.224.144) 56(84) bytes of data.
+2020-12-22 20:09:31	hashworks	4x Gigabit Ethernet, M.2 Slot, can host UMTS/LTE and run Arch if you fiddle with it
+2020-12-22 20:09:43	hashworks	Buuut it's like 180 bucks
+2020-12-22 20:09:45	svenstaro	hashworks: kinda doubt they can push 1gbit over wiregbuard
+2020-12-22 20:10:01	hashworks	Ah, I do wireguard on the clients
+2020-12-22 20:10:23	svenstaro	I'd be interested in a site-to-site kinda deal
+2020-12-22 20:10:42	svenstaro	so I'd need the gateway to encrypt stuff by itself ideally
+2020-12-22 20:10:51	hashworks	Amazon says it has a "1,0 GHz AMD Embedded G-Series GX-412TC Prozessor (Quad-Core 64 Bit Prozessor, AES-NI)"
+2020-12-22 20:11:07	hashworks	And 4GB RAM
+2020-12-22 20:12:46	hashworks	But I've also been interested to invest in Ubiquiti Security Gateway, no idea if they support Wireguard
+2020-12-22 20:12:53	ejsav	those PC Engines boxes are pretty old
+2020-12-22 20:12:59	ejsav	look at the Protectli stuff.
+2020-12-22 20:13:18	wCPO	hashworks: https://serialize.wordpress.com/2019/03/08/intel-nuc-pfsense-build/ easy ;)
+2020-12-22 20:13:19	phrik	Title: Intel NUC pfSense Build | Random Noise (at serialize.wordpress.com)
+2020-12-22 20:13:21	ejsav	I have one for an OpenBSD pf router
+2020-12-22 20:13:36	jelle	wait what
+2020-12-22 20:13:42	ejsav	https://protectli.com
+2020-12-22 20:13:44	phrik	Title: Protectli: Trusted Firewall Appliances with Firmware Protection (at protectli.com)
+2020-12-22 20:13:47	hashworks	That doesn't sound like Arch to me!
+2020-12-22 20:13:55	ejsav	i don't _just_ run Arch
+2020-12-22 20:14:05	Foxboron	jelle: fwiw, read the bugreport, the mirror owner says they filter imcp
+2020-12-22 20:14:13	hashworks	Blasphemous!
+2020-12-22 20:14:15	hashworks	:D
+2020-12-22 20:14:17	jelle	Foxboron: hmpfft
+2020-12-22 20:14:25	jelle	people who filter icmp
+2020-12-22 20:14:34	ejsav	I probably run more obsd than arch...it's just that I need Linux for work
+2020-12-22 20:14:34	jelle	Foxboron: they don't for ipv6 tho
+2020-12-22 20:14:44	Foxboron	so not sure if it's gemini failing or they havent adjusted to the new IP
+2020-12-22 20:15:10	jelle	Foxboron: also where do they say they filter?
+2020-12-22 20:15:12	wCPO	jelle: IIRC blocking it on ipv6 can cause more issues than on ipv4
+2020-12-22 20:15:16	grazzolni|M	ejsav: running openbsd for firewall is perfect
+2020-12-22 20:15:25	jelle	> please give me your netmask to allow icmp@v4 for this case
+2020-12-22 20:15:25	ejsav	grazzolni|M: indeed :)
+2020-12-22 20:15:26	jelle	o
+2020-12-22 20:15:45	 *	jelle hates networking stuff
+2020-12-22 20:16:38	jelle	Foxboron: https://archlinux.org/mirrors/wrz.de/
+2020-12-22 20:16:39	phrik	Title: Arch Linux - wrz.de - Mirror Details (at archlinux.org)
+2020-12-22 20:17:47	ejsav	my work is about to force me to learn Oracle Cloud
+2020-12-22 20:18:03	jelle	my condolences
+2020-12-22 20:18:14	ejsav	EU companies find AWS toxic
+2020-12-22 20:18:24	ejsav	so we need a Google Cloud alternative
+2020-12-22 20:18:35	ejsav	and I couldn't sell anyone on ovhcloud
+2020-12-22 20:19:00	ejsav	(multicloud strategy)
+2020-12-22 20:19:40	wCPO	are you using all the managed services? or do you just need "raw machine power"?
+2020-12-22 20:20:00	jelle	commented, but this is some silly routing issue
+2020-12-22 20:20:08	jelle	orwhatever makes packets go brrr
+2020-12-22 20:20:23	ejsav	mix of both
+2020-12-22 20:20:29	jelle	what was that superior traceroute tool
+2020-12-22 20:20:31	jelle	oh mtr
+2020-12-22 20:20:44	ejsav	we only use managed services that have a functional equivalent in the other providers
+2020-12-22 20:21:22	ejsav	deffo mtr
+2020-12-22 20:21:40	ejsav	we're allergic to lock-in features
+2020-12-22 20:21:51	 *	jelle checks if ejsav is german
+2020-12-22 20:22:05	ejsav	lol, nah
+2020-12-22 20:22:14	ejsav	Yankee af
+2020-12-22 20:22:30	jelle	anyway
+2020-12-22 20:22:35	wCPO	sounds reasonable.. At lot of companies "loves" vendor lock-in and if something happens they are fuckt
+2020-12-22 20:23:00	jelle	wait I can't even debug this
+2020-12-22 20:23:08	jelle	as they filter icmp ^_^
+2020-12-22 20:23:11	ejsav	LOL
+2020-12-22 20:23:18	ejsav	filtering icmp in 2020
+2020-12-22 20:23:30	jelle	ejsav: hmm https://www.ebay.com/c/23016538696 makes me wonder if I can add more disks to my intel nuc
+2020-12-22 20:23:31	Foxboron	jelle: I'd probably try curling the lastupdated file from the mirror
+2020-12-22 20:23:34	phrik	Title: Graphics Card Extension Cable Adapter Pci-e X1 3.0 M2 25cm for Bitcoin Mining for sale online | eBay (at www.ebay.com)
+2020-12-22 20:23:40	jelle	Foxboron: hangs
+2020-12-22 20:23:43	Foxboron	nice
+2020-12-22 20:23:50	jelle	doesn't really help us :)
+2020-12-22 20:24:04	Foxboron	no but to avoid the imcp filtering :)
+2020-12-22 20:24:13	jelle	Foxboron: dunno if mtr can do over http
+2020-12-22 20:24:34	jelle	works from my vps tho
+2020-12-22 20:24:35	jelle	hmm
+2020-12-22 20:24:45	jelle	 -T, --tcp                  use TCP instead of ICMP echo
+2020-12-22 20:24:46	jelle	:O
+2020-12-22 20:24:53	hashworks	Could someone give me write permission to https://github.com/archlinux/official-images ?
+2020-12-22 20:24:54	phrik	Title: GitHub - archlinux/official-images: This is a fork of docker-library/official-images. It is used by the Arch Linux team to create automated pull requests. (at github.com)
+2020-12-22 20:25:12	grazzolni|M	jelle: https://gitlab.archlinux.org/archlinux/infrastructure/-/merge_requests/213
+2020-12-22 20:25:13	phrik	Title: tf-stage1/archlinux: Create patchwork server and lower its DNS record TTL (!213) · Merge Requests · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-22 20:25:14	grazzolni|M	terraform stuff
+2020-12-22 20:25:24	jelle	oh I can merge things again!
+2020-12-22 20:25:32	grazzolni|M	don't delete the branch yet
+2020-12-22 20:25:45	jelle	not sure how MTR works
+2020-12-22 20:27:00	jelle	grazzolni|M: delete source branch is uncommented, so merging is fine no?
+2020-12-22 20:27:22	grazzolni|M	jelle: yeah, just so you resist the temptation of checking that box =D
+2020-12-22 20:27:59	jelle	ejsav: so if you have a clue https://gist.githubusercontent.com/jelly/1be9ea413b8c8b6b95b733fe8dd62ef9/raw/83c607f394b37dbb07c738e68f428b75d217da6f/mtr.log :D
+2020-12-22 20:28:09	jelle	also hetzner is dropping some packages hmmm
+2020-12-22 20:29:11	 *	jelle is confused
+2020-12-22 20:29:58	ejsav	what's the question?
+2020-12-22 20:30:51	jelle	grazzolni|M: weird thing is https://archlinux.org/mirrors/wrz.de/1311/ check ip lists something not gemini
+2020-12-22 20:30:53	phrik	Title: Arch Linux - rsync://ftp.wrz.de/pub/archlinux/ - URL Details (at archlinux.org)
+2020-12-22 20:31:18	jelle	seems that is apollo
+2020-12-22 20:31:21	grazzolni|M	jelle: that's weird
+2020-12-22 20:31:36	jelle	no it ain't wat
+2020-12-22 20:32:05	jelle	I can't ping 88.198.91.70
+2020-12-22 20:33:42	jelle	I give u
+2020-12-22 20:33:51	wCPO	jelle: it is orion according to git
+2020-12-22 20:33:59	jelle	wCPO: lol wat
+2020-12-22 20:34:06	jelle	that makes sense
+2020-12-22 20:34:32	jelle	wCPO: also that domain is still in some spf record
+2020-12-22 20:34:59	jelle	freswa: seems orion is still in spf1, I don't think we want that? :D
+2020-12-22 20:35:09	jelle	well now I know how it works again /o\
+2020-12-22 20:35:17	ejsav	with mtr it might be helpful if you hit D a couple of times to switch the display mode
+2020-12-22 20:35:19	jelle	Yeah
+2020-12-22 20:35:46	jelle	wCPO: https://dodgy.download/AwfulMaroonLobster.png ^_^
+2020-12-22 20:36:17	jelle	oh lord
+2020-12-22 20:36:57	wCPO	did archlinux.org just die?
+2020-12-22 20:37:07	jelle	wCPO: I just asked django to remove some old records :P
+2020-12-22 20:37:09	hashworks	www.archlinux.org took too long to respond.
+2020-12-22 20:37:11	hashworks	AAAAH
+2020-12-22 20:37:14	ejsav	wCPO: Resolving host...
+2020-12-22 20:37:25	hashworks	Aaand back
+2020-12-22 20:37:29	jelle	postgres is just removing like 100.000 records
+2020-12-22 20:37:31	jelle	this is fine
+2020-12-22 20:37:49	ejsav	no caching mechanism?
+2020-12-22 20:37:57	jelle	ejsav: caching?
+2020-12-22 20:38:25	jelle	it does caching, doesn't help with cpu bound issues :)
+2020-12-22 20:38:34	ejsav	ahh indeed
+2020-12-22 20:39:10	jelle	still gonna delete that model tho
+2020-12-22 20:40:25	ejsav	I was assuming you might have some upstream cache like Varnish or a CDN
+2020-12-22 20:40:29	ejsav	don't know anything about the Arch infrastructure
+2020-12-22 20:40:34	jelle	oh no we don't
+2020-12-22 20:40:45	ejsav	sorry I'm just hangin' out :P
+2020-12-22 20:40:47	jelle	np :)
+2020-12-22 20:40:58	jelle	grazzolni|M: updated https://archlinux.org/admin/mirrors/checklocation/
+2020-12-22 20:41:00	phrik	Title: Log in | Django site admin (at archlinux.org)
+2020-12-22 20:41:28	jelle	I should later make one of the kape boxes maybe do mirror monitoring as well, then we don't can check if it's maybe hetzner :P
+2020-12-22 20:42:30	grazzolni|M	jelle: makes sense
+2020-12-22 20:42:59	jelle	ok postgres doesn't lke me
+2020-12-22 20:43:03	jelle	or we are swapping :P
+2020-12-22 20:46:49	ejsav	do you have swap enabled on a db server? :P
+2020-12-22 20:46:54	jelle	hashworks: this was the issue for our pour two cpus {'mirrors.MirrorLog': 2959803}
+2020-12-22 20:46:55	jelle	ejsav: ofc
+2020-12-22 20:47:36	grazzolni|M	jelle: perhaps we should increase the machine?
+2020-12-22 20:47:41	jelle	grazzolni|M: mwoah
+2020-12-22 20:47:57	hashworks	jelle: Nice
+2020-12-22 20:48:18	jelle	grazzolni|M: this won't happen often, let's monitor the situation
+2020-12-22 20:48:35	hashworks	How often does the sync happen? I'm currently adjusting archlinux-docker so it won't depend on the sync
+2020-12-22 20:48:35	jelle	kinda interesting how uwsgi uses a lot of memory
+2020-12-22 20:48:49	hashworks	Basically we can adjust it so it only syncs every 24h or so
+2020-12-22 20:50:45	jelle	grazzolni|M: we might need to tune postgresql instead
+2020-12-22 20:51:30	grazzolni|M	jelle: tune in what sense?
+2020-12-22 20:51:40	jelle	grazzolni|M: to use less memory maybe
+2020-12-22 20:51:51	grazzolni|M	jelle: it's already using 128m
+2020-12-22 20:51:57	jelle	ah
+2020-12-22 20:52:38	jelle	grazzolni|M: most of the tables are tiny, except package files / mirrorlog :)
+2020-12-22 20:52:45	grazzolni|M	yeah
+2020-12-22 20:53:08	jelle	2500 MB in total now hmm
+2020-12-22 20:53:33	jelle	grazzolni|M: hmm we have 12 uwsgi processes, maybe that's an issue ^_^
+2020-12-22 20:53:56	jelle	site works fine regardless
+2020-12-22 20:54:18	grazzolni|M	jelle: we could decrease uwsgi stuff
+2020-12-22 20:54:20	grazzolni|M	for sure
+2020-12-22 20:55:04	jelle	not sure where that number comes from
+2020-12-22 20:55:21	jelle	6 processes, 2 threads
+2020-12-22 20:59:55	grazzolni|M	jelle: /etc/uwsgi/vassals/archweb.ini
+2020-12-22 21:01:51	jelle	grazzolni|M: yeah found it :)
+2020-12-22 21:01:59	jelle	grazzolni|M: I'm happy to spend some time optimizing things :P
+2020-12-22 21:02:36	grazzolni|M	jelle: I think we can go with 3 processes 2 threads
+2020-12-22 21:29:49	freswa	grazzolni|M: are you doing the patchwork migration?
+2020-12-22 21:30:03	grazzolni|M	freswa: yes
+2020-12-22 21:30:12	grazzolni|M	I was about to check with you
+2020-12-22 21:30:22	grazzolni|M	what is needed for the mail stuff
+2020-12-22 21:30:32	grazzolni|M	do I need rspamd, unbound, etc on the playbook?
+2020-12-22 21:30:44	freswa	I thought about just using fetchmail for patchwork
+2020-12-22 21:31:45	freswa	Otherwise we'll have another relayhost that also receives mails and the mess gets even bigger
+2020-12-22 21:32:06	-->	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has joined #archlinux-devops
+2020-12-22 21:33:17	freswa	iirc patchwork doesn't send mail, does it?
+2020-12-22 21:33:22	grazzolni|M	freswa: well, after patchwork is migrated, we can change apollo's conf to be just relay
+2020-12-22 21:33:32	grazzolni|M	freswa: well, it does.
+2020-12-22 21:33:41	grazzolni|M	it's a django application
+2020-12-22 21:34:17	freswa	then let's use a plain relay postfix setup for outgoing mails and fetchmail for incoming stuff
+2020-12-22 21:36:16	grazzolni|M	freswa: but is it something that's easy to do right now? otherwise I'll migrate it, the receiving part is contained to just one machine
+2020-12-22 21:36:38	freswa	fetchmail is easy, yes
+2020-12-22 21:36:45	freswa	I can move it to community now
+2020-12-22 21:37:02	freswa	And configuration is just a few lines
+2020-12-22 21:39:54	grazzolni|M	freswa: can you then make the required changes on the patchwork.archlinux.org branch?
+2020-12-22 21:44:54	freswa	sure
+2020-12-22 21:46:01	grazzolni|M	freswa: I'll add the patchwork playbook now
+2020-12-22 21:46:29	freswa	I'll need some time cause I'm heading into a meeting now.
+2020-12-22 21:46:54	freswa	I think I'll get this done today
+2020-12-22 21:47:16	grazzolni|M	freswa: no problem. I'm going to do this: I'll add the patchwork playbook with regular relay stuff. will drop the rspamd, and all the extra stuff. and I'll run it so we have a relay user created and all
+2020-12-22 21:47:31	freswa	great
+2020-12-22 21:47:33	grazzolni|M	I'll run the book so I can also get a start on the migration itself
+2020-12-22 21:47:39	grazzolni|M	then you can make the changes you want later to the book
+2020-12-22 21:48:02	freswa	We have to change the special handling of the patchwork mails to end up in a *ususal* mbox
+2020-12-22 21:48:42	grazzolni|M	freswa: I'm more concerned about the script that reads that and feeds them to patchwork
+2020-12-22 21:48:51	grazzolni|M	I remember it being finnicky
+2020-12-22 22:12:00	-->	tonitch (~tonitch@91.86.65.165) has joined #archlinux-devops
+2020-12-22 22:47:57	-->	orhunp (~orhun@78.164.54.36) has joined #archlinux-devops
+2020-12-22 22:49:25	<--	orhun (~orhun@78.175.233.165) has quit (Ping timeout: 240 seconds)
+2020-12-22 22:50:29	--	orhunp is now known as orhun
+2020-12-22 22:51:56	<--	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has quit (Ping timeout: 240 seconds)
+2020-12-22 23:06:47	grazzolni|M	freswa: I've pushed all my changes on the patchwork.archlinux.org branch. for the migration I'll skip the patchwork role because it's borked
+2020-12-22 23:07:02	grazzolni|M	I'll rsync everything from apollo
+2020-12-22 23:11:20	-->	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has joined #archlinux-devops
+2020-12-22 23:12:12	grazzolni|M	freswa: jelle I just confirmed that the postfix role is bork
+2020-12-22 23:12:19	grazzolni|M	it doesn't run postmap
+2020-12-22 23:12:32	grazzolni|M	on the files
+2020-12-22 23:12:34	jelle	grazzolni|M: o_O
+2020-12-22 23:13:33	grazzolni|M	jelle: yeah, and to make things worse, if you run the book again, it won't detect there are no .db files and won't run postmap either
+2020-12-22 23:13:38	grazzolni|M	I hate postfix
+2020-12-22 23:13:53	grazzolni|M	freswa: as soon as these migrations are finished, I'll help you with new mail stuff
+2020-12-22 23:13:56	jelle	o.o
+2020-12-22 23:13:58	jelle	lol
+2020-12-22 23:14:21	grazzolni|M	I have to force the role to run postmap again by messing with a few of the files
+2020-12-22 23:15:11	jelle	reminds me a bit of the aurweb role /o\
+2020-12-22 23:15:13	jelle	:P
+2020-12-22 23:16:28	jelle	https://bugs.archlinux.org/task/69064
+2020-12-22 23:16:29	phrik	Title: FS#69064 : Mirror Status Check (at bugs.archlinux.org)
+2020-12-22 23:16:40	jelle	resolved but hmmm he raises good questions I guess
+2020-12-22 23:17:01	grazzolni|M	jelle: the aurweb role has room for improvement
+2020-12-22 23:17:04	jelle	:D
+2020-12-22 23:17:19	grazzolni|M	lukas helped a lot on this, eli as well
+2020-12-22 23:17:31	grazzolni|M	but I was kind of left on my own right on the end
+2020-12-22 23:17:36	jelle	grazzolni|M: it was a joke, it's fine :)
+2020-12-22 23:17:42	grazzolni|M	so probably there's some stuff there that won't work on a new machine
+2020-12-22 23:17:48	grazzolni|M	jelle: =D
+2020-12-22 23:18:05	grazzolni|M	specially the db migration stuff that happend after I wrote the role
+2020-12-22 23:18:10	jelle	yeah that's nice!
+2020-12-22 23:18:17	 *	jelle waits on kevr :D
+2020-12-22 23:19:38	jelle	grazzolni|M: oh we export uwsgi stats btw
+2020-12-22 23:19:39	grazzolni|M	jelle: we don't plan to migrate aur again anytime soon, so we're fine
+2020-12-22 23:19:45	jelle	grazzolni|M: all is fine :)
+2020-12-22 23:20:26	jelle	sounds fun to write uwsgitop in rust
+2020-12-22 23:20:44	jelle	grazzolni|M: should be uwsgitop /run/uwsgi/archweb.sock right?
+2020-12-22 23:20:52	grazzolni|M	yes
+2020-12-22 23:21:05	jelle	grazzolni|M: hmm it get's some unexpected json and throws an exception ^_^
+2020-12-22 23:21:14	grazzolni|M	jelle: by export you mean to prometheus?
+2020-12-22 23:21:21	jelle	yup
+2020-12-22 23:21:25	grazzolni|M	btw, I need a crash course on prometheus
+2020-12-22 23:21:34	grazzolni|M	I haven't seen anything on it yet
+2020-12-22 23:21:39	jelle	we can do that :P
+2020-12-22 23:25:10	jelle	grazzolni|M: ah we have no stats :P
+2020-12-22 23:26:37	grazzolni|M	freswa: the patchwork machine now has working relay.
+2020-12-22 23:26:45	grazzolni|M	I'll just test from django as well
+2020-12-22 23:27:20	freswa	grazzolni|M: nice :)
+2020-12-22 23:27:44	grazzolni|M	then we just need to figure out the incoming stuff
+2020-12-22 23:32:58	jelle	so more things to debug o.o
+2020-12-22 23:35:22	grazzolni|M	jelle: monitoring.al.org is integrated with grafana right?
+2020-12-22 23:35:27	jelle	grazzolni|M: yes
+2020-12-22 23:35:33	jelle	grazzolni|M: https://monitoring.archlinux.org/ is grafana
+2020-12-22 23:35:34	phrik	Title: Log in to Arch Linux (at monitoring.archlinux.org)
+2020-12-22 23:52:06	jelle	grazzolni|M: metrics work locally so hmm
+2020-12-22 23:52:11	jelle	but with --stats foo
+2020-12-22 23:52:56	jelle	I'll look at it later :)
+2020-12-23 00:40:07	<--	finsternis (~Y@23.226.237.192) has quit (Remote host closed the connection)
+2020-12-23 00:51:06	<--	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has quit (Ping timeout: 256 seconds)
+2020-12-23 00:55:21	grazzolni|M	jelle: I'll update patchwork on apollo to 3.0.0 and then migrate
+2020-12-23 00:55:26	grazzolni|M	:O
+2020-12-23 00:55:30	jelle	grazzolni|M: nice if that works!
+2020-12-23 00:55:46	grazzolni|M	jelle: well, it worked on the new machine to create a blank instance
+2020-12-23 00:55:52	jelle	ok
+2020-12-23 00:55:58	jelle	sounds good
+2020-12-23 00:56:05	grazzolni|M	but, I'm not too concerned to break patchwork to be quite honest
+2020-12-23 00:56:13	jelle	:)
+2020-12-23 00:58:40	--	irc: disconnected from server
+2020-12-23 11:06:16	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-23 11:06:16	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-23 11:06:16	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-23 11:06:16	--	Channel #archlinux-devops: 135 nicks (1 op, 0 voices, 134 normals)
+2020-12-23 11:06:20	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-23 12:18:34	--	lagothrix is now known as Guest36126
+2020-12-23 12:18:34	-->	xirhtogal (~lagothrix@unaffiliated/lagothrix) has joined #archlinux-devops
+2020-12-23 12:18:34	<--	Guest36126 (~lagothrix@unaffiliated/lagothrix) has quit (Killed (hitchcock.freenode.net (Nickname regained by services)))
+2020-12-23 12:18:34	--	xirhtogal is now known as lagothrix
+2020-12-23 13:57:07	<--	bruzorabe (~bruzorabe@189-107-149-40.user3p.veloxzone.com.br) has quit (Quit: leaving)
+2020-12-23 14:53:50	<--	pellaeon (~pellaeon@45.77.210.168) has quit (Quit: Goodbye!)
+2020-12-23 14:54:22	-->	pellaeon (~pellaeon@45.77.210.168) has joined #archlinux-devops
+2020-12-23 15:43:09	-->	astylian (~astylian@46-229-72.internethome.cytanet.com.cy) has joined #archlinux-devops
+2020-12-23 15:54:25	-->	sudoforge (~sudoforge@2602:304:b0a7:519:52e0:85ff:feba:8ab5) has joined #archlinux-devops
+2020-12-23 15:55:42	<--	sudoforge (~sudoforge@2602:304:b0a7:519:52e0:85ff:feba:8ab5) has quit (Max SendQ exceeded)
+2020-12-23 15:56:15	-->	sudoforge (~sudoforge@2602:304:b0a7:519:52e0:85ff:feba:8ab5) has joined #archlinux-devops
+2020-12-23 17:05:21	--	irc: disconnected from server
+2020-12-23 17:05:56	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-23 17:05:56	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-23 17:05:56	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-23 17:05:56	--	Channel #archlinux-devops: 136 nicks (1 op, 0 voices, 135 normals)
+2020-12-23 17:06:00	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-23 17:38:05	jelle	svenstaro: groups aren't synced to gitlab right?
+2020-12-23 17:38:37	svenstaro	Nope it's a feature coming next release or so
+2020-12-23 17:41:38	jelle	svenstaro: SO IT NEEDS TO HAPPEN MANUAL RITE?
+2020-12-23 17:41:40	jelle	WWO
+2020-12-23 17:41:58	jelle	sorry :P
+2020-12-23 17:42:00	jelle	23:08:21        demize | Would be neat to set up autolinking of FS# references in the GitHub svntogit repos.
+2020-12-23 17:42:06	jelle	demize: that can't be done, we looked into it
+2020-12-23 17:44:28	jelle	23:08:21        demize | Would be neat to set up autolinking of FS# references in the GitHub svntogit repos.
+2020-12-23 17:44:32	jelle	https://gitlab.archlinux.org/archlinux/infrastructure/-/issues/189
+2020-12-23 17:44:34	phrik	Title: Use GitHub autolinks feature for Flyspray references (#189) · Issues · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-23 17:59:58	<--	fckr (~fckr@233.ip-158-69-223.net) has quit (Quit: cya)
+2020-12-23 18:00:41	-->	fckr (~fckr@233.ip-158-69-223.net) has joined #archlinux-devops
+2020-12-23 18:00:54	<--	wowi42 (~wowi42@51.15.249.183) has quit (Remote host closed the connection)
+2020-12-23 18:01:39	-->	wowi42 (~wowi42@51.15.249.183) has joined #archlinux-devops
+2020-12-23 18:11:01	<--	sudoforge (~sudoforge@2602:304:b0a7:519:52e0:85ff:feba:8ab5) has quit (Ping timeout: 260 seconds)
+2020-12-23 18:39:27	svenstaro	jelle: yes
+2020-12-23 18:39:49	jelle	svenstaro: gotcha
+2020-12-23 19:07:57	svenstaro	upgrading and rebooting all runners
+2020-12-23 19:54:41	-->	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has joined #archlinux-devops
+2020-12-23 20:27:16	grazzolni|M	dmc: this whatcanwedofor will be a gitlab page then?
+2020-12-23 20:28:14	jelle	grazzolni|M: that's the idea :)
+2020-12-23 20:29:12	jelle	I think we can just test live imo on .archlinu.org
+2020-12-23 20:29:21	jelle	just don't share the link anywhere and announce it as official :)
+2020-12-23 20:30:00	grazzolni|M	=D
+2020-12-23 20:30:02	grazzolni|M	sure
+2020-12-23 20:35:29	wCPO	jelle: "We'll be happy to provide a feature request in order to add our mirror to the mirrorlist. I've put this on the roadmap, due to the upcoming holidays and some ongoing reworks of our mirror infrastructure this might not be right away."
+2020-12-23 20:35:43	jelle	wCPO: niceeee!
+2020-12-23 20:35:50	jelle	hetzner++
+2020-12-23 20:39:14	svenstaro	wCPO: who's that?
+2020-12-23 20:39:33	jelle	svenstaro: hetzner is having an arch mirror now
+2020-12-23 20:39:43	svenstaro	oh noice
+2020-12-23 20:39:53	jelle	svenstaro: and wCPO was wondering why it wasn't in our mirrorlist
+2020-12-23 20:42:51	-->	astylian_ (~astylian@87-241-04.netrunf.cytanet.com.cy) has joined #archlinux-devops
+2020-12-23 20:43:29	<--	astylian (~astylian@46-229-72.internethome.cytanet.com.cy) has quit (Read error: Connection reset by peer)
+2020-12-24 06:11:04	--	irc: disconnected from server
+2020-12-24 06:11:38	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-24 06:11:38	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-24 06:11:38	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-24 06:11:38	--	Channel #archlinux-devops: 136 nicks (1 op, 0 voices, 135 normals)
+2020-12-24 06:11:42	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-24 06:12:44	felixonmars|T	it seems archweb is catching extra/community updates within a few minutes but not community-staging (for ~20min already)
+2020-12-24 06:12:53	felixonmars|T	is it because i commit too fast? :p
+2020-12-24 06:15:08	-->	astylian_ (~astylian@31-119-200.netrun.cytanet.com.cy) has joined #archlinux-devops
+2020-12-24 06:15:26	felixonmars|T	ah, they come out now.
+2020-12-24 06:16:14	kevr	good day!
+2020-12-24 06:29:15	dmc	openshwifty
+2020-12-24 06:29:19	dmc	svenstaro, woot <3
+2020-12-24 06:29:50	dmc	kevr, g'day
+2020-12-24 07:08:37	gunix	freswa, svenstaro: are there issues with ipv6?
+2020-12-24 07:09:00	svenstaro	wCPO: I think you mentioned some issues?
+2020-12-24 07:18:27	wCPO	svenstaro, gunix: yeh, we are seeing packet loss
+2020-12-24 07:22:54	wCPO	gunix: I just tested again and packet loss is still present when running curl -6 'https://europe.archive.pkgbuild.com' -v
+2020-12-24 07:22:55	phrik	Title: Index of / (at europe.archive.pkgbuild.com)
+2020-12-24 07:24:31	wCPO	gunix: europe.archive.pkgbuild.com is also only pingable from some networks
+2020-12-24 07:24:53	wCPO	<grawity> oh interesting, it's pingable from one network but not another at the same ISP (different /48's under the same /32)
+2020-12-24 11:23:00	--	irc: disconnected from server
+2020-12-24 11:23:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-24 11:23:34	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-24 11:23:34	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-24 11:23:34	--	Channel #archlinux-devops: 135 nicks (1 op, 0 voices, 134 normals)
+2020-12-24 11:23:38	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-24 11:55:57	-->	cwaydt (~cwaydt@li59-161.members.linode.com) has joined #archlinux-devops
+2020-12-24 12:18:07	--	lagothrix is now known as Guest36336
+2020-12-24 12:18:07	-->	xirhtogal (~lagothrix@unaffiliated/lagothrix) has joined #archlinux-devops
+2020-12-24 12:18:07	<--	Guest36336 (~lagothrix@unaffiliated/lagothrix) has quit (Killed (karatkievich.freenode.net (Nickname regained by services)))
+2020-12-24 12:18:07	--	xirhtogal is now known as lagothrix
+2020-12-24 19:00:38	--	irc: disconnected from server
+2020-12-24 19:01:12	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-24 19:01:12	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-24 19:01:12	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-24 19:01:12	--	Channel #archlinux-devops: 136 nicks (1 op, 0 voices, 135 normals)
+2020-12-24 19:01:16	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-24 19:07:27	zer0def	hey Foxboron, I've noticed you were asking in #lxcontainers about spice bugging out with LXD VMs and I did notice QEMU is missing libspice in deps, did you have an opportunity to look into this a bit further?
+2020-12-24 19:25:34	-->	amcrae (~allanbrok@archlinux/developer/allan) has joined #archlinux-devops
+2020-12-24 19:27:20	<--	allanbrokeit (~allanbrok@archlinux/developer/allan) has quit (Ping timeout: 256 seconds)
+2020-12-24 19:41:05	<--	lizr (~lizr@1.83.104.152) has quit (Quit: WeeChat 2.9)
+2020-12-24 19:43:52	-->	lizr (~lizr@1.83.104.17) has joined #archlinux-devops
+2020-12-24 20:23:29	lambdaclan	freswa: wCPO Hello there and happy Christmas eve! I have been silent but been making good progress on the mail integration ticket.
+2020-12-24 20:24:13	lambdaclan	I take my time since i haven't touched JAVA for a while and messing with new things such as libs and gradle on top of the keycloak API
+2020-12-24 20:24:50	lambdaclan	I have added "fancy" integration testing for the endpoint, json validation and exception handling
+2020-12-24 20:26:28	lambdaclan	I guess might change after review haha. I will work a bit more on the testing side and then move to the custom attribute
+2020-12-24 20:47:57	gunix	grawity: the information you wrote about on the is good for troubleshooting. It sounds like a routing issue that the datacenter should be able to solve. Can you please gather this information into an email and send it to me at gheorghe.ungureanu@kape.com? I will forward this to the DC cause we have an email chain on this topic
+2020-12-25 01:06:18	--	irc: disconnected from server
+2020-12-25 01:07:05	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-25 01:07:05	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-25 01:07:05	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-25 01:07:05	--	Channel #archlinux-devops: 134 nicks (1 op, 0 voices, 133 normals)
+2020-12-25 01:07:08	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-25 01:23:09	<--	orhun (~orhun@78.164.54.36) has quit (Quit: bye!)
+2020-12-25 01:31:47	-->	orhun (~orhun@78.164.54.36) has joined #archlinux-devops
+2020-12-25 01:33:39	<--	orhun (~orhun@78.164.54.36) has quit (Client Quit)
+2020-12-25 01:33:59	-->	orhun (~orhun@78.164.54.36) has joined #archlinux-devops
+2020-12-25 01:54:44	-->	Nact (~l@host-85-27-120-131.dynamic.voo.be) has joined #archlinux-devops
+2020-12-25 02:21:51	<--	orhun (~orhun@78.164.54.36) has quit (Quit: will be back!)
+2020-12-25 02:24:10	-->	orhun (~orhun@78.164.54.36) has joined #archlinux-devops
+2020-12-25 02:25:28	<--	orhun (~orhun@78.164.54.36) has quit (Client Quit)
+2020-12-25 02:34:10	-->	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has joined #archlinux-devops
+2020-12-25 02:35:02	grazzolni|M	guys, I've broke mail
+2020-12-25 02:35:11	grazzolni|M	I need to recover users from the backup
+2020-12-25 02:44:42	-->	orhun (~orhun@78.164.54.36) has joined #archlinux-devops
+2020-12-25 02:46:23	<--	zer0def (~zer0def@5.196.124.232) has quit (Ping timeout: 260 seconds)
+2020-12-25 03:05:10	wCPO	:/
+2020-12-25 03:06:13	grazzolni|M	wCPO: I think I've fixed it
+2020-12-25 03:06:20	grazzolni|M	but we need to improve our docs
+2020-12-25 03:07:30	grazzolni|M	my coffee failed me
+2020-12-25 03:07:40	grazzolni|M	I've accidentaly remove /etc/postfix from mail =D
+2020-12-25 03:10:47	dvzrv	:O
+2020-12-25 03:11:05	wCPO	it is easy to make mistakes :) I did rm -rf * in my homedir a some point, don't do that ;)
+2020-12-25 03:11:13	grazzolni|M	dvzrv: well, in theory it should be recoverable by running the playbook again
+2020-12-25 03:11:24	grazzolni|M	but, we have files there that are not tracked on ansible
+2020-12-25 03:11:27	grazzolni|M	unfortunately
+2020-12-25 03:11:38	grazzolni|M	so, I had to mess with borg, which I hadn't in years
+2020-12-25 03:11:52	grazzolni|M	wCPO: never fucked my own machines though
+2020-12-25 03:11:55	grazzolni|M	don't know why
+2020-12-25 03:12:00	grazzolni|M	I always fuck up others =D
+2020-12-25 03:12:13	wCPO	grazzolni|M: Is there any reason, why we can't add them to ansible for the time being? I know the longterm plan is keycloak, but
+2020-12-25 03:12:18	grazzolni|M	anyway, I'm monitoring the journal, I think it's all good
+2020-12-25 03:12:42	grazzolni|M	wCPO: there are personal emails there. but to be quite honest I think we should get rid of all forwarding
+2020-12-25 03:13:04	-->	zer0def (~zer0def@5.196.124.232) has joined #archlinux-devops
+2020-12-25 03:13:06	wCPO	grazzolni|M: we can just encrypt the file, no?
+2020-12-25 03:13:35	grazzolni|M	wCPO: yeah, it could be entirely on the vault, but I don't like that idea that much either
+2020-12-25 03:13:44	dvzrv	grazzolni|M: hm, I believe freswa applied some changes there and I'm not sure they are tracked by ansible
+2020-12-25 03:14:01	dvzrv	that was irt decoupling lists.archlinux.org
+2020-12-25 03:14:05	grazzolni|M	dvzrv: yes, but no problem, I've restored yesterday's file
+2020-12-25 03:14:20	wCPO	grazzolni|M: maybe we setup snapper at the servers.. Should be a bit faster, just to cop the file from the latest btrfs snapshot
+2020-12-25 03:14:23	grazzolni|M	as long no changes were made today, we're good
+2020-12-25 03:14:58	grazzolni|M	wCPO: nah, it's fast to get from borg, specially small text files, but the problem is remembering the syntax, etc
+2020-12-25 03:15:04	grazzolni|M	which brings me back to our docs
+2020-12-25 03:15:18	grazzolni|M	they refer misc/borg.sh, which doesn't exist anywhere
+2020-12-25 03:18:52	wCPO	grazzolni|M: ehm, https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/misc/borg.sh ?
+2020-12-25 03:18:53	phrik	Title: misc/borg.sh · master · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-25 03:20:16	grazzolni|M	wCPO: it doesn't get installed them
+2020-12-25 03:20:30	grazzolni|M	find / -iname borg.sh doesn't find anything
+2020-12-25 03:22:15	wCPO	I don't think it is supposed to be installed, looking at the script it looks like you are supposed to run it locally
+2020-12-25 03:22:25	wCPO	BTW: We should add the new servers to: https://gitlab.archlinux.org/archlinux/infrastructure/-/blob/master/docs/servers.md
+2020-12-25 03:22:27	phrik	Title: docs/servers.md · master · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-25 03:24:32	<--	Nact (~l@host-85-27-120-131.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-25 03:30:39	grazzolni|M	wCPO: sure, but I wanted to restore the file on the machine itself
+2020-12-25 04:03:41	<--	lizr (~lizr@1.83.104.17) has quit (Ping timeout: 260 seconds)
+2020-12-25 04:05:25	-->	Nact (~l@host-85-27-120-131.dynamic.voo.be) has joined #archlinux-devops
+2020-12-25 04:05:39	-->	lizr (~lizr@1.83.105.135) has joined #archlinux-devops
+2020-12-25 04:24:20	svenstaro	lahwaacz: sooo how about le manpages
+2020-12-25 04:35:48	grazzolni|M	svenstaro: jelle security tracker migration is done =D. told you guys we would decomission apollo before the end of the year
+2020-12-25 04:40:37	<--	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has quit (Ping timeout: 256 seconds)
+2020-12-25 04:41:00	wCPO	grazzolni|M: what is missing? conf + ?
+2020-12-25 04:41:11	grazzolni|M	wCPO: think so
+2020-12-25 04:41:30	grazzolni|M	but that one is going to a gitlab page no?
+2020-12-25 04:42:23	wCPO	Correct, someone needs to migrate it to gitlab first though: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues/237
+2020-12-25 04:42:24	phrik	Title: migrate conf.archlinux.org and add gitlab pages (#237) · Issues · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-25 04:43:11	grazzolni|M	wCPO: well, I'll leave that one for one of the guys, since I haven't touched the gitlab pages, at all
+2020-12-25 04:43:52	wCPO	gitlab pages is the "easy part" :)
+2020-12-25 06:58:26	--	irc: disconnected from server
+2020-12-25 06:59:05	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-25 06:59:05	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-25 06:59:05	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-25 06:59:05	--	Channel #archlinux-devops: 135 nicks (1 op, 0 voices, 134 normals)
+2020-12-25 06:59:08	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-25 07:07:32	<--	orhun (~orhun@78.164.54.36) has quit (Ping timeout: 272 seconds)
+2020-12-25 07:28:33	-->	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has joined #archlinux-devops
+2020-12-25 08:07:19	<--	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has quit (Ping timeout: 256 seconds)
+2020-12-25 08:11:43	-->	orhun (~orhun@78.175.227.104) has joined #archlinux-devops
+2020-12-25 08:23:18	-->	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has joined #archlinux-devops
+2020-12-25 08:36:45	<--	orhun (~orhun@78.175.227.104) has quit (Ping timeout: 240 seconds)
+2020-12-25 08:39:10	-->	orhun (~orhun@78.175.227.151) has joined #archlinux-devops
+2020-12-25 08:57:08	-->	astylian (~astylian@31-119-200.netrun.cytanet.com.cy) has joined #archlinux-devops
+2020-12-25 09:20:00	<--	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has quit (Ping timeout: 265 seconds)
+2020-12-25 09:35:39	Foxboron	svenstaro: maybe a "Conference" grouP?
+2020-12-25 09:35:41	Foxboron	group*
+2020-12-25 09:35:46	Foxboron	or folder
+2020-12-25 09:35:58	svenstaro	are we expecting more stuff in there?
+2020-12-25 09:37:37	Foxboron	static stuff and the conf website. Might be too little for a folder?
+2020-12-25 09:39:01	svenstaro	hmmm yeah maybe. Do you think it would be organisationally advantageous to keep the static stuff separate from the site?
+2020-12-25 09:39:16	svenstaro	I suppose the static stuff could potentially be presented in other contexts than the site
+2020-12-25 09:40:44	Foxboron	Maybe? FOSDEM/CCC pictures and/or hackathon picture?
+2020-12-25 09:40:49	Foxboron	Repro summits and stuff
+2020-12-25 09:40:54	Foxboron	pictures*
+2020-12-25 09:40:58	svenstaro	yeah good enough
+2020-12-25 09:41:19	svenstaro	gotta check if direct-linked LFS things have correct mime types
+2020-12-25 09:41:25	svenstaro	otherwise we gotta get creative
+2020-12-25 09:41:30	Foxboron	but I'd rather keep it flat then a folder for a repo :p But i thought it would be nicer to have the relevant projects grouped together
+2020-12-25 09:44:41	svenstaro	actually there's a technical reason to separate them: lfs and github mirrors
+2020-12-25 09:44:47	svenstaro	so let's do no group but separate repos
+2020-12-25 09:44:58	Foxboron	ahh
+2020-12-25 09:45:29	svenstaro	wanna whip up a github pages publish thing real quick?
+2020-12-25 09:45:33	svenstaro	gitlab pages
+2020-12-25 09:46:59	<--	orhun (~orhun@78.175.227.151) has quit (Ping timeout: 260 seconds)
+2020-12-25 09:47:06	svenstaro	I gave the project a secure runner so you can use that
+2020-12-25 09:47:41	Foxboron	No, it's 1:47 christmas eve and I'm hacking on some kernel stuff before sleeping :)
+2020-12-25 09:47:53	Foxboron	CBA to context switch. but can try look at it over the weekend
+2020-12-25 09:47:55	svenstaro	typical pre-sleep stuff
+2020-12-25 09:48:33	-->	orhun (~orhun@78.175.227.151) has joined #archlinux-devops
+2020-12-25 09:48:36	svenstaro	you cool with conf and conf-static?
+2020-12-25 09:48:40	svenstaro	conf-data?
+2020-12-25 09:49:05	Foxboron	static is a bit of a misnormer. I think "Conference Resources" makes more sense. or "Conference Files"
+2020-12-25 09:49:35	Foxboron	it made sense for the url, not as a repo name :p
+2020-12-25 09:50:37	<--	lizr (~lizr@1.83.105.135) has quit (Ping timeout: 246 seconds)
+2020-12-25 09:51:10	-->	lizr (~lizr@1.83.105.135) has joined #archlinux-devops
+2020-12-25 09:52:27	svenstaro	alright so now we have https://gitlab.archlinux.org/archlinux/conf titled "Conference Website" and https://gitlab.archlinux.org/archlinux/conf-files titled "Conference Files"
+2020-12-25 09:52:28	phrik	Title: Arch Linux / Conference Website · GitLab (at gitlab.archlinux.org)
+2020-12-25 09:54:08	<--	Nact (~l@host-85-27-120-131.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-25 09:55:08	Foxboron	lovely :) thanks for the work
+2020-12-25 09:55:25	<--	orhun (~orhun@78.175.227.151) has quit (Ping timeout: 264 seconds)
+2020-12-25 09:55:29	svenstaro	and also I whipped up a gitlab ci yml real quick. Thankfully hugo is well-understood :P
+2020-12-25 09:55:40	Foxboron	"hugo:latest" -> the reproducability part of my brain is screaming
+2020-12-25 09:55:58	svenstaro	pffff :P
+2020-12-25 09:56:10	svenstaro	pick a version at your leisure
+2020-12-25 09:56:21	Foxboron	"Why is the conf page noe updating...oh...docker imag eis pulling hugo 90001. We only support version 500. woopsie!"
+2020-12-25 09:57:02	-->	orhun (~orhun@78.175.226.128) has joined #archlinux-devops
+2020-12-25 10:06:16	svenstaro	lahwaacz: yo you around I wanna get the manpagibois up
+2020-12-25 10:14:51	dmc	ya boi
+2020-12-25 11:07:25	svenstaro	gotta restart gitlab real quick
+2020-12-25 11:44:04	<--	astylian (~astylian@31-119-200.netrun.cytanet.com.cy) has quit (Remote host closed the connection)
+2020-12-25 11:44:19	-->	astylian (~astylian@31-119-200.netrun.cytanet.com.cy) has joined #archlinux-devops
+2020-12-25 11:45:51	<--	astylian (~astylian@31-119-200.netrun.cytanet.com.cy) has quit (Read error: Connection reset by peer)
+2020-12-25 11:55:16	<--	lizr (~lizr@1.83.105.135) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:57:50	-->	lizr (~lizr@1.83.105.135) has joined #archlinux-devops
+2020-12-25 12:04:16	<--	lizr (~lizr@1.83.105.135) has quit (Ping timeout: 240 seconds)
+2020-12-25 12:05:35	-->	lizr (~lizr@1.83.105.135) has joined #archlinux-devops
+2020-12-25 12:13:56	<--	lizr (~lizr@1.83.105.135) has quit (Ping timeout: 240 seconds)
+2020-12-25 12:15:59	-->	lizr (~lizr@1.83.105.135) has joined #archlinux-devops
+2020-12-25 12:16:47	-->	xirhtogal (~lagothrix@unaffiliated/lagothrix) has joined #archlinux-devops
+2020-12-25 12:16:47	--	lagothrix is now known as Guest33303
+2020-12-25 12:16:47	<--	Guest33303 (~lagothrix@unaffiliated/lagothrix) has quit (Killed (hitchcock.freenode.net (Nickname regained by services)))
+2020-12-25 12:16:47	--	xirhtogal is now known as lagothrix
+2020-12-25 12:23:41	svenstaro	Foxboron: I imported static.conf to https://gitlab.archlinux.org/archlinux/conf-files/-/tree/master/https://gitlab.archlinux.org/archlinux/conf-files/-/tree/master/ and added you as a Dev
+2020-12-25 12:23:43	phrik	Title: Files · master · Arch Linux / Conference Files · GitLab (at gitlab.archlinux.org)
+2020-12-25 12:23:57	svenstaro	er https://gitlab.archlinux.org/archlinux/conf-files/-/tree/master/
+2020-12-25 12:23:58	phrik	Title: Files · master · Arch Linux / Conference Files · GitLab (at gitlab.archlinux.org)
+2020-12-25 12:24:30	svenstaro	please check that everything is there and that you can get it fine via lfs and such
+2020-12-25 12:24:42	svenstaro	also check https://gitlab.archlinux.org/archlinux/conf/-/merge_requests/32
+2020-12-25 12:24:43	phrik	Title: Switch links to new static files location (!32) · Merge Requests · Arch Linux / Conference Website · GitLab (at gitlab.archlinux.org)
+2020-12-25 15:46:36	--	irc: disconnected from server
+2020-12-25 15:47:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-25 15:47:14	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-25 15:47:14	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-25 15:47:14	--	Channel #archlinux-devops: 134 nicks (1 op, 0 voices, 133 normals)
+2020-12-25 15:47:17	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-26 06:21:47	--	irc: disconnected from server
+2020-12-26 06:22:25	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-26 06:22:25	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-26 06:22:25	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-26 06:22:25	--	Channel #archlinux-devops: 137 nicks (1 op, 0 voices, 136 normals)
+2020-12-26 06:22:28	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-26 06:22:55	<--	keiser (~keiser@83.25.87.71.ipv4.supernova.orange.pl) has quit (Client Quit)
+2020-12-26 06:23:09	-->	keiser (~keiser@83.25.87.71.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-26 06:23:12	<--	keiser (~keiser@83.25.87.71.ipv4.supernova.orange.pl) has quit (Client Quit)
+2020-12-26 06:43:19	svenstaro	lahwaacz: well this project has to live somewhere right
+2020-12-26 06:45:40	-->	keiser (~keiser@83.25.87.71.ipv4.supernova.orange.pl) has joined #archlinux-devops
+2020-12-26 06:46:21	lahwaacz	svenstaro: do you mean the git repo now or the website?
+2020-12-26 06:46:46	svenstaro	well since we're gonna use gitlab pages it's kinda gonna be the same deal
+2020-12-26 06:46:51	svenstaro	but let's start with the git repo
+2020-12-26 06:48:20	lahwaacz	svenstaro: uhm, it's Django currently... https://github.com/lahwaacz/archmanweb/
+2020-12-26 06:48:21	phrik	Title: GitHub - lahwaacz/archmanweb: Codebase for the Arch manual pages repository (at github.com)
+2020-12-26 06:48:43	lahwaacz	so I don't see how it could be deployed with gitlab pages
+2020-12-26 06:49:07	svenstaro	uh we can't publish it as static? :/
+2020-12-26 06:49:43	svenstaro	does it need to be dynamic actually?
+2020-12-26 06:49:52	lahwaacz	well not now
+2020-12-26 06:50:01	wCPO	wget -r ?
+2020-12-26 06:51:14	Foxboron	it was search functionality
+2020-12-26 06:51:38	lahwaacz	the search as well as a lot of redirects/symlinks/hardlinks are handled dynamically
+2020-12-26 06:52:04	svenstaro	hm I see
+2020-12-26 06:52:39	lahwaacz	also a static site would have to be regenerated completely whenever a single package changes
+2020-12-26 06:52:43	grawity	is this the online manpage viewer? with the sheer amount of manual pages to render every time, is it actually worth making it static
+2020-12-26 06:53:03	wCPO	Hmm, debian manual site is static: https://github.com/Debian/debiman
+2020-12-26 06:53:04	phrik	Title: GitHub - Debian/debiman: debiman generates a static manpage HTML repository out of a Debian archive (at github.com)
+2020-12-26 06:53:56	wCPO	"With regards to speed, debiman can process all manpages of Debian unstable in less than 10 minutes on a modern machine. Incremental updates complete in less than 15 seconds. For more details, see PERFORMANCE.md."
+2020-12-26 06:56:03	lahwaacz	actually the conversion is pretty fast, I think extracting the packages is the bottleneck (and they probably don't measure it)
+2020-12-26 06:58:15	wCPO	we could probably make it incremental by (ab)using gitlab artifacts. How much storage does https://jlk.fjfi.cvut.cz/arch/manpages/ use?
+2020-12-26 06:58:16	phrik	Title: Arch manual pages (at jlk.fjfi.cvut.cz)
+2020-12-26 07:01:30	lahwaacz	well the SQL database has several hundred MB, so that's probably not the problem
+2020-12-26 07:02:41	lahwaacz	but we'd have to define a new format for the artifacts, rewrite everything from scratch (or from debiman), and we would still not have search
+2020-12-26 07:03:08	lahwaacz	there are probably other problems I don't remember...
+2020-12-26 07:05:03	wCPO	client-side search is a thing these days, but it sounds like a lot of work and I'm not sure it is worth it..
+2020-12-26 07:07:33	svenstaro	prolly not worth it
+2020-12-26 07:07:52	svenstaro	let's just put up what you have and take a look
+2020-12-26 08:55:31	--	irc: disconnected from server
+2020-12-26 08:56:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-26 08:56:09	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-26 08:56:09	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-26 08:56:09	--	Channel #archlinux-devops: 137 nicks (1 op, 0 voices, 136 normals)
+2020-12-26 08:56:12	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-26 09:57:09	freswa	wCPO: I remove it, because it's already in the aftermath :)
+2020-12-26 10:15:18	wCPO	freswa: is extra dns lookups really a concern?
+2020-12-26 10:15:41	freswa	yes
+2020-12-26 10:16:23	wCPO	i prefer readability :/ I will add a comment then
+2020-12-26 10:20:06	freswa	I do prefer readability too, but not when it sacrifices reliability
+2020-12-26 10:20:25	freswa	But comments sound like a very good option here :)
+2020-12-26 10:21:55	freswa	wCPO: Do you wanna do the whole cleanup in that MR?
+2020-12-26 10:22:16	freswa	Actually we should have an SPF for every subdomain... :/
+2020-12-26 10:25:03	wCPO	ideally we would do a wildcard (*.archlinux.org), but that won't work (AFAIK) when we need a different SPF for some subdomain
+2020-12-26 10:25:09	wCPO	yeh, I want to do the whole cleanup in this mr
+2020-12-26 10:25:14	freswa	nice :)
+2020-12-26 10:25:37	wCPO	are we sending mails from master-key.@?
+2020-12-26 10:26:29	freswa	Dunno, but as long as addresses exist, there may be sending too ofc
+2020-12-26 10:26:49	svenstaro	nobody likes DNS
+2020-12-26 10:28:06	wCPO	freswa: so we need a spf record for everysubdomain? That is a lot of noise in the terraform file
+2020-12-26 10:28:15	freswa	svenstaro: *some* people think that changing addresses on there local DNS is good practise... :(
+2020-12-26 10:29:04	freswa	wCPO: It is, but it should be done somehow
+2020-12-26 10:30:29	wCPO	freswa: 7 lines * 29 subdomains :(
+2020-12-26 10:30:41	wCPO	that is not scalable :/
+2020-12-26 10:31:15	freswa	wCPO: https://www.hashicorp.com/blog/hashicorp-terraform-0-12-preview-for-and-for-each
+2020-12-26 10:31:15	phrik	Title: HashiCorp Terraform 0.12 Preview: For and For-Each (at www.hashicorp.com)
+2020-12-26 10:37:56	freswa	wCPO: I'm having some sleep now. I'll look into your changes ~1200 CET
+2020-12-26 10:39:24	 *	wCPO tries to understand the doc :)
+2020-12-26 11:31:29	<--	astylian (~astylian@62-40-107.netrun.cytanet.com.cy) has quit (Remote host closed the connection)
+2020-12-26 11:31:47	-->	astylian (~astylian@62-40-107.netrun.cytanet.com.cy) has joined #archlinux-devops
+2020-12-26 12:16:11	-->	xirhtogal (~lagothrix@unaffiliated/lagothrix) has joined #archlinux-devops
+2020-12-26 12:16:11	--	lagothrix is now known as Guest38065
+2020-12-26 12:16:11	<--	Guest38065 (~lagothrix@unaffiliated/lagothrix) has quit (Killed (verne.freenode.net (Nickname regained by services)))
+2020-12-26 12:16:11	--	xirhtogal is now known as lagothrix
+2020-12-26 14:29:16	--	irc: disconnected from server
+2020-12-26 14:29:53	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-26 14:29:53	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-26 14:29:53	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-26 14:29:53	--	Channel #archlinux-devops: 137 nicks (1 op, 0 voices, 136 normals)
+2020-12-26 14:29:57	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-26 15:34:15	-->	Nact (~l@host-85-27-112-107.dynamic.voo.be) has joined #archlinux-devops
+2020-12-26 16:40:29	<--	lambda (~xiretza@mail.xiretza.xyz) has quit (Ping timeout: 258 seconds)
+2020-12-26 16:41:49	-->	lambda (~xiretza@mail.xiretza.xyz) has joined #archlinux-devops
+2020-12-26 17:55:30	<--	lambda (~xiretza@mail.xiretza.xyz) has quit (Ping timeout: 272 seconds)
+2020-12-26 17:58:25	-->	lambda (~xiretza@mail.xiretza.xyz) has joined #archlinux-devops
+2020-12-26 19:03:20	<--	astylian (~astylian@62-40-107.netrun.cytanet.com.cy) has quit (Remote host closed the connection)
+2020-12-26 19:08:22	-->	orhun_ (~orhun@78.175.226.128) has joined #archlinux-devops
+2020-12-26 19:08:47	<--	orhun (~orhun@78.175.226.128) has quit (Killed (moon.freenode.net (Nickname regained by services)))
+2020-12-26 19:08:47	--	orhun_ is now known as orhun
+2020-12-26 19:27:14	<--	Nact (~l@host-85-27-112-107.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-26 19:40:11	<--	vidal72[m] (vidal72mat@gateway/shell/matrix.org/x-lbvkkcribjrrnvtr) has quit (Ping timeout: 260 seconds)
+2020-12-26 19:45:43	<--	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has quit (Ping timeout: 260 seconds)
+2020-12-26 19:53:15	-->	vidal72[m] (vidal72mat@gateway/shell/matrix.org/x-rdswweohdesfwlpk) has joined #archlinux-devops
+2020-12-26 20:02:57	<--	Frenn_ (~Frenetick@gateway/tor-sasl/freneticks) has quit (Remote host closed the connection)
+2020-12-26 20:04:02	-->	Frenn_ (~Frenetick@gateway/tor-sasl/freneticks) has joined #archlinux-devops
+2020-12-27 09:05:27	--	irc: disconnected from server
+2020-12-27 09:06:23	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-27 09:06:23	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-27 09:06:23	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-27 09:06:23	--	Channel #archlinux-devops: 136 nicks (1 op, 0 voices, 135 normals)
+2020-12-27 09:06:26	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-27 09:47:38	wCPO	more terraform stuff: https://gitlab.archlinux.org/archlinux/infrastructure/-/merge_requests/237 freswa
+2020-12-27 09:47:40	phrik	Title: tf-stage1/archlinux: Move al.org A/AAAA to a variable to ease management (!237) · Merge Requests · Arch Linux / infrastructure · GitLab (at gitlab.archlinux.org)
+2020-12-30 19:38:46	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-30 19:38:46	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-30 19:38:46	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-30 19:38:46	--	Channel #archlinux-devops: 135 nicks (1 op, 0 voices, 134 normals)
+2020-12-30 19:38:50	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-30 19:40:56	Bluewind	wCPO: well, so if you remember, delisting our server on office365 wasn't possible because they said it's not listed. I tried to send the mail again and still get this: host oit-gatech-edu.mail.protection.outlook.com[104.47.59.138] said: 550 5.7.511 Access denied, banned sender[95.216.189.61]. To request removal from this list please forward this message to delist@messaging.microsoft.com.
+2020-12-30 19:40:58	Bluewind	For more information please go to http://go.microsoft.com/fwlink/?LinkId=526653. AS(1410) [DM6NAM12FT025.eop-nam12.prod.protection.outlook.com]
+2020-12-30 19:41:00	phrik	Title: Microsoft - Official Home Page (at go.microsoft.com)
+2020-12-30 19:41:15	Bluewind	I guess they don't like us
+2020-12-30 19:50:43	-->	thurs-47036 (~thurs-@ip68-225-209-147.ph.ph.cox.net) has joined #archlinux-devops
+2020-12-30 19:52:34	jelle	:(
+2020-12-30 19:58:54	<--	astylian (~astylian@62-69-139.netrun.cytanet.com.cy) has quit (Remote host closed the connection)
+2020-12-30 19:59:07	-->	astylian (~astylian@62-69-139.netrun.cytanet.com.cy) has joined #archlinux-devops
+2020-12-30 20:45:15	wCPO	Bluewind: Did you try filling out this form: https://sender.office.com/ ?
+2020-12-30 20:45:16	phrik	Title: Delist IP - Delist IP (at sender.office.com)
+2020-12-30 21:13:45	-->	thefoxie_ (~thefoxie@188-112-69-212.3pp.slovanet.sk) has joined #archlinux-devops
+2020-12-30 21:16:06	thefoxie_	Hey, I guess I got banned as I tried to git push (https unfortunatelly) too many times on aur.archlinux.org as I tried to update package that was orphaned.
+2020-12-30 21:19:53	thefoxie_	this should be my (well it's ISP's subnet) IP 188.112.69.212
+2020-12-30 21:24:30	grazzolni|M	thefoxie_: yes, you're on the fail2ban jail
+2020-12-30 21:27:55	svenstaro	gee our fail2ban is agreessive
+2020-12-30 21:28:58	grazzolni|M	svenstaro: not really, he tried to login many times with the wrong user
+2020-12-30 21:29:19	thefoxie_	is there some timeout when it disappears or do you have to remove it manually?
+2020-12-30 21:29:21	grazzolni|M	thefoxie_: I'm unbaning you, but use the correct user
+2020-12-30 21:29:25	svenstaro	just how many times did you log in?
+2020-12-30 21:29:35	thefoxie_	yeah I got it now haha
+2020-12-30 21:29:38	jelle	thefoxie_: there is a timeout of a day
+2020-12-30 21:29:57	grazzolni|M	svenstaro: I've counted 15 on the journal
+2020-12-30 21:30:00	thefoxie_	svenstaro: few times probably
+2020-12-30 21:30:03	jelle	should maybe document this
+2020-12-30 21:30:18	svenstaro	hm well 15 is plenty IMO
+2020-12-30 21:30:24	grazzolni|M	svenstaro: yeah.
+2020-12-30 21:30:30	thefoxie_	grazzolni|M thanks
+2020-12-30 21:30:33	svenstaro	I almost thought it was like 3
+2020-12-30 21:30:42	grazzolni|M	anyway, journalctl -g is love
+2020-12-30 21:30:47	jelle	hmm it's the default it seems
+2020-12-30 21:30:52	grazzolni|M	svenstaro: nah
+2020-12-30 21:31:02	svenstaro	but we sometimes got people coming in here because of that
+2020-12-30 21:31:11	svenstaro	so maybe it could be raised a lil bit
+2020-12-30 21:31:31	svenstaro	does it reset on success?
+2020-12-30 21:31:35	jelle	findtime is 15 min, max retry is 5 min
+2020-12-30 21:31:41	jelle	ban time is 1 day
+2020-12-30 21:32:17	grazzolni|M	thefoxie_: were you able to login now?
+2020-12-30 21:37:25	thefoxie_	grazzolni|M: yeah and pushed to AUR but the version stays the same on aurweb 🤔️
+2020-12-30 21:38:11	grazzolni|M	thefoxie_: which package?
+2020-12-30 21:38:36	thefoxie_	https://aur.archlinux.org/packages/stoplight-studio-appimage/
+2020-12-30 21:38:37	phrik	Title: AUR (en) - stoplight-studio-appimage (at aur.archlinux.org)
+2020-12-30 21:39:14	jelle	thefoxie_: you did not push an updated SRCINFO
+2020-12-30 21:39:30	thefoxie_	oh ok I'm new to this xD
+2020-12-30 21:39:54	grazzolni|M	I thought the AUR blocked commits without a SRCINFO file
+2020-12-30 21:40:02	jelle	grazzolni|M: same :D
+2020-12-30 21:40:07	jelle	grazzolni|M: I guess on first commit
+2020-12-30 21:40:54	grazzolni|M	jelle: this ain't first commit of that repo either.
+2020-12-30 21:41:08	jelle	grazzolni|M: no I mean, only on the first commit
+2020-12-30 21:41:43	Foxboron	It's the first commit only, yes.
+2020-12-30 21:43:37	grazzolni|M	jelle: you mean first commit of the user?
+2020-12-30 21:43:42	jelle	grazzolni|M: yes
+2020-12-30 21:44:22	grazzolni|M	Ah, I see. that doesn't make sense though =D
+2020-12-30 21:49:12	Foxboron	grazzolni|M: first commit of the package
+2020-12-30 21:50:01	grazzolni|M	Foxboron: but that's the thing, this is not the first commit of that package. it might be this user's first commit *on* that package, but not the first overall of the package.
+2020-12-30 21:50:51	Foxboron	grazzolni|M: I know? But this is why there is no blocking, only a warning
+2020-12-30 21:51:37	grazzolni|M	Foxboron: I distinctly remember the AUR not allowing pushing without a .SRCINFO. but anyway, all's good now
+2020-12-30 21:51:48	Foxboron	It's only for the first commit, or the root commit.
+2020-12-30 22:11:09	<--	lizr (~lizr@1.83.104.34) has quit (Ping timeout: 256 seconds)
+2020-12-30 22:13:05	-->	lizr (~lizr@1.83.104.34) has joined #archlinux-devops
+2020-12-30 22:25:22	aminvakil	i'm reading https://wiki.archlinux.org/index.php/DeveloperWiki:PKGBUILD.com and noticed dragon.archlinux.org is done
+2020-12-30 22:25:23	phrik	Title: DeveloperWiki:PKGBUILD.com - ArchWiki (at wiki.archlinux.org)
+2020-12-30 22:26:11	aminvakil	and apparently there has been an upgrade and reboot 8 hours ago
+2020-12-30 22:26:49	aminvakil	$ curl -IL dragon.archlinux.org
+2020-12-30 22:26:49	aminvakil	curl: (7) Failed to connect to dragon.archlinux.org port 80: No route to host
+2020-12-30 22:26:59	jelle	it's up though
+2020-12-30 22:27:06	Bluewind	wCPO: yeah, that's the one I filled out last time and it said we are not listed
+2020-12-30 22:27:07	jelle	aminvakil: it hosts no website
+2020-12-30 22:27:23	aminvakil	oh!
+2020-12-30 22:27:31	jelle	aminvakil: the website is on pkgbuild.com and is a seperate machine
+2020-12-30 22:27:33	aminvakil	jelle: thanks for clarification, sorry
+2020-12-30 22:27:38	Bluewind	wCPO: it's also what the support told me to fill out when I contacted them. I guess they don't want to be helpful :(
+2020-12-30 22:27:42	jelle	aminvakil: np
+2020-12-30 22:31:39	wCPO	Bluewind: very confusing, hmm..
+2020-12-30 22:31:47	Bluewind	indeed
+2020-12-30 22:38:47	wCPO	Bluewind: Hetzner has a article about it: https://docs.hetzner.com/robot/dedicated-server/troubleshooting/microsoft-blacklist/#office365 , could you try doing it again? (send the most recent error to delist@messaging.microsoft.com)
+2020-12-30 22:40:05	Bluewind	alright
+2020-12-30 22:42:25	wCPO	freswa: are we signed up for Microsoft SDNS and JMRP program and Google Postmaster program?
+2020-12-30 22:43:22	jelle	o.o
+2020-12-30 22:44:08	Bluewind	I used to be signed up for those for orion, but I never signed up for the new server. someone else should do that now
+2020-12-31 07:49:30	--	irc: disconnected from server
+2020-12-31 07:50:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-31 07:50:17	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-31 07:50:17	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-31 07:50:17	--	Channel #archlinux-devops: 135 nicks (1 op, 0 voices, 134 normals)
+2020-12-31 07:50:20	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-31 09:21:22	--	irc: disconnected from server
+2020-12-31 09:21:59	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2020-12-31 09:21:59	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2020-12-31 09:21:59	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2020-12-31 09:21:59	--	Channel #archlinux-devops: 134 nicks (1 op, 0 voices, 133 normals)
+2020-12-31 09:22:02	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2020-12-31 09:44:09	freswa	certbot-renewal on mail.archlinux.org fixed
+2020-12-31 09:44:16	freswa	renewal params were wrong
+2020-12-31 10:02:35	freswa	Gonna fiddle with the terraform state now
+2020-12-31 10:07:25	<--	lizr (~lizr@1.83.107.0) has quit (Ping timeout: 264 seconds)
+2020-12-31 10:09:08	-->	lizr (~lizr@1.83.107.0) has joined #archlinux-devops
+2020-12-31 10:11:29	-->	Nact (~l@host-85-27-123-155.dynamic.voo.be) has joined #archlinux-devops
+2020-12-31 10:26:55	freswa	done
+2020-12-31 10:37:55	freswa	@jelle: archweb gives me a 500 when submitting news items now -.-
+2020-12-31 11:18:58	wCPO	freswa: hmm, the news item wasn't send to arch-announce..
+2020-12-31 11:21:14	freswa	it didn't even make it to the local queue
+2020-12-31 11:22:07	freswa	wait, the machine is time shifted
+2020-12-31 11:23:51	freswa	no, there was no mail to arch-announce in the qeue
+2020-12-31 11:23:55	freswa	*queue
+2020-12-31 11:24:09	freswa	that's probably why I got a 500
+2020-12-31 12:08:57	--	irc: disconnected from server
+2021-01-01 11:08:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2021-01-01 11:08:09	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2021-01-01 11:08:09	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2021-01-01 11:08:09	--	Channel #archlinux-devops: 135 nicks (1 op, 0 voices, 134 normals)
+2021-01-01 11:08:12	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2021-01-01 15:21:35	--	irc: disconnected from server
+2021-01-01 15:22:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2021-01-01 15:22:14	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2021-01-01 15:22:14	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2021-01-01 15:22:14	--	Channel #archlinux-devops: 135 nicks (1 op, 0 voices, 134 normals)
+2021-01-01 15:22:18	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2021-01-01 15:29:38	<--	lizr (~lizr@1.83.107.228) has quit (Ping timeout: 264 seconds)
+2021-01-01 15:31:11	--	irc: disconnected from server
+2021-01-12 23:09:42	-->	jungdongho (~jungdongh@115.23.138.101) has joined #archlinux-devops
+2021-01-12 23:09:42	--	Topic for #archlinux-devops is "Discussion about Arch Linux's infrastructure | Mailinglist: arch-devops | Issues: https://gitlab.archlinux.org/archlinux/infrastructure/-/issues | Status page: https://status.archlinux.org/"
+2021-01-12 23:09:42	--	Topic set by jelle (~weechat@archlinux/developer/jelle) on Wed, 22 Jul 2020 22:25:18
+2021-01-12 23:09:42	--	Channel #archlinux-devops: 132 nicks (1 op, 0 voices, 131 normals)
+2021-01-12 23:09:46	--	Channel created on Sun, 13 Dec 2015 17:34:29
+2021-01-12 23:26:22	--	irc: disconnected from server

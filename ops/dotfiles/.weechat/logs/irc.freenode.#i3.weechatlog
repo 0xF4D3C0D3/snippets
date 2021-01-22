@@ -1,0 +1,1055 @@
+2020-12-19 11:19:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-19 11:19:09	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-19 11:19:09	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-19 11:19:09	--	Channel #i3: 273 nicks (2 ops, 0 voices, 271 normals)
+2020-12-19 11:19:11	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-19 11:24:21	-->	ac3Takwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-19 11:26:43	<--	glowpelt (~myst@focks.pw) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:18	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:19	--	ac3Takwas is now known as acetakwas
+2020-12-19 11:27:44	-->	glowpelt (~myst@focks.pw) has joined #i3
+2020-12-19 11:48:42	<--	qball (~qball@unaffiliated/qball) has quit (Read error: Connection reset by peer)
+2020-12-19 11:55:48	--	irc: disconnected from server
+2020-12-19 11:57:31	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-19 11:57:31	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-19 11:57:31	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-19 11:57:31	--	Channel #i3: 272 nicks (2 ops, 0 voices, 270 normals)
+2020-12-19 11:57:52	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-19 12:04:23	<--	tschan (~tschan@p57a863cb.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2020-12-19 12:09:20	-->	tschan (~tschan@p2e53a5ae.dip0.t-ipconnect.de) has joined #i3
+2020-12-19 12:38:10	<--	carcamovski (~Thunderbi@45.4.2.177) has quit (Ping timeout: 256 seconds)
+2020-12-19 12:38:25	-->	carcamovski (Thunderbir@gateway/vpn/protonvpn/carcamovski) has joined #i3
+2020-12-19 12:43:42	-->	kupi (uid212005@gateway/web/irccloud.com/x-gzofgnqwuptoilky) has joined #i3
+2020-12-19 12:47:30	<--	beano (~beano66@2a02:8109:ac0:3b68:d25c:6525:2fcf:5a5e) has quit (Quit: WeeChat 2.9)
+2020-12-19 12:47:53	--	irc: disconnected from server
+2020-12-20 03:36:55	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-20 03:36:55	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-20 03:36:55	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-20 03:36:55	--	Channel #i3: 285 nicks (2 ops, 0 voices, 283 normals)
+2020-12-20 03:37:16	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-20 03:42:55	<--	sp1ff (~user@c-73-189-132-71.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 03:58:56	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 03:59:02	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 04:04:05	henko	m_ben: thanks. I think this problem is not solvable
+2020-12-20 04:05:03	henko	*easily
+2020-12-20 04:08:42	-->	sp1ff (~user@c-73-189-132-71.hsd1.ca.comcast.net) has joined #i3
+2020-12-20 04:09:23	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-20 04:09:47	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 04:11:39	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-20 04:12:22	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-20 04:15:11	<--	apotheon (~apotheon@copyfree/founder/apotheon) has left #i3
+2020-12-20 04:17:07	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 04:17:52	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:19:07	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 04:20:23	-->	geowiesnot (~user@i15-les02-ix2-87-89-181-157.sfr.lns.abo.bbox.fr) has joined #i3
+2020-12-20 04:21:48	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:24:32	<--	suffer (znc@mutant.penguin.fyi) has quit (Quit: ZNC - https://znc.in seek the truth or pay the price)
+2020-12-20 04:25:00	-->	suffer (znc@mutant.penguin.fyi) has joined #i3
+2020-12-20 04:26:28	-->	chraist (~chraist@h-208-237.A324.priv.bahnhof.se) has joined #i3
+2020-12-20 04:27:20	-->	homogolobean (~homogolob@ip197.ip-91-134-195.eu) has joined #i3
+2020-12-20 04:28:40	henko	i think the program is responsible to set the correct window properties. nothing rofi can do about that.
+2020-12-20 04:28:40	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 04:29:25	homogolobean	kool
+2020-12-20 04:29:48	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:30:08	homogolobean	aight I'm out.
+2020-12-20 04:30:13	<--	homogolobean (~homogolob@ip197.ip-91-134-195.eu) has quit (Remote host closed the connection)
+2020-12-20 04:45:50	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-20 04:45:50	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-20 04:48:33	<--	chraist (~chraist@h-208-237.A324.priv.bahnhof.se) has quit (Ping timeout: 260 seconds)
+2020-12-20 04:51:16	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 04:51:25	<--	geowiesnot (~user@i15-les02-ix2-87-89-181-157.sfr.lns.abo.bbox.fr) has quit (Ping timeout: 268 seconds)
+2020-12-20 04:52:09	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:52:46	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-20 04:53:40	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 04:56:21	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 04:56:23	<--	narimiran (~miran@unaffiliated/miran) has quit (Quit: leaving)
+2020-12-20 04:56:59	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:58:53	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-20 04:59:23	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-20 05:00:30	<--	linux_dream (~isaac@unaffiliated/linux-dream/x-5839402) has quit (Quit: WeeChat 2.9)
+2020-12-20 05:09:17	<--	nebunez (~user@c-73-171-175-205.hsd1.fl.comcast.net) has quit (Remote host closed the connection)
+2020-12-20 05:09:41	-->	nebunez (~user@c-73-171-175-205.hsd1.fl.comcast.net) has joined #i3
+2020-12-20 05:20:49	<--	Oxyd76_ (~quassel@5.18.101.116) has quit (Read error: Connection reset by peer)
+2020-12-20 05:21:23	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-20 05:22:51	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: Connection reset by peer)
+2020-12-20 05:27:54	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-20 05:30:13	<--	shantaram (uid207478@gateway/web/irccloud.com/x-maddpgnroaojchml) has quit (Quit: Connection closed for inactivity)
+2020-12-20 05:32:04	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Client Quit)
+2020-12-20 05:32:34	-->	RandomGuy90 (~RandomGuy@91.239.205.33) has joined #i3
+2020-12-20 05:33:22	<--	henko (~heinrich@213-47-35-122.cable.dynamic.surfer.at) has quit (Quit: WeeChat 3.0)
+2020-12-20 05:45:46	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-20 05:54:24	--	irc: disconnected from server
+2020-12-20 05:54:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-20 05:54:57	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-20 05:54:57	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-20 05:54:57	--	Channel #i3: 281 nicks (2 ops, 0 voices, 279 normals)
+2020-12-20 05:55:21	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-20 06:00:41	--	irc: disconnected from server
+2020-12-20 06:18:28	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-20 06:18:28	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-20 06:18:28	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-20 06:18:28	--	Channel #i3: 281 nicks (2 ops, 0 voices, 279 normals)
+2020-12-20 06:18:49	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-20 06:21:22	-->	mowcat (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has joined #i3
+2020-12-20 16:45:14	--	irc: disconnected from server
+2020-12-20 16:45:50	--	irc: disconnected from server
+2020-12-20 16:46:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-20 16:46:34	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-20 16:46:34	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-20 16:46:34	--	Channel #i3: 278 nicks (2 ops, 0 voices, 276 normals)
+2020-12-20 16:47:26	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-20 16:58:35	--	irc: disconnected from server
+2020-12-20 16:59:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-20 16:59:34	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-20 16:59:34	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-20 16:59:34	--	Channel #i3: 278 nicks (2 ops, 0 voices, 276 normals)
+2020-12-20 16:59:56	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-20 17:03:20	--	irc: disconnected from server
+2020-12-20 17:03:50	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-20 17:03:50	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-20 17:03:50	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-20 17:03:50	--	Channel #i3: 279 nicks (2 ops, 0 voices, 277 normals)
+2020-12-20 17:04:11	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-20 17:04:30	<--	edlou (uid413273@gateway/web/irccloud.com/x-mlxuzsznaqnxtuce) has quit (Quit: Connection closed for inactivity)
+2020-12-20 17:12:29	-->	RuotsalainenO (~weechat@unaffiliated/ruotsalaineno) has joined #i3
+2020-12-20 17:28:49	-->	narimiran (~miran@unaffiliated/miran) has joined #i3
+2020-12-20 17:32:44	-->	ermo (~ermo@foresight/developer/ermo) has joined #i3
+2020-12-20 17:52:14	<--	geowiesnot (~user@87-89-181-157.abo.bbox.fr) has quit (Ping timeout: 260 seconds)
+2020-12-20 17:57:43	<--	ermo (~ermo@foresight/developer/ermo) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-20 17:59:48	-->	bfrost (~bfrost@h-203-104.A151.priv.bahnhof.se) has joined #i3
+2020-12-20 18:02:53	-->	ermo (~ermo@foresight/developer/ermo) has joined #i3
+2020-12-20 18:13:00	<--	bfrost (~bfrost@h-203-104.A151.priv.bahnhof.se) has quit (Quit: WeeChat 3.0)
+2020-12-20 18:14:16	<--	ermo (~ermo@foresight/developer/ermo) has quit (Ping timeout: 240 seconds)
+2020-12-20 18:46:28	-->	ermo (~ermo@foresight/developer/ermo) has joined #i3
+2020-12-20 18:53:58	<--	ermo (~ermo@foresight/developer/ermo) has quit (Ping timeout: 256 seconds)
+2020-12-20 20:58:22	--	irc: disconnected from server
+2020-12-20 20:59:20	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-20 20:59:20	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-20 20:59:20	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-20 20:59:21	--	Channel #i3: 278 nicks (2 ops, 0 voices, 276 normals)
+2020-12-20 21:00:06	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-20 21:03:02	-->	isomari (~isomari@105.112.123.92) has joined #i3
+2020-12-20 21:37:54	-->	DaNeenjah (~DaNeenjah@2600:1005:b156:90d2:d2c3:bc99:aba0:953a) has joined #i3
+2020-12-20 21:40:40	<--	DaNeenjah (~DaNeenjah@2600:1005:b156:90d2:d2c3:bc99:aba0:953a) has quit (Client Quit)
+2020-12-20 21:40:59	-->	DaNeenjah (~DaNeenjah@2600:1005:b156:90d2:d2c3:bc99:aba0:953a) has joined #i3
+2020-12-20 21:55:24	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 21:56:27	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 21:57:01	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 21:57:06	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: Connection reset by peer)
+2020-12-20 21:57:29	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-20 22:00:51	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 22:01:37	<--	isomari (~isomari@105.112.123.92) has quit (Ping timeout: 240 seconds)
+2020-12-20 22:01:41	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 22:04:47	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 22:05:39	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 22:05:52	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: No route to host)
+2020-12-20 22:06:14	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-20 22:06:30	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 22:12:43	<--	tarruda1 (~tarruda@170.238.137.7) has quit (Ping timeout: 256 seconds)
+2020-12-20 22:13:34	-->	bfrost (~bfrost@h-203-104.A151.priv.bahnhof.se) has joined #i3
+2020-12-20 22:14:02	-->	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has joined #i3
+2020-12-20 22:26:46	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 22:29:44	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 22:34:50	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-20 22:35:36	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-20 22:44:57	-->	thrill_seeker (~thrill_se@245.red-88-7-92.staticip.rima-tde.net) has joined #i3
+2020-12-20 22:47:50	<--	thrill_seeker (~thrill_se@245.red-88-7-92.staticip.rima-tde.net) has quit (Client Quit)
+2020-12-20 22:55:44	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: Connection reset by peer)
+2020-12-20 22:56:02	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-20 22:56:14	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-20 22:56:49	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-20 23:00:44	-->	edlou (uid413273@gateway/web/irccloud.com/x-tsmbyvbgwxuqhiqz) has joined #i3
+2020-12-20 23:01:29	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: Connection reset by peer)
+2020-12-20 23:03:56	-->	Hund (Hund@ubuntu/member/hund) has joined #i3
+2020-12-20 23:04:01	<--	bfrost (~bfrost@h-203-104.A151.priv.bahnhof.se) has quit (Quit: WeeChat 3.0)
+2020-12-20 23:04:15	Hund	Is i3 really considered a dynamic window manager?
+2020-12-20 23:07:23	<--	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has left #i3 ("WeeChat 3.0")
+2020-12-20 23:07:40	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-20 23:17:49	-->	tarruda1 (~tarruda@170.238.137.7) has joined #i3
+2020-12-20 23:32:34	<--	dopplergange (~dop@195.158.249.47) has quit (Remote host closed the connection)
+2020-12-20 23:44:12	-->	phonemic (~phonemic@45.41.180.66) has joined #i3
+2020-12-20 23:44:13	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: Connection reset by peer)
+2020-12-20 23:44:37	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-20 23:47:43	<--	phonemic (~phonemic@45.41.180.66) has quit (Client Quit)
+2020-12-20 23:49:31	-->	mowcat (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has joined #i3
+2020-12-20 23:53:03	@sur5r	Hund: Well you can add windows at runtime
+2020-12-20 23:53:07	@sur5r	So.. yes? ;)
+2020-12-20 23:54:46	@sur5r	But more seriously: What's a static window manager?
+2020-12-21 00:01:33	Hund	sur5r: :D A static one doesn't have any layouts and doesn't automatically resize, move and arrange clients when you spawn or kill clients.
+2020-12-21 00:01:58	Hund	Awesome is an example of a dynamic window manager.
+2020-12-21 00:02:37	Hund	I just had *another* discussion where someone claims that i3 is a dynamic window manager. This time because it can float clients. :)
+2020-12-21 00:05:15	<--	einveru (einveru@gateway/vpn/protonvpn/einveru) has quit (Ping timeout: 265 seconds)
+2020-12-21 00:06:20	-->	einveru (einveru@gateway/vpn/protonvpn/einveru) has joined #i3
+2020-12-21 00:17:32	<--	einveru (einveru@gateway/vpn/protonvpn/einveru) has quit (Ping timeout: 256 seconds)
+2020-12-21 00:18:37	-->	einveru (einveru@gateway/vpn/protonvpn/einveru) has joined #i3
+2020-12-21 00:21:35	@sur5r	Ok I fail to understand what you say. Question in return: Does it matter? Does i3 solve your problem or not?
+2020-12-21 00:29:50	Hund	sur5r: A person on the Internet is wrong! It's my duty to make things right.
+2020-12-21 00:29:52	Hund	:P
+2020-12-21 00:30:06	Hund	What didn't you understand?
+2020-12-21 00:31:23	Hund	Anyway. To answer my first question. Is i3 a dynamic window manager or not? The website doesn't mention anything about it being dynamic and I would think that I would have found out about the dynamic features after using it for like 5 years.
+2020-12-21 00:39:10	-->	yidhra (~yidhra@74.123.46.107) has joined #i3
+2020-12-21 00:39:50	Hund	 /join #herbstluftwm
+2020-12-21 00:39:55	Hund	Bah
+2020-12-21 00:54:15	<--	mowcat (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has quit (Remote host closed the connection)
+2020-12-21 00:54:18	<--	DVS[1] (~r3-s0urce@bzq-84-110-103-67.cablep.bezeqint.net) has quit (Ping timeout: 260 seconds)
+2020-12-21 01:24:45	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: Connection reset by peer)
+2020-12-21 01:25:06	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-21 01:27:11	rouji	Hund: I don't quite get why that distinction is useful, but i3 does have layouts and resizes/moves clients when you spawn new ones, soo ...?
+2020-12-21 01:30:53	<--	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has quit (Quit: No Ping reply in 180 seconds.)
+2020-12-21 01:32:10	-->	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has joined #i3
+2020-12-21 02:03:36	<--	DaNeenjah (~DaNeenjah@2600:1005:b156:90d2:d2c3:bc99:aba0:953a) has quit (Ping timeout: 268 seconds)
+2020-12-21 02:05:43	-->	DaNeenjah (~DaNeenjah@2600:1005:b155:2da:27c5:289b:7709:f06f) has joined #i3
+2020-12-21 02:30:58	iwkse	hi, I have an issue with scrot. When I lauch it from a terminal it works properly, it lets me select a screen area to screenshot, but from inside the i3 config file, it's not working. Any hint?
+2020-12-21 02:31:45	GermainZ	iwkse: `exec <command> &> /tmp/log.log` and check the log
+2020-12-21 02:32:25	iwkse	GermainZ: checking
+2020-12-21 02:45:23	-->	michael-kohlhaas (~michael-k@gateway/tor-sasl/michael-kohlhaas) has joined #i3
+2020-12-21 02:50:54	-->	schelcj (~schelcj@096-035-119-047.res.spectrum.com) has joined #i3
+2020-12-21 02:53:49	-->	semeion (~semeion@unaffiliated/semeion) has joined #i3
+2020-12-21 03:07:01	<--	michael-kohlhaas (~michael-k@gateway/tor-sasl/michael-kohlhaas) has quit (Remote host closed the connection)
+2020-12-21 03:17:37	-->	ermo (~ermo@foresight/developer/ermo) has joined #i3
+2020-12-21 03:21:05	-->	nessonic (~nessonic@2601:247:c400:eb7::14e0) has joined #i3
+2020-12-21 03:21:06	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: No route to host)
+2020-12-21 03:23:15	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-21 03:23:25	<--	nessonic (~nessonic@2601:247:c400:eb7::14e0) has quit (Client Quit)
+2020-12-21 03:26:04	-->	ermo_ (~ermo@foresight/developer/ermo) has joined #i3
+2020-12-21 03:27:13	<--	ermo (~ermo@foresight/developer/ermo) has quit (Ping timeout: 256 seconds)
+2020-12-21 03:27:13	--	ermo_ is now known as ermo
+2020-12-21 03:27:59	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Ping timeout: 260 seconds)
+2020-12-21 03:35:57	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-21 03:38:19	-->	linux_dream (~isaac@unaffiliated/linux-dream/x-5839402) has joined #i3
+2020-12-21 03:49:58	<--	DaNeenjah (~DaNeenjah@2600:1005:b155:2da:27c5:289b:7709:f06f) has quit (Quit: WeeChat 2.9)
+2020-12-21 04:05:50	-->	stef204 (~stef204@unaffiliated/stef-204/x-384198) has joined #i3
+2020-12-21 04:09:40	kjetilho	is it possible to use i3 for 5 years without discovering it is dynamic?
+2020-12-21 04:13:15	@sur5r	If you gain pleasure from debating that over and over again, sure.
+2020-12-21 04:36:57	-->	freakazoid0223 (~matt@pool-108-2-68-211.phlapa.fios.verizon.net) has joined #i3
+2020-12-21 04:37:26	kjetilho	I'm just curious what Hund meant
+2020-12-21 04:47:38	<--	aidalgol (~aidalgol@unaffiliated/aidalgol) has quit (Ping timeout: 260 seconds)
+2020-12-21 04:48:00	-->	aidalgol_ (~aidalgol@unaffiliated/aidalgol) has joined #i3
+2020-12-21 04:59:06	<--	somis (~somis@149.56.153.185) has quit (Quit: WeeChat 2.9)
+2020-12-21 05:01:47	-->	somis (~somis@149.56.153.184) has joined #i3
+2020-12-21 05:02:29	<--	einveru (einveru@gateway/vpn/protonvpn/einveru) has quit (Ping timeout: 260 seconds)
+2020-12-21 05:04:15	-->	einveru (~einveru@ip72-211-79-82.no.no.cox.net) has joined #i3
+2020-12-21 05:10:07	grove	It's probably been (at leats) 5 years (but I don't really remember) since I started using i3, and 25 years since I started being interested in window manager configuraion (for the first two years on the university's unix system - I think HPUX and digital UNIX were the two main variants)s, since then mostly on Linux) and I have no idea what "dynemic" mean in the context of window managers
+2020-12-21 05:12:22	-->	igh_ (~igh@cpe-75-186-61-94.cinci.res.rr.com) has joined #i3
+2020-12-21 05:15:10	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Ping timeout: 272 seconds)
+2020-12-21 05:23:40	<--	linux_dream (~isaac@unaffiliated/linux-dream/x-5839402) has quit (Quit: WeeChat 2.9)
+2020-12-21 05:24:55	-->	kupi (uid212005@gateway/web/irccloud.com/x-rilypanikbjfexcy) has joined #i3
+2020-12-21 05:25:29	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #i3
+2020-12-21 05:34:43	<--	catman370 (~catman@unaffiliated/catman370) has quit (Ping timeout: 256 seconds)
+2020-12-21 05:46:46	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-21 05:51:40	-->	mowcat (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has joined #i3
+2020-12-21 06:06:25	kjetilho	"<Hund>: A static one doesn't have any layouts and doesn't automatically resize, move and arrange clients when you spawn or kill clients."
+2020-12-21 06:06:39	<--	narimiran (~miran@unaffiliated/miran) has quit (Ping timeout: 260 seconds)
+2020-12-21 06:06:59	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Read error: No route to host)
+2020-12-21 06:07:39	kjetilho	by this defintion, classic wm's like twm, mwm, 4dwm, Afterstep, fvwm etc. etc. are all static.
+2020-12-21 06:09:28	-->	Oxyd76 (~quassel@5.18.101.116) has joined #i3
+2020-12-21 06:09:46	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #i3
+2020-12-21 06:21:40	-->	_thelion_ (~matthias@93-82-101-105.adsl.highway.telekom.at) has joined #i3
+2020-12-21 06:36:14	<--	_thelion_ (~matthias@93-82-101-105.adsl.highway.telekom.at) has quit (Ping timeout: 264 seconds)
+2020-12-21 06:38:26	-->	thrill_seeker (~thrill_se@245.red-88-7-92.staticip.rima-tde.net) has joined #i3
+2020-12-21 06:38:27	-->	DaNeenjah (~DaNeenjah@2600:1005:b155:2da:27c5:289b:7709:f06f) has joined #i3
+2020-12-21 06:49:46	<--	stef204 (~stef204@unaffiliated/stef-204/x-384198) has quit (Quit: WeeChat 2.9)
+2020-12-21 06:50:28	-->	_thelion_ (~matthias@93-82-101-105.adsl.highway.telekom.at) has joined #i3
+2020-12-21 06:56:38	-->	catman370 (~catman@unaffiliated/catman370) has joined #i3
+2020-12-21 13:06:56	--	irc: disconnected from server
+2020-12-21 13:07:50	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-21 13:07:50	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-21 13:07:50	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-21 13:07:50	--	Channel #i3: 283 nicks (2 ops, 0 voices, 281 normals)
+2020-12-21 13:08:36	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-21 13:10:09	<--	Oxyd76 (~quassel@5.18.101.116) has quit (Ping timeout: 260 seconds)
+2020-12-21 13:56:03	-->	narimiran (~miran@unaffiliated/miran) has joined #i3
+2020-12-21 13:56:26	-->	dbmikus (~dbmikus@c-174-49-172-14.hsd1.pa.comcast.net) has joined #i3
+2020-12-21 14:07:16	<--	dbmikus (~dbmikus@c-174-49-172-14.hsd1.pa.comcast.net) has quit (Ping timeout: 272 seconds)
+2020-12-21 14:16:16	<--	DaNeenjah (~DaNeenjah@2600:1005:b124:26e0:7dc5:1b76:6f9a:f349) has quit (Quit: WeeChat 3.0)
+2020-12-22 05:26:07	--	irc: disconnected from server
+2020-12-22 05:27:03	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-22 05:27:03	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-22 05:27:03	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-22 05:27:03	--	Channel #i3: 282 nicks (2 ops, 0 voices, 280 normals)
+2020-12-22 05:27:49	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-22 05:29:45	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:30:05	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:30:35	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 05:31:58	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 05:41:50	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:42:20	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:42:27	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-22 05:43:06	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 05:43:12	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 05:43:26	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 05:46:43	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 05:47:07	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-22 05:48:16	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:49:17	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 05:50:26	-->	DaNeenjah (~DaNeenjah@2600:1005:b102:e7c9:eff6:21b3:2f79:912c) has joined #i3
+2020-12-22 05:50:57	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 05:51:56	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 06:07:16	<--	narimiran (~miran@unaffiliated/miran) has quit (Ping timeout: 240 seconds)
+2020-12-22 06:09:29	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 06:10:25	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 06:11:41	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:11:47	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 06:12:27	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 06:13:53	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 06:14:46	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:16:30	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:17:49	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 06:18:30	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:19:03	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 06:19:47	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-22 06:21:41	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:21:55	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 06:23:45	<--	DaNeenjah (~DaNeenjah@2600:1005:b102:e7c9:eff6:21b3:2f79:912c) has quit (Ping timeout: 258 seconds)
+2020-12-22 06:24:25	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-22 06:25:38	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 06:25:46	-->	DaNeenjah (~DaNeenjah@2600:1005:b11f:806e:cb0:1603:918c:2bd7) has joined #i3
+2020-12-22 06:28:33	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 06:32:29	<--	gjnoonan (sid95422@gateway/web/irccloud.com/x-adictgjdwhjyoyaw) has quit (Ping timeout: 244 seconds)
+2020-12-22 06:32:29	<--	mnabid (uid448607@gateway/web/irccloud.com/x-dfpwqzcthwhdknez) has quit (Ping timeout: 244 seconds)
+2020-12-22 06:33:58	-->	mnabid (uid448607@gateway/web/irccloud.com/x-hybklanlvybhfczs) has joined #i3
+2020-12-22 06:34:17	-->	gjnoonan (sid95422@gateway/web/irccloud.com/x-horgfufprftjtqui) has joined #i3
+2020-12-22 06:39:51	Celmor[m]1	can someone recommend a compositor that works well with i3?
+2020-12-22 06:40:55	GermainZ	picom (fork of compton)
+2020-12-22 06:42:59	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 06:52:19	Celmor[m]1	thanks, I'll try that
+2020-12-22 06:54:37	GermainZ	and play with its config I guess :p
+2020-12-22 06:55:31	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 06:56:43	Celmor[m]1	I keep having issues with firefox and mpv in particular where only killing compton and optionally restarting helps
+2020-12-22 06:56:58	Celmor[m]1	usually after changing xrandr configuration
+2020-12-22 06:57:18	GermainZ	Celmor[m]1: what's your config?
+2020-12-22 06:57:30	Celmor[m]1	I've just bound xrandr lines to various hotkeys
+2020-12-22 06:57:45	Celmor[m]1	or change the display configuration manually using arandr
+2020-12-22 06:57:50	Celmor[m]1	so not much of a "configuration"
+2020-12-22 06:57:59	<--	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has quit (Quit: No Ping reply in 180 seconds.)
+2020-12-22 06:58:00	GermainZ	Celmor[m]1: I mean compton's
+2020-12-22 06:58:28	Celmor[m]1	exec --no-startup-id compton --unredir-if-possible --vsync -b --config /dev/null
+2020-12-22 06:58:36	Celmor[m]1	is in my i3/config
+2020-12-22 06:59:06	GermainZ	well here's my picom.conf if it helps: https://paste.xinu.at/LLPBC/
+2020-12-22 06:59:12	Celmor[m]1	have the same line bound to a hotkey which I use after running "killall compton" via drun
+2020-12-22 06:59:49	Celmor[m]1	what gpu driver are you using? not sure if I need to change something specific to what I'm using (nvidia)
+2020-12-22 07:00:11	-->	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has joined #i3
+2020-12-22 07:00:32	GermainZ	I've used both intel and nvidia
+2020-12-22 07:00:35	GermainZ	s/intel/mesa/
+2020-12-22 07:00:47	Celmor[m]1	with the same config?
+2020-12-22 07:00:49	GermainZ	I don't have a 2nd monitor right now (vacation), but it worked fine last week
+2020-12-22 07:00:50	GermainZ	yeah
+2020-12-22 07:00:56	GermainZ	didn't have the issue you're describing
+2020-12-22 07:00:57	Celmor[m]1	alright
+2020-12-22 07:01:18	Celmor[m]1	currently firefox refuses to update it's interface after I've rotated my main monitor
+2020-12-22 07:01:22	Celmor[m]1	its*
+2020-12-22 07:01:34	Celmor[m]1	but still responds to clicks and such
+2020-12-22 07:03:00	Celmor[m]1	mpv on the other hand likes to get stuck upon changing my monitor configuration (xrandr hotkey) printing "[2720.124][d][reload] demuxer_cache.transition continue_stuck {"demuxer_cache_time" = 1954.0745, "in_state_time" = 850, "name" = "stuck"}"
+2020-12-22 07:03:58	Celmor[m]1	perhaps I'll need to give wayland a try at some point again using "sway"
+2020-12-22 07:04:26	GermainZ	with nvidia? Npoe
+2020-12-22 07:04:28	GermainZ	Nope * :)
+2020-12-22 07:04:52	Celmor[m]1	ok
+2020-12-22 07:05:07	Celmor[m]1	right, seem to remember something in that regard
+2020-12-22 07:12:13	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-22 07:25:35	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #i3
+2020-12-22 07:28:26	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Remote host closed the connection)
+2020-12-22 07:31:51	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #i3
+2020-12-22 07:44:30	<--	till_b` (~user@ip-178-203-145-70.hsi10.unitymediagroup.de) has quit (Read error: Connection reset by peer)
+2020-12-22 07:44:30	<--	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has quit (Quit: No Ping reply in 180 seconds.)
+2020-12-22 07:45:50	-->	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has joined #i3
+2020-12-22 07:54:56	<--	mowcat (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has quit (Ping timeout: 240 seconds)
+2020-12-22 08:01:48	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Remote host closed the connection)
+2020-12-22 08:02:17	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 08:02:40	<--	theoceaniscool (~theoceani@188.127.171.56) has quit (Ping timeout: 256 seconds)
+2020-12-22 08:05:04	<--	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has quit (Quit: No Ping reply in 180 seconds.)
+2020-12-22 08:06:30	-->	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has joined #i3
+2020-12-22 08:09:11	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 268 seconds)
+2020-12-22 08:22:36	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Ping timeout: 240 seconds)
+2020-12-22 08:23:00	<--	kwmiebach (sid16855@gateway/web/irccloud.com/x-nmtointdivofpfyb) has quit (Ping timeout: 246 seconds)
+2020-12-22 08:24:04	-->	lord| (~solenodic@unaffiliated/solenodic) has joined #i3
+2020-12-22 08:33:37	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 08:35:53	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Remote host closed the connection)
+2020-12-22 08:36:03	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 08:38:14	demure	anyone happen to have suggestions for i3 & xss-lock, to configure xset to only trigger screensaver on suspend? I'd like to make a mode were I can disable my screen lock timer but still lock on lid close
+2020-12-22 08:44:37	<--	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has quit (Ping timeout: 264 seconds)
+2020-12-22 08:46:07	-->	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has joined #i3
+2020-12-22 08:53:09	<--	rkta (~kt@62.113.246.111) has quit (Ping timeout: 260 seconds)
+2020-12-22 09:09:37	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Ping timeout: 246 seconds)
+2020-12-22 09:11:38	-->	lord| (~solenodic@unaffiliated/solenodic) has joined #i3
+2020-12-22 09:33:04	-->	ShimmerGlass (uid144530@gateway/web/irccloud.com/x-qozuifbrhniczmsl) has joined #i3
+2020-12-22 09:35:17	<--	shenyi (uid216035@gateway/web/irccloud.com/x-uvfrbzkrqfbnyxjp) has quit (Quit: Connection closed for inactivity)
+2020-12-22 09:40:04	-->	beano (~beano66@2a02:8109:ac0:3b68:d25c:6525:2fcf:5a5e) has joined #i3
+2020-12-22 09:41:59	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Remote host closed the connection)
+2020-12-22 09:42:28	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 09:48:04	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 258 seconds)
+2020-12-22 10:04:22	<--	somis (~somis@149.56.153.184) has quit (Read error: Connection reset by peer)
+2020-12-22 10:12:46	<--	DaNeenjah (~DaNeenjah@2600:1005:b11f:806e:cb0:1603:918c:2bd7) has quit (Quit: WeeChat 3.0)
+2020-12-22 10:13:43	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 10:27:19	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 268 seconds)
+2020-12-22 10:42:16	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 10:46:37	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-22 12:04:29	<--	tschan (~tschan@p57a865c5.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-22 12:10:05	-->	tschan (~tschan@p57a860ab.dip0.t-ipconnect.de) has joined #i3
+2020-12-22 12:27:52	edlou	anything i can do about super laggy picom with glx backend? :/
+2020-12-22 12:29:37	-->	et09 (~et09@unaffiliated/endolphin) has joined #i3
+2020-12-22 12:45:17	f8e4	uff finally sovled screen on despite lock: bindsym $mod+F2 exec i3lock -c 111111 -f && xset dpms force off && xset -dpms && xset s activate
+2020-12-22 12:46:12	<--	tarruda1 (~tarruda@170.238.137.7) has quit (Ping timeout: 260 seconds)
+2020-12-22 12:46:23	<--	et09 (~et09@unaffiliated/endolphin) has left #i3
+2020-12-22 12:49:04	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 12:50:27	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 12:51:27	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 12:53:59	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 12:57:06	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 12:58:21	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 12:59:07	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-22 13:00:06	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 13:00:55	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 13:05:11	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 268 seconds)
+2020-12-22 13:12:50	<--	ShimmerGlass (uid144530@gateway/web/irccloud.com/x-qozuifbrhniczmsl) has quit (Quit: Connection closed for inactivity)
+2020-12-22 13:20:18	-->	tarruda1 (~tarruda@170.238.137.7) has joined #i3
+2020-12-22 13:40:31	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-22 13:41:13	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 13:42:29	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 13:46:20	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 13:48:44	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 13:57:16	-->	narimiran (~miran@unaffiliated/miran) has joined #i3
+2020-12-22 13:58:22	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-22 14:50:56	-->	darunesh (~darunesh@2409:4064:e9f:143:d008:477:ed99:8d37) has joined #i3
+2020-12-22 14:59:22	-->	greek_soon (~greek_s@116.30.221.239) has joined #i3
+2020-12-22 15:01:27	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 15:05:45	<--	nebunez (~user@c-73-171-175-205.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-22 15:09:58	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-22 15:29:24	-->	thrill_seeker (~thrill_se@245.red-88-7-92.staticip.rima-tde.net) has joined #i3
+2020-12-22 15:41:19	-->	_thelion_ (~matthias@193.170.244.12) has joined #i3
+2020-12-22 15:48:13	<--	thrill_seeker (~thrill_se@245.red-88-7-92.staticip.rima-tde.net) has quit (Ping timeout: 264 seconds)
+2020-12-22 15:49:44	-->	thrill_seeker (~thrill_se@245.red-88-7-92.staticip.rima-tde.net) has joined #i3
+2020-12-22 16:20:46	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 16:21:25	<--	beencubed (~beencubed@209.131.238.248) has quit (Ping timeout: 240 seconds)
+2020-12-22 16:44:00	-->	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has joined #i3
+2020-12-22 16:45:35	-->	cr4y1 (~cr4y1@188.241.65.122) has joined #i3
+2020-12-22 16:49:37	-->	ShimmerGlass (uid144530@gateway/web/irccloud.com/x-hisfmjisrjabddgc) has joined #i3
+2020-12-22 16:52:02	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Quit: bye)
+2020-12-22 16:59:47	-->	till_b` (~user@ip-178-203-145-70.hsi10.unitymediagroup.de) has joined #i3
+2020-12-22 17:06:52	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 17:07:49	-->	kevr` (~kevr@unaffiliated/kevr) has joined #i3
+2020-12-22 17:08:29	<--	kevr (~kevr@unaffiliated/kevr) has quit (Ping timeout: 272 seconds)
+2020-12-22 17:11:48	<--	kevr` (~kevr@unaffiliated/kevr) has quit (Client Quit)
+2020-12-22 17:11:51	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 268 seconds)
+2020-12-22 17:12:44	-->	kevr (~kevr@unaffiliated/kevr) has joined #i3
+2020-12-22 17:16:10	<--	tarruda1 (~tarruda@170.238.137.7) has quit (Remote host closed the connection)
+2020-12-22 17:21:32	-->	tesseract (~tesseract@2a01:e0a:24b:f220:8eb4:c22:16f:5ba0) has joined #i3
+2020-12-22 17:24:36	<--	cyphase (~cyphase@unaffiliated/cyphase) has quit (Ping timeout: 240 seconds)
+2020-12-22 17:31:45	-->	cyphase (~cyphase@unaffiliated/cyphase) has joined #i3
+2020-12-22 17:48:52	<--	andyrtr (~andyrtr@archlinux/developer/andyrtr) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-12-22 17:50:19	-->	andyrtr (~andyrtr@archlinux/developer/andyrtr) has joined #i3
+2020-12-22 18:00:02	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 18:01:00	<--	pinpox (~pinpox@v2202001107577105819.hotsrv.de) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-22 18:02:06	-->	pinpox (~pinpox@v2202001107577105819.hotsrv.de) has joined #i3
+2020-12-22 18:13:16	-->	DVS[1] (~r3-s0urce@bzq-84-110-103-67.red.bezeqint.net) has joined #i3
+2020-12-22 18:15:22	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Remote host closed the connection)
+2020-12-22 18:15:50	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 18:18:23	-->	theoceaniscool (~theoceani@188.127.171.56) has joined #i3
+2020-12-22 18:21:21	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 258 seconds)
+2020-12-22 18:28:51	<--	_thelion_ (~matthias@193.170.244.12) has quit (Quit: WeeChat 2.9)
+2020-12-22 18:41:23	<--	aelien27 (~noident@047-229-056-109.res.spectrum.com) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-22 18:41:28	-->	tarruda1 (~tarruda@170.238.136.2) has joined #i3
+2020-12-22 18:41:46	-->	aelien27 (~noident@047-229-056-109.res.spectrum.com) has joined #i3
+2020-12-22 18:47:07	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 18:59:32	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-22 19:04:38	<--	tarruda1 (~tarruda@170.238.136.2) has quit (Read error: Connection reset by peer)
+2020-12-22 19:11:56	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 19:17:39	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 268 seconds)
+2020-12-22 19:25:24	-->	kwmiebach (sid16855@gateway/web/irccloud.com/x-ervqbdqbjjhgenfk) has joined #i3
+2020-12-22 19:28:45	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 19:29:22	<--	ShimmerGlass (uid144530@gateway/web/irccloud.com/x-hisfmjisrjabddgc) has quit (Quit: Connection closed for inactivity)
+2020-12-22 19:41:36	<--	ermo (~ermo@foresight/developer/ermo) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-22 19:42:52	<--	tschan (~tschan@p57a860ab.dip0.t-ipconnect.de) has quit (Quit: bye, bye)
+2020-12-22 19:44:38	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Remote host closed the connection)
+2020-12-22 19:45:07	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 19:46:53	-->	ermo (~ermo@foresight/developer/ermo) has joined #i3
+2020-12-22 19:50:57	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 268 seconds)
+2020-12-22 20:06:16	<--	BrandonArnold (~brandon@206.189.168.132) has quit (Ping timeout: 240 seconds)
+2020-12-22 20:07:39	-->	BrandonArnold (~brandon@206.189.168.132) has joined #i3
+2020-12-22 20:08:47	-->	chraist (~chraist@h-208-237.A324.priv.bahnhof.se) has joined #i3
+2020-12-22 20:16:24	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 20:20:52	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-22 20:23:38	-->	tschan (~tschan@p57a860ab.dip0.t-ipconnect.de) has joined #i3
+2020-12-22 20:32:44	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 20:36:54	-->	coldycoldi (~user@amarseille-654-1-306-128.w90-37.abo.wanadoo.fr) has joined #i3
+2020-12-22 20:37:26	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 258 seconds)
+2020-12-22 20:37:38	-->	somis (~somis@149.56.153.180) has joined #i3
+2020-12-22 20:41:42	<--	coldycoldi (~user@amarseille-654-1-306-128.w90-37.abo.wanadoo.fr) has left #i3 ("Killed buffer")
+2020-12-22 20:41:54	-->	coldycoldi (~user@amarseille-654-1-306-128.w90-37.abo.wanadoo.fr) has joined #i3
+2020-12-22 20:44:19	-->	Digit (~user@fsf/member/digit) has joined #i3
+2020-12-22 20:58:06	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-22 20:58:26	-->	pluberflas (~brandon@cpe-71-75-235-190.carolina.res.rr.com) has joined #i3
+2020-12-22 21:00:40	pluberflas	I am trying to type in Korean under i3. I issued a few variants of the command "setxkbmap kr". I don't get any errors, but the output appears to be US. The korean keyboard works in my Pop! OS wm.
+2020-12-22 21:01:22	pluberflas	Are there other steps that I need to take to get i3 to chance the output for me?
+2020-12-22 21:01:28	pluberflas	*change
+2020-12-22 21:12:47	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-22 21:23:19	<--	chraist (~chraist@h-208-237.A324.priv.bahnhof.se) has quit (Quit: Leaving)
+2020-12-22 21:27:51	-->	tarruda1 (~tarruda@170.238.136.2) has joined #i3
+2020-12-22 21:37:23	<--	tarruda1 (~tarruda@170.238.136.2) has quit (Read error: Connection reset by peer)
+2020-12-22 21:39:31	-->	tarruda1 (~tarruda@170.238.137.7) has joined #i3
+2020-12-22 21:43:11	<--	tarruda1 (~tarruda@170.238.137.7) has quit (Read error: Connection reset by peer)
+2020-12-22 21:44:08	-->	tarruda1 (~tarruda@170.238.137.7) has joined #i3
+2020-12-22 21:56:02	-->	mowcat (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has joined #i3
+2020-12-22 21:57:42	<--	thrill_seeker (~thrill_se@245.red-88-7-92.staticip.rima-tde.net) has quit (Quit: WeeChat 3.0)
+2020-12-22 22:05:21	-->	thrill_seeker (~thrill_se@245.red-88-7-92.staticip.rima-tde.net) has joined #i3
+2020-12-22 22:10:03	-->	greggerz (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-22 22:11:58	-->	nebunez (~user@c-73-171-175-205.hsd1.fl.comcast.net) has joined #i3
+2020-12-22 22:24:33	<--	temple48 (~temple48@li723-241.members.linode.com) has quit (Quit: Lost terminal)
+2020-12-22 22:28:12	<--	languitar (~languitar@semipol.de) has quit (Quit: I'm done ;))
+2020-12-22 22:29:02	-->	languitar (~languitar@semipol.de) has joined #i3
+2020-12-22 22:31:24	-->	temple48 (~temple48@li723-241.members.linode.com) has joined #i3
+2020-12-22 22:32:16	-->	needhalp (ce7fb161@unaffiliated/sayo-) has joined #i3
+2020-12-22 22:32:25	<--	languitar (~languitar@semipol.de) has quit (Client Quit)
+2020-12-22 22:32:52	-->	languitar (~languitar@semipol.de) has joined #i3
+2020-12-22 22:33:34	-->	greggerz_ (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-22 22:35:52	needhalp	is there a way to have a launcher menu, like a mode but fancier? like a full screen overlay with large colored blocks, images, etc?
+2020-12-22 22:36:30	needhalp	the functionality of modes does the job well, just wondering if there's a way I can have i3 to create an overlay with images and colors and such
+2020-12-22 22:36:40	<--	greggerz (~greggerz@unaffiliated/greggerz) has quit (Ping timeout: 272 seconds)
+2020-12-22 22:47:42	edlou	what do you mean like a rofi launcher?
+2020-12-22 22:58:14	-->	Kaivo (~Kaivo@104-200-86-99.mc.derytele.com) has joined #i3
+2020-12-22 23:02:34	needhalp	uhmm not really a rofi launcher
+2020-12-22 23:03:06	needhalp	something that would retain the way i3 modes work, i.e. once you get into the mode each key has its own meaning
+2020-12-22 23:03:48	needhalp	but instead of getting the options in a bar, you get a fancy, full screen overlay
+2020-12-22 23:15:37	edlou	aahh ok, sorry i am too noob to understand ;(
+2020-12-22 23:16:01	edlou	i3 was my first tiling wm and i liked it a lot, i just had some weird sluggish laggy issues using picom on it
+2020-12-22 23:16:30	needhalp	no worries, probably what I'm saying doesn't make much sense tbh
+2020-12-22 23:40:22	demure	needhalp: if you find a launcher you like, you could bind it to a key
+2020-12-22 23:54:48	-->	beencubed (~beencubed@209.131.238.248) has joined #i3
+2020-12-23 00:01:13	<--	ermo (~ermo@foresight/developer/ermo) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-23 00:25:06	<--	mowcat (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has quit (Ping timeout: 256 seconds)
+2020-12-23 00:25:09	-->	mowotter (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has joined #i3
+2020-12-23 00:27:40	-->	greggerz__ (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-23 00:30:07	<--	greggerz_ (~greggerz@unaffiliated/greggerz) has quit (Ping timeout: 258 seconds)
+2020-12-23 00:37:07	<--	mowotter (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has quit (Ping timeout: 246 seconds)
+2020-12-23 00:38:06	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-23 00:38:39	-->	mowotter (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has joined #i3
+2020-12-23 00:40:07	<--	finsternis (~Y@23.226.237.192) has quit (Remote host closed the connection)
+2020-12-23 00:46:15	teddyc	to add to demure: with the same action you could go into a new mode in i3 if wanted.
+2020-12-23 00:51:10	<--	DVS[1] (~r3-s0urce@bzq-84-110-103-67.red.bezeqint.net) has quit (Ping timeout: 256 seconds)
+2020-12-23 00:58:40	--	irc: disconnected from server
+2020-12-23 11:06:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-23 11:06:17	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-23 11:06:17	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-23 11:06:17	--	Channel #i3: 275 nicks (2 ops, 0 voices, 273 normals)
+2020-12-23 11:06:29	-->	Digit (~user@fsf/member/digit) has joined #i3
+2020-12-23 11:06:34	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-23 11:11:18	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-23 11:11:43	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:15:36	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-23 11:15:48	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:18:37	<--	einveru (einveru@gateway/vpn/protonvpn/einveru) has quit (Ping timeout: 260 seconds)
+2020-12-23 11:19:02	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-23 11:19:27	<--	thefuzz (~thefuzz@181.215.110.227) has quit (Quit: thefuzz)
+2020-12-23 11:20:28	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-23 11:20:39	-->	einveru (~einveru@ip72-211-79-82.no.no.cox.net) has joined #i3
+2020-12-23 11:21:45	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-23 11:26:13	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Client Quit)
+2020-12-23 11:28:14	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-23 11:29:10	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-23 11:34:35	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Ping timeout: 240 seconds)
+2020-12-23 11:41:27	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #i3
+2020-12-23 11:55:00	<--	aelien27 (~noident@047-229-056-109.res.spectrum.com) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-23 11:55:26	-->	aelien27 (~noident@047-229-056-109.res.spectrum.com) has joined #i3
+2020-12-23 12:03:57	<--	tschan (~tschan@p57a860ab.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2020-12-23 12:06:37	<--	zerotex (~zerotex@2600:380:6675:527f:e424:2820:a588:a1be) has quit (Ping timeout: 264 seconds)
+2020-12-23 12:08:53	-->	tschan (~tschan@p57a863f5.dip0.t-ipconnect.de) has joined #i3
+2020-12-23 12:13:15	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-23 12:32:47	<--	DaNeenjah (~DaNeenjah@2600:1005:b119:6674:ea28:48e9:377d:546f) has quit (Quit: WeeChat 3.0)
+2020-12-23 12:49:16	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Quit: thefuzz)
+2020-12-23 12:54:30	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-23 13:01:17	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-23 13:04:01	<--	chesty (~chesty@whocares.crashbunny.com) has quit (Ping timeout: 256 seconds)
+2020-12-23 13:29:38	-->	dqx (~dqx@unaffiliated/dqx) has joined #i3
+2020-12-23 13:35:36	<--	dqx (~dqx@unaffiliated/dqx) has quit (Ping timeout: 256 seconds)
+2020-12-23 13:48:38	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-23 13:54:43	-->	narimiran (~miran@unaffiliated/miran) has joined #i3
+2020-12-23 13:55:03	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Quit: thefuzz)
+2020-12-23 14:29:36	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Ping timeout: 264 seconds)
+2020-12-23 14:31:32	-->	lord| (~solenodic@unaffiliated/solenodic) has joined #i3
+2020-12-23 14:48:46	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-23 14:53:17	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-23 15:14:11	<--	_Warl0ck (~warl0ck@c-73-83-145-12.hsd1.wa.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-23 15:18:13	-->	_Warl0ck (~warl0ck@c-73-83-145-12.hsd1.wa.comcast.net) has joined #i3
+2020-12-23 15:29:14	-->	dqx (~dqx@unaffiliated/dqx) has joined #i3
+2020-12-23 15:57:29	-->	greek_soon (~greek_s@116.30.220.162) has joined #i3
+2020-12-23 15:58:49	<--	dqx (~dqx@unaffiliated/dqx) has quit (Quit: .)
+2020-12-23 16:16:33	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 16:21:19	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-23 16:23:28	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 16:36:25	<--	HumanG33k (~HumanG33k@82-64-99-84.subs.proxad.net) has quit (Quit: Leaving)
+2020-12-23 16:45:22	<--	greek_soon (~greek_s@116.30.220.162) has quit (Quit: WeeChat 3.0)
+2020-12-23 16:49:18	<--	edlou (uid413273@gateway/web/irccloud.com/x-tsmbyvbgwxuqhiqz) has quit (Quit: Connection closed for inactivity)
+2020-12-23 16:53:04	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Quit: WeeChat 3.0)
+2020-12-23 16:53:17	<--	nebunez (~user@c-73-171-175-205.hsd1.fl.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-23 16:59:54	<--	greggerz_ (~greggerz@unaffiliated/greggerz) has quit (Ping timeout: 246 seconds)
+2020-12-23 16:59:58	-->	greggerz__ (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-23 17:00:52	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 17:05:22	--	irc: disconnected from server
+2020-12-23 17:05:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-23 17:05:57	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-23 17:05:57	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-23 17:05:57	--	Channel #i3: 273 nicks (2 ops, 0 voices, 271 normals)
+2020-12-23 17:06:14	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-23 17:14:21	-->	tesseract (~tesseract@2a01:e0a:24b:f220:8eb4:c22:16f:5ba0) has joined #i3
+2020-12-23 17:28:11	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-23 17:32:43	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 268 seconds)
+2020-12-23 17:36:30	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Quit: WeeChat 3.0)
+2020-12-23 17:47:17	-->	theoceaniscool (~theoceani@188.127.171.56) has joined #i3
+2020-12-23 17:50:29	-->	cr4y1 (~cr4y1@188.241.65.122) has joined #i3
+2020-12-23 17:58:45	-->	dancus (~dancus@dynamic-adsl-94-34-166-32.clienti.tiscali.it) has joined #i3
+2020-12-23 18:00:57	<--	NEOhidra (~NEOhidra@unaffiliated/neohidra) has quit (Quit: ZNC - https://znc.in)
+2020-12-23 18:01:18	-->	NEOhidra (~NEOhidra@unaffiliated/neohidra) has joined #i3
+2020-12-23 18:02:46	<--	Staubfinger (~staubfing@unaffiliated/staubfinger) has quit (Ping timeout: 265 seconds)
+2020-12-23 18:11:34	<--	darunesh (~darunesh@2409:4064:58e:9df4:978:b9c2:2679:fb3b) has quit (Ping timeout: 268 seconds)
+2020-12-23 18:20:31	-->	DVS[1] (~r3-s0urce@bzq-84-110-103-67.red.bezeqint.net) has joined #i3
+2020-12-23 18:27:12	<--	tarruda1 (~tarruda@170.238.137.7) has quit (Ping timeout: 264 seconds)
+2020-12-23 18:29:18	-->	Staubfinger (~staubfing@unaffiliated/staubfinger) has joined #i3
+2020-12-23 18:35:24	<--	tinloaf (~tinloaf@virt-no01.mrvm.net) has quit (Ping timeout: 240 seconds)
+2020-12-23 18:44:04	<--	eater9- (~eater@216-180-84-145.starry-inc.net) has quit (Ping timeout: 240 seconds)
+2020-12-23 18:45:22	-->	tinloaf (~tinloaf@2a03:94e0:163c:57e:bc51:5c66:86e7:1) has joined #i3
+2020-12-23 18:48:54	<--	qgTG (~qgTG@unaffiliated/qgtg) has quit (Quit: quit)
+2020-12-23 18:49:14	-->	qgTG (~qgTG@unaffiliated/qgtg) has joined #i3
+2020-12-23 18:50:19	-->	eater9 (~eater@216-180-84-145.starry-inc.net) has joined #i3
+2020-12-23 18:52:23	-->	darunesh (~darunesh@2401:4900:362d:1a2:ba97:83d6:20c7:efe9) has joined #i3
+2020-12-23 19:08:17	<--	dancus (~dancus@dynamic-adsl-94-34-166-32.clienti.tiscali.it) has quit (Quit: WeeChat 2.9)
+2020-12-23 19:22:29	-->	tarruda1 (~tarruda@170.238.137.7) has joined #i3
+2020-12-23 19:27:29	<--	darunesh (~darunesh@2401:4900:362d:1a2:ba97:83d6:20c7:efe9) has quit (Quit: #init 0)
+2020-12-23 19:28:37	<--	randomguy090 (~RandomGuy@91.239.205.33) has quit (Ping timeout: 260 seconds)
+2020-12-23 19:38:31	<--	justan0theruser (~justanoth@unaffiliated/justanotheruser) has quit (Ping timeout: 268 seconds)
+2020-12-23 19:53:02	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 19:57:06	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-23 20:01:08	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 20:01:18	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-23 20:03:58	-->	till_b` (~user@ip-178-203-145-70.hsi10.unitymediagroup.de) has joined #i3
+2020-12-23 20:04:37	--	till_b` is now known as till_b
+2020-12-23 20:07:20	-->	ShimmerGlass (uid144530@gateway/web/irccloud.com/x-sjadhaknrmwbcskl) has joined #i3
+2020-12-23 20:14:28	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 20:14:36	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-23 20:15:37	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 20:16:17	-->	executionByFork (executionB@gateway/vpn/protonvpn/executionbyfork) has joined #i3
+2020-12-23 20:17:50	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-23 20:18:16	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 20:22:14	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-23 20:25:48	<--	executionByFork (executionB@gateway/vpn/protonvpn/executionbyfork) has quit (Quit: leaving)
+2020-12-23 20:26:43	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 20:27:48	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-23 20:31:51	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 20:34:33	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Client Quit)
+2020-12-23 20:35:07	-->	greggerz_ (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-23 20:36:01	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 20:37:13	<--	greggerz__ (~greggerz@unaffiliated/greggerz) has quit (Ping timeout: 264 seconds)
+2020-12-23 20:37:34	<--	tarruda1 (~tarruda@170.238.137.7) has quit (Read error: Connection reset by peer)
+2020-12-23 20:38:06	-->	tarruda1 (~tarruda@170.238.137.7) has joined #i3
+2020-12-23 20:44:47	-->	justan0theruser (~justanoth@unaffiliated/justanotheruser) has joined #i3
+2020-12-23 21:06:20	<--	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has quit (Quit: WeeChat 3.0)
+2020-12-23 21:07:10	-->	thrill_seeker (~thrill_se@18.red-83-32-209.dynamicip.rima-tde.net) has joined #i3
+2020-12-23 21:08:50	-->	carcamovski (~Thunderbi@45.4.2.190) has joined #i3
+2020-12-23 21:10:19	<--	dftxbs3e (~dftxbs3e@unaffiliated/dftxbs3e) has quit (Remote host closed the connection)
+2020-12-23 21:29:38	-->	DaNeenjah (~DaNeenjah@2600:1005:b143:d051:b71f:fc12:15d1:2de3) has joined #i3
+2020-12-23 21:29:59	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-23 21:34:37	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-23 21:35:47	--	wpp is now known as wipro
+2020-12-23 21:36:02	--	wipro is now known as wpp
+2020-12-23 21:45:53	-->	dftxbs3e (~dftxbs3e@unaffiliated/dftxbs3e) has joined #i3
+2020-12-23 22:10:02	-->	okad (~okad@ec2-18-135-78-237.eu-west-2.compute.amazonaws.com) has joined #i3
+2020-12-24 06:11:05	--	irc: disconnected from server
+2020-12-24 06:11:39	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-24 06:11:39	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-24 06:11:39	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-24 06:11:39	--	Channel #i3: 282 nicks (2 ops, 0 voices, 280 normals)
+2020-12-24 06:11:56	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-24 06:12:15	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Remote host closed the connection)
+2020-12-24 06:12:23	<--	mnemonic (~semeion@unaffiliated/semeion) has quit (Quit: WeeChat 3.0)
+2020-12-24 06:12:24	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-24 06:13:38	-->	stef204 (~stef204@unaffiliated/stef-204/x-384198) has joined #i3
+2020-12-24 06:18:56	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Ping timeout: 240 seconds)
+2020-12-24 06:19:51	-->	meropyri (~meropyri@gateway/tor-sasl/meropyri) has joined #i3
+2020-12-24 06:20:40	-->	lord| (~solenodic@unaffiliated/solenodic) has joined #i3
+2020-12-24 06:20:50	plitter	amanqa: What version of slack are you using?
+2020-12-24 06:21:59	plitter	I'm currently using https://aur.archlinux.org/packages/slack-desktop 4.12
+2020-12-24 06:25:10	<--	meropyri (~meropyri@gateway/tor-sasl/meropyri) has quit (Remote host closed the connection)
+2020-12-24 06:27:56	-->	meropyri (~meropyri@gateway/tor-sasl/meropyri) has joined #i3
+2020-12-24 06:28:04	@sur5r	amanqa: "Slack Desktop" is just another Browser missing an address bar
+2020-12-24 06:28:07	@sur5r	it's chrome inside
+2020-12-24 06:28:35	@sur5r	It works fine for me, though
+2020-12-24 06:29:22	-->	antikythera (antikyther@gateway/vpn/privateinternetaccess/antikythera) has joined #i3
+2020-12-24 06:44:13	tyjak	I haf
+2020-12-24 06:45:36	tyjak	amanqa: do you use nvidia graphic card ?
+2020-12-24 06:48:28	-->	f3r0x (~ferox2@host-78-146-9-167.as13285.net) has joined #i3
+2020-12-24 06:48:38	f3r0x	can anyone tell me how to disable titlebars in i3?
+2020-12-24 06:48:48	f3r0x	i have used default border none, to no avail
+2020-12-24 06:49:46	amanqa	plitter My slack version is 4.12.0 Slack for Linux
+2020-12-24 06:51:48	amanqa	tyjak No, not Nvidia. I have a Dell XPS running Ubuntu 20.04 with Intel UHD graphics 620.
+2020-12-24 06:53:24	amanqa	sur5r ah, so then it makes sense that chrome and Slack Desktop -- which is chrome inside -- are both causing these issues.
+2020-12-24 06:54:27	kjetilho	amanqa: ah, I have a Dell XPS, too.  it has, in addition to Intel UHD, 01:00.0 3D controller: NVIDIA Corporation GP107M [GeForce GTX 1050 Ti Mobile] (rev a1)
+2020-12-24 06:55:36	kjetilho	that may explain why the Nvidia driver did not work for me :-D  I completely missed that the VGA controller in Intel
+2020-12-24 06:56:08	amanqa	Ooh interesting, I didn't realize that was possible. I don't see any reference to NVIDIA when I use lspci
+2020-12-24 06:56:30	amanqa	$ lspci -k | grep -iEA5 'vga'
+2020-12-24 07:01:02	plitter	have you tried with the nouveau driver instead of the nvidia driver?
+2020-12-24 07:02:35	<--	michael-kohlhaas (~michael-k@gateway/tor-sasl/michael-kohlhaas) has quit (Remote host closed the connection)
+2020-12-24 07:03:17	<--	charims (~quassel@wsip-24-234-28-130.lv.lv.cox.net) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-24 07:04:31	<--	f3r0x (~ferox2@host-78-146-9-167.as13285.net) has quit (Quit: Leaving)
+2020-12-24 07:08:38	kjetilho	how do I check what X driver module I am currently using?  can't quite make head or tails of the output in journalctl -b -u session-c1.scope
+2020-12-24 07:13:24	kjetilho	I mean, it looks like I'm using fbdev.  IT CAN NOT BE!
+2020-12-24 07:19:14	-->	superbolide (~x@cpe-66-27-85-1.san.res.rr.com) has joined #i3
+2020-12-24 07:24:55	-->	charims (~quassel@wsip-24-234-28-130.lv.lv.cox.net) has joined #i3
+2020-12-24 07:31:00	iwkse	Hi, do you know if with i3blocks is possible to dinamically change color of the block? Something that's already done automatically with the battery block, showing a different color according to the devel. I wonder if there's a way to script it
+2020-12-24 07:40:52	<--	Kabouik (~Kabouik@2a03:4000:4d:fbd:4fe:b1ff:fee3:35d) has quit (Remote host closed the connection)
+2020-12-24 07:41:45	-->	greggerz__ (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-24 07:44:37	<--	greggerz_ (~greggerz@unaffiliated/greggerz) has quit (Ping timeout: 264 seconds)
+2020-12-24 07:47:00	-->	Kabouik (~Kabouik@2a03:4000:4d:fbd:4fe:b1ff:fee3:35d) has joined #i3
+2020-12-24 07:51:16	-->	DaNeenjah (~DaNeenjah@2600:1005:b141:85cf:c838:1de7:b134:104) has joined #i3
+2020-12-24 07:54:37	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Quit: WeeChat 2.8)
+2020-12-24 11:23:00	--	irc: disconnected from server
+2020-12-24 11:23:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-24 11:23:35	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-24 11:23:35	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-24 11:23:35	--	Channel #i3: 276 nicks (2 ops, 0 voices, 274 normals)
+2020-12-24 11:23:52	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-24 11:32:39	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-24 11:34:57	-->	DaNeenjah (~DaNeenjah@2600:1005:b141:85cf:c838:1de7:b134:104) has joined #i3
+2020-12-24 11:38:03	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 268 seconds)
+2020-12-24 11:50:49	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-24 11:55:41	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 258 seconds)
+2020-12-24 11:57:52	<--	catman370 (~catman@unaffiliated/catman370) has quit (Quit: Peace out!)
+2020-12-24 12:00:16	-->	catman370 (~catman@unaffiliated/catman370) has joined #i3
+2020-12-24 12:04:16	<--	tschan (~tschan@p57a863f5.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2020-12-24 12:09:24	-->	tschan (~tschan@p57a86167.dip0.t-ipconnect.de) has joined #i3
+2020-12-24 12:20:38	-->	tejing (~tejing@47.154.37.247) has joined #i3
+2020-12-24 19:00:38	--	irc: disconnected from server
+2020-12-24 19:01:12	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-24 19:01:12	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-24 19:01:12	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-24 19:01:12	--	Channel #i3: 280 nicks (2 ops, 0 voices, 278 normals)
+2020-12-24 19:01:25	-->	till_b (~user@ip-178-203-145-70.hsi10.unitymediagroup.de) has joined #i3
+2020-12-24 19:01:30	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-24 19:04:50	<--	eleksir (~UNIX@195.91.173.49) has quit (Ping timeout: 264 seconds)
+2020-12-24 19:11:43	-->	eleksir (~UNIX@195.91.173.49) has joined #i3
+2020-12-24 19:27:20	<--	pjs (~pjs@base.netlandish.com) has quit (Ping timeout: 256 seconds)
+2020-12-24 19:28:28	-->	pjs (~pjs@base.netlandish.com) has joined #i3
+2020-12-24 19:30:40	--	narimiran_ is now known as narimiran
+2020-12-24 19:35:06	-->	michael-kohlhaas (~michael-k@gateway/tor-sasl/michael-kohlhaas) has joined #i3
+2020-12-24 19:41:00	<--	coldycoldi (~user@amarseille-654-1-306-128.w90-37.abo.wanadoo.fr) has quit (Remote host closed the connection)
+2020-12-24 19:55:04	-->	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has joined #i3
+2020-12-24 19:57:37	<--	justanotheruser (~justanoth@unaffiliated/justanotheruser) has quit (Ping timeout: 246 seconds)
+2020-12-24 19:59:47	<--	citizen_stig (~citizen_s@2001:982:9f64:1:e061:bb56:db25:6db8) has quit (Ping timeout: 260 seconds)
+2020-12-24 20:31:28	<--	greggerz_ (~greggerz@unaffiliated/greggerz) has quit (Read error: Connection reset by peer)
+2020-12-24 20:32:18	-->	greggerz_ (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-24 20:38:12	<--	crash_ (~pi@158.174.58.161) has left #i3
+2020-12-25 01:06:20	--	irc: disconnected from server
+2020-12-25 01:07:05	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-25 01:07:05	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-25 01:07:05	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-25 01:07:05	--	Channel #i3: 281 nicks (2 ops, 0 voices, 279 normals)
+2020-12-25 01:07:22	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-25 01:16:10	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 265 seconds)
+2020-12-25 01:18:39	<--	theorangeone_ (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has quit (Quit: No Ping reply in 180 seconds.)
+2020-12-25 01:19:57	-->	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has joined #i3
+2020-12-25 01:20:31	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 01:24:39	<--	tesseract (~tesseract@2a01:e0a:24b:f220:8eb4:c22:16f:5ba0) has quit (Quit: Leaving)
+2020-12-25 01:24:51	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 246 seconds)
+2020-12-25 01:26:01	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 01:26:51	<--	narimiran (~miran@unaffiliated/miran) has quit (Ping timeout: 268 seconds)
+2020-12-25 01:33:39	<--	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has quit (Quit: No Ping reply in 180 seconds.)
+2020-12-25 01:35:04	-->	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has joined #i3
+2020-12-25 01:36:22	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 260 seconds)
+2020-12-25 01:37:01	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 01:41:33	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 256 seconds)
+2020-12-25 01:43:31	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 01:48:01	<--	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has quit (Ping timeout: 260 seconds)
+2020-12-25 01:48:21	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 256 seconds)
+2020-12-25 01:50:17	-->	theorangeone (~quassel@host86-140-100-159.range86-140.btcentralplus.com) has joined #i3
+2020-12-25 01:50:32	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 01:53:00	-->	twiclo (~twiclo@2604:7b80:2000:1069:52fc:cedd:fbeb:10c) has joined #i3
+2020-12-25 01:58:42	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 265 seconds)
+2020-12-25 01:59:05	twiclo	Can I set both outer and inner gap sizes in one bindsym?
+2020-12-25 02:00:32	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 02:03:00	<--	r3-{s0urce (~r3-s0urce@bzq-84-110-103-67.red.bezeqint.net) has quit (Ping timeout: 246 seconds)
+2020-12-25 02:06:59	<--	michael-kohlhaas (~michael-k@gateway/tor-sasl/michael-kohlhaas) has quit (Remote host closed the connection)
+2020-12-25 02:11:35	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 240 seconds)
+2020-12-25 02:12:32	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 02:20:09	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 246 seconds)
+2020-12-25 02:28:03	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 02:38:37	<--	tarruda (~tarruda@170.238.137.7) has quit (Ping timeout: 256 seconds)
+2020-12-25 02:39:21	-->	tarruda (~tarruda@170.238.137.7) has joined #i3
+2020-12-25 02:39:37	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Ping timeout: 268 seconds)
+2020-12-25 02:40:40	-->	lord| (~solenodic@unaffiliated/solenodic) has joined #i3
+2020-12-25 02:59:55	<--	twiclo (~twiclo@2604:7b80:2000:1069:52fc:cedd:fbeb:10c) has quit (Quit: WeeChat 2.9)
+2020-12-25 03:17:01	<--	cantstanya (~chatting@gateway/tor-sasl/cantstanya) has quit (Remote host closed the connection)
+2020-12-25 03:20:08	-->	cantstanya (~chatting@gateway/tor-sasl/cantstanya) has joined #i3
+2020-12-25 03:25:33	-->	linux_dream (~isaac@unaffiliated/linux-dream/x-5839402) has joined #i3
+2020-12-25 03:28:39	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 256 seconds)
+2020-12-25 03:32:05	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 03:42:24	<--	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has quit (Ping timeout: 246 seconds)
+2020-12-25 03:48:35	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Ping timeout: 240 seconds)
+2020-12-25 03:50:33	-->	lord| (~solenodic@unaffiliated/solenodic) has joined #i3
+2020-12-25 03:51:04	-->	anemoiac (~anemoiac@23.226.128.210) has joined #i3
+2020-12-25 04:10:33	<--	anemoiac (~anemoiac@23.226.128.210) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-25 04:22:54	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-25 04:39:52	<--	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has quit (Ping timeout: 268 seconds)
+2020-12-25 06:58:26	--	irc: disconnected from server
+2020-12-25 06:59:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-25 06:59:06	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-25 06:59:06	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-25 06:59:06	--	Channel #i3: 279 nicks (2 ops, 0 voices, 277 normals)
+2020-12-25 06:59:22	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-25 07:12:32	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-25 07:15:41	<--	darunesh (~darunesh@122.170.110.31) has quit (Read error: Connection reset by peer)
+2020-12-25 07:15:52	-->	darunesh (~darunesh@122.170.110.31) has joined #i3
+2020-12-25 07:21:20	<--	somis (~somis@149.56.153.180) has quit (Quit: WeeChat 3.0)
+2020-12-25 07:23:45	-->	somis (~somis@149.56.153.183) has joined #i3
+2020-12-25 07:32:03	<--	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has quit (Quit: WeeChat 3.0)
+2020-12-25 07:34:55	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Quit: thefuzz)
+2020-12-25 07:49:08	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-25 07:57:33	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Quit: thefuzz)
+2020-12-25 08:03:16	<--	darunesh (~darunesh@122.170.110.31) has quit (Ping timeout: 272 seconds)
+2020-12-25 08:17:53	-->	pluberflas (~brandon@cpe-71-75-235-190.carolina.res.rr.com) has joined #i3
+2020-12-25 08:33:16	-->	DaNeenjah (~DaNeenjah@adsl-74-230-10-200.hsv.bellsouth.net) has joined #i3
+2020-12-25 08:36:53	<--	DaNeenjah (~DaNeenjah@adsl-74-230-10-200.hsv.bellsouth.net) has quit (Client Quit)
+2020-12-25 08:37:11	-->	DaNeenjah (~DaNeenjah@2600:1005:b12d:b705:af00:7a58:2ee6:6161) has joined #i3
+2020-12-25 09:29:33	<--	mowcat (~mowcat@cpc105068-sgyl40-2-0-cust91.18-2.cable.virginm.net) has quit (Remote host closed the connection)
+2020-12-25 09:44:56	<--	rdelfin (~rdelfin@cpc158601-hari23-2-0-cust44.20-2.cable.virginm.net) has quit (Ping timeout: 256 seconds)
+2020-12-25 09:53:01	<--	theoceaniscool (~theoceani@188.127.171.56) has quit (Ping timeout: 264 seconds)
+2020-12-25 09:54:05	<--	till_b (~user@ip-178-203-145-70.hsi10.unitymediagroup.de) has quit (Remote host closed the connection)
+2020-12-25 09:54:22	-->	rdelfin (~rdelfin@cpc158601-hari23-2-0-cust44.20-2.cable.virginm.net) has joined #i3
+2020-12-25 10:03:49	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-25 10:06:03	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-25 10:07:34	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2020-12-25 10:08:47	-->	kupi (uid212005@gateway/web/irccloud.com/x-luozpabxvpomtxpu) has joined #i3
+2020-12-25 10:12:20	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-25 10:14:17	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:17:09	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-25 10:19:15	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:21:28	-->	greek_soon (~greek_s@116.30.220.162) has joined #i3
+2020-12-25 10:37:55	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-25 10:40:27	<--	DaNeenjah (~DaNeenjah@2600:1005:b12d:b705:af00:7a58:2ee6:6161) has quit (Quit: WeeChat 3.0)
+2020-12-25 10:41:13	-->	DaNeenjah (~DaNeenjah@adsl-74-230-10-200.hsv.bellsouth.net) has joined #i3
+2020-12-25 10:42:07	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 10:45:19	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-25 10:45:54	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-25 11:05:30	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-25 11:14:10	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-25 11:24:47	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Quit: thefuzz)
+2020-12-25 11:25:28	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-25 11:26:14	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Client Quit)
+2020-12-25 11:26:59	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-25 12:00:15	<--	Moxie (~moxie@91-156-69-159.elisa-laajakaista.fi) has quit (Quit: WeeChat 2.9)
+2020-12-25 12:04:20	<--	tschan (~tschan@p57a86167.dip0.t-ipconnect.de) has quit (Ping timeout: 265 seconds)
+2020-12-25 12:05:28	-->	woodruffw (~yossarian@unaffiliated/cpt-yossarian/x-8375832) has joined #i3
+2020-12-25 12:10:24	-->	tschan (~tschan@p57a8612c.dip0.t-ipconnect.de) has joined #i3
+2020-12-25 12:17:54	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Quit: Leaving)
+2020-12-25 12:29:04	<--	DaNeenjah (~DaNeenjah@adsl-74-230-10-200.hsv.bellsouth.net) has quit (Quit: WeeChat 3.0)
+2020-12-25 12:44:18	<--	pluberflas (~brandon@cpe-71-75-235-190.carolina.res.rr.com) has quit (Quit: WeeChat 2.8)
+2020-12-25 12:47:24	<--	greek_soon (~greek_s@116.30.220.162) has quit (Ping timeout: 256 seconds)
+2020-12-25 12:47:24	-->	DaNeenjah (~DaNeenjah@2600:1005:b12d:b705:af00:7a58:2ee6:6161) has joined #i3
+2020-12-25 12:47:48	-->	greek_soon (~greek_s@116.30.220.162) has joined #i3
+2020-12-25 13:16:59	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-25 13:19:46	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Quit: leaving)
+2020-12-25 13:33:45	-->	narimiran (~miran@unaffiliated/miran) has joined #i3
+2020-12-25 13:34:45	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-25 13:38:49	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Client Quit)
+2020-12-25 13:47:39	<--	kupi (uid212005@gateway/web/irccloud.com/x-luozpabxvpomtxpu) has quit (Quit: Connection closed for inactivity)
+2020-12-25 13:53:06	<--	swflint (~swflint@fsf/member/swflint) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:53:18	-->	swflint_away (~swflint@fsf/member/swflint) has joined #i3
+2020-12-25 13:53:42	--	swflint_away is now known as swflint
+2020-12-25 15:46:37	--	irc: disconnected from server
+2020-12-25 15:47:15	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-25 15:47:15	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-25 15:47:15	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-25 15:47:15	--	Channel #i3: 277 nicks (2 ops, 0 voices, 275 normals)
+2020-12-25 15:47:31	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-25 15:57:31	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Ping timeout: 272 seconds)
+2020-12-26 06:21:47	--	irc: disconnected from server
+2020-12-26 06:22:25	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-26 06:22:25	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-26 06:22:25	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-26 06:22:25	--	Channel #i3: 283 nicks (2 ops, 0 voices, 281 normals)
+2020-12-26 06:22:43	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-26 06:32:02	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-26 06:33:40	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Client Quit)
+2020-12-26 06:37:19	<--	catman370 (~catman@unaffiliated/catman370) has quit (Quit: Peace out!)
+2020-12-26 06:39:45	<--	DaNeenjah (~DaNeenjah@2600:1005:b12b:ed6d:7525:ed09:a7c4:a1b4) has quit (Ping timeout: 272 seconds)
+2020-12-26 06:41:36	-->	DaNeenjah (~DaNeenjah@2600:1005:b151:9454:23f8:ff3e:2f14:7ede) has joined #i3
+2020-12-26 06:45:53	<--	drot (drot@unaffiliated/drot) has quit (Read error: Connection reset by peer)
+2020-12-26 06:55:48	<--	m0u (~m0u@unaffiliated/m0u) has quit (Ping timeout: 265 seconds)
+2020-12-26 07:02:12	-->	catman370 (~catman@unaffiliated/catman370) has joined #i3
+2020-12-26 08:55:32	--	irc: disconnected from server
+2020-12-26 08:56:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-26 08:56:09	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-26 08:56:09	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-26 08:56:09	--	Channel #i3: 281 nicks (2 ops, 0 voices, 279 normals)
+2020-12-26 08:56:26	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-26 09:01:52	<--	sbk (~quassel@2600:1702:1460:c960::15) has left #i3 ("https://quassel-irc.org - Chat comfortably. Anywhere.")
+2020-12-26 09:15:01	-->	antikyther (~antikythe@138.199.13.201) has joined #i3
+2020-12-26 09:17:28	<--	antikythera (antikyther@gateway/vpn/privateinternetaccess/antikythera) has quit (Ping timeout: 260 seconds)
+2020-12-26 09:17:43	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Quit: thefuzz)
+2020-12-26 09:52:04	-->	antikythera (antikyther@gateway/vpn/privateinternetaccess/antikythera) has joined #i3
+2020-12-26 09:54:18	<--	antikyther (~antikythe@138.199.13.201) has quit (Ping timeout: 256 seconds)
+2020-12-26 09:55:06	<--	DaNeenjah (~DaNeenjah@2600:1005:b151:9454:23f8:ff3e:2f14:7ede) has quit (Quit: WeeChat 3.0)
+2020-12-26 10:17:06	tejing	hmm, my picom is using 100% of a core, but only when my screen is locked with i3lock... I only happened to notice because I was ssh'd in from my phone. Anyone else seen this or better yet have a fix?
+2020-12-26 10:55:38	-->	jezza (~jezza@2a10:3781:de:2:fa4a:d0b5:45c5:e9a6) has joined #i3
+2020-12-26 11:04:44	-->	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has joined #i3
+2020-12-26 11:06:02	<--	thefuzz (~thefuzz@c-174-53-241-227.hsd1.mn.comcast.net) has quit (Client Quit)
+2020-12-26 11:26:23	<--	jezza (~jezza@2a10:3781:de:2:fa4a:d0b5:45c5:e9a6) has quit (Quit: Leaving)
+2020-12-26 12:04:13	<--	tschan (~tschan@p57a8612c.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2020-12-26 12:09:38	-->	tschan (~tschan@p2e53a470.dip0.t-ipconnect.de) has joined #i3
+2020-12-26 12:11:58	-->	carcamovski1 (~Thunderbi@45.4.2.180) has joined #i3
+2020-12-26 12:13:03	<--	carcamovski (~Thunderbi@45.4.2.190) has quit (Ping timeout: 268 seconds)
+2020-12-26 12:13:03	--	carcamovski1 is now known as carcamovski
+2020-12-26 12:18:41	-->	conray (~conray@p54911626.dip0.t-ipconnect.de) has joined #i3
+2020-12-26 12:45:27	-->	zerotex (~zerotex@2600:380:6714:42f7:9d08:b502:42c9:2232) has joined #i3
+2020-12-26 14:29:17	--	irc: disconnected from server
+2020-12-26 14:29:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-26 14:29:54	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-26 14:29:54	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-26 14:29:54	--	Channel #i3: 277 nicks (2 ops, 0 voices, 275 normals)
+2020-12-26 14:30:11	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-26 15:22:53	-->	narimiran (~miran@unaffiliated/miran) has joined #i3
+2020-12-26 15:43:56	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Ping timeout: 268 seconds)
+2020-12-26 15:57:16	-->	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has joined #i3
+2020-12-26 16:44:58	<--	lord| (~solenodic@unaffiliated/solenodic) has quit (Remote host closed the connection)
+2020-12-26 16:48:20	-->	lord| (~solenodic@unaffiliated/solenodic) has joined #i3
+2020-12-26 16:52:46	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-26 16:55:37	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-26 18:04:04	<--	joedoe47 (~joedoe47@c-98-254-188-143.hsd1.fl.comcast.net) has quit (Ping timeout: 258 seconds)
+2020-12-26 18:07:57	<--	kupi (uid212005@gateway/web/irccloud.com/x-svbzcydmccffkyhg) has quit (Quit: Connection closed for inactivity)
+2020-12-26 18:17:02	-->	joedoe47 (~joedoe47@c-98-254-188-143.hsd1.fl.comcast.net) has joined #i3
+2020-12-26 18:19:45	-->	m0u (~m0u@unaffiliated/m0u) has joined #i3
+2020-12-26 18:56:59	-->	greek_soon (~greek_s@120.229.1.153) has joined #i3
+2020-12-26 19:07:15	<--	Anthaas (~Anthaas@unaffiliated/anthaas) has quit (Ping timeout: 240 seconds)
+2020-12-26 19:09:36	-->	Anthaas (~Anthaas@unaffiliated/anthaas) has joined #i3
+2020-12-26 19:11:37	<--	m0u (~m0u@unaffiliated/m0u) has quit (Ping timeout: 272 seconds)
+2020-12-26 19:12:01	-->	m0u (~m0u@unaffiliated/m0u) has joined #i3
+2020-12-26 19:12:43	<--	greek_soon (~greek_s@120.229.1.153) has quit (Quit: WeeChat 3.0)
+2020-12-26 19:26:52	-->	drot (drot@unaffiliated/drot) has joined #i3
+2020-12-26 19:27:43	<--	Hund (Hund@ubuntu/member/hund) has left #i3 ("WeeChat 2.8")
+2020-12-26 19:28:21	<--	m0u (~m0u@unaffiliated/m0u) has quit (Ping timeout: 246 seconds)
+2020-12-26 19:40:11	<--	DamienCassou (damiencass@gateway/shell/matrix.org/x-grhapbhrugurlapf) has quit (Ping timeout: 260 seconds)
+2020-12-26 19:53:15	-->	DamienCassou (damiencass@gateway/shell/matrix.org/x-gjehgrjmktnwwdci) has joined #i3
+2020-12-26 20:17:47	<--	theoceaniscool (~theoceani@188.127.171.56) has quit (Ping timeout: 256 seconds)
+2020-12-26 20:19:45	-->	theoceaniscool (~theoceani@188.127.171.56) has joined #i3
+2020-12-26 20:45:41	-->	greggerz__ (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-26 20:47:55	<--	greggerz_ (~greggerz@unaffiliated/greggerz) has quit (Ping timeout: 240 seconds)
+2020-12-26 20:55:20	<--	kakaka (~koniu@gateway/tor-sasl/koniu) has quit (Remote host closed the connection)
+2020-12-26 20:55:22	-->	spacekookie_ (~kookie@qaul.net/dev/spacekookie) has joined #i3
+2020-12-26 20:55:53	-->	kakaka (~koniu@gateway/tor-sasl/koniu) has joined #i3
+2020-12-26 20:58:32	<--	spacekookie (~kookie@qaul.net/dev/spacekookie) has quit (Ping timeout: 272 seconds)
+2020-12-26 21:15:51	<--	greggerz__ (~greggerz@unaffiliated/greggerz) has quit (Ping timeout: 260 seconds)
+2020-12-27 09:05:27	--	irc: disconnected from server
+2020-12-27 09:06:24	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-27 09:06:24	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-27 09:06:24	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-27 09:06:24	--	Channel #i3: 274 nicks (2 ops, 0 voices, 272 normals)
+2020-12-27 09:06:40	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-27 09:11:29	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #i3
+2020-12-27 09:17:27	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 09:20:48	tejing	yeah, I normally use `xset dpms force off`
+2020-12-27 09:22:25	-->	justanotheruser (~justanoth@unaffiliated/justanotheruser) has joined #i3
+2020-12-27 09:28:01	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #i3
+2020-12-27 09:33:45	-->	DaNeenjah (~DaNeenjah@2600:1005:b15e:e798:d56a:89af:ecfb:41f1) has joined #i3
+2020-12-27 09:34:01	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 09:39:05	<--	Anthaas (~Anthaas@unaffiliated/anthaas) has quit (Ping timeout: 240 seconds)
+2020-12-27 09:40:12	<--	theoceaniscool (~theoceani@188.127.171.56) has quit (Ping timeout: 260 seconds)
+2020-12-27 09:41:08	-->	Anthaas (~Anthaas@unaffiliated/anthaas) has joined #i3
+2020-12-27 09:57:38	-->	greggerz_ (~greggerz@unaffiliated/greggerz) has joined #i3
+2020-12-27 10:00:19	<--	greggerz__ (~greggerz@unaffiliated/greggerz) has quit (Ping timeout: 260 seconds)
+2020-12-27 10:07:37	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #i3
+2020-12-27 10:13:38	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 10:24:30	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #i3
+2020-12-27 10:31:22	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 10:38:05	<--	chesty (~chesty@whocares.crashbunny.com) has quit (Quit: the ting go skrra)
+2020-12-27 10:38:25	-->	chesty (~chesty@whocares.crashbunny.com) has joined #i3
+2020-12-27 10:41:07	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #i3
+2020-12-27 10:42:38	-->	carcamovski1 (~Thunderbi@45.4.2.189) has joined #i3
+2020-12-30 19:38:46	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-30 19:38:46	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-30 19:38:46	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-30 19:38:46	--	Channel #i3: 276 nicks (2 ops, 0 voices, 274 normals)
+2020-12-30 19:39:04	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-30 19:39:05	<--	qgTG (~qgTG@unaffiliated/qgtg) has quit (Ping timeout: 240 seconds)
+2020-12-30 20:22:52	-->	kmarius (~kmarius@p5b099ac4.dip0.t-ipconnect.de) has joined #i3
+2020-12-30 20:57:39	<--	theorangeone (~quassel@host109-147-121-123.range109-147.btcentralplus.com) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-30 20:58:08	-->	theorangeone (~quassel@host109-147-121-123.range109-147.btcentralplus.com) has joined #i3
+2020-12-30 21:00:16	<--	theorangeone (~quassel@host109-147-121-123.range109-147.btcentralplus.com) has quit (Client Quit)
+2020-12-30 21:03:52	<--	Anthaas (~Anthaas@unaffiliated/anthaas) has quit (Ping timeout: 246 seconds)
+2020-12-30 21:04:23	-->	theorangeone (~quassel@host109-147-121-123.range109-147.btcentralplus.com) has joined #i3
+2020-12-30 21:06:33	-->	Anthaas (~Anthaas@unaffiliated/anthaas) has joined #i3
+2020-12-30 21:09:17	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Read error: No route to host)
+2020-12-30 21:12:01	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined #i3
+2020-12-30 21:33:58	<--	meropyri (~meropyri@gateway/tor-sasl/meropyri) has quit (Remote host closed the connection)
+2020-12-30 21:34:15	-->	meropyri (~meropyri@gateway/tor-sasl/meropyri) has joined #i3
+2020-12-30 21:34:19	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-30 21:35:52	<--	meropyri (~meropyri@gateway/tor-sasl/meropyri) has quit (Remote host closed the connection)
+2020-12-30 21:36:06	-->	meropyri (~meropyri@gateway/tor-sasl/meropyri) has joined #i3
+2020-12-30 21:38:03	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-30 21:40:59	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-30 21:56:23	-->	HumanG33k (~HumanG33k@82-64-99-84.subs.proxad.net) has joined #i3
+2020-12-30 21:57:25	-->	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has joined #i3
+2020-12-30 22:03:33	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-30 22:04:50	<--	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-30 22:04:50	<--	theorangeone (~quassel@host109-147-121-123.range109-147.btcentralplus.com) has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-30 22:06:03	-->	theorangeone (~quassel@host109-147-121-123.range109-147.btcentralplus.com) has joined #i3
+2020-12-30 22:18:10	-->	carcamovski (~Thunderbi@45.4.2.180) has joined #i3
+2020-12-30 22:25:45	-->	acetakwas (~acetakwas@acetakwas.powered.by.lunarbnc.net) has joined #i3
+2020-12-30 22:32:30	<--	HumanG33k (~HumanG33k@82-64-99-84.subs.proxad.net) has quit (Remote host closed the connection)
+2020-12-30 22:34:37	-->	HumanG33k (~HumanG33k@82-64-99-84.subs.proxad.net) has joined #i3
+2020-12-31 07:49:35	--	irc: disconnected from server
+2020-12-31 07:50:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-31 07:50:17	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-31 07:50:17	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-31 07:50:17	--	Channel #i3: 277 nicks (2 ops, 0 voices, 275 normals)
+2020-12-31 07:50:34	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-31 09:21:22	--	irc: disconnected from server
+2020-12-31 09:21:59	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2020-12-31 09:21:59	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2020-12-31 09:21:59	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2020-12-31 09:21:59	--	Channel #i3: 275 nicks (2 ops, 0 voices, 273 normals)
+2020-12-31 09:22:16	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2020-12-31 09:28:45	<--	einveru (einveru@gateway/vpn/protonvpn/einveru) has quit (Ping timeout: 240 seconds)
+2020-12-31 09:31:10	-->	einveru (~einveru@ip72-211-79-82.no.no.cox.net) has joined #i3
+2020-12-31 09:41:43	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Quit: WeeChat 2.8)
+2020-12-31 09:53:36	-->	CyberTrekker (cybertrekk@gateway/vpn/protonvpn/cybertrekker) has joined #i3
+2020-12-31 10:02:12	-->	antikyther (~antikythe@138.199.13.149) has joined #i3
+2020-12-31 10:04:41	<--	antikythera (antikyther@gateway/vpn/privateinternetaccess/antikythera) has quit (Ping timeout: 272 seconds)
+2020-12-31 10:16:28	<--	kmarius (~kmarius@p5b099ac4.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2020-12-31 10:19:28	-->	azed (~azed@160.156.42.195) has joined #i3
+2020-12-31 10:38:43	<--	greek_so1 (~greek_s@116.30.220.54) has quit (Ping timeout: 256 seconds)
+2020-12-31 10:40:29	-->	greek_so1 (~greek_s@116.30.220.54) has joined #i3
+2020-12-31 10:51:54	<--	azed (~azed@160.156.42.195) has quit (Quit: WeeChat 3.0)
+2020-12-31 10:58:20	<--	greek_so1 (~greek_s@116.30.220.54) has quit (Quit: WeeChat 3.0)
+2020-12-31 10:58:38	-->	greek_soon (~greek_s@116.30.220.54) has joined #i3
+2020-12-31 10:59:06	<--	CyberTrekker (cybertrekk@gateway/vpn/protonvpn/cybertrekker) has quit (Remote host closed the connection)
+2020-12-31 10:59:41	-->	CyberTrekker (cybertrekk@gateway/vpn/protonvpn/cybertrekker) has joined #i3
+2020-12-31 11:06:03	<--	greek_soon (~greek_s@116.30.220.54) has quit (Ping timeout: 260 seconds)
+2020-12-31 11:08:03	-->	greek_soon (~greek_s@116.30.220.54) has joined #i3
+2020-12-31 11:12:59	-->	catman370 (~catman@unaffiliated/catman370) has joined #i3
+2020-12-31 11:23:04	-->	jotaxpe (~jotaxpe@191.113.108.188) has joined #i3
+2020-12-31 11:23:48	<--	fflam (~mdt@ip70-179-20-127.sd.sd.cox.net) has quit (Ping timeout: 265 seconds)
+2020-12-31 11:24:53	-->	fflam (~mdt@ip70-179-20-127.sd.sd.cox.net) has joined #i3
+2020-12-31 11:26:06	<--	jotaxpe (~jotaxpe@191.113.108.188) has quit (Client Quit)
+2020-12-31 12:02:32	<--	darunesh (~darunesh@122.170.110.31) has quit (Quit: #init 0)
+2020-12-31 12:03:43	<--	tschan (~tschan@p57a864bd.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2020-12-31 12:08:57	--	irc: disconnected from server
+2021-01-01 11:08:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2021-01-01 11:08:09	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2021-01-01 11:08:09	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2021-01-01 11:08:09	--	Channel #i3: 281 nicks (2 ops, 0 voices, 279 normals)
+2021-01-01 11:08:26	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2021-01-01 11:11:21	<--	kmarius (~kmarius@p5b099ac4.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2021-01-01 11:16:01	<--	geowiesnot (~user@i15-les02-ix2-87-89-181-157.sfr.lns.abo.bbox.fr) has quit (Ping timeout: 246 seconds)
+2021-01-01 15:21:35	--	irc: disconnected from server
+2021-01-01 15:22:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2021-01-01 15:22:14	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2021-01-01 15:22:14	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2021-01-01 15:22:14	--	Channel #i3: 280 nicks (2 ops, 0 voices, 278 normals)
+2021-01-01 15:22:31	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2021-01-01 15:23:06	<--	geowiesnot (~user@i15-les02-ix2-87-89-181-157.sfr.lns.abo.bbox.fr) has quit (Ping timeout: 256 seconds)
+2021-01-01 15:31:11	--	irc: disconnected from server
+2021-01-12 23:09:42	-->	jungdongho (~jungdongh@115.23.138.101) has joined #i3
+2021-01-12 23:09:42	--	Topic for #i3 is "i3 v4.19 released | i3status 2.13 released | i3lock 2.13 released | http://code.i3wm.org/ | http://i3wm.org/ | http://faq.i3wm.org/ | https://bintray.com/i3/i3-autobuild/i3-wm#statistics | paste at http://p.nnev.de/ | file upload at https://transfer.sh/ | Container tutorial: https://youtu.be/AWA8Pl57UBY | #i3-offtopic"
+2021-01-12 23:09:42	--	Topic set by sECuRE (~sECuRE@i3/creator/sECuRE) on Mon, 16 Nov 2020 02:34:21
+2021-01-12 23:09:42	--	Channel #i3: 286 nicks (2 ops, 0 voices, 284 normals)
+2021-01-12 23:10:00	--	Channel created on Fri, 23 Jul 2010 04:58:13
+2021-01-12 23:10:56	<--	feral_hedgehog (~feral_hed@unaffiliated/feral-hedgehog/x-4343726) has quit (Quit: WeeChat 3.0)
+2021-01-12 23:15:24	<--	theoceaniscool (~theoceani@243.red-83-37-231.dynamicip.rima-tde.net) has quit (Ping timeout: 265 seconds)
+2021-01-12 23:19:36	-->	theoceaniscool (~theoceani@63.red-83-39-166.dynamicip.rima-tde.net) has joined #i3
+2021-01-12 23:26:22	--	irc: disconnected from server

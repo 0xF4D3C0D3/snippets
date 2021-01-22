@@ -1,0 +1,1160 @@
+2020-12-19 06:34:05	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-19 06:34:05	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-19 06:34:05	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-19 06:34:05	--	Channel ##kernel: 271 nicks (1 op, 0 voices, 270 normals)
+2020-12-19 06:34:05	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-19 06:34:07	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-19 06:38:05	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Ping timeout: 240 seconds)
+2020-12-19 06:57:33	-->	edrich (~edrich@169-0-68-60.ip.afrihost.co.za) has joined ##kernel
+2020-12-19 06:59:18	<--	edrich (~edrich@169-0-68-60.ip.afrihost.co.za) has quit (Quit: Leaving...)
+2020-12-19 07:13:57	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 268 seconds)
+2020-12-19 07:14:44	<--	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has quit (Quit: Leaving...)
+2020-12-19 07:15:09	-->	di6mbav (~BNFMeOcK~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-19 07:25:28	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-19 07:38:25	<--	di6mbav (~BNFMeOcK~@gateway/tor-sasl/spareproject) has quit (Remote host closed the connection)
+2020-12-19 07:38:26	<--	teardown (~user@gateway/tor-sasl/mrush) has quit (Remote host closed the connection)
+2020-12-19 07:38:43	-->	di6mbav (~BNFMeOcK~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-19 07:38:48	-->	teardown (~user@gateway/tor-sasl/mrush) has joined ##kernel
+2020-12-19 07:40:40	<--	linuxmk (~rb@78.157.24.197) has quit (Ping timeout: 260 seconds)
+2020-12-19 08:16:54	<--	Net147 (~Net147@unaffiliated/net147) has quit (Quit: Quit)
+2020-12-19 08:17:25	<--	teardown (~user@gateway/tor-sasl/mrush) has quit (Ping timeout: 240 seconds)
+2020-12-19 08:18:53	-->	Net147 (~Net147@unaffiliated/net147) has joined ##kernel
+2020-12-19 08:19:28	-->	teardown (~user@gateway/tor-sasl/mrush) has joined ##kernel
+2020-12-19 08:24:41	<--	towo` (~towo@unaffiliated/towo/x-4064351) has quit (Quit: Leaving)
+2020-12-19 08:24:48	-->	philbert (~philbert@63.162.123.38) has joined ##kernel
+2020-12-19 08:26:09	<--	mani_s (mani_s__@gateway/shell/linaro/x-dbhgjctiyzxxmguf) has quit (Ping timeout: 272 seconds)
+2020-12-19 08:26:27	--	irc: disconnected from server
+2020-12-19 11:02:12	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-19 11:02:12	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-19 11:02:12	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-19 11:02:12	--	Channel ##kernel: 262 nicks (1 op, 0 voices, 261 normals)
+2020-12-19 11:02:12	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-19 11:02:14	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-19 11:25:33	<--	kuldeep (~kuldeep@unaffiliated/kuldeepdhaka) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:26:08	-->	kuldeep (~kuldeep@unaffiliated/kuldeepdhaka) has joined ##kernel
+2020-12-19 11:26:44	--	gaulishcoin0 is now known as gaulishcoin
+2020-12-19 11:27:19	<--	flyback (~flyback@2601:540:8201:1e60:99db:6ae5:12f:dfa3) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:46	-->	flyback (~flyback@2601:540:8201:1e60:bdb5:315d:cc24:1eaf) has joined ##kernel
+2020-12-19 11:31:12	-->	diwyjukjt5nwbmz (~mvQSMXPj~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-19 11:32:10	-->	pcods (~pcods@gateway/tor-sasl/pcods) has joined ##kernel
+2020-12-19 11:36:25	-->	de-facto_ (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-19 11:36:25	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Disconnected by services)
+2020-12-19 11:37:36	--	de-facto_ is now known as de-facto
+2020-12-19 11:54:50	<--	dansan (~daniel@cpe-76-183-130-197.tx.res.rr.com) has quit (Ping timeout: 264 seconds)
+2020-12-19 11:55:47	--	irc: disconnected from server
+2020-12-19 11:57:31	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-19 11:57:31	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-19 11:57:31	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-19 11:57:31	--	Channel ##kernel: 263 nicks (1 op, 0 voices, 262 normals)
+2020-12-19 11:57:32	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-19 11:57:56	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-19 11:58:58	-->	dansan (~daniel@cpe-76-183-130-197.tx.res.rr.com) has joined ##kernel
+2020-12-19 12:03:25	<--	diwyjukjt5nwbmz (~mvQSMXPj~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-19 12:06:56	-->	di6mbav (~hjqRwbTq~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-19 12:13:25	<--	di6mbav (~hjqRwbTq~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-19 12:32:49	<--	brainium (~brainium@unaffiliated/brainium) has quit (Quit: Konversation terminated!)
+2020-12-19 12:33:07	-->	di6mbav4pephrgjd (~uunLgRSB~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-19 12:42:43	<--	milkt (~debian@gateway/tor-sasl/milkt) has quit (Remote host closed the connection)
+2020-12-19 12:46:57	<--	moldorcoder7 (~moldorcod@206.166.251.59) has quit (Ping timeout: 240 seconds)
+2020-12-19 12:47:28	-->	milkt (~debian@gateway/tor-sasl/milkt) has joined ##kernel
+2020-12-19 12:47:53	--	irc: disconnected from server
+2020-12-20 03:36:55	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-20 03:36:55	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-20 03:36:55	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-20 03:36:55	--	Channel ##kernel: 271 nicks (1 op, 0 voices, 270 normals)
+2020-12-20 03:36:55	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-20 03:37:20	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-20 03:38:07	-->	sudeepholla_ (~sudeep@host165-120-33-113.range165-120.btcentralplus.com) has joined ##kernel
+2020-12-20 03:38:20	Guest20	so where does stack or register comes in picture now?
+2020-12-20 03:38:40	<--	sudeepholla_ (~sudeep@host165-120-33-113.range165-120.btcentralplus.com) has quit (Client Quit)
+2020-12-20 03:38:46	jn__	the fully detailed view is in the architecture reference manual, for example "Intel® 64 and IA-32 Architectures Software Developer’s Manual"
+2020-12-20 03:39:49	Guest20	https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html
+2020-12-20 03:39:55	Guest20	which page specifically here?
+2020-12-20 03:40:06	<--	sudeepholla (sudeep@nat/arm/x-swcxxuleojqnbshb) has quit (Ping timeout: 240 seconds)
+2020-12-20 03:40:13	jn__	Guest20: the fault/trap/interrupt handler code in the kernel will look at the register to learn the parameter values that the userspace program passed
+2020-12-20 03:42:02	Guest20	ok now the register will be entry point for invocation of the system calls ?
+2020-12-20 03:42:03	jn__	the instructions are documented in Volume 2, chapter "instruction set reference, A-M"
+2020-12-20 03:42:13	jn__	Guest20: No
+2020-12-20 03:42:40	jn__	No, a register can't be an entry point because those are incompatible concepts
+2020-12-20 03:43:08	jn__	a register is a little piece of hardware that can store a value (usually a 32 or 64 bit number)
+2020-12-20 03:43:36	jn__	an entry point is a point in the code
+2020-12-20 03:43:45	jn__	a position in the code
+2020-12-20 03:43:57	jn__	a line of code, you might say
+2020-12-20 03:44:03	Guest20	ok the kernel will look at the register to tearn the parameter values and then it will call the functon in the library?
+2020-12-20 03:44:33	jn__	in which library?
+2020-12-20 03:45:58	Guest20	i understood till you message saying ".... the fault/trap/interrupt handler code in the kernel will look at the register to learn the parameter values that the userspace program passed....."
+2020-12-20 03:46:09	Guest20	could you please say what happens next
+2020-12-20 03:46:17	-->	linuxmk (~rb@78.157.24.114) has joined ##kernel
+2020-12-20 03:47:05	jn__	then, the implementation of the system call in the kernel is called, in order to perform the action that the system call is supposed to do
+2020-12-20 03:47:43	jn__	for the exit syscall, for example, it terminates the process
+2020-12-20 03:48:50	Guest20	sure
+2020-12-20 03:51:08	Guest20	thanks a lot for the detailed explanation.. i tried to google and get to know but at times few concepts are difficult to grasp
+2020-12-20 04:03:03	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-20 04:06:51	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-20 04:10:21	-->	headless (~headless@178.176.73.236) has joined ##kernel
+2020-12-20 04:13:47	-->	Borkr (~Borkr@118.158-248-29.customer.lyse.net) has joined ##kernel
+2020-12-20 04:15:34	<--	klonn (~klonn@p200300c7cf38344fa3c510c89eaf10ce.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-20 04:40:48	-->	brainium (~brainium@unaffiliated/brainium) has joined ##kernel
+2020-12-20 04:49:20	-->	philbert (~philbert@63.162.123.38) has joined ##kernel
+2020-12-20 04:55:33	<--	philbert (~philbert@63.162.123.38) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-20 05:00:12	<--	linuxmk (~rb@78.157.24.114) has quit (Ping timeout: 256 seconds)
+2020-12-20 05:20:55	-->	linuxmk (~rb@78.157.24.114) has joined ##kernel
+2020-12-20 05:22:12	-->	spareproject (b018826b@unaffiliated/spareproject) has joined ##kernel
+2020-12-20 05:22:24	-->	bocephus607 (~bradf@2600:1700:8460:fda0:5cb8:4da1:3c18:7d5e) has joined ##kernel
+2020-12-20 05:23:37	<--	roc91 (~roc91@38.109.215.2) has quit (Quit: Leaving)
+2020-12-20 05:32:34	-->	RandomGuy90 (~RandomGuy@91.239.205.33) has joined ##kernel
+2020-12-20 05:46:01	-->	lordyod (~lordyod@c-67-169-144-132.hsd1.ca.comcast.net) has joined ##kernel
+2020-12-20 05:48:57	<--	Hello71 (~Hello71@gateway/tor-sasl/hello71) has quit (Quit: Hello71)
+2020-12-20 05:53:16	<--	spareproject (b018826b@unaffiliated/spareproject) has quit (Remote host closed the connection)
+2020-12-20 05:54:24	--	irc: disconnected from server
+2020-12-20 05:54:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-20 05:54:57	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-20 05:54:57	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-20 05:54:57	--	Channel ##kernel: 272 nicks (1 op, 0 voices, 271 normals)
+2020-12-20 05:54:58	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-20 05:55:25	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-20 05:55:48	-->	Hello71 (~Hello71@gateway/tor-sasl/hello71) has joined ##kernel
+2020-12-20 06:00:41	--	irc: disconnected from server
+2020-12-20 06:18:28	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-20 06:18:28	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-20 06:18:28	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-20 06:18:28	--	Channel ##kernel: 274 nicks (1 op, 0 voices, 273 normals)
+2020-12-20 06:18:28	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-20 06:18:53	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-20 16:45:14	--	irc: disconnected from server
+2020-12-20 16:45:50	--	irc: disconnected from server
+2020-12-20 16:46:38	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-20 16:46:38	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-20 16:46:38	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-20 16:46:38	--	Channel ##kernel: 265 nicks (1 op, 0 voices, 264 normals)
+2020-12-20 16:46:38	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-20 16:47:26	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-20 16:48:11	-->	roc91 (~roc91@38.109.215.2) has joined ##kernel
+2020-12-20 16:58:35	--	irc: disconnected from server
+2020-12-20 16:59:34	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-20 16:59:34	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-20 16:59:34	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-20 16:59:34	--	Channel ##kernel: 266 nicks (1 op, 0 voices, 265 normals)
+2020-12-20 16:59:35	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-20 17:00:00	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-20 17:03:20	--	irc: disconnected from server
+2020-12-20 17:03:50	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-20 17:03:50	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-20 17:03:50	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-20 17:03:50	--	Channel ##kernel: 266 nicks (1 op, 0 voices, 265 normals)
+2020-12-20 17:03:51	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-20 17:04:15	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-20 17:13:41	-->	linuxmk (~rb@78.157.24.114) has joined ##kernel
+2020-12-20 17:34:40	<--	roc91 (~roc91@38.109.215.2) has quit (Quit: Leaving)
+2020-12-20 17:53:36	-->	headless (~Thunderbi@31.173.81.25) has joined ##kernel
+2020-12-20 18:19:00	<--	fatalhalt (~fatalhalt@c-67-163-60-93.hsd1.il.comcast.net) has quit (Quit: fatal halt)
+2020-12-20 18:29:31	<--	headless (~Thunderbi@31.173.81.25) has quit (Quit: headless)
+2020-12-20 18:49:59	-->	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has joined ##kernel
+2020-12-20 18:51:30	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Read error: Connection reset by peer)
+2020-12-20 20:58:22	--	irc: disconnected from server
+2020-12-20 20:59:24	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-20 20:59:24	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-20 20:59:24	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-20 20:59:25	--	Channel ##kernel: 266 nicks (1 op, 0 voices, 265 normals)
+2020-12-20 20:59:25	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-20 21:00:10	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-20 21:06:37	<--	linuxmk (~rb@78.157.24.114) has quit (Ping timeout: 240 seconds)
+2020-12-20 21:08:21	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Quit: WeeChat 2.8)
+2020-12-20 21:29:32	-->	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has joined ##kernel
+2020-12-20 21:41:52	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined ##kernel
+2020-12-20 21:52:39	-->	MikeDebian (~none@bl11-47-156.dsl.telepac.pt) has joined ##kernel
+2020-12-20 21:53:15	-->	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has joined ##kernel
+2020-12-20 21:55:52	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-20 21:57:31	Guest20	what happens when some app calls write() twice, does all the things related to switching to kernel, using eax register to invoke the system calls. does all of these happen again.. or somewhere there is a buffer handled by kernel to avoid this'?'
+2020-12-20 21:57:37	Guest20	ince context switch is expensive, is there a buffer that tells how to go to the specific  address in kernel space ?
+2020-12-20 21:57:41	Guest20		for example:     what would happen when someone does a grep in nginx log.. lets say grep has multiple results, would this call write() multiple times?
+2020-12-20 21:58:21	j`ey	yes it happens multiple times
+2020-12-20 22:00:35	Guest20	j`ey oh it will be such an expense right?
+2020-12-20 22:01:03	j`ey	"yes"
+2020-12-20 22:01:32	Guest20	any optimization available in kernel for this?
+2020-12-20 22:02:39	j`ey	io_uring
+2020-12-20 22:03:00	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined ##kernel
+2020-12-20 22:03:37	<--	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has quit (Ping timeout: 240 seconds)
+2020-12-20 22:04:02	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Remote host closed the connection)
+2020-12-20 22:05:23	Guest20	what does this do?
+2020-12-20 22:05:32	Guest20	j`ey what about the stdout buffering?
+2020-12-20 22:06:12	-->	de-facto (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-20 22:07:23	j`ey	io_uring is kinda a way to buffer up syscalls to avoid context switch
+2020-12-20 22:08:27	Guest20	looks like io_uring is new, were there any other predecessors?
+2020-12-20 22:08:47	-->	brainium (~brainium@unaffiliated/brainium) has joined ##kernel
+2020-12-20 22:08:59	-->	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has joined ##kernel
+2020-12-20 22:10:52	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined ##kernel
+2020-12-20 22:13:16	-->	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has joined ##kernel
+2020-12-20 22:14:18	<--	apus (~apus@gateway/tor-sasl/apus) has quit (Remote host closed the connection)
+2020-12-20 22:15:36	-->	apus (~apus@gateway/tor-sasl/apus) has joined ##kernel
+2020-12-20 22:26:39	<--	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has quit (Ping timeout: 265 seconds)
+2020-12-20 22:28:24	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Ping timeout: 240 seconds)
+2020-12-20 22:30:07	-->	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has joined ##kernel
+2020-12-20 22:32:04	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Ping timeout: 240 seconds)
+2020-12-20 22:33:37	<--	whoopwhoop (~malina@unaffiliated/malina) has quit (Ping timeout: 256 seconds)
+2020-12-20 22:47:39	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined ##kernel
+2020-12-20 22:48:46	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-20 22:50:40	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Client Quit)
+2020-12-20 22:57:55	-->	masami (~masami@FL1-118-109-96-70.tky.mesh.ad.jp) has joined ##kernel
+2020-12-20 23:05:28	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined ##kernel
+2020-12-20 23:05:52	-->	Mo_ (~Mo@unaffiliated/mo) has joined ##kernel
+2020-12-20 23:12:29	<--	Mo_ (~Mo@unaffiliated/mo) has quit (Ping timeout: 260 seconds)
+2020-12-20 23:28:14	<--	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has quit (Ping timeout: 256 seconds)
+2020-12-20 23:32:35	<--	Alchemical (~al@unaffiliated/alchemical) has quit (Remote host closed the connection)
+2020-12-20 23:37:20	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Quit: shibboleth)
+2020-12-20 23:38:11	-->	Alchemical (~al@unaffiliated/alchemical) has joined ##kernel
+2020-12-20 23:39:40	-->	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has joined ##kernel
+2020-12-20 23:42:06	-->	Alchemical_ (~al@unaffiliated/alchemical) has joined ##kernel
+2020-12-20 23:42:23	<--	Alchemical (~al@unaffiliated/alchemical) has quit (Ping timeout: 246 seconds)
+2020-12-20 23:55:57	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-20 23:58:18	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-21 00:10:09	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Remote host closed the connection)
+2020-12-21 00:11:16	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined ##kernel
+2020-12-21 00:18:22	<--	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has quit (Quit: Lost terminal)
+2020-12-21 00:22:05	<--	heftig (heftig@archlinux/developer/heftig) has quit (Quit: heftig)
+2020-12-21 00:22:18	-->	heftig (heftig@archlinux/developer/heftig) has joined ##kernel
+2020-12-21 00:22:26	<--	d_olex (~d_olex@159.65.12.243) has quit (Read error: Connection reset by peer)
+2020-12-21 00:26:16	-->	linuxmk (~rb@78.157.24.179) has joined ##kernel
+2020-12-21 00:27:08	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Quit: Leaving)
+2020-12-21 00:32:29	<--	shokohsc (~shokohsc@117.238.142.88.rev.sfr.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 00:32:30	-->	eiche_home_ (~eiche_hom@x4db661ab.dyn.telefonica.de) has joined ##kernel
+2020-12-21 00:39:11	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Quit: Leaving)
+2020-12-21 00:40:08	-->	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has joined ##kernel
+2020-12-21 00:40:52	-->	shokohsc (~shokohsc@117.238.142.88.rev.sfr.net) has joined ##kernel
+2020-12-21 01:09:08	-->	malina (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-21 01:15:00	-->	roc91 (~roc91@38.109.215.2) has joined ##kernel
+2020-12-21 01:21:13	-->	whoopwhoop (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-21 01:21:14	-->	headless (~headless@178.176.73.132) has joined ##kernel
+2020-12-21 01:38:49	Guest20	Hi jn__ : your thoughts on the above?
+2020-12-21 01:39:34	jn__	Guest20: yes, if you call printf a second time, the whole syscall thing happens again
+2020-12-21 01:39:56	Guest20	no optimizations? isnt the process expensive?
+2020-12-21 01:39:56	jn__	especially if you explicitly call write twice
+2020-12-21 01:41:10	jn__	there is an optimization in stdio (the part of the libc that implements printf). see setvbuf.
+2020-12-21 01:43:30	Guest20	jn__ for eg: how about in case of grep, if a keyword is present multiple time, it would do a write() multiple times.. multiple times context switch happens..  by default does linux use setvbuf?
+2020-12-21 01:44:05	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-21 01:44:13	jn__	linux (the kernel) doesn't care or know or care about the buffering mechnism that is configured with setvbuf
+2020-12-21 01:44:21	jn__	it exists in userspace, in the libc
+2020-12-21 01:45:50	jn__	>Normally all files are block buffered.  If a stream refers to a terminal (as stdout normally does), it is line buffered.  The standard error stream  stderr  is  always unbuffered by default.
+2020-12-21 01:47:29	<--	Necktwi (~necktwi@ferryfair.com) has quit (Ping timeout: 256 seconds)
+2020-12-21 01:47:37	Guest20	what do you mean by stream - set of words or lines?
+2020-12-21 01:47:43	-->	Kruppt (~Kruppt@50-111-56-201.drhm.nc.frontiernet.net) has joined ##kernel
+2020-12-21 01:48:01	Guest20	when you say its line buffered - is it stored in a buffer in processor or something?
+2020-12-21 01:48:04	jn__	that was a quote from the setvbuf(3) manpage
+2020-12-21 01:48:35	jn__	https://manpages.debian.org/buster/manpages-dev/setvbuf.3.en.html
+2020-12-21 01:48:57	jn__	a stream in that context is a FILE*
+2020-12-21 01:49:24	<--	linuxmk (~rb@78.157.24.179) has quit (Ping timeout: 260 seconds)
+2020-12-21 01:51:14	<--	whoopwhoop (~malina@unaffiliated/malina) has quit (Ping timeout: 264 seconds)
+2020-12-21 01:51:24	Guest20	jn__ this page mentions there is stdout buffering and the grep example i mentioned
+2020-12-21 01:51:25	Guest20	https://eklitzke.org/stdout-buffering
+2020-12-21 01:53:11	jn__	yes, the setvbuf manpage too
+2020-12-21 01:56:49	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-21 01:59:03	-->	Necktwi (~necktwi@ferryfair.com) has joined ##kernel
+2020-12-21 02:01:41	Guest20	jn__ , when you say BLOCK buffered. what does it mean?
+2020-12-21 02:01:57	jn__	from the manpage: "when it is block buffered many characters are saved up and written as a block"
+2020-12-21 02:02:20	jn__	a "block" here is just a chunk of memory, a kilobyte or something
+2020-12-21 02:04:46	Guest20	oh ok
+2020-12-21 02:09:54	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-21 02:16:40	<--	PipeManMusic (~daniel@c-71-237-116-178.hsd1.co.comcast.net) has quit (Remote host closed the connection)
+2020-12-21 02:21:04	<--	malina (~malina@unaffiliated/malina) has quit (Ping timeout: 256 seconds)
+2020-12-21 02:24:01	-->	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-21 02:26:34	-->	Narrat (~Narrat@p200300df5f45004406ea56fffe2e7cdc.dip0.t-ipconnect.de) has joined ##kernel
+2020-12-21 02:27:24	<--	GNUmoon (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Ping timeout: 240 seconds)
+2020-12-21 02:27:55	-->	linuxmk (~rb@78.157.24.179) has joined ##kernel
+2020-12-21 02:35:25	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##kernel
+2020-12-21 02:37:50	<--	rebrec (~rebrec@82-64-53-213.subs.proxad.net) has quit (Quit: The Lounge - https://thelounge.github.io)
+2020-12-21 02:38:55	-->	rebrec (~rebrec@82-64-53-213.subs.proxad.net) has joined ##kernel
+2020-12-21 02:43:53	-->	philbert (~philbert@63.162.123.38) has joined ##kernel
+2020-12-21 02:59:00	<--	philbert (~philbert@63.162.123.38) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-21 03:08:54	<--	headless (~headless@178.176.73.132) has quit (Quit: Konversation terminated!)
+2020-12-21 03:14:18	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined ##kernel
+2020-12-21 03:23:55	<--	roc91 (~roc91@38.109.215.2) has quit (Remote host closed the connection)
+2020-12-21 03:28:21	<--	rendar (~rendar@unaffiliated/rendar) has quit
+2020-12-21 03:36:20	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-21 03:44:53	-->	imm_ (~imm_@unaffiliated/imm/x-7821412) has joined ##kernel
+2020-12-21 03:48:57	<--	towo` (~towo@unaffiliated/towo/x-4064351) has quit (Quit: Leaving)
+2020-12-21 03:51:47	-->	towo` (~towo@unaffiliated/towo/x-4064351) has joined ##kernel
+2020-12-21 03:59:26	-->	roc91 (~roc91@38.109.215.2) has joined ##kernel
+2020-12-21 04:02:52	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Remote host closed the connection)
+2020-12-21 04:03:06	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Remote host closed the connection)
+2020-12-21 04:03:41	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined ##kernel
+2020-12-21 04:07:30	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined ##kernel
+2020-12-21 04:12:29	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 256 seconds)
+2020-12-21 04:13:17	<--	eiche_home_ (~eiche_hom@x4db661ab.dyn.telefonica.de) has quit (Ping timeout: 240 seconds)
+2020-12-21 04:13:31	-->	eiche_home_ (~eiche_hom@x4db661ab.dyn.telefonica.de) has joined ##kernel
+2020-12-21 04:15:05	<--	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has quit (Quit: Halcyon flies away.)
+2020-12-21 04:18:58	<--	D-melanogaster (~D-melanog@212.90.58.216) has quit (Remote host closed the connection)
+2020-12-21 04:19:13	-->	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has joined ##kernel
+2020-12-21 04:19:21	-->	D-melanogaster (~D-melanog@212.90.58.216) has joined ##kernel
+2020-12-21 04:22:44	-->	SOLIDSEC (~internet@89.238.185.116) has joined ##kernel
+2020-12-21 04:22:45	-->	philbert (~philbert@63.162.123.38) has joined ##kernel
+2020-12-21 04:27:56	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Quit: shibboleth)
+2020-12-21 04:43:05	<--	philbert (~philbert@63.162.123.38) has quit (Read error: Connection reset by peer)
+2020-12-21 04:57:33	<--	eiche_home_ (~eiche_hom@x4db661ab.dyn.telefonica.de) has quit (Ping timeout: 272 seconds)
+2020-12-21 04:57:45	-->	eiche_home_ (~eiche_hom@x4db661ab.dyn.telefonica.de) has joined ##kernel
+2020-12-21 04:59:48	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Quit: sord937)
+2020-12-21 05:00:24	-->	moo (~wootehfoo@unaffiliated/wootehfoot) has joined ##kernel
+2020-12-21 05:00:50	<--	linuxmk (~rb@78.157.24.179) has quit (Ping timeout: 264 seconds)
+2020-12-21 05:15:10	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Ping timeout: 272 seconds)
+2020-12-21 05:16:26	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 264 seconds)
+2020-12-21 05:25:29	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined ##kernel
+2020-12-21 05:31:53	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##kernel
+2020-12-21 05:46:46	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-21 05:54:44	<--	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Ping timeout: 240 seconds)
+2020-12-21 05:55:38	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Quit: Leaving)
+2020-12-21 06:02:46	<--	Senicar (~Senicar@gateway/tor-sasl/senicar) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 06:08:55	<--	chasmo77 (~chas77@69.62.183.158) has quit (Quit: It's just that easy)
+2020-12-21 06:09:46	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined ##kernel
+2020-12-21 06:10:43	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-21 06:11:21	-->	linuxmk (~rb@78.157.24.179) has joined ##kernel
+2020-12-21 06:15:37	<--	linuxmk (~rb@78.157.24.179) has quit (Ping timeout: 240 seconds)
+2020-12-21 06:18:30	<--	eiche_home_ (~eiche_hom@x4db661ab.dyn.telefonica.de) has quit (Ping timeout: 256 seconds)
+2020-12-21 06:18:43	-->	eiche_home_ (~eiche_hom@x4db661ab.dyn.telefonica.de) has joined ##kernel
+2020-12-21 06:27:05	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-21 06:37:11	-->	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-21 13:06:56	--	irc: disconnected from server
+2020-12-21 13:07:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-21 13:07:54	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-21 13:07:54	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-21 13:07:54	--	Channel ##kernel: 265 nicks (1 op, 0 voices, 264 normals)
+2020-12-21 13:07:54	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-21 13:08:40	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-21 13:42:04	<--	di6mbav4pephrg (~oKLtROtw~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-21 13:57:34	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-21 14:00:11	-->	eiche_home_ (~eiche_hom@x4db5437e.dyn.telefonica.de) has joined ##kernel
+2020-12-21 14:09:13	<--	esselfe (~steph@unaffiliated/esselfe) has quit (Quit: brb)
+2020-12-21 14:10:21	-->	CrackerJack (~CrackerJa@95-42-109-196.ip.btc-net.bg) has joined ##kernel
+2020-12-21 14:15:24	<--	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Ping timeout: 240 seconds)
+2020-12-21 14:15:43	-->	esselfe (~steph@unaffiliated/esselfe) has joined ##kernel
+2020-12-21 14:18:56	<--	esselfe (~steph@unaffiliated/esselfe) has quit (Client Quit)
+2020-12-21 14:25:45	-->	esselfe (~steph@unaffiliated/esselfe) has joined ##kernel
+2020-12-21 14:36:33	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined ##kernel
+2020-12-21 14:40:08	<--	haritz (~hrtz@unaffiliated/haritz) has quit (Ping timeout: 246 seconds)
+2020-12-21 14:42:36	-->	haritz (~hrtz@unaffiliated/haritz) has joined ##kernel
+2020-12-21 14:49:37	-->	Axonis (~Axonis@host-76.195-146-152.telecom.sk) has joined ##kernel
+2020-12-22 05:26:07	--	irc: disconnected from server
+2020-12-22 05:27:07	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-22 05:27:07	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-22 05:27:07	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-22 05:27:07	--	Channel ##kernel: 278 nicks (1 op, 0 voices, 277 normals)
+2020-12-22 05:27:07	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-22 05:27:53	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-22 05:29:22	<--	rendar (~rendar@unaffiliated/rendar) has quit
+2020-12-22 05:34:36	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 240 seconds)
+2020-12-22 05:35:22	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-22 05:38:53	-->	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has joined ##kernel
+2020-12-22 05:40:02	<--	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has quit (Remote host closed the connection)
+2020-12-22 05:41:55	<--	post-factum (~post-fact@vulcan.natalenko.name) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-12-22 05:42:39	-->	post-factum (~post-fact@vulcan.natalenko.name) has joined ##kernel
+2020-12-22 05:52:16	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-22 05:54:09	-->	klotz (~cyberklot@gateway/tor-sasl/klotz) has joined ##kernel
+2020-12-22 05:55:52	<--	klotz (~cyberklot@gateway/tor-sasl/klotz) has quit (Remote host closed the connection)
+2020-12-22 05:56:14	-->	klotz (~cyberklot@gateway/tor-sasl/klotz) has joined ##kernel
+2020-12-22 05:56:43	<--	klotz (~cyberklot@gateway/tor-sasl/klotz) has quit (Client Quit)
+2020-12-22 05:57:26	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-22 05:59:01	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Remote host closed the connection)
+2020-12-22 05:59:26	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined ##kernel
+2020-12-22 06:05:36	<--	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Remote host closed the connection)
+2020-12-22 06:05:55	-->	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined ##kernel
+2020-12-22 06:08:07	<--	headless (~headless@178.176.74.236) has quit (Quit: Konversation terminated!)
+2020-12-22 06:12:24	<--	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Ping timeout: 240 seconds)
+2020-12-22 06:13:35	-->	fatalhalt (~fatalhalt@c-67-163-60-93.hsd1.il.comcast.net) has joined ##kernel
+2020-12-22 06:18:31	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Quit: sord937)
+2020-12-22 06:29:05	-->	cdown_ (~cdown@163.114.131.1) has joined ##kernel
+2020-12-22 06:30:28	-->	chasmo77 (~chas77@69.62.183.158) has joined ##kernel
+2020-12-22 06:31:11	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Quit: See you around. 💤)
+2020-12-22 06:31:26	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 256 seconds)
+2020-12-22 06:31:46	-->	de-facto (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-22 06:32:07	<--	Adbray (~Adbray@2600:6c48:6f7f:d764:afef:e464:9861:6026) has quit (Disconnected by services)
+2020-12-22 06:32:13	-->	Adbray_ (~Adbray@2600:6c48:6f7f:d764:afef:e464:9861:6026) has joined ##kernel
+2020-12-22 06:32:29	<--	dtor (sid141506@gateway/web/irccloud.com/x-ywsxmihictsnuqeq) has quit (Ping timeout: 244 seconds)
+2020-12-22 06:32:48	-->	dtor (sid141506@gateway/web/irccloud.com/x-ydfurxyewpndrjna) has joined ##kernel
+2020-12-22 06:35:47	<--	cdown_ (~cdown@163.114.131.1) has quit (Ping timeout: 260 seconds)
+2020-12-22 06:53:55	<--	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has quit (Quit: Leaving...)
+2020-12-22 06:54:02	-->	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-22 06:57:39	<--	eiche_home_ (~eiche_hom@x4db5437e.dyn.telefonica.de) has quit (Ping timeout: 268 seconds)
+2020-12-22 07:07:56	<--	SpydarOO7 (spydar007@unaffiliated/spydar007) has quit (Quit: Quit)
+2020-12-22 07:08:12	-->	SpydarOO7 (spydar007@unaffiliated/spydar007) has joined ##kernel
+2020-12-22 07:12:13	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-22 07:20:46	<--	beneth (~beneth@irc.beneth.fr) has left ##kernel ("Error from remote client")
+2020-12-22 07:24:10	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-22 07:24:50	-->	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has joined ##kernel
+2020-12-22 07:25:35	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined ##kernel
+2020-12-22 07:28:26	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Remote host closed the connection)
+2020-12-22 07:31:51	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined ##kernel
+2020-12-22 07:39:20	-->	brainium (~brainium@unaffiliated/brainium) has joined ##kernel
+2020-12-22 07:40:55	<--	TJ- (~root@2a02:8011:2007:0:bc1a:62ec:b4a:4161) has quit (Quit: WeeChat 2.8)
+2020-12-22 07:44:38	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-22 07:45:37	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Client Quit)
+2020-12-22 07:56:23	-->	di6mbav4pephrgjd (~CxHVGMeY~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-22 08:03:01	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-22 08:06:02	<--	gioyik (~gioyik@186.112.104.164) has quit (Quit: WeeChat 3.0)
+2020-12-22 08:13:06	<--	towo` (~towo@unaffiliated/towo/x-4064351) has quit (Quit: Leaving)
+2020-12-22 08:21:27	<--	himcesjf (uid409730@gateway/web/irccloud.com/x-aeujezjwocwtwwis) has quit (Ping timeout: 258 seconds)
+2020-12-22 08:22:18	<--	jhill (sid1055@gateway/web/irccloud.com/x-konpcpcmefysdvjm) has quit (Ping timeout: 246 seconds)
+2020-12-22 08:22:18	<--	Kruppt (~Kruppt@50-111-56-201.drhm.nc.frontiernet.net) has quit (Quit: Leaving)
+2020-12-22 08:23:07	<--	dtor (sid141506@gateway/web/irccloud.com/x-ydfurxyewpndrjna) has quit (Ping timeout: 260 seconds)
+2020-12-22 08:44:43	<--	di6mbav4pephrgjd (~CxHVGMeY~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-22 08:50:36	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Read error: Connection reset by peer)
+2020-12-22 09:00:16	-->	di6mbav4pephrg (~WslgeqhE~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-22 09:02:21	<--	murkx (~mur@unaffiliated/murkx) has quit (Quit: WeeChat 2.7)
+2020-12-22 09:05:04	-->	murkx (~mur@unaffiliated/murkx) has joined ##kernel
+2020-12-22 09:52:09	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined ##kernel
+2020-12-22 09:53:23	<--	di6mbav4pephrg (~WslgeqhE~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-22 09:55:25	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 264 seconds)
+2020-12-22 10:15:19	<--	Narrat (~Narrat@p200300df5f4500ca06ea56fffe2e7cdc.dip0.t-ipconnect.de) has quit (Quit: They say a little knowledge is a dangerous thing, but it's not one half so bad as a lot of ignorance.)
+2020-12-22 10:20:55	<--	MikeDebian (~none@bl11-47-156.dsl.telepac.pt) has quit (Quit: Leaving)
+2020-12-22 10:29:14	-->	perdent (~perdent@101.175.70.218) has joined ##kernel
+2020-12-22 10:30:54	perdent	Hey, I have a debian image: linux-image-unsigned-5.0.0-38-generic-dbgsym_5.0.0-38.41_amd64.ddeb  in which i would like to debug this specific kernel version, and I have a qemu config file, how would I boot up the kernel with qemu? What is the command?
+2020-12-22 10:31:03	perdent	As I am wanting to debug the kernel
+2020-12-22 10:31:11	perdent	So how would i boot up the kernel?
+2020-12-22 10:31:18	-->	diwyjukjt5nwbmz (~WfSbLkAY~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-22 10:32:32	Hello71	#debian
+2020-12-22 11:05:35	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 272 seconds)
+2020-12-22 11:12:10	-->	malina (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-22 11:13:32	<--	malina (~malina@unaffiliated/malina) has quit (Remote host closed the connection)
+2020-12-22 11:34:43	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Ping timeout: 240 seconds)
+2020-12-22 11:35:13	-->	de-facto (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-22 11:56:11	-->	roc91 (~roc91@45.132.115.58) has joined ##kernel
+2020-12-22 11:56:11	<--	roc91 (~roc91@45.132.115.58) has quit (Max SendQ exceeded)
+2020-12-22 11:56:39	-->	roc91 (~roc91@45.132.115.58) has joined ##kernel
+2020-12-22 12:01:23	<--	brainium (~brainium@unaffiliated/brainium) has quit (Quit: Konversation terminated!)
+2020-12-22 12:06:21	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Remote host closed the connection)
+2020-12-22 12:06:46	-->	de-facto (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-22 12:12:50	-->	lukedashjr (~luke-jr@unaffiliated/luke-jr) has joined ##kernel
+2020-12-22 12:12:59	<--	luke-jr (~luke-jr@unaffiliated/luke-jr) has quit (Ping timeout: 256 seconds)
+2020-12-22 12:17:07	--	lukedashjr is now known as luke-jr
+2020-12-22 12:34:23	<--	diwyjukjt5nwbmz (~WfSbLkAY~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-22 12:57:13	<--	Sithlord (~sithlord@unaffiliated/sithlord) has quit (Quit: Leaving)
+2020-12-22 13:13:38	-->	Mo-jorisin (~Mo@unaffiliated/mo) has joined ##kernel
+2020-12-22 13:17:07	<--	Mo_ (~Mo@unaffiliated/mo) has quit (Ping timeout: 260 seconds)
+2020-12-22 13:17:22	<--	bpsecret (~bpsecret@unaffiliated/bpsecret) has quit (Ping timeout: 258 seconds)
+2020-12-22 13:19:34	-->	bpsecret (~bpsecret@unaffiliated/bpsecret) has joined ##kernel
+2020-12-22 13:25:07	<--	smeso (~smeso@unaffiliated/smeso) has quit (Quit: smeso)
+2020-12-22 13:31:00	-->	smeso (~smeso@unaffiliated/smeso) has joined ##kernel
+2020-12-22 13:44:11	<--	roc91 (~roc91@45.132.115.58) has quit (Quit: Leaving)
+2020-12-22 13:49:23	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Ping timeout: 240 seconds)
+2020-12-22 13:50:00	<--	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has quit (Quit: Leaving)
+2020-12-22 13:50:15	-->	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has joined ##kernel
+2020-12-22 13:53:58	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-22 14:00:11	-->	eiche_home_ (~eiche_hom@x4db541e4.dyn.telefonica.de) has joined ##kernel
+2020-12-22 14:01:19	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined ##kernel
+2020-12-22 14:04:03	-->	fredl (~fredl@smtp.3dn.nl) has joined ##kernel
+2020-12-22 14:04:07	<--	fredl (~fredl@smtp.3dn.nl) has quit (Remote host closed the connection)
+2020-12-22 14:06:58	<--	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Remote host closed the connection)
+2020-12-22 14:07:28	-->	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-22 14:34:01	-->	c2a1 (~u0_a100@42.sub-174-228-9.myvzw.com) has joined ##kernel
+2020-12-22 14:42:32	-->	c2a1_ (~u0_a100@70.127.211.140) has joined ##kernel
+2020-12-22 14:45:06	<--	c2a1 (~u0_a100@42.sub-174-228-9.myvzw.com) has quit (Disconnected by services)
+2020-12-22 14:45:16	--	c2a1_ is now known as c2a1
+2020-12-22 14:49:03	<--	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Ping timeout: 240 seconds)
+2020-12-22 15:02:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 15:14:57	--	Mo-jorisin is now known as Mo
+2020-12-22 15:15:42	-->	beneth (~beneth@irc.beneth.fr) has joined ##kernel
+2020-12-22 15:19:26	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Remote host closed the connection)
+2020-12-22 15:27:03	-->	Guest20 (~textual@192.146.154.3) has joined ##kernel
+2020-12-22 15:32:36	<--	dhill (~dhill@modemcable114.211-80-70.mc.videotron.ca) has quit (Ping timeout: 256 seconds)
+2020-12-22 15:33:33	-->	dhill (~dhill@modemcable114.211-80-70.mc.videotron.ca) has joined ##kernel
+2020-12-22 15:48:10	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined ##kernel
+2020-12-22 15:56:18	<--	francisv (123080@vatn.ifi.uio.no) has quit (Ping timeout: 265 seconds)
+2020-12-22 15:59:59	-->	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-22 16:07:00	<--	eiche_home_ (~eiche_hom@x4db541e4.dyn.telefonica.de) has quit (Ping timeout: 256 seconds)
+2020-12-22 16:21:25	<--	beencubed (~beencubed@209.131.238.248) has quit (Ping timeout: 240 seconds)
+2020-12-22 16:34:40	-->	rendar (~rendar@unaffiliated/rendar) has joined ##kernel
+2020-12-22 16:40:38	-->	Axonis (~Axonis@host-76.195-146-152.telecom.sk) has joined ##kernel
+2020-12-22 16:48:24	-->	astylian (~astylian@46-229-72.internethome.cytanet.com.cy) has joined ##kernel
+2020-12-22 16:49:26	<--	rolfbjarte (~rstokke@195.242.46.66) has quit (Ping timeout: 256 seconds)
+2020-12-22 16:59:13	-->	rolfbjarte (~rstokke@195.242.46.66) has joined ##kernel
+2020-12-22 17:13:27	-->	headless (~Thunderbi@31.173.84.85) has joined ##kernel
+2020-12-22 17:13:46	-->	ret2libc (~ret2libc@151.48.109.59) has joined ##kernel
+2020-12-22 17:17:51	<--	j`ey (~joey@unaffiliated/jey/x-00002) has quit (Ping timeout: 256 seconds)
+2020-12-22 17:21:32	-->	tesseract (~tesseract@2a01:e0a:24b:f220:8eb4:c22:16f:5ba0) has joined ##kernel
+2020-12-22 17:27:02	Guest20	any idea why namedpipes can be faster than the normal pipes?
+2020-12-22 17:38:12	-->	Guest20_ (~textual@103.215.168.1) has joined ##kernel
+2020-12-22 17:38:24	<--	Guest20 (~textual@192.146.154.3) has quit (Ping timeout: 256 seconds)
+2020-12-22 17:43:27	-->	towo` (~towo@unaffiliated/towo/x-4064351) has joined ##kernel
+2020-12-22 17:44:04	-->	kill-animals (uid461693@gateway/web/irccloud.com/x-qzrlzonoimdbchxu) has joined ##kernel
+2020-12-22 17:45:05	kill-animals	dealing with a laptop that doesnt want to charge due to me draining its battery while it was asleep. I can get it to charge again if I can can unplug and plug it back in, but it has 0 charge to sustain this.
+2020-12-22 17:45:37	kill-animals	at least software wise. I am wondering if there is anything in the kernel that I could play with to either force a charge or to not have my computer autoturn off when I unplug it.
+2020-12-22 17:54:37	-->	TJ- (~root@2a02:8010:4007:dead:beef::b217) has joined ##kernel
+2020-12-22 17:59:19	-->	daregap (~belovent@cr-01.anx09.lju.si.anexia-it.com) has joined ##kernel
+2020-12-22 18:02:14	<--	towo` (~towo@unaffiliated/towo/x-4064351) has quit (Quit: Leaving)
+2020-12-22 18:03:34	-->	towo` (~towo@unaffiliated/towo/x-4064351) has joined ##kernel
+2020-12-22 18:26:19	<--	rigid (~rigid@unaffiliated/rigid) has quit (Quit: +++ ATH)
+2020-12-22 18:27:32	-->	rigid (~rigid@unaffiliated/rigid) has joined ##kernel
+2020-12-22 18:29:05	<--	Necktwi (~necktwi@ferryfair.com) has quit (Ping timeout: 240 seconds)
+2020-12-22 18:31:31	<--	CrackerJack (~CrackerJa@95-42-109-196.ip.btc-net.bg) has quit (Remote host closed the connection)
+2020-12-22 18:31:51	-->	CrackerJack (~CrackerJa@95-42-109-196.ip.btc-net.bg) has joined ##kernel
+2020-12-22 18:35:15	<--	post-factum (~post-fact@vulcan.natalenko.name) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-12-22 18:36:31	-->	post-factum (~post-fact@vulcan.natalenko.name) has joined ##kernel
+2020-12-22 18:41:04	-->	Necktwi (~necktwi@ferryfair.com) has joined ##kernel
+2020-12-22 18:52:52	<--	headless (~Thunderbi@31.173.84.85) has quit (Quit: headless)
+2020-12-22 19:12:20	<--	fatalhalt (~fatalhalt@c-67-163-60-93.hsd1.il.comcast.net) has quit (Quit: fatal halt)
+2020-12-22 19:17:09	<--	milkt_ (~debian@gateway/tor-sasl/milkt) has quit (Remote host closed the connection)
+2020-12-22 19:23:37	-->	milkt (~debian@gateway/tor-sasl/milkt) has joined ##kernel
+2020-12-22 19:23:39	<--	milkt (~debian@gateway/tor-sasl/milkt) has quit (Client Quit)
+2020-12-22 19:24:57	-->	jhill (sid1055@gateway/web/irccloud.com/x-fwhbcrxziztsrmph) has joined ##kernel
+2020-12-22 19:27:50	-->	dtor (sid141506@gateway/web/irccloud.com/x-feynjnwweusztqja) has joined ##kernel
+2020-12-22 19:28:14	<--	Guest20_ (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 19:36:26	-->	himcesjf (uid409730@gateway/web/irccloud.com/x-tywbzvvlxohpzlbf) has joined ##kernel
+2020-12-22 19:37:34	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-22 19:50:32	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Ping timeout: 260 seconds)
+2020-12-22 19:53:39	-->	TJ- (~root@2a02:8010:4007:dead:beef::b217) has joined ##kernel
+2020-12-22 19:54:05	<--	Net147 (~Net147@unaffiliated/net147) has quit (Ping timeout: 240 seconds)
+2020-12-22 20:00:10	-->	Net147 (~Net147@unaffiliated/net147) has joined ##kernel
+2020-12-22 20:03:13	<--	kill-animals (uid461693@gateway/web/irccloud.com/x-qzrlzonoimdbchxu) has quit (Quit: Connection closed for inactivity)
+2020-12-22 20:04:22	-->	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has joined ##kernel
+2020-12-22 20:05:16	<--	dviola (~diego@unaffiliated/dviola) has quit (Ping timeout: 240 seconds)
+2020-12-22 20:14:27	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-22 20:19:39	<--	masami (~masami@FL1-118-109-96-70.tky.mesh.ad.jp) has quit (Remote host closed the connection)
+2020-12-22 20:24:07	-->	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has joined ##kernel
+2020-12-22 20:56:14	-->	headless (~headless@31.173.80.156) has joined ##kernel
+2020-12-22 21:07:22	<--	Mo (~Mo@unaffiliated/mo) has quit (Ping timeout: 272 seconds)
+2020-12-22 21:08:54	-->	Mo (~Mo@unaffiliated/mo) has joined ##kernel
+2020-12-22 21:23:16	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-22 21:35:02	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-22 21:36:04	-->	brainium (~brainium@unaffiliated/brainium) has joined ##kernel
+2020-12-22 22:00:09	<--	fling (~fling@fsf/member/fling) has quit (Remote host closed the connection)
+2020-12-22 22:00:30	-->	fling (~fling@fsf/member/fling) has joined ##kernel
+2020-12-22 22:12:19	-->	diwyjukjt (~yDFNXpCs~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-22 22:16:23	<--	diwyjukjt (~yDFNXpCs~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-22 22:17:19	-->	diegopd (~Thunderbi@201-92-142-45.dsl.telesp.net.br) has joined ##kernel
+2020-12-22 22:30:48	<--	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has quit (Quit: Leaving...)
+2020-12-22 22:38:49	<--	diegopd (~Thunderbi@201-92-142-45.dsl.telesp.net.br) has quit (Read error: Connection reset by peer)
+2020-12-22 22:39:57	<--	towo` (~towo@unaffiliated/towo/x-4064351) has quit (Quit: Leaving)
+2020-12-22 22:42:37	-->	towo` (~towo@unaffiliated/towo/x-4064351) has joined ##kernel
+2020-12-22 22:45:11	jelly	perdent, that's not a debian kernel.  It might be an old ubuntu kernel.
+2020-12-22 22:47:20	Hello71	that too
+2020-12-22 22:48:22	-->	diwyjukjt5nw (~JaoIwjsm~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-22 22:48:30	jelly	that said I suppose dbgsym packages probably behave the same, but I don't know how to qemu with gdb at all :-\
+2020-12-22 22:57:57	-->	RickDeckard (~tgburrin@pool-100-12-186-231.nycmny.fios.verizon.net) has joined ##kernel
+2020-12-22 22:58:53	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-22 22:59:23	<--	diwyjukjt5nw (~JaoIwjsm~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-22 23:00:28	-->	diwyjukjt5nw (~JaoIwjsm~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-22 23:04:57	-->	milkt (~debian@gateway/tor-sasl/milkt) has joined ##kernel
+2020-12-22 23:18:02	<--	headless (~headless@31.173.80.156) has quit (Quit: Konversation terminated!)
+2020-12-22 23:18:15	-->	Kruppt (~Kruppt@50-111-56-201.drhm.nc.frontiernet.net) has joined ##kernel
+2020-12-22 23:18:53	<--	esselfe (~steph@unaffiliated/esselfe) has quit (Quit: Changing AP)
+2020-12-22 23:18:55	-->	Oriz (~kvirc@unaffiliated/zacdev) has joined ##kernel
+2020-12-22 23:20:15	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Ping timeout: 272 seconds)
+2020-12-22 23:21:34	-->	esselfe (~steph@unaffiliated/esselfe) has joined ##kernel
+2020-12-22 23:23:04	-->	MikeDebian (~none@bl11-47-156.dsl.telepac.pt) has joined ##kernel
+2020-12-22 23:29:00	<--	esselfe (~steph@unaffiliated/esselfe) has quit (Ping timeout: 256 seconds)
+2020-12-22 23:42:43	<--	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has quit (Ping timeout: 265 seconds)
+2020-12-22 23:47:04	-->	TJ- (~root@2a02:8010:4007:dead:beef::b217) has joined ##kernel
+2020-12-22 23:50:10	-->	malina (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-22 23:52:13	<--	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has quit (Quit: Leaving)
+2020-12-22 23:52:29	-->	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has joined ##kernel
+2020-12-22 23:54:27	<--	malina (~malina@unaffiliated/malina) has quit (Remote host closed the connection)
+2020-12-22 23:54:48	-->	beencubed (~beencubed@209.131.238.248) has joined ##kernel
+2020-12-23 00:13:27	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Ping timeout: 272 seconds)
+2020-12-23 00:32:21	-->	cdown_ (~cdown@163.114.131.1) has joined ##kernel
+2020-12-23 00:34:45	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-23 00:34:54	--	cdown_ is now known as cdown
+2020-12-23 00:39:56	-->	alterjsive (~jeroen@82-217-106-119.cable.dynamic.v4.ziggo.nl) has joined ##kernel
+2020-12-23 00:50:52	-->	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has joined ##kernel
+2020-12-23 00:51:51	<--	Axonis (~Axonis@host-76.195-146-152.telecom.sk) has quit (Quit: Leaving)
+2020-12-23 00:52:50	<--	alterjsive (~jeroen@82-217-106-119.cable.dynamic.v4.ziggo.nl) has quit (Ping timeout: 272 seconds)
+2020-12-23 00:58:40	--	irc: disconnected from server
+2020-12-23 11:06:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-23 11:06:17	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-23 11:06:17	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-23 11:06:17	--	Channel ##kernel: 263 nicks (1 op, 0 voices, 262 normals)
+2020-12-23 11:06:17	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-23 11:06:36	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-23 11:20:42	<--	Senicar (~Senicar@gateway/tor-sasl/senicar) has quit (Ping timeout: 240 seconds)
+2020-12-23 11:31:10	-->	de-facto_ (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-23 11:31:11	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Disconnected by services)
+2020-12-23 11:32:16	--	de-facto_ is now known as de-facto
+2020-12-23 11:32:50	-->	Senicar (~Senicar@gateway/tor-sasl/senicar) has joined ##kernel
+2020-12-23 11:39:26	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 256 seconds)
+2020-12-23 12:52:47	-->	rare_energy (~quassel@c-73-248-161-44.hsd1.nj.comcast.net) has joined ##kernel
+2020-12-23 13:29:38	-->	dqx (~dqx@unaffiliated/dqx) has joined ##kernel
+2020-12-23 13:34:22	<--	diwyjukjt5 (~HFCqCrxb~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-23 13:35:36	<--	dqx (~dqx@unaffiliated/dqx) has quit (Ping timeout: 256 seconds)
+2020-12-23 13:47:05	-->	Mo_ (~Mo@unaffiliated/mo) has joined ##kernel
+2020-12-23 13:47:26	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-23 13:50:54	<--	Mo (~Mo@unaffiliated/mo) has quit (Ping timeout: 256 seconds)
+2020-12-23 14:00:26	-->	eiche_home_ (~eiche_hom@x4db342c9.dyn.telefonica.de) has joined ##kernel
+2020-12-23 14:20:43	<--	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Remote host closed the connection)
+2020-12-23 14:21:14	-->	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-23 14:24:05	<--	perdent (~perdent@101.175.70.218) has quit (Read error: Connection reset by peer)
+2020-12-23 14:25:33	<--	unixpro1970 (~unixpro19@unaffiliated/unixpro1970) has quit (Ping timeout: 246 seconds)
+2020-12-23 14:28:52	-->	unixpro1970 (~unixpro19@unaffiliated/unixpro1970) has joined ##kernel
+2020-12-23 14:32:38	<--	nurupo (~nurupo.ga@unaffiliated/nurupo) has quit (Quit: nurupo.ga)
+2020-12-23 15:00:43	<--	roc91 (~roc91@45.132.115.58) has quit (Quit: Leaving)
+2020-12-23 15:11:02	<--	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Ping timeout: 240 seconds)
+2020-12-23 15:16:38	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined ##kernel
+2020-12-23 15:20:02	-->	beneth (~beneth@irc.beneth.fr) has joined ##kernel
+2020-12-23 15:29:14	-->	dqx (~dqx@unaffiliated/dqx) has joined ##kernel
+2020-12-23 15:38:51	<--	beneth (~beneth@irc.beneth.fr) has left ##kernel ("Error from remote client")
+2020-12-23 15:41:58	<--	wwilly_ (~wwilly@lfbn-str-1-377-53.w86-243.abo.wanadoo.fr) has quit (Quit: Leaving)
+2020-12-23 15:43:08	-->	astylian (~astylian@46-229-72.internethome.cytanet.com.cy) has joined ##kernel
+2020-12-23 15:50:15	-->	GNUmoon2 (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-23 15:51:33	-->	fatalhalt (~fatalhalt@c-67-163-60-93.hsd1.il.comcast.net) has joined ##kernel
+2020-12-23 15:56:27	-->	nurupo (~nurupo.ga@unaffiliated/nurupo) has joined ##kernel
+2020-12-23 15:58:49	<--	dqx (~dqx@unaffiliated/dqx) has quit (Quit: .)
+2020-12-23 16:22:10	<--	daregap (~belovent@cr-01.anx09.lju.si.anexia-it.com) has quit (Quit: daregap)
+2020-12-23 16:35:18	-->	rendar (~rendar@unaffiliated/rendar) has joined ##kernel
+2020-12-23 16:44:26	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Excess Flood)
+2020-12-23 16:44:51	-->	de-facto (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-23 16:46:50	-->	beneth (~beneth@irc.beneth.fr) has joined ##kernel
+2020-12-23 16:54:54	<--	CrackerJack (~CrackerJa@95-42-109-196.ip.btc-net.bg) has quit (Quit: Leaving)
+2020-12-23 16:57:28	-->	Katana_Steel (~quassel@108-205-159-72.lightspeed.irvnca.sbcglobal.net) has joined ##kernel
+2020-12-23 17:05:22	--	irc: disconnected from server
+2020-12-23 17:05:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-23 17:05:57	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-23 17:05:57	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-23 17:05:57	--	Channel ##kernel: 265 nicks (1 op, 0 voices, 264 normals)
+2020-12-23 17:05:57	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-23 17:06:13	-->	ret2libc (~ret2libc@151.48.109.59) has joined ##kernel
+2020-12-23 17:06:16	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-23 17:12:26	-->	oneforall2 (~guru@S0106ec086bc3574f.mh.shawcable.net) has joined ##kernel
+2020-12-23 17:13:30	oneforall2	kernel: [   13.827939] ACPI: \: failed to evaluate _DSM (0x1001) googling I see it was 2018 mesa problem? having it now qith 5.10.2  5.10.1 was the same
+2020-12-23 17:13:43	oneforall2	hangs my system ..
+2020-12-23 17:14:21	-->	tesseract (~tesseract@2a01:e0a:24b:f220:8eb4:c22:16f:5ba0) has joined ##kernel
+2020-12-23 17:16:22	-->	towo` (~towo@unaffiliated/towo/x-4064351) has joined ##kernel
+2020-12-23 17:41:21	-->	headless (~Thunderbi@31.173.83.145) has joined ##kernel
+2020-12-23 17:41:43	-->	diwyjukjt (~PuHYmtyp~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-23 17:42:13	-->	dviola (~diego@unaffiliated/dviola) has joined ##kernel
+2020-12-23 17:45:42	<--	diwyjukjt (~PuHYmtyp~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-23 17:46:11	-->	skydrome` (~emordyks@unaffiliated/skydrome) has joined ##kernel
+2020-12-23 17:46:49	<--	skydrome (~emordyks@unaffiliated/skydrome) has quit (Ping timeout: 265 seconds)
+2020-12-23 17:46:49	--	skydrome` is now known as skydrome
+2020-12-23 17:51:42	<--	skydrome (~emordyks@unaffiliated/skydrome) has quit (Quit: quit)
+2020-12-23 17:52:00	-->	skydrome (~emordyks@unaffiliated/skydrome) has joined ##kernel
+2020-12-23 17:59:26	-->	Borkr (~Borkr@118.158-248-29.customer.lyse.net) has joined ##kernel
+2020-12-23 17:59:46	<--	Katana_Steel (~quassel@108-205-159-72.lightspeed.irvnca.sbcglobal.net) has quit (Read error: No route to host)
+2020-12-23 17:59:55	<--	antoine (~antoine@159.100.241.193) has quit (Quit: Ping timeout (120 seconds))
+2020-12-23 18:00:22	-->	antoine (~antoine@159.100.241.193) has joined ##kernel
+2020-12-23 18:00:39	<--	mpmc (~mpmc@unaffiliated/mpmc) has quit (Remote host closed the connection)
+2020-12-23 18:00:54	<--	wowi42 (~wowi42@51.15.249.183) has quit (Remote host closed the connection)
+2020-12-23 18:00:55	<--	mawk (mawk@serveur.io) has quit (Quit: ZNC - https://znc.in)
+2020-12-23 18:01:10	-->	mawk (mawk@serveur.io) has joined ##kernel
+2020-12-23 18:01:39	-->	wowi42 (~wowi42@51.15.249.183) has joined ##kernel
+2020-12-23 18:02:07	-->	mpmc (~mpmc@unaffiliated/mpmc) has joined ##kernel
+2020-12-23 18:34:36	-->	wlxmhls (~wlxmhls@45.251.22.32) has joined ##kernel
+2020-12-23 18:53:39	<--	Borkr (~Borkr@118.158-248-29.customer.lyse.net) has quit (Ping timeout: 256 seconds)
+2020-12-23 19:01:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-23 19:26:19	<--	headless (~Thunderbi@31.173.83.145) has quit (Quit: headless)
+2020-12-23 19:27:35	-->	cdown_ (~cdown@163.114.131.1) has joined ##kernel
+2020-12-23 19:28:37	<--	randomguy090 (~RandomGuy@91.239.205.33) has quit (Ping timeout: 260 seconds)
+2020-12-23 19:30:17	--	cdown_ is now known as cdown
+2020-12-23 19:40:45	-->	cdown_ (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-23 19:43:04	<--	cdown (~cdown@163.114.131.1) has quit (Ping timeout: 240 seconds)
+2020-12-23 19:43:05	--	cdown_ is now known as cdown
+2020-12-23 19:50:22	-->	Borkr (~Borkr@118.158-248-29.customer.lyse.net) has joined ##kernel
+2020-12-23 20:00:15	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-23 20:22:47	-->	Borkr_ (~Borkr@118.158-248-29.customer.lyse.net) has joined ##kernel
+2020-12-23 20:26:00	<--	Borkr (~Borkr@118.158-248-29.customer.lyse.net) has quit (Ping timeout: 264 seconds)
+2020-12-23 20:29:16	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-23 20:35:40	-->	ar1el (~psych0del@unaffiliated/ar1el) has joined ##kernel
+2020-12-23 20:38:42	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 20:40:04	<--	Borkr_ (~Borkr@118.158-248-29.customer.lyse.net) has quit (Read error: Connection reset by peer)
+2020-12-23 20:41:07	-->	diegopd (~Thunderbi@201-92-142-45.dsl.telesp.net.br) has joined ##kernel
+2020-12-23 20:42:51	-->	astylian_ (~astylian@87-241-04.netrunf.cytanet.com.cy) has joined ##kernel
+2020-12-23 20:43:29	<--	astylian (~astylian@46-229-72.internethome.cytanet.com.cy) has quit (Read error: Connection reset by peer)
+2020-12-23 20:47:03	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-23 20:47:55	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-23 20:54:08	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-23 20:54:59	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined ##kernel
+2020-12-23 21:21:51	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 21:22:55	-->	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has joined ##kernel
+2020-12-23 21:32:17	-->	diwyjukjt (~KbEnsDNW~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-23 21:32:31	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-23 21:36:22	<--	diwyjukjt (~KbEnsDNW~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-23 21:37:10	-->	diwyjukjt (~KbEnsDNW~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-23 21:48:08	<--	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has quit (Quit: Lost terminal)
+2020-12-23 21:54:39	<--	esselfe (~steph@unaffiliated/esselfe) has quit (Read error: Connection reset by peer)
+2020-12-24 06:11:05	--	irc: disconnected from server
+2020-12-24 06:11:39	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-24 06:11:39	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-24 06:11:39	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-24 06:11:39	--	Channel ##kernel: 269 nicks (1 op, 0 voices, 268 normals)
+2020-12-24 06:11:39	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-24 06:11:44	<--	headless (~headless@178.176.74.218) has quit (Quit: Konversation terminated!)
+2020-12-24 06:11:58	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-24 06:15:08	-->	astylian_ (~astylian@31-119-200.netrun.cytanet.com.cy) has joined ##kernel
+2020-12-24 06:17:51	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Quit: Leaving)
+2020-12-24 06:20:30	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-24 06:22:11	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Read error: Connection reset by peer)
+2020-12-24 06:23:37	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Quit: sord937)
+2020-12-24 06:30:03	-->	GNUmoon (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-24 06:49:00	<--	esselfe (~steph@unaffiliated/esselfe) has quit (Quit: 1000‰ Linux Ⓑ ⓨ ⓔ)
+2020-12-24 07:00:31	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-24 07:06:38	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-24 07:22:09	-->	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has joined ##kernel
+2020-12-24 07:24:16	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 256 seconds)
+2020-12-24 07:25:01	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-24 07:25:02	-->	Lightsword (~Lightswor@2604:a880:1:20::1d3:9001) has joined ##kernel
+2020-12-24 07:27:29	<--	Lightsword (~Lightswor@2604:a880:1:20::1d3:9001) has quit (Client Quit)
+2020-12-24 07:29:37	-->	Lightsword (~Lightswor@2604:a880:1:20::1d3:9001) has joined ##kernel
+2020-12-24 07:41:00	<--	Kruppt (~Kruppt@50-111-56-201.drhm.nc.frontiernet.net) has quit (Quit: Leaving)
+2020-12-24 07:47:44	<--	post-factum (~post-fact@vulcan.natalenko.name) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-12-24 07:48:24	-->	post-factum (~post-fact@vulcan.natalenko.name) has joined ##kernel
+2020-12-24 11:23:00	--	irc: disconnected from server
+2020-12-24 11:23:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-24 11:23:35	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-24 11:23:35	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-24 11:23:35	--	Channel ##kernel: 263 nicks (1 op, 0 voices, 262 normals)
+2020-12-24 11:23:35	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-24 11:23:54	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-24 11:26:44	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-24 11:32:53	-->	de-facto_ (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-24 11:32:54	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Disconnected by services)
+2020-12-24 11:33:56	--	de-facto_ is now known as de-facto
+2020-12-24 11:51:47	-->	Katana_Steel (~quassel@108-205-159-72.lightspeed.irvnca.sbcglobal.net) has joined ##kernel
+2020-12-24 11:55:32	<--	brainium (~brainium@unaffiliated/brainium) has quit (Quit: Konversation terminated!)
+2020-12-24 12:19:28	-->	cwaydt (~cwaydt@li59-161.members.linode.com) has joined ##kernel
+2020-12-24 12:25:11	<--	cwaydt (~cwaydt@li59-161.members.linode.com) has left ##kernel ("The Lounge - https://thelounge.chat")
+2020-12-24 19:00:38	--	irc: disconnected from server
+2020-12-24 19:01:12	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-24 19:01:12	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-24 19:01:12	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-24 19:01:12	--	Channel ##kernel: 268 nicks (1 op, 0 voices, 267 normals)
+2020-12-24 19:01:13	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-24 19:01:32	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-24 19:04:59	<--	headless (~Thunderbi@178.176.73.120) has quit (Quit: headless)
+2020-12-24 19:43:07	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-24 19:47:11	<--	sec^nd (~second@gateway/tor-sasl/sec0nd) has quit (Remote host closed the connection)
+2020-12-24 19:47:32	-->	sec^nd (~second@gateway/tor-sasl/sec0nd) has joined ##kernel
+2020-12-24 20:01:16	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-24 20:03:31	-->	johnjay (~pi@38.120.10.99) has joined ##kernel
+2020-12-24 20:05:53	-->	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has joined ##kernel
+2020-12-24 20:27:52	-->	zyweo (~tt@unaffiliated/zyweo) has joined ##kernel
+2020-12-24 20:49:09	<--	rayyyy1 (~nanoz@gateway/tor-sasl/nanoz) has quit (Remote host closed the connection)
+2020-12-24 20:50:52	<--	zyweo (~tt@unaffiliated/zyweo) has quit (Quit: co co)
+2020-12-25 01:06:20	--	irc: disconnected from server
+2020-12-25 01:07:05	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-25 01:07:05	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-25 01:07:05	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-25 01:07:05	--	Channel ##kernel: 272 nicks (1 op, 0 voices, 271 normals)
+2020-12-25 01:07:06	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-25 01:07:24	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-25 01:19:24	-->	LH44_ (~LH44@41.141.5.130) has joined ##kernel
+2020-12-25 01:22:41	<--	LH44 (~LH44@196.89.7.6) has quit (Ping timeout: 260 seconds)
+2020-12-25 01:24:39	<--	tesseract (~tesseract@2a01:e0a:24b:f220:8eb4:c22:16f:5ba0) has quit (Quit: Leaving)
+2020-12-25 01:28:51	<--	ttill (~ttill@5cf3ff07.rev.dansknet.dk) has quit (Ping timeout: 256 seconds)
+2020-12-25 01:44:49	-->	headless (~headless@31.173.80.163) has joined ##kernel
+2020-12-25 01:49:08	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 01:49:41	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-25 02:04:11	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Quit: sord937)
+2020-12-25 02:16:08	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-25 02:23:29	<--	ohsix (~ohsix@h72-35-140-141.bendor.broadband.dynamic.tds.net) has quit (Ping timeout: 256 seconds)
+2020-12-25 02:44:22	<--	diwyjukjt5nwbmzd (~ZXIvryoL~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-25 02:57:57	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##kernel
+2020-12-25 02:58:52	-->	beneth (~beneth@irc.beneth.fr) has joined ##kernel
+2020-12-25 03:00:34	<--	berglh (~quassel@ns1.bytefuse.net) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-25 03:01:12	-->	berglh (~quassel@ns1.bytefuse.net) has joined ##kernel
+2020-12-25 03:05:00	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 264 seconds)
+2020-12-25 03:12:04	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-12-25 03:22:56	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-25 03:30:38	<--	fncapkle (~sb35@167.114.5.1) has quit (Quit: fncapkle)
+2020-12-25 03:32:51	<--	xtrWrithe (xtrWrithe@gateway/vpn/mullvad/v0idpattern) has quit (Quit: WeeChat 2.9)
+2020-12-25 03:40:24	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-25 03:41:41	<--	LH44_ (~LH44@41.141.5.130) has quit (Quit: ...)
+2020-12-25 03:42:12	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 264 seconds)
+2020-12-25 04:02:26	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-25 04:03:07	Guest20	hi there, a very basic question, once the kernel runs a program, it loads its code from the disk to memory.. in memory there is a concept of stack and heap
+2020-12-25 04:03:13	-->	xrash (~xrash@177.45.93.120) has joined ##kernel
+2020-12-25 04:03:13	Guest20	what are those?
+2020-12-25 04:03:21	<--	xrash (~xrash@177.45.93.120) has quit (Excess Flood)
+2020-12-25 04:03:37	Guest20	why heaps are used for dynamic allocation of memory via malloc and not stack? what is the difference?
+2020-12-25 04:05:43	-->	xrash (~xrash@177.45.93.120) has joined ##kernel
+2020-12-25 04:05:53	<--	xrash (~xrash@177.45.93.120) has quit (Excess Flood)
+2020-12-25 04:16:14	jn__	Guest20: "stack" and "heap" are basically two different access disciplines
+2020-12-25 04:16:31	Guest20	jn__ are these present in the ram?
+2020-12-25 04:16:35	jn__	on the "heap", different objects have lifetimes that are independent of each other
+2020-12-25 04:16:59	jn__	on the "stack", the newest-allocated object is destroyed first
+2020-12-25 04:17:02	jn__	(simplified)
+2020-12-25 04:17:18	jn__	Guest20: what do you mean by your question?
+2020-12-25 04:17:42	-->	xrash (~xrash@177.45.93.120) has joined ##kernel
+2020-12-25 04:17:49	<--	xrash (~xrash@177.45.93.120) has quit (Excess Flood)
+2020-12-25 04:17:59	Guest20	so stack and heap are the data structures to access something from the memory?
+2020-12-25 04:20:06	jn__	well—  they aren't really specific data structures.  but for a given system (for example fixed versions of linux+glibc on x86), they are implemented by specific data structures
+2020-12-25 04:20:18	Hello71	Guest20: you can think of it this way: the operating system gives you a big chunk of memory
+2020-12-25 04:20:24	Hello71	you can decide for yourself how you want to divide it
+2020-12-25 04:20:28	-->	xrash (~xrash@177.45.93.120) has joined ##kernel
+2020-12-25 04:21:00	jn__	the details of how you access stack or heap memory become apparent when looking at C code or something
+2020-12-25 04:21:01	Hello71	but, most people choose to divide their memory into one section for function variables and one section for dynamic data
+2020-12-25 04:21:15	jn__	how they are implemented can be seen in compiler output and libc implementation
+2020-12-25 04:23:57	Guest20	thanks jn__ Hello71
+2020-12-25 04:24:06	jn__	as a bit of a side note, there is also a specific data structure in computer science. https://en.wikipedia.org/wiki/Heap_(data_structure)
+2020-12-25 04:24:06	jn__	but don't expect the "heap" of a C program etc. to be implemented as that kind of heap. it often isn't
+2020-12-25 04:24:28	jn__	there is also a specific data structure *called a heap* in computer science
+2020-12-25 04:24:44	Guest20	sure
+2020-12-25 04:25:57	Guest20	i have one silly doubt, when a parent issues a fork(), it also issues a wait().. now this terminology is called "child is reaped"
+2020-12-25 04:27:41	Guest20	wait() is called on a parent process just to delay its execution, so that child can execute and return its return status to the parent?
+2020-12-25 04:27:45	Guest20	am i right?
+2020-12-25 04:28:18	jn__	there is another aspect to it:
+2020-12-25 04:29:08	jn__	before wait() has been called for a terminated process (a "zombie"), the kernel has to keep some information about the process around
+2020-12-25 04:30:09	jn__	it can only free delete that information when the parent process calls wait
+2020-12-25 04:31:20	jn__	note also that wait isn't called "so that child can execute". the child process can execute before the parent process ever calls wait.
+2020-12-25 04:31:24	-->	ohsix (~ohsix@h72-35-140-141.bendor.broadband.dynamic.tds.net) has joined ##kernel
+2020-12-25 04:31:28	Guest20	i am confused with your first statement, do you mean even before wait(), there is a chance that child process can finish its execution and not return its return status to its parent?
+2020-12-25 04:31:36	<--	rendar (~rendar@unaffiliated/rendar) has quit
+2020-12-25 04:31:41	Hello71	Guest20: you can write your own program to test
+2020-12-25 04:31:53	jn__	yes, the child process can start executing as soon as fork is called
+2020-12-25 04:31:55	Hello71	the point of fork is that the parent and child can execute independently
+2020-12-25 04:32:16	Hello71	on an SMP system they may in fact execute simultaneously
+2020-12-25 04:32:22	jn__	Hello71 makes a great point. testing these details is a fun and educational way to learn about the system
+2020-12-25 04:32:42	Guest20	jn__ so in the case , the parent will not free the information from the process table. this is called as zombie
+2020-12-25 04:32:50	Hello71	although I suspect that in practice Linux will run the child briefly to see what it does, and only move it if both need CPU
+2020-12-25 04:33:56	jn__	Guest20: a zombie is a process that has been terminated, but for which wait has not yet been called
+2020-12-25 04:34:50	Guest20	sure
+2020-12-25 04:37:16	-->	Sajesajama (Salsa@gateway/vpn/protonvpn/sajesajama) has joined ##kernel
+2020-12-25 04:37:48	Hello71	Guest20: basically
+2020-12-25 04:38:10	Hello71	you can disable wait() by setting SIGCHLD to SIG_IGN
+2020-12-25 04:38:22	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-25 04:39:34	Guest20	sure
+2020-12-25 04:39:56	Guest20	Hello71 when a process is said to be orphan.. from googling i can know that child still runs but its parents has finished its execution
+2020-12-25 04:39:57	-->	Sajesajama_ (Salsa@gateway/vpn/protonvpn/sajesajama) has joined ##kernel
+2020-12-25 04:40:01	Guest20	how this scenario can happen
+2020-12-25 04:40:14	Hello71	you just quit without waiting
+2020-12-25 04:40:30	Hello71	you don't even need C for this, just shell
+2020-12-25 04:41:34	Guest20	oh ok
+2020-12-25 04:41:48	<--	Sajesajama_ (Salsa@gateway/vpn/protonvpn/sajesajama) has quit (Remote host closed the connection)
+2020-12-25 06:58:26	--	irc: disconnected from server
+2020-12-25 06:59:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-25 06:59:06	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-25 06:59:06	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-25 06:59:06	--	Channel ##kernel: 265 nicks (1 op, 0 voices, 264 normals)
+2020-12-25 06:59:07	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-25 06:59:24	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-25 07:21:47	<--	f4t4l_3rr0r (~PhoenixCo@unaffiliated/alien-fx-fiend/x-2870569) has quit (Quit: .oO (bbl tc folks~!))
+2020-12-25 07:26:32	<--	Dave_R (~Dave_R@home.amunra.co.uk) has quit (Quit: My machine has gone to sleep. ZZZzzz…)
+2020-12-25 07:28:47	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Remote host closed the connection)
+2020-12-25 07:28:57	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-25 07:30:36	-->	hexteex (~hexteex@gateway/tor-sasl/hexteex) has joined ##kernel
+2020-12-25 07:32:07	<--	towo` (~towo@unaffiliated/towo/x-4064351) has quit (Quit: Leaving)
+2020-12-25 07:41:43	<--	Kruppt (~Kruppt@50-111-56-201.drhm.nc.frontiernet.net) has quit (Quit: Leaving)
+2020-12-25 07:46:14	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 265 seconds)
+2020-12-25 07:50:30	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-25 08:05:43	<--	GNUmoon (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Ping timeout: 240 seconds)
+2020-12-25 08:34:44	--	mpagano is now known as belsnickel
+2020-12-25 08:57:08	-->	astylian (~astylian@31-119-200.netrun.cytanet.com.cy) has joined ##kernel
+2020-12-25 09:00:57	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 09:03:45	<--	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has quit (Quit: Leaving)
+2020-12-25 09:15:30	-->	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has joined ##kernel
+2020-12-25 09:27:56	-->	diwyjukjt5 (~vsgKJHgJ~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-25 09:44:56	<--	rdelfin (~rdelfin@cpc158601-hari23-2-0-cust44.20-2.cable.virginm.net) has quit (Ping timeout: 256 seconds)
+2020-12-25 09:54:22	-->	rdelfin (~rdelfin@cpc158601-hari23-2-0-cust44.20-2.cable.virginm.net) has joined ##kernel
+2020-12-25 09:55:51	jungdongho	hello, is there any reference about which causes contribute how much to linux kernel crash/bug? like a _device drivers are primary contributor to kernel crashed_ from "Improving the Reliability of Commodity Operating Systems". But I couldn't find exact ratio and other causes.
+2020-12-25 09:56:50	jungdongho	I searched arxiv and google scholar with keywords like linux, kernel, crash, bug, trend, ratio, etc... but couldn't find them
+2020-12-25 10:09:56	Hello71	statistically speaking device drivers have the most code
+2020-12-25 10:10:01	Hello71	but this isn't an interesting question
+2020-12-25 10:10:22	Hello71	if the graphics card driver stops working generally the worst thing is the kernel panics
+2020-12-25 10:10:33	Hello71	if the filesystem driver stops working then you may lose data
+2020-12-25 10:14:43	<--	hexteex (~hexteex@gateway/tor-sasl/hexteex) has quit (Quit: Leaving)
+2020-12-25 10:14:59	jungdongho	Has no one done any quantitative analysis on that yet? I thought someone already did it.
+2020-12-25 10:23:03	-->	lukedashjr (~luke-jr@unaffiliated/luke-jr) has joined ##kernel
+2020-12-25 10:23:25	<--	luke-jr (~luke-jr@unaffiliated/luke-jr) has quit (Ping timeout: 240 seconds)
+2020-12-25 10:27:23	--	lukedashjr is now known as luke-jr
+2020-12-25 10:53:16	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:10:56	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:13:03	<--	diwyjukjt5 (~vsgKJHgJ~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:32:22	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Disconnected by services)
+2020-12-25 11:32:23	-->	de-facto_ (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-25 11:33:38	--	de-facto_ is now known as de-facto
+2020-12-25 11:35:16	<--	brainium (~brainium@unaffiliated/brainium) has quit (Quit: Konversation terminated!)
+2020-12-25 11:44:04	<--	astylian (~astylian@31-119-200.netrun.cytanet.com.cy) has quit (Remote host closed the connection)
+2020-12-25 11:44:19	-->	astylian (~astylian@31-119-200.netrun.cytanet.com.cy) has joined ##kernel
+2020-12-25 11:45:51	<--	astylian (~astylian@31-119-200.netrun.cytanet.com.cy) has quit (Read error: Connection reset by peer)
+2020-12-25 11:46:10	<--	xrash (~xrash@177.45.93.120) has quit (Remote host closed the connection)
+2020-12-25 11:46:47	-->	diwyju (~mGIfJYQX~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-25 11:47:40	<--	diwyju (~mGIfJYQX~@gateway/tor-sasl/spareproject) has quit (Remote host closed the connection)
+2020-12-25 12:55:40	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-25 12:58:16	<--	Led_Zeppelin (~user@cpe-68-172-248-139.nj.res.rr.com) has quit (Ping timeout: 240 seconds)
+2020-12-25 13:31:34	-->	d_olex (~d_olex@ppp-115-87-79-128.revip4.asianet.co.th) has joined ##kernel
+2020-12-25 13:38:25	-->	xrash (~xrash@177.45.93.120) has joined ##kernel
+2020-12-25 13:44:30	-->	Mo_ (~Mo@unaffiliated/mo) has joined ##kernel
+2020-12-25 13:48:26	<--	Mo-jorisin (~Mo@unaffiliated/mo) has quit (Ping timeout: 272 seconds)
+2020-12-25 13:48:27	<--	indy (~indy@dsl-static-104.213-160-167.telecom.sk) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:49:51	<--	[daryl] (~daryl@unaffiliated/theglass) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:50:24	-->	[daryl] (~daryl@unaffiliated/theglass) has joined ##kernel
+2020-12-25 13:58:49	-->	indy (~indy@dsl-static-104.213-160-167.telecom.sk) has joined ##kernel
+2020-12-25 14:03:22	<--	mefistofeles (~mefistofe@unaffiliated/mefistofeles) has quit (Ping timeout: 260 seconds)
+2020-12-25 14:03:30	-->	mefistofeles (~mefistofe@unaffiliated/mefistofeles) has joined ##kernel
+2020-12-25 14:09:44	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-25 14:12:25	<--	rare_energy (~quassel@c-73-248-161-44.hsd1.nj.comcast.net) has quit (Read error: Connection reset by peer)
+2020-12-25 14:14:39	-->	rare_energy (~quassel@73.248.161.44) has joined ##kernel
+2020-12-25 14:30:05	<--	xrash (~xrash@177.45.93.120) has quit (Ping timeout: 240 seconds)
+2020-12-25 14:33:25	-->	Sajesajama (Salsa@gateway/vpn/protonvpn/sajesajama) has joined ##kernel
+2020-12-25 15:46:37	--	irc: disconnected from server
+2020-12-25 15:47:15	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-25 15:47:15	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-25 15:47:15	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-25 15:47:15	--	Channel ##kernel: 255 nicks (1 op, 0 voices, 254 normals)
+2020-12-25 15:47:17	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-25 15:47:33	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-25 15:49:07	-->	beneth (~beneth@irc.beneth.fr) has joined ##kernel
+2020-12-25 15:53:11	-->	Necktwi (~necktwi@ferryfair.com) has joined ##kernel
+2020-12-25 15:55:45	<--	Mo_ (~Mo@unaffiliated/mo) has quit (Ping timeout: 240 seconds)
+2020-12-26 06:21:47	--	irc: disconnected from server
+2020-12-26 06:22:25	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-26 06:22:25	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-26 06:22:25	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-26 06:22:25	--	Channel ##kernel: 265 nicks (1 op, 0 voices, 264 normals)
+2020-12-26 06:22:26	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-26 06:22:44	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-26 06:36:50	-->	Kruppt (~Kruppt@50-111-56-201.drhm.nc.frontiernet.net) has joined ##kernel
+2020-12-26 06:37:10	<--	Kruppt (~Kruppt@50-111-56-201.drhm.nc.frontiernet.net) has quit (Client Quit)
+2020-12-26 06:42:44	-->	HeN (uid173181@gateway/web/irccloud.com/x-vgasopoxienbfpes) has joined ##kernel
+2020-12-26 06:44:09	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Remote host closed the connection)
+2020-12-26 06:44:19	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-26 06:55:39	<--	danyspin97 (~danyspin9@liveunix.org) has quit (Quit: ZNC - https://znc.in)
+2020-12-26 06:57:40	-->	sserra (5127691d@29.red-81-39-105.dynamicip.rima-tde.net) has joined ##kernel
+2020-12-26 06:59:09	-->	danyspin97 (danyspin97@liveunix.org) has joined ##kernel
+2020-12-26 07:09:29	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Read error: Connection reset by peer)
+2020-12-26 08:55:32	--	irc: disconnected from server
+2020-12-26 08:56:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-26 08:56:09	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-26 08:56:09	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-26 08:56:09	--	Channel ##kernel: 264 nicks (1 op, 0 voices, 263 normals)
+2020-12-26 08:56:10	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-26 08:56:28	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-26 09:01:50	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-26 09:07:19	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-26 09:10:09	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-26 09:11:30	<--	tkchk (~tkchk@86.26.broadband6.iol.cz) has quit (Client Quit)
+2020-12-26 09:16:48	<--	johnjay (~pi@38.120.10.99) has quit (Read error: Connection reset by peer)
+2020-12-26 09:16:54	-->	johnjay (~pi@38.120.10.99) has joined ##kernel
+2020-12-26 09:37:19	<--	johnjay (~pi@38.120.10.99) has quit (Quit: WeeChat 2.3)
+2020-12-26 09:38:30	-->	johnjay (~pi@38.120.10.99) has joined ##kernel
+2020-12-26 09:42:22	-->	Dadrophenia (~Dadrophen@97-113-190-154.tukw.qwest.net) has joined ##kernel
+2020-12-26 09:57:36	<--	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has quit (Ping timeout: 240 seconds)
+2020-12-26 10:01:54	-->	gioyik_ (gioyik@gateway/vpn/privateinternetaccess/gioyik) has joined ##kernel
+2020-12-26 10:04:55	-->	gioyik__ (~gioyik@186.112.107.251) has joined ##kernel
+2020-12-26 10:05:13	<--	gioyik (~gioyik@186.112.107.251) has quit (Ping timeout: 256 seconds)
+2020-12-26 10:07:42	<--	gioyik_ (gioyik@gateway/vpn/privateinternetaccess/gioyik) has quit (Ping timeout: 265 seconds)
+2020-12-26 10:10:06	<--	sserra (5127691d@29.red-81-39-105.dynamicip.rima-tde.net) has quit (Remote host closed the connection)
+2020-12-26 11:14:22	<--	Devastator (~devas@unaffiliated/devastator) has left ##kernel
+2020-12-26 11:17:32	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 256 seconds)
+2020-12-26 11:20:05	<--	Dadrophenia (~Dadrophen@97-113-190-154.tukw.qwest.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-26 11:21:23	-->	Dadrophenia (~Dadrophen@97-113-190-154.tukw.qwest.net) has joined ##kernel
+2020-12-26 11:21:38	<--	Dadrophenia (~Dadrophen@97-113-190-154.tukw.qwest.net) has quit (Client Quit)
+2020-12-26 11:22:33	-->	Dadrophenia (~Dadrophen@97-113-190-154.tukw.qwest.net) has joined ##kernel
+2020-12-26 11:27:26	<--	Dadrophenia (~Dadrophen@97-113-190-154.tukw.qwest.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-26 11:28:47	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Disconnected by services)
+2020-12-26 11:28:47	-->	de-facto_ (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-26 11:29:30	-->	Dadrophenia (~Dadrophen@97-113-190-154.tukw.qwest.net) has joined ##kernel
+2020-12-26 11:30:26	--	de-facto_ is now known as de-facto
+2020-12-26 11:31:29	<--	astylian (~astylian@62-40-107.netrun.cytanet.com.cy) has quit (Remote host closed the connection)
+2020-12-26 11:31:47	-->	astylian (~astylian@62-40-107.netrun.cytanet.com.cy) has joined ##kernel
+2020-12-26 11:35:02	-->	diwyju (~Daohshdy~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-26 11:43:21	-->	PamiPetteri (pamipetter@unaffiliated/xormor) has joined ##kernel
+2020-12-26 11:44:28	PamiPetteri	I compiled the Linux kernel for my Debian GNU stable. Why does the version number show as x.y.z+? It has a trailing + sign: "Linux luola 5.10.2+ #1 SMP Sat Dec 26 00:44:06 EET 2020 x86_64 GNU/Linux".
+2020-12-26 11:48:23	<--	diwyju (~Daohshdy~@gateway/tor-sasl/spareproject) has quit (Ping timeout: 240 seconds)
+2020-12-26 11:48:52	-->	diwyju (~Daohshdy~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-26 11:55:33	<--	brainium (~brainium@unaffiliated/brainium) has quit (Quit: Konversation terminated!)
+2020-12-26 12:14:04	-->	Klox (~Klox@c-24-1-131-19.hsd1.il.comcast.net) has joined ##kernel
+2020-12-26 12:25:16	-->	trinityblade (~textual@adsl-76-211-177-0.dsl.wlfrct.sbcglobal.net) has joined ##kernel
+2020-12-26 14:29:17	--	irc: disconnected from server
+2020-12-26 14:29:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-26 14:29:54	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-26 14:29:54	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-26 14:29:54	--	Channel ##kernel: 262 nicks (1 op, 0 voices, 261 normals)
+2020-12-26 14:29:55	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-26 14:30:13	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-26 15:26:12	-->	malina (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-26 15:31:57	<--	tds (~tds@lounge.srv.home.timstallard.me.uk) has quit (Ping timeout: 260 seconds)
+2020-12-26 15:35:27	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined ##kernel
+2020-12-26 15:55:23	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-26 15:56:34	-->	fredl (~fredl@smtp.3dn.nl) has joined ##kernel
+2020-12-26 15:56:51	<--	fredl (~fredl@smtp.3dn.nl) has quit (Remote host closed the connection)
+2020-12-26 16:07:01	<--	xrash (~xrash@179.145.51.148) has quit (Remote host closed the connection)
+2020-12-26 16:11:40	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-26 16:16:45	<--	malina (~malina@unaffiliated/malina) has quit (Remote host closed the connection)
+2020-12-26 16:20:23	<--	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has quit (Ping timeout: 260 seconds)
+2020-12-26 16:32:41	-->	rendar (~rendar@unaffiliated/rendar) has joined ##kernel
+2020-12-26 17:21:37	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Remote host closed the connection)
+2020-12-26 17:22:29	-->	de-facto (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-26 17:23:51	-->	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has joined ##kernel
+2020-12-26 17:24:34	<--	GNUmoon (~GNUmoon@gateway/tor-sasl/gnumoon) has quit (Remote host closed the connection)
+2020-12-26 17:26:18	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Remote host closed the connection)
+2020-12-26 17:27:16	-->	de-facto (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-26 17:28:57	-->	headless (~Thunderbi@31.173.85.239) has joined ##kernel
+2020-12-26 17:44:30	<--	headless (~Thunderbi@31.173.85.239) has quit (Quit: headless)
+2020-12-26 17:45:45	<--	gioyik__ (~gioyik@186.112.107.251) has quit (Quit: WeeChat 3.0)
+2020-12-26 17:47:18	-->	headless (~Thunderbi@31.173.85.239) has joined ##kernel
+2020-12-26 17:47:52	<--	headless (~Thunderbi@31.173.85.239) has quit (Client Quit)
+2020-12-26 17:49:37	-->	beneth (~beneth@irc.beneth.fr) has joined ##kernel
+2020-12-26 17:53:23	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Remote host closed the connection)
+2020-12-26 17:53:41	-->	de-facto (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-26 18:01:23	<--	Necktwi (~necktwi@ferryfair.com) has quit (Read error: Connection reset by peer)
+2020-12-26 18:25:06	-->	Guest20 (~textual@103.215.168.1) has joined ##kernel
+2020-12-26 18:25:19	Guest20	is there a way to get the logs of this channel
+2020-12-26 18:33:43	-->	ZNK1aE (~filler@a4.inai.de) has joined ##kernel
+2020-12-26 18:38:03	-->	GNUmoon (~GNUmoon@gateway/tor-sasl/gnumoon) has joined ##kernel
+2020-12-26 18:40:16	<--	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has quit (Quit: Halcyon flies away.)
+2020-12-26 18:44:27	-->	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has joined ##kernel
+2020-12-26 18:45:12	la_mettrie	what do you want from logs?
+2020-12-26 18:47:18	-->	towo` (~towo@unaffiliated/towo/x-4064351) has joined ##kernel
+2020-12-26 19:03:20	<--	astylian (~astylian@62-40-107.netrun.cytanet.com.cy) has quit (Remote host closed the connection)
+2020-12-26 19:07:11	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-26 19:15:15	-->	Alchemical (~al@unaffiliated/alchemical) has joined ##kernel
+2020-12-26 19:17:39	<--	Alchemical (~al@unaffiliated/alchemical) has quit (K-Lined)
+2020-12-26 19:42:43	-->	tds (~tds@lounge.srv.home.timstallard.me.uk) has joined ##kernel
+2020-12-26 19:53:46	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Remote host closed the connection)
+2020-12-26 19:54:19	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined ##kernel
+2020-12-26 20:09:49	-->	mixfix41 (~hoodfame@unaffiliated/mixfix41) has joined ##kernel
+2020-12-26 20:11:23	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Ping timeout: 240 seconds)
+2020-12-26 20:14:09	-->	diwyjukj (~XJOaeLHx~@gateway/tor-sasl/spareproject) has joined ##kernel
+2020-12-26 20:48:10	-->	malina (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-26 20:57:52	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-26 20:58:19	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined ##kernel
+2020-12-26 21:05:57	-->	tkchk (~tkchk@86.26.broadband6.iol.cz) has joined ##kernel
+2020-12-26 21:10:22	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Read error: Connection reset by peer)
+2020-12-26 21:12:26	-->	cdown (~cdown@163.114.131.1) has joined ##kernel
+2020-12-26 21:15:10	-->	kayprish (~kayprish@cable-188-2-151-212.dynamic.sbb.rs) has joined ##kernel
+2020-12-27 09:05:27	--	irc: disconnected from server
+2020-12-27 09:06:24	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-27 09:06:24	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-27 09:06:24	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-27 09:06:24	--	Channel ##kernel: 265 nicks (1 op, 0 voices, 264 normals)
+2020-12-27 09:06:25	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-27 09:06:42	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-27 09:11:29	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined ##kernel
+2020-12-27 09:17:27	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 09:20:49	<--	milkt_ (~debian@gateway/tor-sasl/milkt) has quit (Remote host closed the connection)
+2020-12-27 09:28:01	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined ##kernel
+2020-12-27 09:30:35	-->	milkt (~debian@gateway/tor-sasl/milkt) has joined ##kernel
+2020-12-27 09:34:01	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 09:36:06	-->	aethlas (~aethlas@45.86.202.95) has joined ##kernel
+2020-12-27 10:02:08	<--	towo` (~towo@unaffiliated/towo/x-4064351) has quit (Quit: Leaving)
+2020-12-27 10:07:37	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined ##kernel
+2020-12-27 10:12:09	-->	fifihyperbola (~monsieur@cpc80981-perr17-2-0-cust753.19-1.cable.virginm.net) has joined ##kernel
+2020-12-27 10:13:38	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 10:14:22	-->	MikeDebian (~none@bl11-47-156.dsl.telepac.pt) has joined ##kernel
+2020-12-27 10:15:16	<--	Scotty_Trees (Scotty_Tre@gateway/vpn/protonvpn/scottytrees/x-84723905) has quit (Quit: Leaving)
+2020-12-27 10:15:33	-->	Scotty_Trees (Scotty_Tre@gateway/vpn/protonvpn/scottytrees/x-84723905) has joined ##kernel
+2020-12-27 10:24:30	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined ##kernel
+2020-12-27 10:26:59	<--	fifihyperbola (~monsieur@cpc80981-perr17-2-0-cust753.19-1.cable.virginm.net) has quit (Remote host closed the connection)
+2020-12-27 10:31:22	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Remote host closed the connection)
+2020-12-27 10:41:07	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined ##kernel
+2020-12-30 19:38:46	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-30 19:38:46	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-30 19:38:46	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-30 19:38:46	--	Channel ##kernel: 273 nicks (1 op, 0 voices, 272 normals)
+2020-12-30 19:38:47	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-30 19:39:06	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-30 19:43:32	-->	eiche_home_ (~eiche_hom@x4db4924b.dyn.telefonica.de) has joined ##kernel
+2020-12-30 19:44:16	<--	brettgilio (~brettgili@brettgilio.com) has quit (Ping timeout: 240 seconds)
+2020-12-30 19:48:32	-->	brettgilio (~brettgili@brettgilio.com) has joined ##kernel
+2020-12-30 19:51:32	-->	redbrain (~oliver@124-155-N1.p43.customer.vsm.sh) has joined ##kernel
+2020-12-30 19:58:54	<--	astylian (~astylian@62-69-139.netrun.cytanet.com.cy) has quit (Remote host closed the connection)
+2020-12-30 19:59:07	-->	astylian (~astylian@62-69-139.netrun.cytanet.com.cy) has joined ##kernel
+2020-12-30 20:04:32	<--	eiche_home_ (~eiche_hom@x4db4924b.dyn.telefonica.de) has quit (Ping timeout: 260 seconds)
+2020-12-30 20:05:12	-->	eiche_home_ (~eiche_hom@x4db4924b.dyn.telefonica.de) has joined ##kernel
+2020-12-30 20:06:30	<--	eiche_home_ (~eiche_hom@x4db4924b.dyn.telefonica.de) has quit (Read error: Connection reset by peer)
+2020-12-30 20:06:40	-->	eiche_home_ (~eiche_hom@x4db4924b.dyn.telefonica.de) has joined ##kernel
+2020-12-30 20:16:53	-->	brainium (~brainium@unaffiliated/brainium) has joined ##kernel
+2020-12-30 20:22:50	-->	MikeDebian (~none@bl11-47-156.dsl.telepac.pt) has joined ##kernel
+2020-12-30 20:24:53	-->	towo` (~towo@unaffiliated/towo/x-4064351) has joined ##kernel
+2020-12-30 20:28:05	<--	brainium (~brainium@unaffiliated/brainium) has quit (Quit: bye)
+2020-12-30 20:31:33	<--	towo` (~towo@unaffiliated/towo/x-4064351) has quit (Quit: Leaving)
+2020-12-30 20:32:18	<--	jayvbe (~jayvbe@2601:647:4800:1475:805a:3a94:9f31:e15e) has quit (Remote host closed the connection)
+2020-12-30 20:32:32	-->	jayvbe (~jayvbe@2601:647:4800:1475:23cf:a5a1:be4:25cb) has joined ##kernel
+2020-12-30 20:34:59	-->	malina (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-30 20:53:35	-->	headless (~headless@31.173.80.169) has joined ##kernel
+2020-12-30 20:55:21	<--	daregap (~belovent@cr-01.anx09.lju.si.anexia-it.com) has quit (Quit: daregap)
+2020-12-30 20:58:42	<--	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has quit (Remote host closed the connection)
+2020-12-30 20:59:08	-->	rayyyy (~nanoz@gateway/tor-sasl/nanoz) has joined ##kernel
+2020-12-30 21:01:50	<--	malina (~malina@unaffiliated/malina) has quit (Remote host closed the connection)
+2020-12-30 21:08:52	-->	towo` (~towo@unaffiliated/towo/x-4064351) has joined ##kernel
+2020-12-30 21:09:17	<--	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has quit (Read error: No route to host)
+2020-12-30 21:12:01	-->	random_yanek (~random_ya@2a01:118f:822:9c00:ce49:1330:eb01:6547) has joined ##kernel
+2020-12-30 21:15:49	-->	TSPenguin (~Knecht@85.27.249.162) has joined ##kernel
+2020-12-30 21:21:49	<--	shailangsa (~shailangs@host86-186-196-229.range86-186.btcentralplus.com) has quit (Ping timeout: 260 seconds)
+2020-12-30 21:24:12	<--	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has quit (Quit: Leaving)
+2020-12-30 21:51:59	-->	shailangsa (~shailangs@host86-185-58-185.range86-185.btcentralplus.com) has joined ##kernel
+2020-12-30 22:03:43	-->	kayprish (~kayprish@cable-188-2-151-212.dynamic.sbb.rs) has joined ##kernel
+2020-12-30 22:08:30	-->	brainium (~brainium@unaffiliated/brainium) has joined ##kernel
+2020-12-30 22:08:49	-->	eiche_home (~eiche_hom@x4db4924b.dyn.telefonica.de) has joined ##kernel
+2020-12-30 22:12:54	<--	brainium (~brainium@unaffiliated/brainium) has quit (Excess Flood)
+2020-12-30 22:13:11	<--	headless (~headless@31.173.80.169) has quit (Quit: Konversation terminated!)
+2020-12-30 22:13:19	-->	brainium (~brainium@unaffiliated/brainium) has joined ##kernel
+2020-12-30 22:17:43	-->	John_Ivan (~John_Ivan@unaffiliated/john-ivan/x-3287162) has joined ##kernel
+2020-12-30 22:18:02	<--	Guest20 (~textual@103.215.168.1) has quit (Quit: ZZZzzz…)
+2020-12-30 22:19:54	-->	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has joined ##kernel
+2020-12-30 22:20:47	<--	TSPenguin (~Knecht@85.27.249.162) has quit (Quit: left)
+2020-12-30 22:26:29	-->	eiche_home__ (~eichehome@x4db4924b.dyn.telefonica.de) has joined ##kernel
+2020-12-30 22:29:57	<--	kayprish (~kayprish@cable-188-2-151-212.dynamic.sbb.rs) has quit (Quit: Leaving)
+2020-12-30 22:29:59	-->	eiche_home___ (~eiche_hom@x4db4924b.dyn.telefonica.de) has joined ##kernel
+2020-12-30 22:30:44	<--	eiche_home___ (~eiche_hom@x4db4924b.dyn.telefonica.de) has quit (Read error: Connection reset by peer)
+2020-12-30 22:31:10	-->	eiche_home___ (~eiche_hom@x4db4924b.dyn.telefonica.de) has joined ##kernel
+2020-12-30 22:33:36	<--	eiche_home (~eiche_hom@x4db4924b.dyn.telefonica.de) has quit (Ping timeout: 240 seconds)
+2020-12-30 22:33:49	<--	eiche_home__ (~eichehome@x4db4924b.dyn.telefonica.de) has quit (Ping timeout: 264 seconds)
+2020-12-30 22:34:22	-->	eiche_home (~eichehome@x4db4924b.dyn.telefonica.de) has joined ##kernel
+2020-12-30 22:41:16	-->	malina (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-31 07:49:35	--	irc: disconnected from server
+2020-12-31 07:50:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-31 07:50:17	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-31 07:50:17	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-31 07:50:17	--	Channel ##kernel: 284 nicks (1 op, 0 voices, 283 normals)
+2020-12-31 07:50:18	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-31 07:50:36	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-31 09:21:22	--	irc: disconnected from server
+2020-12-31 09:21:59	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2020-12-31 09:21:59	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2020-12-31 09:21:59	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2020-12-31 09:21:59	--	Channel ##kernel: 281 nicks (1 op, 0 voices, 280 normals)
+2020-12-31 09:22:00	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2020-12-31 09:22:18	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2020-12-31 09:23:29	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Quit: Leaving)
+2020-12-31 09:49:18	<--	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has quit (Quit: Leaving)
+2020-12-31 09:55:51	<--	EvanCarroll (~ecarroll@c-73-32-86-244.hsd1.tx.comcast.net) has quit (Remote host closed the connection)
+2020-12-31 10:00:28	-->	Scotty_Trees (~Scotty_Tr@162-234-179-169.lightspeed.brhmal.sbcglobal.net) has joined ##kernel
+2020-12-31 10:07:05	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Quit: WeeChat 2.8)
+2020-12-31 10:08:51	<--	dir76e3q (~klFvhLnL~@gateway/tor-sasl/spareproject) has quit (Remote host closed the connection)
+2020-12-31 10:15:30	-->	SOLIDSEC (~openbsd@217.138.203.179) has joined ##kernel
+2020-12-31 10:22:55	SOLIDSEC	Hi, is possible to disable physical cores in CPU by kernel ?
+2020-12-31 10:23:55	SOLIDSEC	Enable Maximum number of SMP Processors and NUMA nodes - it means only CPU ?
+2020-12-31 10:24:07	SOLIDSEC	not cores ?
+2020-12-31 10:26:20	-->	trinityblade (~textual@adsl-76-211-177-0.dsl.wlfrct.sbcglobal.net) has joined ##kernel
+2020-12-31 10:32:42	<--	berglh (~quassel@ns1.bytefuse.net) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-31 10:51:08	SOLIDSEC	AMD Ryzen 4800u      echo 0 > /sys/devices/system/cpu/cpu7-15/online
+2020-12-31 10:52:46	tdr	the smp processors would be cores
+2020-12-31 10:55:18	-->	tilpner_ (~weechat@NixOS/user/tilpner) has joined ##kernel
+2020-12-31 10:58:38	<--	tilpner (~weechat@NixOS/user/tilpner) has quit (Ping timeout: 272 seconds)
+2020-12-31 10:58:40	--	tilpner_ is now known as tilpner
+2020-12-31 11:05:37	<--	lukey (~lukey@i5E86B4BD.versanet.de) has quit (Ping timeout: 264 seconds)
+2020-12-31 11:07:27	-->	lukey (~lukey@mue-88-130-61-181.dsl.tropolys.de) has joined ##kernel
+2020-12-31 11:12:53	-->	whoopwhoop (~malina@unaffiliated/malina) has joined ##kernel
+2020-12-31 11:17:43	SOLIDSEC	thank you
+2020-12-31 11:17:49	SOLIDSEC	bye
+2020-12-31 11:17:51	<--	SOLIDSEC (~openbsd@217.138.203.179) has left ##kernel
+2020-12-31 11:39:05	-->	aquijoule__ (~richbridg@213-225-15-90.nat.highway.a1.net) has joined ##kernel
+2020-12-31 11:41:25	<--	aquijoule_ (~richbridg@213-225-1-68.nat.highway.a1.net) has quit (Ping timeout: 240 seconds)
+2020-12-31 11:52:04	<--	malina (~malina@unaffiliated/malina) has quit (Ping timeout: 240 seconds)
+2020-12-31 11:52:08	<--	whoopwhoop (~malina@unaffiliated/malina) has quit (Ping timeout: 260 seconds)
+2020-12-31 11:56:48	<--	de-facto (~de-facto@gateway/tor-sasl/de-facto) has quit (Disconnected by services)
+2020-12-31 11:56:48	-->	de-facto_ (~de-facto@gateway/tor-sasl/de-facto) has joined ##kernel
+2020-12-31 11:58:07	--	de-facto_ is now known as de-facto
+2020-12-31 12:00:30	<--	MikeDebian (~none@bl11-47-156.dsl.telepac.pt) has quit (Quit: Leaving)
+2020-12-31 12:02:38	<--	lukey (~lukey@mue-88-130-61-181.dsl.tropolys.de) has quit (Ping timeout: 260 seconds)
+2020-12-31 12:04:39	-->	lukey (~lukey@87.123.206.227) has joined ##kernel
+2020-12-31 12:08:57	--	irc: disconnected from server
+2021-01-01 11:08:09	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2021-01-01 11:08:09	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2021-01-01 11:08:09	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2021-01-01 11:08:09	--	Channel ##kernel: 276 nicks (1 op, 0 voices, 275 normals)
+2021-01-01 11:08:10	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2021-01-01 11:08:29	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2021-01-01 11:16:43	<--	lukey (~lukey@mue-88-130-61-187.dsl.tropolys.de) has quit (Ping timeout: 246 seconds)
+2021-01-01 11:18:26	<--	brainium (~brainium@unaffiliated/brainium) has quit (Quit: Konversation terminated!)
+2021-01-01 11:18:54	-->	lukey (~lukey@87.123.206.196) has joined ##kernel
+2021-01-01 15:21:35	--	irc: disconnected from server
+2021-01-01 15:22:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2021-01-01 15:22:14	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2021-01-01 15:22:14	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2021-01-01 15:22:14	--	Channel ##kernel: 277 nicks (1 op, 0 voices, 276 normals)
+2021-01-01 15:22:14	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2021-01-01 15:22:33	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2021-01-01 15:31:11	--	irc: disconnected from server
+2021-01-12 23:09:42	-->	jungdongho (~jungdongh@115.23.138.101) has joined ##kernel
+2021-01-12 23:09:42	--	Topic for ##kernel is ""Channel for linux,unix-like kernel discussion | BOOKS lwn.net/Kernel/LDD3 | BROWSER elixir.bootlin.com | PASTEBIN codepad.org | HOWTO goo.gl/wzsul http://goo.gl/zi5V | HOWTO CONTRIBUTE goo.gl/1Fb2VG""
+2021-01-12 23:09:42	--	Topic set by derRichard on Sun, 25 Mar 2018 07:36:19
+2021-01-12 23:09:42	--	Channel ##kernel: 284 nicks (1 op, 0 voices, 283 normals)
+2021-01-12 23:09:43	--	PvNotice(ChanServ): Welcome to ##kernel - Feel free to ask, don't ask if you can ask.
+2021-01-12 23:10:02	--	Channel created on Sun, 26 Nov 2006 15:42:43
+2021-01-12 23:26:22	--	irc: disconnected from server

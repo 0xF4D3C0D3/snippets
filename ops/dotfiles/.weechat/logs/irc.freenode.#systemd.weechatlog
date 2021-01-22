@@ -1,0 +1,1362 @@
+2020-12-19 08:13:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-19 08:13:14	--	Topic for #systemd is "Version 247 released"
+2020-12-19 08:13:14	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-19 08:13:14	--	Channel #systemd: 566 nicks (0 ops, 0 voices, 566 normals)
+2020-12-19 08:13:16	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-19 08:16:54	<--	Net147 (~Net147@unaffiliated/net147) has quit (Quit: Quit)
+2020-12-19 08:17:10	<--	goldfish__ (~goldfish@2a02:8010:63b5::b57) has quit (Read error: Connection reset by peer)
+2020-12-19 08:17:18	-->	goldfish_ (~goldfish@2a02:8010:63b5::b57) has joined #systemd
+2020-12-19 08:18:51	dvergatal	hi all i am trying to use systemd together with adb usb gadget, for that i have made 4 configuration files a service which loads all the gadget configurations, a mount which mount ffs_adb a socket for usb function fs and a service which loads the adbd demon on
+2020-12-19 08:18:53	-->	Net147 (~Net147@unaffiliated/net147) has joined #systemd
+2020-12-19 08:19:11	dvergatal	but i have a problem with socket file
+2020-12-19 08:19:36	dvergatal	i get an error for it which looks like that
+2020-12-19 08:19:40	dvergatal	ffs@ffs_adb.socket: Failed to listen on sockets: Invalid argument
+2020-12-19 08:20:33	dvergatal	but i see that mount has succedded
+2020-12-19 08:22:05	<--	mutante (foobar@wikimedia/mutante) has left #systemd
+2020-12-19 08:26:28	--	irc: disconnected from server
+2020-12-19 11:26:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-19 11:26:06	--	Topic for #systemd is "Version 247 released"
+2020-12-19 11:26:06	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-19 11:26:06	--	Channel #systemd: 556 nicks (0 ops, 0 voices, 556 normals)
+2020-12-19 11:26:08	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-19 11:26:37	-->	Akari- (~Akari@0x0.st) has joined #systemd
+2020-12-19 11:26:43	<--	Akari (~Akari@0x0.st) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:26:43	<--	Habbie (peter@lorentz.7bits.nl) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:01	--	Akari- is now known as Akari
+2020-12-19 11:27:12	-->	amessina_ (~amessina@unaffiliated/amessina) has joined #systemd
+2020-12-19 11:27:14	<--	Ultrasauce_ (~sauce@omae.wa.mou.shindei.ru) has quit (Read error: Connection reset by peer)
+2020-12-19 11:27:17	-->	Ultrasauce (~sauce@omae.wa.mou.shindei.ru) has joined #systemd
+2020-12-19 11:27:18	<--	amessina (~amessina@unaffiliated/amessina) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:18	<--	GrayShade (~quassel@unaffiliated/grayshade) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:27:47	-->	GrayShade (~quassel@unaffiliated/grayshade) has joined #systemd
+2020-12-19 11:29:01	-->	xSmurf (~MrSmurf@unaffiliated/mrsmurf) has joined #systemd
+2020-12-19 11:29:37	-->	Habbie (peter@lorentz.7bits.nl) has joined #systemd
+2020-12-19 11:36:20	<--	benfelin (~BouncingB@cpc91230-cmbg18-2-0-cust41.5-4.cable.virginm.net) has quit (Ping timeout: 260 seconds)
+2020-12-19 11:55:48	--	irc: disconnected from server
+2020-12-19 11:57:31	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-19 11:57:31	--	Topic for #systemd is "Version 247 released"
+2020-12-19 11:57:31	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-19 11:57:32	--	Channel #systemd: 556 nicks (0 ops, 0 voices, 556 normals)
+2020-12-19 11:58:14	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-19 12:10:59	<--	ekaj (~ekaj@unaffiliated/ekaj) has quit (Quit: WeeChat 2.7.1)
+2020-12-19 12:11:17	<--	Aelius (~Aelius@unaffiliated/aelius) has quit (Quit: quit)
+2020-12-19 12:12:29	-->	Aelius (~Aelius@unaffiliated/aelius) has joined #systemd
+2020-12-19 12:37:11	-->	Nact (~l@host-85-27-112-179.dynamic.voo.be) has joined #systemd
+2020-12-19 12:47:54	--	irc: disconnected from server
+2020-12-20 03:36:55	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-20 03:36:55	--	Topic for #systemd is "Version 247 released"
+2020-12-20 03:36:55	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-20 03:36:55	--	Channel #systemd: 561 nicks (0 ops, 0 voices, 561 normals)
+2020-12-20 03:37:38	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-20 03:41:53	-->	andreyv (~andrey@unaffiliated/andreyv) has joined #systemd
+2020-12-20 03:43:03	-->	xSmurf (~MrSmurf@unaffiliated/mrsmurf) has joined #systemd
+2020-12-20 03:50:20	-->	filbranden_ (~filbrande@c-67-170-82-150.hsd1.wa.comcast.net) has joined #systemd
+2020-12-20 03:52:25	-->	filbranden__ (~filbrande@2620:10d:c090:400::5:83af) has joined #systemd
+2020-12-20 03:54:35	-->	Nact (~l@host-85-27-126-227.dynamic.voo.be) has joined #systemd
+2020-12-20 03:54:50	<--	filbranden_ (~filbrande@c-67-170-82-150.hsd1.wa.comcast.net) has quit (Ping timeout: 264 seconds)
+2020-12-20 03:58:56	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 04:07:47	<--	c10l (~c10l@2a01:4b00:9d42:9650::1e0) has quit (Quit: ZNC 1.7.4+deb7 - https://znc.in)
+2020-12-20 04:09:27	-->	c10l (~c10l@2a01:4b00:9d42:9650::1e0) has joined #systemd
+2020-12-20 04:10:03	<--	filbranden__ (~filbrande@2620:10d:c090:400::5:83af) has quit (Ping timeout: 260 seconds)
+2020-12-20 04:14:33	-->	shan (~shan@unaffiliated/jasatso1301) has joined #systemd
+2020-12-20 04:14:43	shan	hiii
+2020-12-20 04:15:10	shan	how do i disable the systemd "starting version 247" message?
+2020-12-20 04:15:34	<--	klonn (~klonn@p200300c7cf38344fa3c510c89eaf10ce.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-20 04:16:53	Ke	don't know, but why is this an issue, just curious
+2020-12-20 04:17:07	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 04:17:20	Ke	maybe command line option quiet does what you want
+2020-12-20 04:17:21	BtbN	You don't, it's printed unconditionally.
+2020-12-20 04:17:52	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:17:52	<--	joshmiller (~joshmille@2620:10d:c090:400::5:7c21) has quit (Read error: Connection reset by peer)
+2020-12-20 04:18:16	shan	Ke: it prints before the i915 driver loads ;_;
+2020-12-20 04:18:23	shan	BtbN: D:
+2020-12-20 04:19:07	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 04:21:21	Ke	is that a problem?
+2020-12-20 04:21:48	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:23:08	-->	joshmiller (~joshmille@2620:10d:c090:400::5:7c21) has joined #systemd
+2020-12-20 04:23:38	shan	Ke: that means it prints in 640x480
+2020-12-20 04:23:43	shan	it looks terrible
+2020-12-20 04:28:40	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 04:29:48	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:33:58	-->	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has joined #systemd
+2020-12-20 04:34:51	<--	joshmiller (~joshmille@2620:10d:c090:400::5:7c21) has quit (Ping timeout: 264 seconds)
+2020-12-20 04:35:44	-->	uid883 (~uid883@197.185.112.88) has joined #systemd
+2020-12-20 04:39:37	<--	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has quit (Quit: cosimone)
+2020-12-20 04:40:48	-->	joshmiller (~joshmille@2620:10d:c090:400::5:7c21) has joined #systemd
+2020-12-20 04:45:46	Edu4rdSHL	...
+2020-12-20 04:46:49	MacGyver	Remove the unconditional print and build it yourself, because this is not something anyone is going to (or should) care about.
+2020-12-20 04:48:13	shan	time to switch to gentoo
+2020-12-20 04:48:16	shan	(/s)
+2020-12-20 04:50:52	Edu4rdSHL	People caring about irrelevant things lol
+2020-12-20 04:51:16	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 04:52:09	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:56:21	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 04:56:59	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 04:58:53	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-20 05:15:12	--	ocharles is now known as ocharles_bot
+2020-12-20 05:16:55	--	ocharles_bot is now known as ocharles
+2020-12-20 05:26:15	-->	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has joined #systemd
+2020-12-20 05:26:52	<--	SuperLag (~akulbe@unaffiliated/superlag) has quit (Remote host closed the connection)
+2020-12-20 05:28:21	<--	rex_victor (~rex_victo@HSI-KBW-095-208-222-193.hsi5.kabel-badenwuerttemberg.de) has left #systemd ("WeeChat 2.9")
+2020-12-20 05:29:40	-->	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has joined #systemd
+2020-12-20 05:31:16	<--	Nact (~l@host-85-27-126-227.dynamic.voo.be) has quit (Remote host closed the connection)
+2020-12-20 05:32:45	<--	joshmiller (~joshmille@2620:10d:c090:400::5:7c21) has quit (Read error: Connection reset by peer)
+2020-12-20 05:37:48	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-20 05:41:02	dvergatal	hi all i want to make *.mount file with Where variable like that /dev/usb-ffs/adb so i need to change file name
+2020-12-20 05:41:22	dvergatal	into such representation
+2020-12-20 05:41:41	dvergatal	but this minusin usb-ffs is problematic
+2020-12-20 05:41:48	dvergatal	how can i manage to do that
+2020-12-20 05:46:49	BtbN	I have read that 3 times now, and got no clue what you're asking or trying to do.
+2020-12-20 05:50:04	<--	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has quit (Quit: cosimone)
+2020-12-20 05:50:45	-->	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has joined #systemd
+2020-12-20 05:54:24	--	irc: disconnected from server
+2020-12-20 05:54:58	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-20 05:54:58	--	Topic for #systemd is "Version 247 released"
+2020-12-20 05:54:58	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-20 05:54:58	--	Channel #systemd: 564 nicks (0 ops, 0 voices, 564 normals)
+2020-12-20 05:55:43	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-20 06:00:42	--	irc: disconnected from server
+2020-12-20 06:18:28	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-20 06:18:28	--	Topic for #systemd is "Version 247 released"
+2020-12-20 06:18:28	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-20 06:18:28	--	Channel #systemd: 565 nicks (0 ops, 0 voices, 565 normals)
+2020-12-20 06:19:11	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-20 16:45:15	--	irc: disconnected from server
+2020-12-20 16:45:50	--	irc: disconnected from server
+2020-12-20 16:46:56	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-20 16:46:56	--	Topic for #systemd is "Version 247 released"
+2020-12-20 16:46:56	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-20 16:46:56	--	Channel #systemd: 552 nicks (1 op, 0 voices, 551 normals)
+2020-12-20 16:47:42	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-20 16:50:45	-->	johnLate (~johnlate@lexington.scnr.net) has joined #systemd
+2020-12-20 16:58:35	--	irc: disconnected from server
+2020-12-20 16:59:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-20 16:59:35	--	Topic for #systemd is "Version 247 released"
+2020-12-20 16:59:35	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-20 16:59:35	--	Channel #systemd: 553 nicks (1 op, 0 voices, 552 normals)
+2020-12-20 17:00:18	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-20 17:03:20	--	irc: disconnected from server
+2020-12-20 17:03:51	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-20 17:03:51	--	Topic for #systemd is "Version 247 released"
+2020-12-20 17:03:51	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-20 17:03:51	--	Channel #systemd: 553 nicks (1 op, 0 voices, 552 normals)
+2020-12-20 17:04:24	-->	anaselli (~quassel@mandriva/developer/kde/anaselli) has joined #systemd
+2020-12-20 17:04:30	<--	edlou (uid413273@gateway/web/irccloud.com/x-mlxuzsznaqnxtuce) has quit (Quit: Connection closed for inactivity)
+2020-12-20 17:04:34	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-20 17:05:10	-->	jimklimov (~jimklimov@165.225.200.103) has joined #systemd
+2020-12-20 17:05:34	<--	jimklimov1 (~jimklimov@165.225.72.64) has quit (Ping timeout: 260 seconds)
+2020-12-20 17:34:11	-->	QuestionC (~Thunderbi@67.254.222.11) has joined #systemd
+2020-12-20 17:43:05	-->	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has joined #systemd
+2020-12-20 17:51:15	<--	palooka-jock (~mike@45.126.44.146) has quit (Quit: WeeChat 1.9.1)
+2020-12-20 17:55:36	-->	palooka-jock (~mike@45.126.44.146) has joined #systemd
+2020-12-20 17:56:46	-->	rdrex (~rdrdrdrdr@pool-71-120-203-193.nrflva.fios.verizon.net) has joined #systemd
+2020-12-20 18:02:16	-->	thaller_ (~thaller@2001:a61:35ad:1101:6212:27e3:43d5:b486) has joined #systemd
+2020-12-20 18:16:24	<--	MIF (~MIF@heb12/developer/nate) has quit (Quit: Sturtz Network <https://sturtz.cf>)
+2020-12-20 18:17:49	-->	infides (~infides@i5C7595D4.versanet.de) has joined #systemd
+2020-12-20 18:26:49	<--	rdrex (~rdrdrdrdr@pool-71-120-203-193.nrflva.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-20 18:31:16	-->	agi (~agi@etc.inittab.org) has joined #systemd
+2020-12-20 18:33:15	-->	cihancan (~cian@31.223.54.62) has joined #systemd
+2020-12-20 18:49:59	-->	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has joined #systemd
+2020-12-20 18:51:30	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Read error: Connection reset by peer)
+2020-12-20 18:52:09	<--	Deyaa (uid190709@gateway/web/irccloud.com/x-jxqzvkyijmcurnic) has quit (Quit: Connection closed for inactivity)
+2020-12-20 20:58:23	--	irc: disconnected from server
+2020-12-20 20:59:42	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-20 20:59:42	--	Topic for #systemd is "Version 247 released"
+2020-12-20 20:59:42	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-20 20:59:43	--	Channel #systemd: 557 nicks (1 op, 0 voices, 556 normals)
+2020-12-20 21:00:31	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-20 21:08:21	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Quit: WeeChat 2.8)
+2020-12-20 21:08:40	-->	andreypopp (uid22726@gateway/web/irccloud.com/x-lelvospasbhxlcxm) has joined #systemd
+2020-12-20 21:09:51	andreypopp	Hi, I'm trying out a transition from docker/podman to systemd-nspawn/systemd-run and wondering if there's a nice guide on how to run builds layered images for nspawn?
+2020-12-20 21:10:08	andreypopp	Using something similar as Dockerfile/Containerfile specifications.
+2020-12-20 21:11:34	<--	frebib (~frebibcha@nerdhouse.io) has quit (Quit: Bridge terminating on SIGTERM)
+2020-12-20 21:21:53	Safi	Edu4rdSHL: Oh and for what it's worth, `EffectiveCPUs` shows the expected value on user.slice (although it's empty on descendent units; not sure if that's okay or not)
+2020-12-20 21:29:32	-->	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has joined #systemd
+2020-12-20 21:37:54	-->	DaNeenjah (~DaNeenjah@2600:1005:b156:90d2:d2c3:bc99:aba0:953a) has joined #systemd
+2020-12-20 21:40:40	<--	DaNeenjah (~DaNeenjah@2600:1005:b156:90d2:d2c3:bc99:aba0:953a) has quit (Client Quit)
+2020-12-20 21:40:59	-->	DaNeenjah (~DaNeenjah@2600:1005:b156:90d2:d2c3:bc99:aba0:953a) has joined #systemd
+2020-12-20 21:41:53	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #systemd
+2020-12-20 21:50:37	-->	frebib (~frebibcha@2a02:8010:64b4:a:3::4) has joined #systemd
+2020-12-20 21:55:24	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-20 21:57:01	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 21:58:31	<--	kim0 (uid105149@ubuntu/member/kim0) has quit (Quit: Connection closed for inactivity)
+2020-12-20 22:00:51	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 22:01:41	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 22:04:47	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 22:05:39	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 22:06:30	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 22:10:52	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined #systemd
+2020-12-20 22:26:23	-->	spiri (~spiri@unaffiliated/spiri) has joined #systemd
+2020-12-20 22:26:46	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 22:28:24	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Ping timeout: 240 seconds)
+2020-12-20 22:29:44	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-20 22:32:04	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Ping timeout: 240 seconds)
+2020-12-20 22:36:20	<--	frebib (~frebibcha@2a02:8010:64b4:a:3::4) has quit (Read error: Connection reset by peer)
+2020-12-20 22:36:38	-->	rsx (~rsx@ppp-188-174-145-249.dynamic.mnet-online.de) has joined #systemd
+2020-12-20 22:47:37	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #systemd
+2020-12-20 22:56:49	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-20 23:00:18	-->	edlou (uid413273@gateway/web/irccloud.com/x-tsmbyvbgwxuqhiqz) has joined #systemd
+2020-12-20 23:05:30	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined #systemd
+2020-12-20 23:05:55	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #systemd
+2020-12-20 23:09:02	Safi	Edu4rdSHL: Oh I think I figured it out; it seems processes and threads are only moved off a CPU when they are in a running state, all the processes still on the isolated cpus are in a sleeping state; they move to a different core one they resume
+2020-12-20 23:32:33	<--	titanbiscuit (~tbisk@104.200.131.166) has quit (Remote host closed the connection)
+2020-12-20 23:37:20	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Quit: shibboleth)
+2020-12-20 23:37:38	-->	titanbiscuit (~tbisk@104.200.131.173) has joined #systemd
+2020-12-20 23:38:11	<--	andreypopp (uid22726@gateway/web/irccloud.com/x-lelvospasbhxlcxm) has quit (Quit: Connection closed for inactivity)
+2020-12-20 23:51:20	<--	sunri5e (~sunri5e@unaffiliated/sunri5e) has quit (Quit: goodbye)
+2020-12-20 23:51:34	<--	Xogium (~Xogium@unaffiliated/xogium) has left #systemd ("leaving channel")
+2020-12-20 23:54:27	-->	sunri5e (~sunri5e@unaffiliated/sunri5e) has joined #systemd
+2020-12-20 23:58:18	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-20 23:58:27	-->	Xogium (~Xogium@unaffiliated/xogium) has joined #systemd
+2020-12-21 00:10:09	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Remote host closed the connection)
+2020-12-21 00:11:18	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined #systemd
+2020-12-21 00:39:11	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Quit: Leaving)
+2020-12-21 00:39:55	-->	yabbes (uid254190@gateway/web/irccloud.com/x-zfyhtueyherwmden) has joined #systemd
+2020-12-21 00:40:08	-->	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has joined #systemd
+2020-12-21 00:46:09	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 00:55:33	BtbN	Why is my apache2 service shown as thawing? I just restarted it.
+2020-12-21 01:04:14	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #systemd
+2020-12-21 01:14:13	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 01:14:42	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #systemd
+2020-12-21 01:15:08	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Client Quit)
+2020-12-21 01:15:34	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #systemd
+2020-12-21 01:16:09	<--	QuestionC (~Thunderbi@67.254.222.11) has quit (Ping timeout: 260 seconds)
+2020-12-21 01:18:01	-->	powerhouse (~powerhous@184.69.151.38) has joined #systemd
+2020-12-21 01:19:21	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Client Quit)
+2020-12-21 01:19:47	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #systemd
+2020-12-21 01:33:23	<--	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2020-12-21 01:38:42	-->	sandeepsureshpan (uid194925@gateway/web/irccloud.com/x-hsyjoujthjwjyfkn) has joined #systemd
+2020-12-21 01:41:24	-->	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has joined #systemd
+2020-12-21 01:44:05	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-21 01:56:49	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-21 01:57:17	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-12-21 01:59:00	-->	QuestionC (~Thunderbi@67.254.222.11) has joined #systemd
+2020-12-21 01:59:24	-->	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has joined #systemd
+2020-12-21 02:03:36	<--	DaNeenjah (~DaNeenjah@2600:1005:b156:90d2:d2c3:bc99:aba0:953a) has quit (Ping timeout: 268 seconds)
+2020-12-21 02:04:25	-->	Tokamak (~Tokamak@204.141.173.217) has joined #systemd
+2020-12-21 02:06:09	-->	DaNeenjah (~DaNeenjah@2600:1005:b155:2da:27c5:289b:7709:f06f) has joined #systemd
+2020-12-21 02:12:04	<--	fachinformatiker (~fachinfor@fsf/member/fachinformatiker) has quit (Read error: Connection reset by peer)
+2020-12-21 02:17:38	-->	fachinformatiker (~fachinfor@fsf/member/fachinformatiker) has joined #systemd
+2020-12-21 02:26:34	-->	Narrat (~Narrat@p200300df5f45004406ea56fffe2e7cdc.dip0.t-ipconnect.de) has joined #systemd
+2020-12-21 02:27:31	jbowen	I apologize if this isn't the correct forum, but I'm getting a bit frustrated. I have a service file with one command I want to have run at start up and I can't figure out why it's not running.
+2020-12-21 02:27:57	jbowen	Here's the unit file, /etc/systemd/system/smt-mode.service: https://paste.centos.org/view/raw/a4d2e36d
+2020-12-21 02:29:30	jbowen	Nothing shows up in journalctl for the service. I also changed standard out/err to write to a file (e.g. /root/smt.stdout.txt) and nothing was written
+2020-12-21 02:30:18	jbowen	If I run `systemctl list-unit-files` it shows up as "enabled"
+2020-12-21 02:31:01	jbowen	If I stat it manually with `systemctl start` it completes successfully
+2020-12-21 02:31:24	jbowen	Nothing shows up in dmesg, either
+2020-12-21 02:32:01	jbowen	I'm unsure how to further debug this (and it doesn't help that the server I'm using takes 10 minutes or so to reach multi-user.target)
+2020-12-21 02:39:29	-->	efm (~efm@vpn.tummy.com) has joined #systemd
+2020-12-21 02:45:29	<--	rsx (~rsx@ppp-188-174-145-249.dynamic.mnet-online.de) has quit (Quit: rsx)
+2020-12-21 02:45:38	-->	ExeciN (~nicexe@213.140.201.244) has joined #systemd
+2020-12-21 02:46:30	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-21 02:48:23	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #systemd
+2020-12-21 02:53:48	-->	semeion (~semeion@unaffiliated/semeion) has joined #systemd
+2020-12-21 03:01:22	Edu4rdSHL	Safi, ohhh I see. I think that's maybe made by the CPU scheduler.
+2020-12-21 03:01:40	Edu4rdSHL	But glad to hear you've figured it!
+2020-12-21 03:02:40	Edu4rdSHL	BtbN, what do mean by "thawing"? What's the error?
+2020-12-21 03:05:32	Edu4rdSHL	jbowen, do you want to use journal+console instead of syslog+sconsole in StandardOutput, also `journal` instead of syslog in StandardErr.
+2020-12-21 03:05:59	Edu4rdSHL	According to the docs, syslog isn't valid there.
+2020-12-21 03:06:21	BtbN	Edu4rdSHL, it literally just says "(thawing)" behind the service in the status output.,
+2020-12-21 03:07:16	Edu4rdSHL	BtbN, can you paste the output of `systemctl status apache2.service`?
+2020-12-21 03:07:41	BtbN	    Active: active (running) (thawing) since Sun 2020-12-20 16:50:52 CET; 2h 16min ago
+2020-12-21 03:07:58	BtbN	It appears to be working fine for all I can tell. Just this odd (thawing) right there.
+2020-12-21 03:11:11	Edu4rdSHL	It's the only thing I found https://www.freedesktop.org/software/systemd/man/systemctl.html#thaw%20PATTERN%E2%80%A6
+2020-12-21 03:11:23	Edu4rdSHL	But  really doesn't explain anything :p
+2020-12-21 03:12:17	Edu4rdSHL	https://bugzilla.redhat.com/show_bug.cgi?id=1868831
+2020-12-21 03:12:24	zdzichu	there was an issue with errornously displaying thawing, but it was fixed
+2020-12-21 03:12:36	jbowen	Edu4rdSHL: Sure, I can. According to the man page for systemd.exec (I have systemd 239) `syslog` and `journal` are roughly equivalent
+2020-12-21 03:12:43	jbowen	I'll give it a shot, though
+2020-12-21 03:13:20	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Remote host closed the connection)
+2020-12-21 03:13:52	jbowen	But there's nothing else obviously wrong with how the unit file is written?
+2020-12-21 03:14:20	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #systemd
+2020-12-21 03:18:27	BtbN	ah, I'll just ignore it then.
+2020-12-21 03:21:05	-->	nessonic (~nessonic@2601:247:c400:eb7::14e0) has joined #systemd
+2020-12-21 03:23:25	<--	nessonic (~nessonic@2601:247:c400:eb7::14e0) has quit (Client Quit)
+2020-12-21 03:24:32	-->	masterboy (~momo@78-57-212-189.static.zebra.lt) has joined #systemd
+2020-12-21 03:24:43	jbowen	Edu4rdSHL: I switched `syslog` to `journal` and there's still nothing in journalctl output
+2020-12-21 03:25:07	jbowen	Or dmesg
+2020-12-21 03:25:49	masterboy	hi there, wanted to ask. I want to use x-systemd.growfs in a systemd dir.mount script but it does not work this way?
+2020-12-21 03:26:04	masterboy	is it possible? :)
+2020-12-21 03:26:34	masterboy	i see it is only a fstab option but WHY can't I use it in a systemd script?
+2020-12-21 03:29:06	masterboy	Options=x-systemd.growfs - does not work :'''(
+2020-12-21 03:32:22	masterboy	Note that this option can only be used in /etc/fstab, and will be ignored when part of the Options= setting in a unit file.
+2020-12-21 03:32:32	masterboy	WHY? :(
+2020-12-21 03:41:46	jbowen	masterboy: Have you looked at systemd-fstab-generator for converting fstab entries to systemd mount units?
+2020-12-21 03:41:49	jbowen	https://www.freedesktop.org/software/systemd/man/systemd-fstab-generator.html
+2020-12-21 03:45:02	<--	sandeepsureshpan (uid194925@gateway/web/irccloud.com/x-hsyjoujthjwjyfkn) has quit (Quit: Connection closed for inactivity)
+2020-12-21 03:46:11	--	Hazelesque_ is now known as Hazelesque
+2020-12-21 03:49:58	<--	DaNeenjah (~DaNeenjah@2600:1005:b155:2da:27c5:289b:7709:f06f) has quit (Quit: WeeChat 2.9)
+2020-12-21 03:55:23	-->	Nact (~l@host-85-27-120-131.dynamic.voo.be) has joined #systemd
+2020-12-21 03:57:31	Edu4rdSHL	jbowen, what's the output for `systemctl list-dependencies default.target`
+2020-12-21 03:57:38	Edu4rdSHL	Is your unit there?
+2020-12-21 04:02:52	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Remote host closed the connection)
+2020-12-21 04:06:11	masterboy	jbowen, thanks but i am using ubuntu core that overwrites fstab everytime so fstab is no use to me. I wrote a dir.mount file but it would be nice to include growfs before the mount...
+2020-12-21 04:06:46	<--	JackWinter_ (~jack@vodsl-10481.vo.lu) has quit (Remote host closed the connection)
+2020-12-21 04:07:08	masterboy	jbowen, systemd-fstab-generator is like a black hole to me so far. I don't understand it...
+2020-12-21 04:07:30	-->	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has joined #systemd
+2020-12-21 04:09:29	-->	JackWinter (~jack@vodsl-10481.vo.lu) has joined #systemd
+2020-12-21 04:12:29	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 256 seconds)
+2020-12-21 04:14:29	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-21 04:15:05	<--	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has quit (Quit: Halcyon flies away.)
+2020-12-21 04:19:42	<--	Nact (~l@host-85-27-120-131.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-21 04:23:02	-->	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has joined #systemd
+2020-12-21 04:25:50	jbowen	Edu4rdSHL: there was a typo: I had WantedBy `mutli-user.target` instead of `multi-user.target`
+2020-12-21 04:26:04	jbowen	After fixing that it runs and shows up in journalctl
+2020-12-21 04:26:10	Edu4rdSHL	:)
+2020-12-21 04:26:22	<--	spiri (~spiri@unaffiliated/spiri) has quit (Quit: Leaving)
+2020-12-21 04:26:44	<--	jbowen (~jbowen@pat-verona-b.epic.com) has left #systemd ("Thanks!")
+2020-12-21 04:27:56	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Quit: shibboleth)
+2020-12-21 04:32:14	masterboy	heh
+2020-12-21 04:34:26	masterboy	Edu4rdSHL, I mounted/unmounted a disk with dir.mount script but other programs report it as in use. Maybe systemd does not let go of the mount? I enabled forceful mount but that did not help...
+2020-12-21 04:34:43	masterboy	foreful unmount...
+2020-12-21 04:35:32	masterboy	something is using the disk and systemctl stop dir.mount does not help... :(
+2020-12-21 04:37:48	masterboy	umount: /dev/sdb1: not mounted.
+2020-12-21 04:37:48	masterboy	 but 2fsck 1.44.1 (24-Mar-2018)
+2020-12-21 04:38:00	masterboy	dev/sdb1 is in use.
+2020-12-21 04:41:02	<--	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has quit (Ping timeout: 256 seconds)
+2020-12-21 04:43:03	Edu4rdSHL	masterboy, can you show your ,mount script?
+2020-12-21 04:43:09	Edu4rdSHL	s/,/./
+2020-12-21 04:43:39	damjan	cat /proc/self/mounts
+2020-12-21 04:46:19	-->	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has joined #systemd
+2020-12-21 04:46:52	<--	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has quit (Remote host closed the connection)
+2020-12-21 04:47:38	<--	aidalgol (~aidalgol@unaffiliated/aidalgol) has quit (Ping timeout: 260 seconds)
+2020-12-21 04:48:00	-->	aidalgol_ (~aidalgol@unaffiliated/aidalgol) has joined #systemd
+2020-12-21 04:48:39	-->	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has joined #systemd
+2020-12-21 04:50:35	<--	Tokamak (~Tokamak@204.141.173.217) has quit (Ping timeout: 272 seconds)
+2020-12-21 04:52:17	-->	Tokamak (~Tokamak@204.141.173.217) has joined #systemd
+2020-12-21 04:56:51	<--	JackWinter (~jack@vodsl-10481.vo.lu) has quit (Remote host closed the connection)
+2020-12-21 04:57:52	-->	JackWinter (~jack@vodsl-10481.vo.lu) has joined #systemd
+2020-12-21 04:59:48	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Quit: sord937)
+2020-12-21 05:00:24	-->	moo (~wootehfoo@unaffiliated/wootehfoot) has joined #systemd
+2020-12-21 05:02:16	masterboy	Edu4rdSHL, https://paste.gnome.org/pscbqoz1x
+2020-12-21 05:03:16	masterboy	Edu4rdSHL, as i remember regular mount unmount has no problems after the system boots... but i will doublecheck again
+2020-12-21 05:08:31	Edu4rdSHL	masterboy, I don't have much experience with .mount units sincerely.
+2020-12-21 05:08:50	masterboy	Edu4rdSHL, thanks for looking into it anyway. :)
+2020-12-21 05:09:02	Edu4rdSHL	But according to man systemd.mount you're using the right options.
+2020-12-21 05:09:25	Edu4rdSHL	Can you confirm damjan's command afer you stopped the .mount unit?
+2020-12-21 05:09:33	Edu4rdSHL	`cat /proc/self/mounts`
+2020-12-21 05:09:50	Edu4rdSHL	I mean, when other programs reports the disk as busy.
+2020-12-21 05:13:20	masterboy	Edu4rdSHL, yeah it is gone from mounts but reported as in use nayway
+2020-12-21 05:13:42	Edu4rdSHL	But it isn't present in /proc/self/mounts, right?
+2020-12-21 05:15:32	masterboy	Edu4rdSHL, yes it is not
+2020-12-21 05:16:00	grawity	is it present in any other process' /proc/*/mounts, though?
+2020-12-21 05:17:11	Edu4rdSHL	masterboy, what's the output for sudo fuser -v -m /dev/sdb ?
+2020-12-21 05:17:42	Edu4rdSHL	Well, sudo isn't needed (at least here)
+2020-12-21 05:17:46	masterboy	Edu4rdSHL, my system is ubuntu core (snap only) there is no fuser
+2020-12-21 05:18:53	masterboy	Edu4rdSHL, i double checked - regular mount - umount commands work fine after boot,  but this systemd scipt does not
+2020-12-21 05:20:01	Edu4rdSHL	No idea. :/
+2020-12-21 05:21:23	masterboy	Edu4rdSHL, do you know maybe what would be the latest thing systemd boots so i can make the script execute at that time?
+2020-12-21 05:22:06	Edu4rdSHL	masterboy, why you don't just put the mount/umount commands in a .service file?
+2020-12-21 05:22:17	Edu4rdSHL	I mean, if they're working fine...
+2020-12-21 05:22:44	masterboy	Edu4rdSHL, right, i have to check how to create that
+2020-12-21 05:23:46	Edu4rdSHL	Well, it's pretty simple, put ExecStart=/usr/bin/mount ... and ExecStop=/usr/bin/umount ...
+2020-12-21 05:28:29	masterboy	Edu4rdSHL, thanks I will try that in a bit. 
+2020-12-21 05:30:25	<--	cihancan (~cian@31.223.54.62) has quit (Remote host closed the connection)
+2020-12-21 05:32:23	<--	ExeciN (~nicexe@213.140.201.244) has quit (Quit: so long king Bowser)
+2020-12-21 05:36:47	--	grumble is now known as SeasonsBeatings
+2020-12-21 05:44:34	<--	Wouter0100 (~Wouter010@84.80.174.188) has quit (Read error: Connection reset by peer)
+2020-12-21 05:45:11	-->	Wouter0100 (~Wouter010@84-80-174-188.fixed.kpn.net) has joined #systemd
+2020-12-21 05:46:46	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-21 05:52:17	-->	MIF (~MIF@heb12/developer/nate) has joined #systemd
+2020-12-21 05:55:38	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Quit: Leaving)
+2020-12-21 06:06:13	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #systemd
+2020-12-21 06:08:27	<--	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-21 06:08:51	<--	ircuser-1 (~Johnny@69.62.183.158) has quit (Quit: because)
+2020-12-21 06:09:46	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #systemd
+2020-12-21 06:13:20	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 268 seconds)
+2020-12-21 06:26:38	<--	QuestionC (~Thunderbi@67.254.222.11) has quit (Ping timeout: 264 seconds)
+2020-12-21 06:38:27	-->	DaNeenjah (~DaNeenjah@2600:1005:b155:2da:27c5:289b:7709:f06f) has joined #systemd
+2020-12-21 13:06:58	--	irc: disconnected from server
+2020-12-21 13:08:12	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-21 13:08:12	--	Topic for #systemd is "Version 247 released"
+2020-12-21 13:08:12	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-21 13:08:12	--	Channel #systemd: 554 nicks (1 op, 0 voices, 553 normals)
+2020-12-21 13:08:58	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-21 13:52:00	-->	Martchus (~martchus@2a01:c22:7257:9a00:d250:99ff:fe49:3cce) has joined #systemd
+2020-12-21 13:53:02	<--	Martchus_ (~martchus@2a01:c22:7a63:b500:d250:99ff:fe49:3cce) has quit (Ping timeout: 260 seconds)
+2020-12-21 14:01:52	-->	capn (capn@gateway/vpn/mullvad/capn) has joined #systemd
+2020-12-21 14:04:05	<--	flarunt (~flurant@109.201.154.65) has quit (Ping timeout: 256 seconds)
+2020-12-21 14:04:47	<--	capn_ (capn@gateway/vpn/mullvad/capn) has quit (Ping timeout: 246 seconds)
+2020-12-21 14:10:56	<--	Tokamak (~Tokamak@204.141.173.217) has quit (Ping timeout: 240 seconds)
+2020-12-21 14:15:51	-->	flarunt (~flurant@109.201.154.65) has joined #systemd
+2020-12-21 14:16:16	<--	DaNeenjah (~DaNeenjah@2600:1005:b124:26e0:7dc5:1b76:6f9a:f349) has quit (Quit: WeeChat 3.0)
+2020-12-21 14:18:20	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-21 14:21:49	-->	keiser5 (~keiser@83.25.87.71.ipv4.supernova.orange.pl) has joined #systemd
+2020-12-21 14:23:35	<--	keiser (~keiser@83.25.202.125.ipv4.supernova.orange.pl) has quit (Ping timeout: 268 seconds)
+2020-12-21 14:23:36	--	keiser5 is now known as keiser
+2020-12-22 05:26:08	--	irc: disconnected from server
+2020-12-22 05:27:25	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-22 05:27:25	--	Topic for #systemd is "Version 247 released"
+2020-12-22 05:27:25	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-22 05:27:25	--	Channel #systemd: 571 nicks (1 op, 0 voices, 570 normals)
+2020-12-22 05:28:14	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-22 05:28:33	<--	tnovotny (~tnovotny@176-74-132-138.netdatacomm.cz) has quit (Ping timeout: 258 seconds)
+2020-12-22 05:29:28	<--	panda88kazag (~radim@176-74-132-138.netdatacomm.cz) has quit (Ping timeout: 246 seconds)
+2020-12-22 05:29:45	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:30:35	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 05:36:52	<--	joshmiller (~joshmille@2620:10d:c090:400::5:fa35) has quit (Ping timeout: 260 seconds)
+2020-12-22 05:39:08	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-22 05:40:42	-->	cosimone_ (~cosimone@93-47-228-249.ip115.fastwebnet.it) has joined #systemd
+2020-12-22 05:41:48	<--	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has quit (Ping timeout: 260 seconds)
+2020-12-22 05:41:49	--	cosimone_ is now known as cosimone
+2020-12-22 05:41:50	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 05:42:27	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-22 05:42:42	<--	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has quit (Client Quit)
+2020-12-22 05:43:06	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 05:43:26	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 05:43:51	-->	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has joined #systemd
+2020-12-22 05:45:28	-->	holri1 (~user@213-47-109-114.cable.dynamic.surfer.at) has joined #systemd
+2020-12-22 05:46:43	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 05:47:07	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-22 05:47:10	holri1	I would need a daily timer that is considered to have been run only if the exit code of the exec was 0 (the command was successfull). Is this possible with systemd?
+2020-12-22 05:47:38	<--	efm (~efm@vpn.tummy.com) has quit (Ping timeout: 260 seconds)
+2020-12-22 05:49:51	NetSysFire	SuccessExitStatus= perhaps?
+2020-12-22 05:50:27	-->	DaNeenjah (~DaNeenjah@2600:1005:b102:e7c9:eff6:21b3:2f79:912c) has joined #systemd
+2020-12-22 05:50:46	-->	efm (~efm@vpn.tummy.com) has joined #systemd
+2020-12-22 05:50:56	-->	msekleta (~msekleta@194.228.68.80) has joined #systemd
+2020-12-22 06:02:22	<--	holri1 (~user@213-47-109-114.cable.dynamic.surfer.at) has quit (Ping timeout: 246 seconds)
+2020-12-22 06:03:49	<--	ExeciN (~nicexe@213.140.201.244) has quit (Quit: so long king Bowser)
+2020-12-22 06:04:36	<--	spiri (~spiri@unaffiliated/spiri) has quit (Ping timeout: 240 seconds)
+2020-12-22 06:11:47	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 06:12:27	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 06:16:30	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:17:49	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 06:18:30	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 06:18:31	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Quit: sord937)
+2020-12-22 06:19:47	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-22 06:21:55	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 06:23:23	<--	memoryleak (~hciftci@84-73-108-46.dclient.hispeed.ch) has quit (Quit: Konversation terminated!)
+2020-12-22 06:23:45	<--	DaNeenjah (~DaNeenjah@2600:1005:b102:e7c9:eff6:21b3:2f79:912c) has quit (Ping timeout: 258 seconds)
+2020-12-22 06:24:25	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-22 06:25:38	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 06:25:46	-->	DaNeenjah (~DaNeenjah@2600:1005:b11f:806e:cb0:1603:918c:2bd7) has joined #systemd
+2020-12-22 06:27:45	<--	msekleta (~msekleta@194.228.68.80) has quit (Remote host closed the connection)
+2020-12-22 06:28:33	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 06:29:05	-->	cdown_ (~cdown@163.114.131.1) has joined #systemd
+2020-12-22 06:31:26	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 256 seconds)
+2020-12-22 06:32:07	<--	Adbray (~Adbray@2600:6c48:6f7f:d764:afef:e464:9861:6026) has quit (Disconnected by services)
+2020-12-22 06:32:13	-->	Adbray_ (~Adbray@2600:6c48:6f7f:d764:afef:e464:9861:6026) has joined #systemd
+2020-12-22 06:33:00	<--	iaguis (sid147100@gateway/web/irccloud.com/x-utngvtgksvikecje) has quit (Ping timeout: 258 seconds)
+2020-12-22 06:33:06	-->	ircuser-1 (~Johnny@69.62.183.158) has joined #systemd
+2020-12-22 06:34:14	-->	iaguis (sid147100@gateway/web/irccloud.com/x-kwxjqxjuxyclhlch) has joined #systemd
+2020-12-22 06:35:47	<--	cdown_ (~cdown@163.114.131.1) has quit (Ping timeout: 260 seconds)
+2020-12-22 06:50:55	<--	WilliamH (~william@gentoo/developer/williamh) has quit (Quit: getting ready to upgrade kernel)
+2020-12-22 06:59:33	-->	WilliamH (~william@gentoo/developer/williamh) has joined #systemd
+2020-12-22 07:07:32	<--	anaselli (~quassel@mandriva/developer/kde/anaselli) has quit (Remote host closed the connection)
+2020-12-22 07:07:52	<--	haasn (~nand@mpv/developer/haasn) has quit (Quit: ZNC 1.7.5+deb4 - https://znc.in)
+2020-12-22 07:08:04	<--	Frenn_ (~Frenetick@gateway/tor-sasl/freneticks) has quit (Ping timeout: 240 seconds)
+2020-12-22 07:08:15	-->	haasn (~nand@mpv/developer/haasn) has joined #systemd
+2020-12-22 07:08:22	<--	matthewcroughan (~quassel@static.211.38.12.49.clients.your-server.de) has quit (Remote host closed the connection)
+2020-12-22 07:08:41	-->	matthewcroughan (~quassel@static.211.38.12.49.clients.your-server.de) has joined #systemd
+2020-12-22 07:08:56	<--	kwizart (~kwizart@fedora/kwizart) has quit (Ping timeout: 240 seconds)
+2020-12-22 07:09:09	-->	kwizart (~kwizart@fedora/kwizart) has joined #systemd
+2020-12-22 07:10:28	-->	Frenn_ (~Frenetick@gateway/tor-sasl/freneticks) has joined #systemd
+2020-12-22 07:12:13	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Quit: Leaving)
+2020-12-22 07:13:36	<--	andi- (~andi-@NixOS/user/andi-) has quit (Remote host closed the connection)
+2020-12-22 07:17:16	<--	efm (~efm@vpn.tummy.com) has quit (Read error: Connection reset by peer)
+2020-12-22 07:18:00	-->	andi- (~andi-@NixOS/user/andi-) has joined #systemd
+2020-12-22 07:21:06	--	thaller_ is now known as thaller
+2020-12-22 07:21:11	<--	bigjazzsound (~craig.fie@75-60-207-113.lightspeed.tukrga.sbcglobal.net) has quit (Quit: leaving)
+2020-12-22 07:24:27	-->	efm (~efm@vpn.tummy.com) has joined #systemd
+2020-12-22 07:25:35	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #systemd
+2020-12-22 07:28:26	<--	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has quit (Remote host closed the connection)
+2020-12-22 07:29:04	-->	amessina (~amessina@unaffiliated/amessina) has joined #systemd
+2020-12-22 07:31:51	-->	Jesin (~Jesin@pool-72-66-101-18.washdc.fios.verizon.net) has joined #systemd
+2020-12-22 07:33:16	<--	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has quit (Ping timeout: 240 seconds)
+2020-12-22 07:36:57	-->	joshmiller (~joshmille@2620:10d:c090:400::5:8e9f) has joined #systemd
+2020-12-22 07:40:24	<--	joshmiller (~joshmille@2620:10d:c090:400::5:8e9f) has quit (Read error: Connection reset by peer)
+2020-12-22 07:40:55	<--	TJ- (~root@2a02:8011:2007:0:bc1a:62ec:b4a:4161) has quit (Quit: WeeChat 2.8)
+2020-12-22 07:45:05	apathor	hi. when stopping a target is there any way to wait for the PartOf proceses to stop?
+2020-12-22 07:45:19	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-22 07:46:53	-->	panda88kazag (~radim@176-74-132-138.netdatacomm.cz) has joined #systemd
+2020-12-22 07:50:50	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #systemd
+2020-12-22 07:51:49	<--	panda88kazag (~radim@176-74-132-138.netdatacomm.cz) has quit (Ping timeout: 264 seconds)
+2020-12-22 07:51:58	Edu4rdSHL	apathor, https://www.freedesktop.org/software/systemd/man/systemd.unit.html#PartOf=
+2020-12-22 07:52:07	Edu4rdSHL	There's well explained how it works.
+2020-12-22 07:54:12	apathor	thanks
+2020-12-22 07:57:24	<--	sdeziel (~sdeziel@2001:470:b1c3:7947::100) has left #systemd
+2020-12-22 08:03:01	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-22 08:21:27	<--	zzag (sid349003@gateway/web/irccloud.com/x-rrticyrnzzbogxli) has quit (Ping timeout: 258 seconds)
+2020-12-22 08:21:33	<--	walters (sid333965@gateway/web/irccloud.com/x-dkotnsrkzcapjqtz) has quit (Ping timeout: 272 seconds)
+2020-12-22 08:21:38	<--	fancer (fancer@gateway/web/irccloud.com/x-ikiaeuocommjpjvd) has quit (Ping timeout: 260 seconds)
+2020-12-22 08:22:13	<--	jkkm (sid181533@gateway/web/irccloud.com/x-crnoqodkjzkbkjth) has quit (Ping timeout: 260 seconds)
+2020-12-22 08:22:15	<--	ocharles (sid30093@musicbrainz/user/ocharles) has quit (Ping timeout: 264 seconds)
+2020-12-22 08:22:32	<--	zx2c4 (sid204921@gentoo/developer/zx2c4) has quit (Ping timeout: 244 seconds)
+2020-12-22 08:22:51	<--	mbrownnyc (sid18017@gateway/web/irccloud.com/x-xxwlgzqwqdumnzjp) has quit (Ping timeout: 264 seconds)
+2020-12-22 08:25:38	-->	bn_work (uid268505@gateway/web/irccloud.com/x-etuykxwcithmicvp) has joined #systemd
+2020-12-22 08:27:29	<--	amessina (~amessina@unaffiliated/amessina) has quit (Quit: Konversation terminated!)
+2020-12-22 08:35:34	<--	LetoThe2nd (uid453638@gateway/web/irccloud.com/x-dyquqrlqrbnzxumq) has quit (Quit: Connection closed for inactivity)
+2020-12-22 08:36:14	<--	infides (~infides@i5C75F3C3.versanet.de) has quit (Ping timeout: 260 seconds)
+2020-12-22 08:46:08	<--	MIF (~MIF@heb12/developer/nate) has quit (Quit: Sturtz Network <https://sturtz.cf>)
+2020-12-22 08:48:55	<--	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 08:49:48	<--	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2020-12-22 08:50:33	-->	filbranden (~filbrande@2620:10d:c090:400::5:fc58) has joined #systemd
+2020-12-22 08:50:36	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Read error: Connection reset by peer)
+2020-12-22 08:54:33	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-22 09:04:41	<--	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has quit (Ping timeout: 268 seconds)
+2020-12-22 09:18:09	-->	Hackerpcs (~user@unaffiliated/hackerpcs) has joined #systemd
+2020-12-22 09:37:44	-->	sdeziel (~sdeziel@2001:470:b1c3:7947::100) has joined #systemd
+2020-12-22 09:41:56	-->	MIF (~MIF@heb12/developer/nate) has joined #systemd
+2020-12-22 09:44:36	<--	sundancer (uid330993@gateway/web/irccloud.com/x-gnrlghybelpbthqp) has quit (Quit: Connection closed for inactivity)
+2020-12-22 09:45:29	<--	sdeziel (~sdeziel@2001:470:b1c3:7947::100) has left #systemd
+2020-12-22 09:51:49	<--	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has quit (Ping timeout: 264 seconds)
+2020-12-22 09:52:34	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-22 09:55:25	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 264 seconds)
+2020-12-22 10:03:47	<--	benfelin (~BouncingB@cpc91230-cmbg18-2-0-cust41.5-4.cable.virginm.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 10:08:17	<--	otaylor (~otaylor@c-24-61-241-41.hsd1.ma.comcast.net) has quit (Quit: otaylor)
+2020-12-22 10:08:46	-->	otaylor (~otaylor@c-24-61-241-41.hsd1.ma.comcast.net) has joined #systemd
+2020-12-22 10:12:46	<--	DaNeenjah (~DaNeenjah@2600:1005:b11f:806e:cb0:1603:918c:2bd7) has quit (Quit: WeeChat 3.0)
+2020-12-22 10:15:19	<--	Narrat (~Narrat@p200300df5f4500ca06ea56fffe2e7cdc.dip0.t-ipconnect.de) has quit (Quit: They say a little knowledge is a dangerous thing, but it's not one half so bad as a lot of ignorance.)
+2020-12-22 10:33:24	<--	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 10:34:39	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-22 10:41:53	-->	Deyaa (uid190709@gateway/web/irccloud.com/x-zeondxpiclziszkf) has joined #systemd
+2020-12-22 11:12:03	-->	[b0b] (~bob@unaffiliated/sulfyr) has joined #systemd
+2020-12-22 11:15:12	<--	b0b (~bob@unaffiliated/sulfyr) has quit (Ping timeout: 272 seconds)
+2020-12-22 11:15:14	--	[b0b] is now known as b0b
+2020-12-22 11:22:26	<--	PyR3X (~PyR3X@unaffiliated/pyr3x) has left #systemd
+2020-12-22 11:27:59	<--	MIF (~MIF@heb12/developer/nate) has quit (Quit: Sturtz Network <https://sturtz.cf>)
+2020-12-22 11:34:18	-->	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has joined #systemd
+2020-12-22 11:37:19	<--	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has quit (Remote host closed the connection)
+2020-12-22 11:37:38	-->	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has joined #systemd
+2020-12-22 11:41:12	-->	MIF (~MIF@heb12/developer/nate) has joined #systemd
+2020-12-22 11:42:59	<--	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has quit (Remote host closed the connection)
+2020-12-22 11:43:25	-->	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has joined #systemd
+2020-12-22 11:53:46	<--	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has quit (Ping timeout: 246 seconds)
+2020-12-22 11:54:08	-->	msekleta (~msekleta@194.228.68.80) has joined #systemd
+2020-12-22 12:07:57	<--	MIF (~MIF@heb12/developer/nate) has quit (Quit: Sturtz Network <https://sturtz.cf>)
+2020-12-22 12:13:36	<--	msekleta (~msekleta@194.228.68.80) has quit (Ping timeout: 240 seconds)
+2020-12-22 12:42:35	-->	lanartri_ (~lanartri@188.58.4.225) has joined #systemd
+2020-12-22 12:43:16	<--	lanartri (~lanartri@188.58.4.225) has quit (Read error: Connection reset by peer)
+2020-12-22 12:50:27	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Quit: Free ZNC ~ Powered by LunarBNC: https://LunarBNC.net)
+2020-12-22 12:51:27	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 12:53:59	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 12:57:06	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 12:58:21	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 12:59:07	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-22 13:00:55	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 13:09:43	<--	andreyv (~andrey@unaffiliated/andreyv) has quit (Ping timeout: 272 seconds)
+2020-12-22 13:11:12	<--	Deyaa (uid190709@gateway/web/irccloud.com/x-zeondxpiclziszkf) has quit (Quit: Connection closed for inactivity)
+2020-12-22 13:11:38	<--	srk (~sorki@gateway/tor-sasl/sorki) has quit (Remote host closed the connection)
+2020-12-22 13:11:57	-->	srk (~sorki@gateway/tor-sasl/sorki) has joined #systemd
+2020-12-22 13:16:52	<--	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-22 13:22:14	<--	filbranden (~filbrande@2620:10d:c090:400::5:fc58) has quit (Ping timeout: 264 seconds)
+2020-12-22 13:22:30	<--	Wouter0100 (~Wouter010@84-80-174-188.fixed.kpn.net) has quit (Read error: Connection reset by peer)
+2020-12-22 13:23:08	-->	Wouter0100 (~Wouter010@84-80-174-188.fixed.kpn.net) has joined #systemd
+2020-12-22 13:40:31	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-22 13:41:13	<--	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has quit (Client Quit)
+2020-12-22 13:42:29	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 13:46:20	<--	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has quit (Client Quit)
+2020-12-22 13:48:44	-->	tinywrkb (~tinywrkb@tinywrkb.powered.by.lunarbnc.net) has joined #systemd
+2020-12-22 13:51:11	-->	Martchus_ (~martchus@dynamic-095-115-113-195.95.115.pool.telefonica.de) has joined #systemd
+2020-12-22 13:52:14	<--	Martchus (~martchus@2a01:c22:7257:9a00:d250:99ff:fe49:3cce) has quit (Ping timeout: 264 seconds)
+2020-12-22 14:11:13	-->	msekleta (~msekleta@194.228.68.80) has joined #systemd
+2020-12-22 14:32:39	<--	msekleta (~msekleta@194.228.68.80) has quit (Ping timeout: 260 seconds)
+2020-12-22 14:48:32	<--	Nact (~l@host-85-27-120-131.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-22 14:55:09	<--	jathan (~jathan@69.61.93.38) has quit (Quit: WeeChat 2.3)
+2020-12-22 14:56:45	<--	pyllyukko (~pyllyukko@gateway/tor-sasl/pyllyukko) has quit (Remote host closed the connection)
+2020-12-22 14:57:04	-->	pyllyukko (~pyllyukko@gateway/tor-sasl/pyllyukko) has joined #systemd
+2020-12-22 14:59:00	-->	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has joined #systemd
+2020-12-22 15:02:12	-->	Tokamak_ (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-22 15:04:07	<--	Tokamak (~Tokamak@204.141.173.217) has quit (Ping timeout: 256 seconds)
+2020-12-22 15:08:00	<--	Tokamak_ (~Tokamak@204.141.172.128) has quit (Ping timeout: 256 seconds)
+2020-12-22 15:11:07	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-22 15:22:02	<--	QuestionC (~Thunderbi@67.254.222.11) has quit (Read error: Connection reset by peer)
+2020-12-22 15:28:57	<--	jmcgnh (~jmcgnh@wikipedia/jmcgnh) has quit (Ping timeout: 260 seconds)
+2020-12-22 15:29:30	-->	QuestionC (~Thunderbi@67.254.222.11) has joined #systemd
+2020-12-22 15:38:16	-->	goodburner (~goodburne@185.162.184.12) has joined #systemd
+2020-12-22 15:39:03	-->	jmcgnh (~jmcgnh@wikipedia/jmcgnh) has joined #systemd
+2020-12-22 15:40:43	<--	tejr (~tejr@fsf/member/tyrmored) has quit (Ping timeout: 240 seconds)
+2020-12-22 15:42:55	-->	tejr (~tejr@fsf/member/tyrmored) has joined #systemd
+2020-12-22 15:48:10	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined #systemd
+2020-12-22 15:54:16	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-22 15:58:33	-->	LetoThe2nd (uid453638@gateway/web/irccloud.com/x-alieqjifywrtxncq) has joined #systemd
+2020-12-22 15:59:59	<--	sysrich (~sysrich@static.165.131.203.116.clients.your-server.de) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-22 16:00:45	-->	sysrich (~sysrich@static.165.131.203.116.clients.your-server.de) has joined #systemd
+2020-12-22 16:20:46	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Ping timeout: 256 seconds)
+2020-12-22 16:29:55	-->	msekleta (~msekleta@194.228.68.80) has joined #systemd
+2020-12-22 16:44:00	-->	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has joined #systemd
+2020-12-22 16:52:02	<--	jab416171 (~jab416171@c-174-52-57-189.hsd1.ut.comcast.net) has quit (Quit: bye)
+2020-12-22 16:52:42	-->	rsx (~rsx@ppp-188-174-142-192.dynamic.mnet-online.de) has joined #systemd
+2020-12-22 16:53:32	<--	msekleta (~msekleta@194.228.68.80) has quit (Ping timeout: 260 seconds)
+2020-12-22 16:57:31	<--	autopsy (~autopsy@fedora/autopsy) has quit (Remote host closed the connection)
+2020-12-22 17:12:05	<--	QuestionC (~Thunderbi@67.254.222.11) has quit (Read error: Connection reset by peer)
+2020-12-22 17:13:46	-->	ret2libc (~ret2libc@151.48.109.59) has joined #systemd
+2020-12-22 17:15:45	-->	infides (~infides@i5C75FC37.versanet.de) has joined #systemd
+2020-12-22 17:20:56	-->	msekleta (~msekleta@194.228.68.80) has joined #systemd
+2020-12-22 17:31:18	-->	panda88kazag (~radim@176-74-132-138.netdatacomm.cz) has joined #systemd
+2020-12-22 17:44:16	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 240 seconds)
+2020-12-22 17:44:24	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #systemd
+2020-12-22 17:44:56	-->	tnovotny (~tnovotny@176-74-132-138.netdatacomm.cz) has joined #systemd
+2020-12-22 17:45:51	<--	msekleta (~msekleta@194.228.68.80) has quit (Ping timeout: 272 seconds)
+2020-12-22 17:48:52	<--	andyrtr (~andyrtr@archlinux/developer/andyrtr) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-12-22 17:50:10	-->	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has joined #systemd
+2020-12-22 17:50:19	-->	andyrtr (~andyrtr@archlinux/developer/andyrtr) has joined #systemd
+2020-12-22 17:54:21	<--	b0b (~bob@unaffiliated/sulfyr) has quit (Quit: o/)
+2020-12-22 17:54:53	-->	TJ- (~root@2a02:8010:4007:dead:beef::b217) has joined #systemd
+2020-12-22 17:55:20	-->	b0b (~bob@unaffiliated/sulfyr) has joined #systemd
+2020-12-22 17:55:42	-->	Belxjander (~Belxjande@sourcemage/Mage/Abh-Elementalist) has joined #systemd
+2020-12-22 17:58:38	-->	[Enrico] (~chiccoroc@gentoo/contributor/Enrico) has joined #systemd
+2020-12-22 17:59:21	-->	QuestionC (~Thunderbi@67.254.222.11) has joined #systemd
+2020-12-22 18:00:20	<--	vmiklos (~vmiklos@catv-89-133-36-86.catv.broadband.hu) has quit (Ping timeout: 256 seconds)
+2020-12-22 18:02:10	-->	vmiklos (~vmiklos@catv-89-133-36-86.catv.broadband.hu) has joined #systemd
+2020-12-22 18:06:17	-->	phako (~jgeorg@p579366c8.dip0.t-ipconnect.de) has joined #systemd
+2020-12-22 18:34:23	<--	Sven_vB (~sven@gateway/tor-sasl/svenvb/x-98888234) has quit (Ping timeout: 240 seconds)
+2020-12-22 18:46:16	<--	ndim (hun@moooo.n-dimensional.de) has quit (Ping timeout: 240 seconds)
+2020-12-22 18:53:03	-->	bigon (bigon@unaffiliated/bigon) has joined #systemd
+2020-12-22 18:58:15	-->	ndim (hun@moooo.n-dimensional.de) has joined #systemd
+2020-12-22 19:08:59	-->	spiri (~spiri@unaffiliated/spiri) has joined #systemd
+2020-12-22 19:25:18	-->	mbrownnyc (sid18017@gateway/web/irccloud.com/x-yabfsobkejiupnff) has joined #systemd
+2020-12-22 19:28:44	-->	jkkm (sid181533@gateway/web/irccloud.com/x-mvqyakyyvtcpdpku) has joined #systemd
+2020-12-22 19:29:10	-->	zx2c4 (sid204921@gentoo/developer/zx2c4) has joined #systemd
+2020-12-22 19:33:26	-->	fancer (fancer@gateway/web/irccloud.com/x-ywmkiymewizaowvs) has joined #systemd
+2020-12-22 19:34:53	-->	walters (sid333965@gateway/web/irccloud.com/x-oibywwvnattygcgo) has joined #systemd
+2020-12-22 19:35:33	-->	zzag (sid349003@gateway/web/irccloud.com/x-aapsngjtqzkviavu) has joined #systemd
+2020-12-22 19:43:24	-->	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has joined #systemd
+2020-12-22 19:50:32	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Ping timeout: 260 seconds)
+2020-12-22 19:53:54	<--	phunyguy (~blaahchm@ubuntu/member/phunyguy) has quit (Ping timeout: 272 seconds)
+2020-12-22 19:53:55	-->	TJ- (~root@2a02:8010:4007:dead:beef::b217) has joined #systemd
+2020-12-22 19:54:05	<--	Net147 (~Net147@unaffiliated/net147) has quit (Ping timeout: 240 seconds)
+2020-12-22 19:55:04	-->	vinosec (~Monokuai@194.95.154.90) has joined #systemd
+2020-12-22 19:55:10	<--	vinosec (~Monokuai@194.95.154.90) has quit (Client Quit)
+2020-12-22 19:55:36	-->	vinosec (~Monokuai@194.95.154.90) has joined #systemd
+2020-12-22 19:59:12	<--	phako (~jgeorg@p579366c8.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2020-12-22 20:00:10	-->	Net147 (~Net147@unaffiliated/net147) has joined #systemd
+2020-12-22 20:04:13	-->	phako (~jgeorg@p579366c8.dip0.t-ipconnect.de) has joined #systemd
+2020-12-22 20:05:16	<--	dviola (~diego@unaffiliated/dviola) has quit (Ping timeout: 240 seconds)
+2020-12-22 20:05:16	<--	swivel (~swivel@shells.gnugeneration.com) has quit (Ping timeout: 240 seconds)
+2020-12-22 20:05:47	-->	florfoto (~florfoto@181.230.4.158) has joined #systemd
+2020-12-22 20:08:45	<--	phako (~jgeorg@p579366c8.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2020-12-22 20:09:37	-->	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has joined #systemd
+2020-12-22 20:17:01	<--	spiri (~spiri@unaffiliated/spiri) has quit (Ping timeout: 264 seconds)
+2020-12-22 20:45:02	-->	benfelin (~BouncingB@cpc91230-cmbg18-2-0-cust41.5-4.cable.virginm.net) has joined #systemd
+2020-12-22 20:58:56	-->	phako (~jgeorg@p579366c8.dip0.t-ipconnect.de) has joined #systemd
+2020-12-22 21:15:12	<--	panda88kazag (~radim@176-74-132-138.netdatacomm.cz) has quit (Ping timeout: 256 seconds)
+2020-12-22 21:16:04	-->	panda88kazag (~radim@176-74-132-138.netdatacomm.cz) has joined #systemd
+2020-12-22 21:21:55	-->	ncuxo (~ncuxo@ip-109-42-113-117.web.vodafone.de) has joined #systemd
+2020-12-22 21:23:16	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-22 21:34:04	<--	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has quit (Quit: Leaving)
+2020-12-22 21:34:06	<--	fachinformatiker (~fachinfor@fsf/member/fachinformatiker) has quit (Read error: Connection reset by peer)
+2020-12-22 21:39:19	<--	Belxjander (~Belxjande@sourcemage/Mage/Abh-Elementalist) has quit (Quit: AmigaOS PPC 4.1 +E +U1 // AmIRC 68K)
+2020-12-22 21:39:59	-->	fachinformatiker (~fachinfor@fsf/member/fachinformatiker) has joined #systemd
+2020-12-22 21:41:52	-->	Belxjander (~Belxjande@sourcemage/Mage/Abh-Elementalist) has joined #systemd
+2020-12-22 21:42:29	-->	sdeziel (~sdeziel@2001:470:b1c3:7947::100) has joined #systemd
+2020-12-22 21:50:43	<--	SuperHeron (~SuperHero@217.136.193.166) has quit (Ping timeout: 260 seconds)
+2020-12-22 21:52:57	-->	SuperHeron (~SuperHero@166.193-136-217.adsl-dyn.isp.belgacom.be) has joined #systemd
+2020-12-22 22:03:16	<--	vinosec (~Monokuai@194.95.154.90) has quit (Quit: WeeChat 3.0)
+2020-12-22 22:10:27	-->	phunyguy (~blaahchm@ubuntu/member/phunyguy) has joined #systemd
+2020-12-22 22:23:55	-->	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has joined #systemd
+2020-12-22 22:49:19	-->	bigjazzsound (~craig.fie@75-60-207-113.lightspeed.tukrga.sbcglobal.net) has joined #systemd
+2020-12-22 22:59:10	<--	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has quit (Quit: Leaving)
+2020-12-22 22:59:42	-->	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has joined #systemd
+2020-12-22 23:00:57	-->	MIF (~MIF@heb12/developer/nate) has joined #systemd
+2020-12-22 23:10:08	-->	autopsy (~autopsy@fedora/autopsy) has joined #systemd
+2020-12-22 23:11:01	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Ping timeout: 246 seconds)
+2020-12-22 23:11:20	-->	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has joined #systemd
+2020-12-22 23:15:38	<--	ddstreet (~quassel@ubuntu/member/ddstreet) has quit (Read error: Connection reset by peer)
+2020-12-22 23:15:58	-->	ddstreet (~quassel@ubuntu/member/ddstreet) has joined #systemd
+2020-12-22 23:20:15	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Ping timeout: 272 seconds)
+2020-12-22 23:38:46	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-22 23:42:38	<--	phako (~jgeorg@p579366c8.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-22 23:44:36	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #systemd
+2020-12-22 23:47:20	-->	TJ- (~root@2a02:8010:4007:dead:beef::b217) has joined #systemd
+2020-12-22 23:54:45	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 240 seconds)
+2020-12-22 23:55:06	-->	cliluw (~cliluw@unaffiliated/cliluw) has joined #systemd
+2020-12-23 00:02:29	-->	phako (~jgeorg@p579366c8.dip0.t-ipconnect.de) has joined #systemd
+2020-12-23 00:09:20	-->	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has joined #systemd
+2020-12-23 00:13:27	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Ping timeout: 272 seconds)
+2020-12-23 00:32:22	-->	cdown_ (~cdown@163.114.131.1) has joined #systemd
+2020-12-23 00:34:45	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-23 00:34:54	--	cdown_ is now known as cdown
+2020-12-23 00:51:06	<--	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has quit (Ping timeout: 256 seconds)
+2020-12-23 00:52:35	-->	phako_ (~jgeorg@p579364dd.dip0.t-ipconnect.de) has joined #systemd
+2020-12-23 00:54:34	<--	phako (~jgeorg@p579366c8.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2020-12-23 00:56:34	--	phako_ is now known as phako
+2020-12-23 00:58:41	--	irc: disconnected from server
+2020-12-23 11:06:17	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-23 11:06:17	--	Topic for #systemd is "Version 247 released"
+2020-12-23 11:06:17	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-23 11:06:17	--	Channel #systemd: 549 nicks (1 op, 0 voices, 548 normals)
+2020-12-23 11:06:54	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-23 11:12:42	-->	[b0b] (~bob@unaffiliated/sulfyr) has joined #systemd
+2020-12-23 11:15:15	<--	b0b (~bob@unaffiliated/sulfyr) has quit (Ping timeout: 240 seconds)
+2020-12-23 11:15:18	--	[b0b] is now known as b0b
+2020-12-23 11:27:48	-->	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has joined #systemd
+2020-12-23 11:41:27	-->	tinywrkb (~tinywrkb@2001:470:7857:fb2::f) has joined #systemd
+2020-12-23 11:51:00	<--	scampbell (~scampbell@mail.scampbell.net) has quit (Remote host closed the connection)
+2020-12-23 12:30:42	-->	andreyv (~andrey@unaffiliated/andreyv) has joined #systemd
+2020-12-23 12:32:47	<--	DaNeenjah (~DaNeenjah@2600:1005:b119:6674:ea28:48e9:377d:546f) has quit (Quit: WeeChat 3.0)
+2020-12-23 12:33:42	-->	scampbell (~scampbell@mail.scampbell.net) has joined #systemd
+2020-12-23 12:36:47	<--	joshmiller (~joshmille@2620:10d:c090:400::5:d7f9) has quit (Ping timeout: 260 seconds)
+2020-12-23 12:38:41	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-23 13:03:15	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Remote host closed the connection)
+2020-12-23 13:03:54	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-23 13:47:59	-->	Martchus (~martchus@dynamic-095-117-006-021.95.117.pool.telefonica.de) has joined #systemd
+2020-12-23 13:49:24	<--	Martchus_ (~martchus@dynamic-095-115-113-195.95.115.pool.telefonica.de) has quit (Ping timeout: 240 seconds)
+2020-12-23 14:01:01	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 14:22:06	<--	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 14:48:51	-->	khfeng (~khfeng@2001:67c:1562:8007::aac:44ae) has joined #systemd
+2020-12-23 14:59:40	-->	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has joined #systemd
+2020-12-23 15:01:07	<--	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has quit (Client Quit)
+2020-12-23 15:12:37	<--	squeed (~quassel@2602:ff06:725:5:da::1) has quit (Ping timeout: 264 seconds)
+2020-12-23 15:16:38	-->	sord937 (~sord937@gateway/tor-sasl/sord937) has joined #systemd
+2020-12-23 15:18:07	-->	squeed (~quassel@2602:ff06:725:5:da::1) has joined #systemd
+2020-12-23 15:18:44	<--	TheConjurer (~TheConjur@149.91.83.123) has quit (Ping timeout: 240 seconds)
+2020-12-23 15:25:43	-->	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has joined #systemd
+2020-12-23 15:36:31	-->	Deyaa (uid190709@gateway/web/irccloud.com/x-bwtubbdxpagcngnf) has joined #systemd
+2020-12-23 15:37:37	<--	andreyv (~andrey@unaffiliated/andreyv) has quit (Remote host closed the connection)
+2020-12-23 15:59:58	<--	sysrich (~sysrich@static.165.131.203.116.clients.your-server.de) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-23 16:00:37	-->	sysrich (~sysrich@static.165.131.203.116.clients.your-server.de) has joined #systemd
+2020-12-23 16:00:41	-->	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has joined #systemd
+2020-12-23 16:12:28	-->	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has joined #systemd
+2020-12-23 16:17:43	-->	yabbes (uid254190@gateway/web/irccloud.com/x-fuowbicmxzizprgb) has joined #systemd
+2020-12-23 16:37:41	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-23 16:43:47	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 16:45:22	<--	joshmiller (~joshmille@23-118-54-135.lightspeed.sntcca.sbcglobal.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 16:49:18	<--	edlou (uid413273@gateway/web/irccloud.com/x-tsmbyvbgwxuqhiqz) has quit (Quit: Connection closed for inactivity)
+2020-12-23 16:49:35	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-23 16:56:17	-->	anaselli (~quassel@mandriva/developer/kde/anaselli) has joined #systemd
+2020-12-23 16:57:25	<--	LocutusOfBorg (~locutusof@ubuntu/member/locutusofborg) has quit (Quit: ZNC 1.8.2+deb1 - https://znc.in)
+2020-12-23 17:02:07	-->	benfelin (~BouncingB@cpc91230-cmbg18-2-0-cust41.5-4.cable.virginm.net) has joined #systemd
+2020-12-23 17:05:22	--	irc: disconnected from server
+2020-12-23 17:05:57	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-23 17:05:57	--	Topic for #systemd is "Version 247 released"
+2020-12-23 17:05:57	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-23 17:05:57	--	Channel #systemd: 554 nicks (1 op, 0 voices, 553 normals)
+2020-12-23 17:06:13	-->	ret2libc (~ret2libc@151.48.109.59) has joined #systemd
+2020-12-23 17:06:34	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-23 17:08:56	<--	squeed (~quassel@2602:ff06:725:5:da::1) has quit (Ping timeout: 260 seconds)
+2020-12-23 17:10:44	-->	LocutusOfBorg (~locutusof@ubuntu/member/locutusofborg) has joined #systemd
+2020-12-23 17:13:34	-->	infides (~infides@i5C75FCB3.versanet.de) has joined #systemd
+2020-12-23 17:15:06	<--	LocutusOfBorg (~locutusof@ubuntu/member/locutusofborg) has quit (Client Quit)
+2020-12-23 17:16:23	-->	TheConjurer (~TheConjur@149.91.83.123) has joined #systemd
+2020-12-23 17:20:56	-->	LocutusOfBorg (~locutusof@ubuntu/member/locutusofborg) has joined #systemd
+2020-12-23 17:33:17	-->	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has joined #systemd
+2020-12-23 17:42:13	-->	dviola (~diego@unaffiliated/dviola) has joined #systemd
+2020-12-23 17:42:46	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-23 17:47:21	<--	yukam (~yukam@109.252.105.208) has quit (Ping timeout: 256 seconds)
+2020-12-23 17:53:45	-->	yukam (~yukam@109-252-105-171.nat.spd-mgts.ru) has joined #systemd
+2020-12-23 17:59:55	<--	antoine (~antoine@159.100.241.193) has quit (Quit: Ping timeout (120 seconds))
+2020-12-23 18:00:47	-->	antoine (~antoine@159.100.241.193) has joined #systemd
+2020-12-23 18:00:54	<--	wowi42 (~wowi42@51.15.249.183) has quit (Remote host closed the connection)
+2020-12-23 18:00:55	<--	mawk (mawk@serveur.io) has quit (Quit: ZNC - https://znc.in)
+2020-12-23 18:00:57	<--	NEOhidra (~NEOhidra@unaffiliated/neohidra) has quit (Quit: ZNC - https://znc.in)
+2020-12-23 18:01:11	-->	mawk (mawk@serveur.io) has joined #systemd
+2020-12-23 18:01:18	-->	NEOhidra (~NEOhidra@unaffiliated/neohidra) has joined #systemd
+2020-12-23 18:01:39	-->	wowi42 (~wowi42@51.15.249.183) has joined #systemd
+2020-12-23 18:04:43	<--	lanartri_ (~lanartri@188.58.4.225) has quit (Quit: Leaving)
+2020-12-23 18:05:06	-->	lanartri (~lanartri@188.58.4.225) has joined #systemd
+2020-12-23 18:16:51	-->	jimklimov (~jimklimov@ip-86-49-250-67.net.upcbroadband.cz) has joined #systemd
+2020-12-23 18:19:21	-->	jimklimov1 (~jimklimov@165.225.72.51) has joined #systemd
+2020-12-23 18:21:45	<--	jimklimov (~jimklimov@ip-86-49-250-67.net.upcbroadband.cz) has quit (Ping timeout: 256 seconds)
+2020-12-23 18:36:48	<--	TheConjurer (~TheConjur@149.91.83.123) has quit (Read error: Connection reset by peer)
+2020-12-23 18:46:19	<--	eki (~eki@dsl-hkibng41-54f858-46.dhcp.inet.fi) has quit (Quit: leaving)
+2020-12-23 18:47:39	-->	drawat_ (~drawat@50-47-106-83.evrt.wa.frontiernet.net) has joined #systemd
+2020-12-23 18:48:39	-->	eki (~eki@dsl-hkibng41-54f858-46.dhcp.inet.fi) has joined #systemd
+2020-12-23 18:50:45	<--	drawat (~drawat@50-47-106-83.evrt.wa.frontiernet.net) has quit (Ping timeout: 272 seconds)
+2020-12-23 18:52:37	-->	cosimone (~cosimone@2001:b07:ae5:db26:d849:743b:370b:b3cd) has joined #systemd
+2020-12-23 18:57:56	<--	khfeng (~khfeng@2001:67c:1562:8007::aac:44ae) has quit (Ping timeout: 258 seconds)
+2020-12-23 19:10:23	-->	otisolsen70 (~otisolsen@xd4ed80b5.cust.hiper.dk) has joined #systemd
+2020-12-23 19:16:33	<--	cosimone (~cosimone@2001:b07:ae5:db26:d849:743b:370b:b3cd) has quit (Remote host closed the connection)
+2020-12-23 19:17:15	-->	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has joined #systemd
+2020-12-23 19:20:28	-->	andreyv (~andrey@unaffiliated/andreyv) has joined #systemd
+2020-12-23 19:27:35	-->	cdown_ (~cdown@163.114.131.1) has joined #systemd
+2020-12-23 19:30:17	--	cdown_ is now known as cdown
+2020-12-23 19:38:31	<--	justan0theruser (~justanoth@unaffiliated/justanotheruser) has quit (Ping timeout: 268 seconds)
+2020-12-23 19:40:45	-->	cdown_ (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-23 19:43:04	<--	cdown (~cdown@163.114.131.1) has quit (Ping timeout: 240 seconds)
+2020-12-23 19:43:05	--	cdown_ is now known as cdown
+2020-12-23 19:54:41	-->	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has joined #systemd
+2020-12-23 19:55:50	-->	florfoto (~florfoto@181.230.4.158) has joined #systemd
+2020-12-23 20:00:05	-->	dirtwash (~dirtwash@51.15.46.163) has joined #systemd
+2020-12-23 20:00:15	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-23 20:00:21	dirtwash	does the systemd resolve ctl cache? I think so? by default on Ubuntu
+2020-12-23 20:04:11	<--	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-23 20:08:12	zdzichu	dirtwash: https://www.freedesktop.org/software/systemd/man/resolved.conf.html#Cache=
+2020-12-23 20:09:03	dirtwash	yea i just wonder why some addresses arent cached
+2020-12-23 20:09:21	dirtwash	I dont get it, if I dig certain ones they never get cached
+2020-12-23 20:13:56	zdzichu	you can run systemd-resolved with SYSTEMD_LOG_LEVEL=debug in the environment, it may spill something relevant
+2020-12-23 20:17:07	dirtwash	thanks, I check
+2020-12-23 20:21:53	<--	QuestionC (~Thunderbi@67.254.222.11) has quit (Ping timeout: 256 seconds)
+2020-12-23 20:24:36	-->	lassulus_ (~lassulus@NixOS/user/lassulus) has joined #systemd
+2020-12-23 20:24:48	<--	lassulus_ (~lassulus@NixOS/user/lassulus) has quit (Client Quit)
+2020-12-23 20:25:17	<--	veegee (~veegee@142.126.160.36) has quit (Remote host closed the connection)
+2020-12-23 20:27:09	-->	lassulus_ (~lassulus@NixOS/user/lassulus) has joined #systemd
+2020-12-23 20:27:18	<--	lassulus_ (~lassulus@NixOS/user/lassulus) has quit (Client Quit)
+2020-12-23 20:32:44	<--	lassulus (~lassulus@NixOS/user/lassulus) has quit (Quit: WeeChat 2.9)
+2020-12-23 20:33:54	-->	lassulus (~lassulus@NixOS/user/lassulus) has joined #systemd
+2020-12-23 20:33:57	<--	pppingme (~pppingme@unaffiliated/pppingme) has quit (Ping timeout: 256 seconds)
+2020-12-23 20:35:52	-->	pppingme (~pppingme@unaffiliated/pppingme) has joined #systemd
+2020-12-23 20:43:19	-->	justan0theruser (~justanoth@unaffiliated/justanotheruser) has joined #systemd
+2020-12-23 20:50:36	dvergatal	hi all i have written a socket which is using ListenUSBFunction and runnin a service daemon, in dameon service file i have USBFunctionDescriptors and USBFunctionStrings, i have also modified mine service to use file descriptors ep0, ep1 and ep2 from systemd using sd_listen_fds(0) and passing proper SD_LISTEN_FDS_START as file descriptors
+2020-12-23 20:50:50	dvergatal	this all works ok for the first connection of usb device
+2020-12-23 20:51:31	<--	runejuhl (~runejuhl@185.166.122.161) has quit (Ping timeout: 256 seconds)
+2020-12-23 20:51:37	dvergatal	but if i unplug the device and plug it again it doesn' work because sd_listen_fds(0) returns value != 3
+2020-12-23 20:54:09	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-23 20:54:33	-->	runejuhl (~runejuhl@185.166.122.161) has joined #systemd
+2020-12-23 20:59:10	-->	hughest (~hughest@91.215.166.4) has joined #systemd
+2020-12-23 21:09:24	-->	cosimone_ (~cosimone@5.170.240.2) has joined #systemd
+2020-12-23 21:12:43	<--	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has quit (Ping timeout: 265 seconds)
+2020-12-23 21:12:43	--	cosimone_ is now known as cosimone
+2020-12-23 21:22:56	-->	jimklimov (~jimklimov@165.225.72.51) has joined #systemd
+2020-12-23 21:23:05	<--	jimklimov1 (~jimklimov@165.225.72.51) has quit (Ping timeout: 256 seconds)
+2020-12-23 21:25:32	-->	jimklimov1 (~jimklimov@ip-86-49-250-67.net.upcbroadband.cz) has joined #systemd
+2020-12-23 21:25:49	<--	Deyaa (uid190709@gateway/web/irccloud.com/x-bwtubbdxpagcngnf) has quit (Quit: Connection closed for inactivity)
+2020-12-23 21:27:21	<--	jimklimov (~jimklimov@165.225.72.51) has quit (Ping timeout: 260 seconds)
+2020-12-23 21:29:38	-->	DaNeenjah (~DaNeenjah@2600:1005:b143:d051:b71f:fc12:15d1:2de3) has joined #systemd
+2020-12-23 22:02:34	-->	rsx (~rsx@ppp-188-174-154-80.dynamic.mnet-online.de) has joined #systemd
+2020-12-24 06:11:05	--	irc: disconnected from server
+2020-12-24 06:11:39	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-24 06:11:39	--	Topic for #systemd is "Version 247 released"
+2020-12-24 06:11:39	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-24 06:11:39	--	Channel #systemd: 558 nicks (1 op, 0 voices, 557 normals)
+2020-12-24 06:11:48	<--	Cultist (~CultOfThe@unaffiliated/cultist) has quit (Client Quit)
+2020-12-24 06:12:16	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-24 06:12:23	<--	mnemonic (~semeion@unaffiliated/semeion) has quit (Quit: WeeChat 3.0)
+2020-12-24 06:13:05	-->	joshmiller (~joshmille@2620:10d:c090:400::5:bf8e) has joined #systemd
+2020-12-24 06:13:10	-->	Cultist (~CultOfThe@unaffiliated/cultist) has joined #systemd
+2020-12-24 06:14:36	-->	cebtenzzre (~cebtenzzr@2603-7081-3406-8f26-00c4-ed3c-3f47-2b1e.res6.spectrum.com) has joined #systemd
+2020-12-24 06:15:12	<--	Cultist (~CultOfThe@unaffiliated/cultist) has quit (Client Quit)
+2020-12-24 06:15:33	-->	Cultist (~CultOfThe@unaffiliated/cultist) has joined #systemd
+2020-12-24 06:17:51	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Quit: Leaving)
+2020-12-24 06:19:51	-->	meropyri (~meropyri@gateway/tor-sasl/meropyri) has joined #systemd
+2020-12-24 06:23:37	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Quit: sord937)
+2020-12-24 06:25:10	<--	meropyri (~meropyri@gateway/tor-sasl/meropyri) has quit (Remote host closed the connection)
+2020-12-24 06:27:56	-->	meropyri (~meropyri@gateway/tor-sasl/meropyri) has joined #systemd
+2020-12-24 06:28:24	<--	imcsk8 (~imcsk8@189.154.64.11) has quit (Ping timeout: 256 seconds)
+2020-12-24 06:30:17	<--	CambridgeDave (~dave@cpc149474-cmbg20-2-0-cust343.5-4.cable.virginm.net) has quit (Quit: Konversation terminated!)
+2020-12-24 06:30:20	<--	Cultist (~CultOfThe@unaffiliated/cultist) has quit (Quit: knee deep in the dead)
+2020-12-24 06:33:45	-->	Cultist (~CultOfThe@unaffiliated/cultist) has joined #systemd
+2020-12-24 06:35:19	-->	imcsk8 (~imcsk8@189.154.0.94) has joined #systemd
+2020-12-24 06:47:49	<--	lassulus (~lassulus@NixOS/user/lassulus) has quit (Remote host closed the connection)
+2020-12-24 06:50:59	<--	Cultist (~CultOfThe@unaffiliated/cultist) has quit (Quit: knee deep in the dead)
+2020-12-24 06:52:14	<--	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has quit (Ping timeout: 264 seconds)
+2020-12-24 06:53:12	-->	Cultist (~CultOfThe@unaffiliated/cultist) has joined #systemd
+2020-12-24 06:55:18	-->	lassulus (~lassulus@NixOS/user/lassulus) has joined #systemd
+2020-12-24 07:22:09	-->	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has joined #systemd
+2020-12-24 07:25:02	-->	Lightsword (~Lightswor@2604:a880:1:20::1d3:9001) has joined #systemd
+2020-12-24 07:26:09	<--	spiri (~spiri@unaffiliated/spiri) has quit (Ping timeout: 260 seconds)
+2020-12-24 07:27:29	<--	Lightsword (~Lightswor@2604:a880:1:20::1d3:9001) has quit (Client Quit)
+2020-12-24 07:29:37	-->	Lightsword (~Lightswor@2604:a880:1:20::1d3:9001) has joined #systemd
+2020-12-24 07:39:39	-->	sdeziel (~sdeziel@2001:470:b1c3:7947::100) has joined #systemd
+2020-12-24 07:43:43	-->	foul_owl (~foul_owl@67.40.177.144) has joined #systemd
+2020-12-24 07:48:19	<--	jaros (~mj@158.red-81-38-164.dynamicip.rima-tde.net) has left #systemd ("WeeChat 3.0")
+2020-12-24 07:49:03	-->	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has joined #systemd
+2020-12-24 07:49:04	<--	foul_owl (~foul_owl@67.40.177.144) has quit (Quit: WeeChat 2.3)
+2020-12-24 07:49:23	-->	foul_owl (~foul_owl@67.40.177.144) has joined #systemd
+2020-12-24 07:50:24	<--	infides (~infides@i5C75FCB3.versanet.de) has quit (Ping timeout: 256 seconds)
+2020-12-24 07:51:16	-->	DaNeenjah (~DaNeenjah@2600:1005:b141:85cf:c838:1de7:b134:104) has joined #systemd
+2020-12-24 07:52:01	-->	infides (~infides@i5C75FCB3.versanet.de) has joined #systemd
+2020-12-24 07:52:26	<--	KombuchaKip (~KombuchaK@192.252.230.5) has quit (Quit: Yarrr!!!)
+2020-12-24 07:54:29	-->	KombuchaKip (~KombuchaK@192.252.230.5) has joined #systemd
+2020-12-24 07:54:37	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Quit: WeeChat 2.8)
+2020-12-24 07:55:24	<--	anaselli (~quassel@mandriva/developer/kde/anaselli) has quit (Remote host closed the connection)
+2020-12-24 08:02:16	<--	infides (~infides@i5C75FCB3.versanet.de) has quit (Ping timeout: 240 seconds)
+2020-12-24 11:23:01	--	irc: disconnected from server
+2020-12-24 11:23:35	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-24 11:23:35	--	Topic for #systemd is "Version 247 released"
+2020-12-24 11:23:35	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-24 11:23:35	--	Channel #systemd: 549 nicks (1 op, 0 voices, 548 normals)
+2020-12-24 11:24:12	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-24 11:26:19	-->	hurikhan77 (~quassel@2a02:8109:43f:800::1a2) has joined #systemd
+2020-12-24 11:26:44	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-24 11:29:41	<--	joshmiller (~joshmille@2620:10d:c090:400::5:1cf9) has quit (Ping timeout: 260 seconds)
+2020-12-24 11:34:58	-->	DaNeenjah (~DaNeenjah@2600:1005:b141:85cf:c838:1de7:b134:104) has joined #systemd
+2020-12-24 11:55:11	-->	joshmiller (~joshmille@2620:10d:c090:400::5:1cf9) has joined #systemd
+2020-12-24 19:00:38	--	irc: disconnected from server
+2020-12-24 19:01:13	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-24 19:01:13	--	Topic for #systemd is "Version 247 released"
+2020-12-24 19:01:13	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-24 19:01:13	--	Channel #systemd: 552 nicks (1 op, 0 voices, 551 normals)
+2020-12-24 19:01:50	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-24 19:04:50	<--	eleksir (~UNIX@195.91.173.49) has quit (Ping timeout: 264 seconds)
+2020-12-24 19:10:42	-->	eleksir (~UNIX@195.91.173.49) has joined #systemd
+2020-12-24 19:12:24	-->	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has joined #systemd
+2020-12-24 19:15:12	-->	damex (quassel@unaffiliated/damex) has joined #systemd
+2020-12-24 19:20:22	<--	damex (quassel@unaffiliated/damex) has quit (Read error: Connection reset by peer)
+2020-12-24 19:20:41	-->	damex (quassel@unaffiliated/damex) has joined #systemd
+2020-12-24 19:21:34	-->	chrisccoulson (~chrisccou@ubuntu/member/chrisccoulson) has joined #systemd
+2020-12-24 19:25:05	<--	damex (quassel@unaffiliated/damex) has quit (Ping timeout: 256 seconds)
+2020-12-24 19:52:32	<--	BobbyJr (~BobbyJr@robsworld.plus.com) has quit (Ping timeout: 260 seconds)
+2020-12-24 19:57:29	-->	khfeng (~khfeng@2001:67c:1562:8007::aac:44ae) has joined #systemd
+2020-12-24 19:57:37	<--	justanotheruser (~justanoth@unaffiliated/justanotheruser) has quit (Ping timeout: 246 seconds)
+2020-12-24 20:08:38	-->	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has joined #systemd
+2020-12-24 20:17:37	<--	efm (~efm@vpn.tummy.com) has quit (Ping timeout: 264 seconds)
+2020-12-24 20:19:44	-->	hughest_ (~hughest@91.215.166.4) has joined #systemd
+2020-12-24 20:21:56	<--	hughest (~hughest@91.215.166.4) has quit (Ping timeout: 240 seconds)
+2020-12-24 20:30:21	<--	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has quit (Quit: ZNC - http://znc.in)
+2020-12-24 20:33:44	-->	delacroix (~delacroix@2a02:810c:4cc0:400:9468:9cf8:51c1:a463) has joined #systemd
+2020-12-24 20:36:35	-->	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has joined #systemd
+2020-12-24 20:41:33	<--	delacroix (~delacroix@2a02:810c:4cc0:400:9468:9cf8:51c1:a463) has quit (Quit: ZNC - http://znc.in)
+2020-12-24 20:41:47	-->	delacroix (~delacroix@2a02:810c:4cc0:400:9468:9cf8:51c1:a463) has joined #systemd
+2020-12-24 20:43:41	<--	anaselli (~quassel@mandriva/developer/kde/anaselli) has quit (Ping timeout: 272 seconds)
+2020-12-24 20:43:43	-->	a_naselli (~quassel@mandriva/developer/kde/anaselli) has joined #systemd
+2020-12-24 20:47:05	-->	benfelin (~BouncingB@cpc91230-cmbg18-2-0-cust41.5-4.cable.virginm.net) has joined #systemd
+2020-12-24 20:51:03	<--	delacroix (~delacroix@2a02:810c:4cc0:400:9468:9cf8:51c1:a463) has quit (Quit: ZNC - http://znc.in)
+2020-12-24 20:51:15	-->	delacroix (~delacroix@2a02:810c:4cc0:400:9468:9cf8:51c1:a463) has joined #systemd
+2020-12-25 01:06:23	--	irc: disconnected from server
+2020-12-25 01:07:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-25 01:07:06	--	Topic for #systemd is "Version 247 released"
+2020-12-25 01:07:06	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-25 01:07:06	--	Channel #systemd: 555 nicks (1 op, 0 voices, 554 normals)
+2020-12-25 01:07:42	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-25 01:08:31	Ultra-77	hi, is there a way to  avoid mount scans with systemd running from user space  `systemd --user`   ... 
+2020-12-25 01:08:38	Ultra-77	whenever mounts on system happens  entire server is hit with too much load, since every user of server is running `systemd --user`  all those intances start to scan  mounts and  CPU spikes a lot, 
+2020-12-25 01:08:38	Ultra-77	 when you have 200 users  it means entire server  will start to crawl  until  this scan is finished by each and every `systemd --user` process 
+2020-12-25 01:09:33	-->	greyltc[m][m] (greyltcmat@gateway/shell/matrix.org/x-uzkhgyxcshrsrhxs) has joined #systemd
+2020-12-25 01:17:50	-->	joshmiller (~joshmille@2620:10d:c090:400::5:aac7) has joined #systemd
+2020-12-25 01:28:51	<--	ttill (~ttill@5cf3ff07.rev.dansknet.dk) has quit (Ping timeout: 256 seconds)
+2020-12-25 01:29:44	<--	Ultra-77 (~mrultra@185.207.164.70) has quit (Ping timeout: 240 seconds)
+2020-12-25 01:33:27	<--	thaller_ (~thaller@aftr-62-216-207-248.dynamic.mnet-online.de) has quit (Ping timeout: 256 seconds)
+2020-12-25 01:37:30	<--	joshmiller (~joshmille@2620:10d:c090:400::5:aac7) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-25 01:54:44	-->	Nact (~l@host-85-27-120-131.dynamic.voo.be) has joined #systemd
+2020-12-25 01:55:30	-->	bashtanov1 (~Thunderbi@80-44-116-13.dynamic.dsl.as9105.com) has joined #systemd
+2020-12-25 01:57:02	bashtanov1	hello, if my daemon changes its main PID, in what order do I notify systemd about it and write it to the pidfile, which systemd is aware of as well?
+2020-12-25 01:58:27	grawity	I feel like using both doesn't really make much sense
+2020-12-25 01:58:35	grawity	if your service unit is Type=notify, what's the pidfile for?
+2020-12-25 02:03:20	-->	quantum (~carl@45.159.14.242) has joined #systemd
+2020-12-25 02:04:06	quantum	Where do you put .service files, when you have an immutable OS? (can't write most of it)
+2020-12-25 02:04:11	<--	sord937 (~sord937@gateway/tor-sasl/sord937) has quit (Quit: sord937)
+2020-12-25 02:04:36	quantum	Everyone there tells me /etc/systemd/system, but that should be for runtime only.
+2020-12-25 02:04:58	grawity	well, sounds like your OS doesn't play by the usual rules
+2020-12-25 02:05:15	grawity	in the rest of the world, /etc/systemd is persistent and /run/systemd is for runtime only
+2020-12-25 02:05:28	quantum	Yes, it's a new class. (SilverBlue, MicroOS)
+2020-12-25 02:05:40	grawity	I'm guessing yours was specifically made so that you *wouldn't* put custom .service files anywhere
+2020-12-25 02:06:18	quantum	We can write /etc (as an overlay), as well as /home, /root, and /var.
+2020-12-25 02:06:59	quantum	Ok my mistake, /run/systemd must be runtime.
+2020-12-25 02:07:19	grawity	so I would still say /etc, then
+2020-12-25 02:07:23	quantum	But where do I put my own .service files, intended for system mode?
+2020-12-25 02:07:38	grawity	since that is the whole point of /etc/systemd
+2020-12-25 02:08:04	quantum	man says /etc/systemd/user, but when I try to enabe it doesn't see the file.
+2020-12-25 02:08:15	grawity	/user is not for system mode
+2020-12-25 02:08:48	quantum	So it should be /etc/systemd/system/?
+2020-12-25 02:08:55	grawity	yes
+2020-12-25 02:09:24	quantum	If /root/.config/systemd/user/ would it run in system mode on boot, and stay alive?
+2020-12-25 02:09:35	grawity	no; that's very much not system mode
+2020-12-25 02:09:47	quantum	I mean /root/.config/systemd/system/
+2020-12-25 02:10:12	grawity	the system service manager will never look for units in homedirs; this is the entire point of --user mode
+2020-12-25 02:10:53	grawity	though you *can* arrange for some user's user-mode instance to start on boot and run forever (this setting is stored in /var), but it's still a separate world from system-mode, even if it runs as root
+2020-12-25 02:11:09	-->	efm (~efm@vpn.tummy.com) has joined #systemd
+2020-12-25 02:11:18	quantum	It just seems so weird to drop files directly into /etc/systemd/system.  I've always put them into /usr/local/lib/systemd/system.
+2020-12-25 02:11:47	grawity	I haven't seen any distro read from /usr/local, is that a local patch?
+2020-12-25 02:11:57	quantum	... of course I can't anymore since most of the filesystem is immutable.
+2020-12-25 02:12:04	grawity	generally, in systemd, /etc is *specifically* for sysadmin customizations
+2020-12-25 02:12:16	quantum	CentOS has always read from local.
+2020-12-25 02:12:39	quantum	Ok.  Much respect grawity, thank you.
+2020-12-25 02:12:40	grawity	which is also why it stores the "built-in" units in (/usr)/lib which can be part of an immutable /usr
+2020-12-25 02:12:44	bashtanov1	grawity: pidfile is anyway used internally. Do you think it's worth just not declaring it to systemd?
+2020-12-25 02:18:42	quantum	PS - In my experience SilverBlue 33 is busted.  I'm running/learning MicroOS.
+2020-12-25 02:18:51	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 02:23:29	<--	ohsix (~ohsix@h72-35-140-141.bendor.broadband.dynamic.tds.net) has quit (Ping timeout: 256 seconds)
+2020-12-25 02:24:20	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-25 02:31:18	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 02:37:01	-->	astrofog (~astrofog@unaffiliated/astrofog) has joined #systemd
+2020-12-25 02:48:54	<--	Some_Person (someperson@2600:1700:d02:1c50:ce81:24dc:3854:f698) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-25 02:56:19	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-25 02:57:44	<--	astrofog (~astrofog@unaffiliated/astrofog) has quit (Quit: Quite)
+2020-12-25 02:58:18	-->	thaller_ (~thaller@2001:a61:35ad:1101:30ad:ec6a:f250:42dc) has joined #systemd
+2020-12-25 02:59:33	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Client Quit)
+2020-12-25 03:00:34	<--	berglh (~quassel@ns1.bytefuse.net) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-25 03:01:12	-->	berglh (~quassel@ns1.bytefuse.net) has joined #systemd
+2020-12-25 03:02:42	-->	Some_Person (someperson@2600:1700:d02:1c50:ce81:24dc:3854:f698) has joined #systemd
+2020-12-25 03:09:13	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-25 03:17:01	<--	cantstanya (~chatting@gateway/tor-sasl/cantstanya) has quit (Remote host closed the connection)
+2020-12-25 03:17:32	-->	cantstanya (~chatting@gateway/tor-sasl/cantstanya) has joined #systemd
+2020-12-25 03:24:32	<--	Nact (~l@host-85-27-120-131.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-25 03:25:44	<--	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has quit (Ping timeout: 272 seconds)
+2020-12-25 03:32:00	-->	damex (quassel@unaffiliated/damex) has joined #systemd
+2020-12-25 03:37:13	<--	damex (quassel@unaffiliated/damex) has quit (Read error: Connection reset by peer)
+2020-12-25 03:37:31	-->	damex (quassel@unaffiliated/damex) has joined #systemd
+2020-12-25 03:42:12	<--	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has quit (Ping timeout: 272 seconds)
+2020-12-25 03:42:12	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 264 seconds)
+2020-12-25 03:49:34	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 03:51:58	-->	Tokamak (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-25 03:52:00	-->	anemoiac (~anemoiac@23.226.128.210) has joined #systemd
+2020-12-25 03:54:44	<--	khfeng (~khfeng@2001:67c:1562:8007::aac:44ae) has quit (Quit: khfeng)
+2020-12-25 03:57:48	<--	spiri (~spiri@unaffiliated/spiri) has quit (Ping timeout: 246 seconds)
+2020-12-25 04:05:25	-->	Nact (~l@host-85-27-120-131.dynamic.voo.be) has joined #systemd
+2020-12-25 04:06:13	<--	rsx (~rsx@ppp-188-174-135-8.dynamic.mnet-online.de) has quit (Quit: rsx)
+2020-12-25 04:10:33	<--	anemoiac (~anemoiac@23.226.128.210) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-25 04:19:02	<--	Tokamak (~Tokamak@204.141.172.128) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-12-25 04:26:19	<--	damex (quassel@unaffiliated/damex) has quit (Read error: Connection reset by peer)
+2020-12-25 04:26:31	-->	damex (quassel@unaffiliated/damex) has joined #systemd
+2020-12-25 04:31:24	-->	ohsix (~ohsix@h72-35-140-141.bendor.broadband.dynamic.tds.net) has joined #systemd
+2020-12-25 04:37:16	-->	Sajesajama (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #systemd
+2020-12-25 04:38:22	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-25 04:39:59	-->	Sajesajama_ (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #systemd
+2020-12-25 04:41:48	<--	Sajesajama_ (Salsa@gateway/vpn/protonvpn/sajesajama) has quit (Remote host closed the connection)
+2020-12-25 04:42:47	-->	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has joined #systemd
+2020-12-25 06:58:27	--	irc: disconnected from server
+2020-12-25 06:59:06	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-25 06:59:06	--	Topic for #systemd is "Version 247 released"
+2020-12-25 06:59:06	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-25 06:59:07	--	Channel #systemd: 557 nicks (1 op, 0 voices, 556 normals)
+2020-12-25 06:59:42	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-25 07:02:54	<--	zyga-mbp (~zyga@unaffiliated/zyga) has quit (Quit: zyga-mbp)
+2020-12-25 07:03:51	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-25 07:07:22	<--	zyga (~zyga@unaffiliated/zyga) has quit (Client Quit)
+2020-12-25 07:11:53	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-25 07:18:35	-->	veegee (~veegee@bras-base-toroon0411w-grc-53-142-114-107-114.dsl.bell.ca) has joined #systemd
+2020-12-25 07:28:47	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Remote host closed the connection)
+2020-12-25 07:28:57	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-25 07:33:58	<--	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has quit (Read error: Connection reset by peer)
+2020-12-25 07:34:11	-->	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has joined #systemd
+2020-12-25 08:03:33	<--	zyga (~zyga@unaffiliated/zyga) has quit (Quit: zyga)
+2020-12-25 08:15:15	<--	spiri (~spiri@unaffiliated/spiri) has quit (Ping timeout: 256 seconds)
+2020-12-25 08:20:54	<--	anaselli (~quassel@mandriva/developer/kde/anaselli) has quit (Remote host closed the connection)
+2020-12-25 08:25:26	<--	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has quit (Ping timeout: 258 seconds)
+2020-12-25 08:28:05	<--	leonixyz (~leonixyz@151.62.208.191) has quit (Ping timeout: 240 seconds)
+2020-12-25 08:33:16	-->	DaNeenjah (~DaNeenjah@adsl-74-230-10-200.hsv.bellsouth.net) has joined #systemd
+2020-12-25 08:35:43	-->	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has joined #systemd
+2020-12-25 08:36:25	damjan	bashtanov1: what Type= is the service?
+2020-12-25 08:36:53	<--	DaNeenjah (~DaNeenjah@adsl-74-230-10-200.hsv.bellsouth.net) has quit (Client Quit)
+2020-12-25 08:37:11	-->	DaNeenjah (~DaNeenjah@2600:1005:b12d:b705:af00:7a58:2ee6:6161) has joined #systemd
+2020-12-25 08:39:29	bashtanov1	damjan: Type=notify
+2020-12-25 08:41:56	<--	Fire-Dragon-DoL (~Fire-Drag@d23-16-24-216.bchsia.telus.net) has quit (Ping timeout: 240 seconds)
+2020-12-25 08:43:38	damjan	ah ok, then dont use PIDFile= at all
+2020-12-25 08:44:17	-->	Fire-Dragon-DoL (~Fire-Drag@d23-16-27-70.bchsia.telus.net) has joined #systemd
+2020-12-25 09:06:14	<--	crabbedhaloablut (~crabbedha@unaffiliated/crabbedhaloablut) has quit (Ping timeout: 256 seconds)
+2020-12-25 09:06:45	-->	crabbedhaloablut (~crabbedha@unaffiliated/crabbedhaloablut) has joined #systemd
+2020-12-25 09:35:45	<--	quantum (~carl@45.159.14.242) has quit (Quit: Leaving.)
+2020-12-25 09:38:18	<--	srk (~sorki@gateway/tor-sasl/sorki) has quit (Remote host closed the connection)
+2020-12-25 09:40:21	-->	srk (~sorki@gateway/tor-sasl/sorki) has joined #systemd
+2020-12-25 09:54:08	<--	Nact (~l@host-85-27-120-131.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-25 10:21:07	<--	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-25 10:39:45	-->	efm (~efm@vpn.tummy.com) has joined #systemd
+2020-12-25 10:40:27	<--	DaNeenjah (~DaNeenjah@2600:1005:b12d:b705:af00:7a58:2ee6:6161) has quit (Quit: WeeChat 3.0)
+2020-12-25 10:41:13	-->	DaNeenjah (~DaNeenjah@adsl-74-230-10-200.hsv.bellsouth.net) has joined #systemd
+2020-12-25 10:53:12	--	drawat_ is now known as drawat
+2020-12-25 10:54:47	<--	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has quit (Quit: cosimone)
+2020-12-25 10:59:56	<--	efm (~efm@vpn.tummy.com) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:03:17	-->	IniGit (~gernot@62-178-56-62.cable.dynamic.surfer.at) has joined #systemd
+2020-12-25 11:03:19	IniGit	hi
+2020-12-25 11:03:38	IniGit	my verdaccio.service cannot create a file within /etc/verdaccio. Do services which need to write to files always have to have root persiomissions? Or what should I do? Tell the service to create the file in an other directory?
+2020-12-25 11:03:46	IniGit	It needs to create and write to /etc/verdaccio/htpasswd
+2020-12-25 11:04:04	IniGit	I told the service that it runs as `User=ini`. Is this good or should I let it run as root
+2020-12-25 11:04:23	IniGit	`ini` is my user on the system
+2020-12-25 11:08:33	-->	[b0b] (~bob@unaffiliated/sulfyr) has joined #systemd
+2020-12-25 11:10:56	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:11:16	<--	b0b (~bob@unaffiliated/sulfyr) has quit (Ping timeout: 240 seconds)
+2020-12-25 11:11:18	--	[b0b] is now known as b0b
+2020-12-25 11:38:07	<--	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 256 seconds)
+2020-12-25 11:41:26	<--	IniGit (~gernot@62-178-56-62.cable.dynamic.surfer.at) has quit (Quit: WeeChat 2.8)
+2020-12-25 11:46:07	<--	xSmurf (~MrSmurf@unaffiliated/mrsmurf) has quit (Ping timeout: 246 seconds)
+2020-12-25 12:29:04	<--	DaNeenjah (~DaNeenjah@adsl-74-230-10-200.hsv.bellsouth.net) has quit (Quit: WeeChat 3.0)
+2020-12-25 12:47:24	-->	DaNeenjah (~DaNeenjah@2600:1005:b12d:b705:af00:7a58:2ee6:6161) has joined #systemd
+2020-12-25 12:51:33	-->	MIF (~MIF@heb12/developer/nate) has joined #systemd
+2020-12-25 13:47:26	<--	Martchus_ (~martchus@2a01:c22:7623:a900:d250:99ff:fe49:3cce) has quit (Ping timeout: 264 seconds)
+2020-12-25 13:48:02	-->	Martchus (~martchus@dynamic-095-114-079-028.95.114.pool.telefonica.de) has joined #systemd
+2020-12-25 13:48:27	<--	pdxleif (~pdxleif@ec2-54-68-166-10.us-west-2.compute.amazonaws.com) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:49:22	<--	MrKiD (kid@Linux.SRl) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:49:23	<--	jmcnaught (~jeremy@shelley.deptadapt.org) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:50:19	<--	vancz (~vancz@unaffiliated/vancz) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:50:20	-->	pdxleif (~pdxleif@ec2-54-68-166-10.us-west-2.compute.amazonaws.com) has joined #systemd
+2020-12-25 13:50:26	<--	Addle (~quassel@108.162.128.20) has quit (Read error: Connection reset by peer)
+2020-12-25 13:50:32	-->	vancz (~vancz@unaffiliated/vancz) has joined #systemd
+2020-12-25 13:50:47	<--	badeball (~jonas@159.65.195.62) has quit (Ping timeout: 260 seconds)
+2020-12-25 13:51:07	-->	jmcnaught (~jeremy@shelley.deptadapt.org) has joined #systemd
+2020-12-25 13:51:10	-->	Addle (~quassel@108.162.128.20) has joined #systemd
+2020-12-25 13:52:17	-->	badeball (~jonas@159.65.195.62) has joined #systemd
+2020-12-25 14:16:03	<--	tkazi (~tkazi@unaffiliated/tkazi) has quit (Quit: Disconnected)
+2020-12-25 14:16:24	-->	tkazi (~tkazi@unaffiliated/tkazi) has joined #systemd
+2020-12-25 14:20:43	--	phunyguy is now known as phunysanta
+2020-12-25 14:33:24	-->	Sajesajama (Salsa@gateway/vpn/protonvpn/sajesajama) has joined #systemd
+2020-12-25 15:46:38	--	irc: disconnected from server
+2020-12-25 15:47:16	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-25 15:47:16	--	Topic for #systemd is "Version 247 released"
+2020-12-25 15:47:16	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-25 15:47:17	--	Channel #systemd: 549 nicks (1 op, 0 voices, 548 normals)
+2020-12-25 15:47:51	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-25 15:57:31	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Ping timeout: 272 seconds)
+2020-12-26 06:21:33	-->	Tokamak_ (~Tokamak@204.141.172.128) has joined #systemd
+2020-12-26 06:21:48	--	irc: disconnected from server
+2020-12-26 06:22:26	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-26 06:22:26	--	Topic for #systemd is "Version 247 released"
+2020-12-26 06:22:26	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-26 06:22:26	--	Channel #systemd: 551 nicks (1 op, 0 voices, 550 normals)
+2020-12-26 06:22:55	<--	keiser (~keiser@83.25.87.71.ipv4.supernova.orange.pl) has quit (Client Quit)
+2020-12-26 06:23:02	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-26 06:23:47	--	Xogium is now known as lp0-on-fire
+2020-12-26 06:24:16	--	lp0-on-fire is now known as Xogium
+2020-12-26 06:39:45	<--	DaNeenjah (~DaNeenjah@2600:1005:b12b:ed6d:7525:ed09:a7c4:a1b4) has quit (Ping timeout: 272 seconds)
+2020-12-26 06:41:36	-->	DaNeenjah (~DaNeenjah@2600:1005:b151:9454:23f8:ff3e:2f14:7ede) has joined #systemd
+2020-12-26 06:42:36	<--	zyga (~zyga@unaffiliated/zyga) has quit (Quit: zyga)
+2020-12-26 06:44:09	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Remote host closed the connection)
+2020-12-26 06:44:20	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-26 06:45:51	-->	keiser (~keiser@83.25.87.71.ipv4.supernova.orange.pl) has joined #systemd
+2020-12-26 06:45:53	<--	drot (drot@unaffiliated/drot) has quit (Read error: Connection reset by peer)
+2020-12-26 06:46:14	<--	sorbus (reynir@2a01:4f8:141:1272::2) has quit (Read error: Connection reset by peer)
+2020-12-26 06:48:04	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-26 06:51:58	<--	zyga (~zyga@unaffiliated/zyga) has quit (Client Quit)
+2020-12-26 06:54:16	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-26 06:55:42	<--	QuestionC (~Thunderbi@67.254.222.11) has quit (Ping timeout: 260 seconds)
+2020-12-26 06:58:32	<--	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has quit (Ping timeout: 268 seconds)
+2020-12-26 06:59:17	<--	strugee (~strugee@strugee.net) has quit (Quit: ZNC - http://znc.in)
+2020-12-26 07:00:02	<--	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has quit (Ping timeout: 264 seconds)
+2020-12-26 07:03:26	-->	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has joined #systemd
+2020-12-26 07:07:08	<--	Wouter0100 (~Wouter010@84-80-174-188.fixed.kpn.net) has quit (Read error: Connection reset by peer)
+2020-12-26 07:07:46	-->	Wouter0100 (~Wouter010@84-80-174-188.fixed.kpn.net) has joined #systemd
+2020-12-26 07:07:52	<--	zyga (~zyga@unaffiliated/zyga) has quit (Quit: zyga)
+2020-12-26 07:23:10	<--	boucman (~boucman@wesnoth/developer/boucman) has quit (Ping timeout: 246 seconds)
+2020-12-26 07:23:24	<--	foul_owl (~foul_owl@67.40.177.144) has quit (Ping timeout: 240 seconds)
+2020-12-26 08:55:32	--	irc: disconnected from server
+2020-12-26 08:56:10	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-26 08:56:10	--	Topic for #systemd is "Version 247 released"
+2020-12-26 08:56:10	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-26 08:56:10	--	Channel #systemd: 540 nicks (1 op, 0 voices, 539 normals)
+2020-12-26 08:56:46	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-26 08:59:11	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-26 09:07:39	-->	dx (~dx@irssi/staff/dx) has joined #systemd
+2020-12-26 09:08:02	-->	veegee_ (~veegee@142.126.160.36) has joined #systemd
+2020-12-26 09:09:52	--	Swanta-Claus is now known as Swant
+2020-12-26 09:13:16	<--	dx (~dx@irssi/staff/dx) has left #systemd
+2020-12-26 09:20:42	<--	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-26 09:21:00	<--	zyga (~zyga@unaffiliated/zyga) has quit (Quit: zyga)
+2020-12-26 09:29:54	-->	efm (~efm@vpn.tummy.com) has joined #systemd
+2020-12-26 09:42:19	<--	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has quit (Quit: ZNC - http://znc.in)
+2020-12-26 09:45:48	-->	delacroix (~delacroix@2a02:810c:4cc0:400:21e:2aff:fe47:c90f) has joined #systemd
+2020-12-26 09:46:03	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Ping timeout: 260 seconds)
+2020-12-26 09:46:36	-->	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has joined #systemd
+2020-12-26 09:55:06	<--	DaNeenjah (~DaNeenjah@2600:1005:b151:9454:23f8:ff3e:2f14:7ede) has quit (Quit: WeeChat 3.0)
+2020-12-26 10:05:31	-->	strugee (~strugee@strugee.net) has joined #systemd
+2020-12-26 10:11:28	<--	kwork (~quassel@unaffiliated/kwork) has quit (Ping timeout: 256 seconds)
+2020-12-26 10:11:56	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Ping timeout: 240 seconds)
+2020-12-26 10:12:58	-->	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has joined #systemd
+2020-12-26 10:34:58	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Ping timeout: 246 seconds)
+2020-12-26 10:35:57	-->	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has joined #systemd
+2020-12-26 10:54:36	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Ping timeout: 240 seconds)
+2020-12-26 10:54:51	-->	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has joined #systemd
+2020-12-26 11:05:56	-->	[b0b] (~bob@unaffiliated/sulfyr) has joined #systemd
+2020-12-26 11:09:49	<--	b0b (~bob@unaffiliated/sulfyr) has quit (Ping timeout: 264 seconds)
+2020-12-26 11:09:51	--	[b0b] is now known as b0b
+2020-12-26 11:10:23	<--	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has quit (Quit: cosimone)
+2020-12-26 11:17:32	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 256 seconds)
+2020-12-26 11:48:00	-->	intelfx (~intelfxin@broadband-95-84-164-43.ip.moscow.rt.ru) has joined #systemd
+2020-12-26 11:56:25	-->	incentive (~rbatty@unaffiliated/incentive) has joined #systemd
+2020-12-26 12:03:10	<--	incentive (~rbatty@unaffiliated/incentive) has quit (Quit: Leaving)
+2020-12-26 12:43:53	<--	chachasmooth (~chachasmo@unaffiliated/chachasmooth) has quit (Ping timeout: 268 seconds)
+2020-12-26 12:44:52	<--	JanC (~janc@lugwv/member/JanC) has quit (Remote host closed the connection)
+2020-12-26 12:45:16	-->	JanC (~janc@lugwv/member/JanC) has joined #systemd
+2020-12-26 12:45:26	-->	chachasmooth (~chachasmo@unaffiliated/chachasmooth) has joined #systemd
+2020-12-26 14:29:17	--	irc: disconnected from server
+2020-12-26 14:29:54	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-26 14:29:54	--	Topic for #systemd is "Version 247 released"
+2020-12-26 14:29:54	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-26 14:29:55	--	Channel #systemd: 537 nicks (1 op, 0 voices, 536 normals)
+2020-12-26 14:30:31	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-26 14:42:32	hyper_ch	Edu4rdSHL: you know nixpkgs? 
+2020-12-26 14:43:33	Edu4rdSHL	hyper_ch, it's the first time I see one but seems pretty easy to apply a patch.
+2020-12-26 14:43:49	Edu4rdSHL	https://github.com/NixOS/nixpkgs/blob/8a801d431937891960421cfef4cf864302bbb58e/pkgs/os-specific/linux/util-linux/default.nix#L13
+2020-12-26 14:44:31	Edu4rdSHL	So, create the .patch file, add the patch name there.
+2020-12-26 14:45:11	Edu4rdSHL	I didn't see that they have some "package revisions" item (like pkgrel in arch)
+2020-12-26 14:45:46	hyper_ch	well, I just referenced the patchfile from util-linux using fetchpatch ( urs, sha245).....
+2020-12-26 14:46:01	hyper_ch	and am rebuilding now before making pr 
+2020-12-26 14:47:11	hyper_ch	Edu4rdSHL: https://paste.simplylinux.ch/view/raw/dfbb575a
+2020-12-26 14:47:41	hyper_ch	still surprised you know nixpkgs :)
+2020-12-26 14:48:49	hyper_ch	the only problem is: I just built it on my homeserver instead of my notebook :(
+2020-12-26 14:54:23	<--	hyper_ch (~hyper_ch@openvpn/user/hyper-ch) has quit (Read error: Connection reset by peer)
+2020-12-26 14:55:10	<--	rektide (~rektide@eldergods.com) has quit (Remote host closed the connection)
+2020-12-26 14:58:15	-->	hyper_ch (~hyper_ch@openvpn/user/hyper-ch) has joined #systemd
+2020-12-26 15:02:00	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Ping timeout: 268 seconds)
+2020-12-26 15:02:18	-->	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has joined #systemd
+2020-12-26 15:22:13	<--	Aelius (~Aelius@unaffiliated/aelius) has quit (Quit: quit)
+2020-12-26 15:22:35	-->	Aelius (~Aelius@unaffiliated/aelius) has joined #systemd
+2020-12-26 15:31:57	<--	tds (~tds@lounge.srv.home.timstallard.me.uk) has quit (Ping timeout: 260 seconds)
+2020-12-26 15:34:15	-->	Nact (~l@host-85-27-112-107.dynamic.voo.be) has joined #systemd
+2020-12-26 15:34:37	Safi	Is AllowedCPUs supposed to apply to all descendents of the unit upon which its set? I have set AllowedCPUs on user.slice, system.slice and init.scope yet I still see descendents of these units running on CPUs they shouldn't
+2020-12-26 15:43:56	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Ping timeout: 268 seconds)
+2020-12-26 15:57:10	-->	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has joined #systemd
+2020-12-26 15:59:59	<--	sysrich (~sysrich@static.165.131.203.116.clients.your-server.de) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-26 16:00:40	-->	sysrich (~sysrich@static.165.131.203.116.clients.your-server.de) has joined #systemd
+2020-12-26 16:07:01	-->	Deyaa (uid190709@gateway/web/irccloud.com/x-wrffpmakplgxtmvq) has joined #systemd
+2020-12-26 16:20:23	<--	Hallcyon (~Hallcyon@122-199-59-48.ip4.superloop.com) has quit (Ping timeout: 260 seconds)
+2020-12-26 16:32:23	-->	boucman (~boucman@wesnoth/developer/boucman) has joined #systemd
+2020-12-26 16:33:34	--	phunysanta is now known as phunyguy
+2020-12-26 17:09:40	-->	Mental_Inflation (~Mental_In@2a02:587:1206:92a7:441e:fb83:f842:8655) has joined #systemd
+2020-12-26 17:25:42	-->	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has joined #systemd
+2020-12-26 17:41:28	-->	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has joined #systemd
+2020-12-26 17:55:46	-->	infides (~infides@i5C75F16A.versanet.de) has joined #systemd
+2020-12-26 17:56:38	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-26 18:00:00	<--	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has quit (Quit: WeeChat 2.9)
+2020-12-26 18:05:49	-->	kini (~kini@unaffiliated/kini) has joined #systemd
+2020-12-26 18:06:13	<--	sunri5e (~sunri5e@unaffiliated/sunri5e) has quit (Quit: goodbye)
+2020-12-26 18:11:13	<--	zyga (~zyga@unaffiliated/zyga) has quit (Quit: zyga)
+2020-12-26 18:27:23	<--	Mental_Inflation (~Mental_In@2a02:587:1206:92a7:441e:fb83:f842:8655) has quit (Quit: Leaving)
+2020-12-26 18:28:30	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-26 18:37:12	-->	dionysus69 (~Thunderbi@unaffiliated/dionysus69) has joined #systemd
+2020-12-26 18:40:16	<--	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has quit (Quit: Halcyon flies away.)
+2020-12-26 18:46:07	<--	Deyaa (uid190709@gateway/web/irccloud.com/x-wrffpmakplgxtmvq) has quit (Quit: Connection closed for inactivity)
+2020-12-26 18:47:06	-->	Hallcyon (~Hallcyon@122-199-59-155.ip4.superloop.com) has joined #systemd
+2020-12-26 18:48:20	<--	kini (~kini@unaffiliated/kini) has quit (Remote host closed the connection)
+2020-12-26 18:54:19	-->	sikorsp2 (~loouom@afbs138.neoplus.adsl.tpnet.pl) has joined #systemd
+2020-12-26 18:56:05	<--	sikorsp2 (~loouom@afbs138.neoplus.adsl.tpnet.pl) has quit (Client Quit)
+2020-12-26 19:07:29	<--	zyga (~zyga@unaffiliated/zyga) has quit (Quit: zyga)
+2020-12-26 19:07:50	-->	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has joined #systemd
+2020-12-26 19:19:19	-->	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has joined #systemd
+2020-12-26 19:23:05	-->	anaselli (~quassel@mandriva/developer/kde/anaselli) has joined #systemd
+2020-12-26 19:26:52	-->	drot (drot@unaffiliated/drot) has joined #systemd
+2020-12-26 19:27:14	<--	Nact (~l@host-85-27-112-107.dynamic.voo.be) has quit (Quit: Konversation terminated!)
+2020-12-26 19:37:37	-->	spiri (~spiri@unaffiliated/spiri) has joined #systemd
+2020-12-26 19:39:10	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-26 19:40:11	<--	vidal72[m] (vidal72mat@gateway/shell/matrix.org/x-lbvkkcribjrrnvtr) has quit (Ping timeout: 260 seconds)
+2020-12-26 19:43:15	-->	tds (~tds@lounge.srv.home.timstallard.me.uk) has joined #systemd
+2020-12-26 19:48:38	<--	Some_Person (someperson@2600:1700:d02:1c50:ce81:24dc:3854:f698) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-26 19:51:59	-->	Some_Person (someperson@2600:1700:d02:1c50:ce81:24dc:3854:f698) has joined #systemd
+2020-12-26 19:53:22	-->	vidal72[m] (vidal72mat@gateway/shell/matrix.org/x-rdswweohdesfwlpk) has joined #systemd
+2020-12-26 20:02:57	<--	Frenn_ (~Frenetick@gateway/tor-sasl/freneticks) has quit (Remote host closed the connection)
+2020-12-26 20:04:00	-->	Frenn_ (~Frenetick@gateway/tor-sasl/freneticks) has joined #systemd
+2020-12-26 20:37:10	-->	cosimone (~cosimone@93-47-228-249.ip115.fastwebnet.it) has joined #systemd
+2020-12-26 20:47:04	<--	geissonator (~geissonat@129.41.86.5) has quit (Ping timeout: 240 seconds)
+2020-12-26 20:58:19	-->	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has joined #systemd
+2020-12-26 21:10:22	<--	cdown (~cdown@82-69-42-66.dsl.in-addr.zen.co.uk) has quit (Read error: Connection reset by peer)
+2020-12-26 21:12:27	-->	cdown (~cdown@163.114.131.1) has joined #systemd
+2020-12-26 21:12:41	<--	s_ (~rootveget@fsf/member/hays) has quit (Remote host closed the connection)
+2020-12-26 21:12:49	<--	raggi (~raggi@lin.rag.pub) has quit (Remote host closed the connection)
+2020-12-26 21:13:52	-->	s_ (rootvegeta@fsf/member/hays) has joined #systemd
+2020-12-26 21:14:24	<--	mjsir911 (~bnc@sirabella.org) has quit (Quit: Goodbye, World!)
+2020-12-26 21:14:40	-->	mjsir911 (~bnc@2001:19f0:5:4de7:81b6:1c8c:e2c1:f051) has joined #systemd
+2020-12-26 21:15:40	-->	kini (~kini@unaffiliated/kini) has joined #systemd
+2020-12-27 09:05:28	--	irc: disconnected from server
+2020-12-27 09:06:24	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-27 09:06:24	--	Topic for #systemd is "Version 247 released"
+2020-12-27 09:06:24	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-27 09:06:25	--	Channel #systemd: 545 nicks (1 op, 0 voices, 544 normals)
+2020-12-27 09:07:00	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-27 09:19:12	<--	jkwnki (~jkwnki@p200300cd47077e001e1bb5fffe7a47f7.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-12-27 09:20:57	-->	justanotheruser (~justanoth@unaffiliated/justanotheruser) has joined #systemd
+2020-12-27 09:23:09	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-27 09:31:14	<--	elvishjerricco (sid237756@NixOS/user/ElvishJerricco) has quit (Ping timeout: 264 seconds)
+2020-12-27 09:31:40	-->	elvishjerricco (sid237756@NixOS/user/ElvishJerricco) has joined #systemd
+2020-12-27 09:33:45	-->	DaNeenjah (~DaNeenjah@2600:1005:b15e:e798:d56a:89af:ecfb:41f1) has joined #systemd
+2020-12-27 09:36:35	<--	zyga (~zyga@unaffiliated/zyga) has quit (Ping timeout: 256 seconds)
+2020-12-27 09:45:30	<--	QuestionC (~Thunderbi@67.254.222.11) has quit (Remote host closed the connection)
+2020-12-27 09:47:45	-->	QuestionC (~Thunderbi@67.254.222.11) has joined #systemd
+2020-12-27 09:50:44	-->	zyga (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-27 09:55:57	<--	zyga (~zyga@unaffiliated/zyga) has quit (Ping timeout: 260 seconds)
+2020-12-27 09:58:07	<--	Belxjander (~Belxjande@sourcemage/Mage/Abh-Elementalist) has quit (Ping timeout: 246 seconds)
+2020-12-27 10:14:37	-->	foul_owl (~foul_owl@67.40.177.144) has joined #systemd
+2020-12-27 10:18:59	<--	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has quit (Ping timeout: 260 seconds)
+2020-12-27 10:30:24	<--	dionysus69 (~Thunderbi@unaffiliated/dionysus69) has quit (Quit: dionysus69)
+2020-12-30 19:38:47	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-30 19:38:47	--	Topic for #systemd is "Version 247 released"
+2020-12-30 19:38:47	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-30 19:38:47	--	Channel #systemd: 543 nicks (1 op, 0 voices, 542 normals)
+2020-12-30 19:39:24	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-30 19:41:23	-->	rsx (~rsx@ppp-188-174-145-171.dynamic.mnet-online.de) has joined #systemd
+2020-12-30 20:27:32	<--	yabbes (uid254190@gateway/web/irccloud.com/x-njnkowoemvguribv) has quit (Quit: Connection closed for inactivity)
+2020-12-30 20:30:09	<--	andreyv (~andrey@unaffiliated/andreyv) has quit (Quit: ZNC - http://znc.in)
+2020-12-30 20:30:25	-->	andreyv (~andrey@unaffiliated/andreyv) has joined #systemd
+2020-12-30 20:32:10	-->	cosimone (~cosimone@2001:b07:ae5:db26:1fb3:ef3f:ece2:c6f8) has joined #systemd
+2020-12-30 20:39:54	<--	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Ping timeout: 256 seconds)
+2020-12-30 21:02:29	-->	dionysus69 (~Thunderbi@unaffiliated/dionysus69) has joined #systemd
+2020-12-30 21:02:37	-->	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #systemd
+2020-12-30 21:04:58	<--	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has quit (Ping timeout: 258 seconds)
+2020-12-30 21:09:13	-->	cihancan (~cian@31.223.78.161) has joined #systemd
+2020-12-30 21:15:49	-->	TSPenguin (~Knecht@85.27.249.162) has joined #systemd
+2020-12-30 21:16:40	<--	wallacer (~quassel@51.15.76.253) has quit (Ping timeout: 256 seconds)
+2020-12-30 21:17:24	-->	bkircher (~bkircher@2001:a61:25fe:df01:b2b3:d532:8724:251d) has joined #systemd
+2020-12-30 21:31:10	<--	fachinformatiker (~fachinfor@fsf/member/fachinformatiker) has quit (Read error: Connection reset by peer)
+2020-12-30 21:33:58	<--	meropyri (~meropyri@gateway/tor-sasl/meropyri) has quit (Remote host closed the connection)
+2020-12-30 21:34:15	-->	meropyri (~meropyri@gateway/tor-sasl/meropyri) has joined #systemd
+2020-12-30 21:35:52	<--	meropyri (~meropyri@gateway/tor-sasl/meropyri) has quit (Remote host closed the connection)
+2020-12-30 21:36:06	-->	meropyri (~meropyri@gateway/tor-sasl/meropyri) has joined #systemd
+2020-12-30 21:37:28	-->	fachinformatiker (~fachinfor@fsf/member/fachinformatiker) has joined #systemd
+2020-12-30 21:39:09	-->	zyga-mbp (~zyga@unaffiliated/zyga) has joined #systemd
+2020-12-30 21:49:45	-->	otaylor (~otaylor@c-24-61-241-41.hsd1.ma.comcast.net) has joined #systemd
+2020-12-30 21:51:32	<--	zyga-mbp (~zyga@unaffiliated/zyga) has quit (Quit: zyga-mbp)
+2020-12-30 22:02:28	-->	wallacer (~quassel@51.15.76.253) has joined #systemd
+2020-12-30 22:18:30	<--	flarunt (~flurant@109.201.154.65) has quit (Ping timeout: 256 seconds)
+2020-12-30 22:19:06	damjan	twb: https://fedoramagazine.org/systemd-resolved-introduction-to-split-dns/
+2020-12-30 22:20:47	<--	TSPenguin (~Knecht@85.27.249.162) has quit (Quit: left)
+2020-12-30 22:33:50	twb	Oh so I should not only set DNS= but also tell it the LAN's split-brain domain, so only that goes down the VPN pipe?
+2020-12-30 22:34:55	damjan	preferably yes
+2020-12-30 22:35:04	twb	Ah yes excellent
+2020-12-30 22:35:19	twb	I assumed resolved was just sending queries in parallel to all and that was "good enough"
+2020-12-30 22:35:24	twb	But this is better
+2020-12-30 22:36:20	twb	I wonder, can I set that for people using the windows wireguard client?
+2020-12-30 22:36:37	twb	Doesn't look like it
+2020-12-30 22:39:09	<--	WilliButz (~WilliButz@NixOS/user/WilliButz) has quit (Remote host closed the connection)
+2020-12-30 22:39:26	damjan	twb: no systemd-resolved for windows :)
+2020-12-30 22:39:40	-->	WilliButz (~WilliButz@NixOS/user/WilliButz) has joined #systemd
+2020-12-30 22:40:10	twb	Yeah.  On Linux, non-systemd "wg-quick" solution uses resolveconf wrapper around /etc/resolve.conf, and I don't think that supports targeting specific domains to specific servers
+2020-12-30 22:40:34	twb	i.e. this is a definitive advantage over wg-quick
+2020-12-31 07:49:38	--	irc: disconnected from server
+2020-12-31 07:50:18	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-31 07:50:18	--	Topic for #systemd is "Version 247 released"
+2020-12-31 07:50:18	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-31 07:50:18	--	Channel #systemd: 551 nicks (1 op, 0 voices, 550 normals)
+2020-12-31 07:50:54	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-31 07:54:06	<--	amessina (~amessina@unaffiliated/amessina) has quit (Quit: Konversation terminated!)
+2020-12-31 09:21:23	--	irc: disconnected from server
+2020-12-31 09:22:00	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2020-12-31 09:22:00	--	Topic for #systemd is "Version 247 released"
+2020-12-31 09:22:00	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2020-12-31 09:22:00	--	Channel #systemd: 542 nicks (1 op, 0 voices, 541 normals)
+2020-12-31 09:22:36	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2020-12-31 09:23:29	<--	wootehfoot (~wootehfoo@unaffiliated/wootehfoot) has quit (Quit: Leaving)
+2020-12-31 09:29:40	<--	zyga (~zyga@unaffiliated/zyga) has quit (Quit: zyga)
+2020-12-31 09:36:19	-->	QuestionC (~Thunderbi@67.254.222.11) has joined #systemd
+2020-12-31 09:41:43	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Quit: WeeChat 2.8)
+2020-12-31 09:47:02	<--	LuKaRo (~LuKaRo@p200300dfa71f0cee00000000000001f9.dip0.t-ipconnect.de) has quit (Quit: ZNC 1.8.2 - https://znc.in)
+2020-12-31 09:50:41	-->	LuKaRo (~LuKaRo@p200300dfa71f0cee00000000000001f9.dip0.t-ipconnect.de) has joined #systemd
+2020-12-31 09:50:54	<--	LuKaRo (~LuKaRo@p200300dfa71f0cee00000000000001f9.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2020-12-31 09:53:58	-->	LuKaRo (~LuKaRo@p4fc338a6.dip0.t-ipconnect.de) has joined #systemd
+2020-12-31 10:07:05	<--	TJ- (~root@2a02:8010:4007:dead:beef::b217) has quit (Quit: WeeChat 2.8)
+2020-12-31 10:11:29	-->	Nact (~l@host-85-27-123-155.dynamic.voo.be) has joined #systemd
+2020-12-31 10:32:42	<--	berglh (~quassel@ns1.bytefuse.net) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-31 10:33:02	<--	goldfish (~goldfish@2a02:8010:63b5::b57) has quit (Ping timeout: 264 seconds)
+2020-12-31 10:43:24	<--	rah (b984851a@185.132.133.26) has left #systemd
+2020-12-31 10:56:29	-->	[b0b] (~bob@unaffiliated/sulfyr) has joined #systemd
+2020-12-31 10:57:17	<--	powerhouse (~powerhous@184.69.151.38) has quit (Read error: No route to host)
+2020-12-31 10:59:16	<--	b0b (~bob@unaffiliated/sulfyr) has quit (Ping timeout: 240 seconds)
+2020-12-31 10:59:18	--	[b0b] is now known as b0b
+2020-12-31 10:59:22	-->	powerhouse (~powerhous@184.69.151.38) has joined #systemd
+2020-12-31 11:10:22	<--	Kelsar (~quassel@unaffiliated/kelsar) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-31 11:10:32	-->	Kelsar (~quassel@unaffiliated/kelsar) has joined #systemd
+2020-12-31 11:15:01	twb	damjan: hey dumb question
+2020-12-31 11:15:21	twb	resolved knows to send Domain=foo queries to the wg-foo interface's DNS servers
+2020-12-31 11:15:23	twb	*but*
+2020-12-31 11:15:27	twb	What about PTR RRs?
+2020-12-31 11:15:56	damjan	make sure to use routing domains
+2020-12-31 11:15:59	damjan	those with a ~
+2020-12-31 11:16:10	damjan	PTRs can work in the same sense
+2020-12-31 11:16:13	twb	Does it work out that the default route for 1.2.3.4 is over the 1/8 route on dev foo, and so send PTR 4.3.2.1.in-addr.arpa to that?
+2020-12-31 11:16:21	twb	oh hrm
+2020-12-31 11:16:32	twb	I didn't understand the stuff about "~." in the manpage, I'll reread it
+2020-12-31 11:16:33	damjan	~.1.in-addr.arpa
+2020-12-31 11:16:51	twb	Oh
+2020-12-31 11:17:02	twb	So it's not smart enough to infer that from the routing table?
+2020-12-31 11:17:19	damjan	no
+2020-12-31 11:17:29	damjan	since DNS is quite removed from routing
+2020-12-31 11:18:04	twb	Fair enough
+2020-12-31 11:25:25	<--	ddstreet (~quassel@ubuntu/member/ddstreet) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2020-12-31 11:27:09	-->	ddstreet (~quassel@ubuntu/member/ddstreet) has joined #systemd
+2020-12-31 11:47:08	<--	slash_ (~slash_@030-245-128-083.dynamic.caiway.nl) has quit (Ping timeout: 256 seconds)
+2020-12-31 11:50:37	<--	foul_owl (~foul_owl@67.40.177.144) has quit (Ping timeout: 264 seconds)
+2020-12-31 12:07:10	<--	joshmiller (~joshmille@2620:10d:c090:400::5:c18d) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-12-31 12:08:58	--	irc: disconnected from server
+2021-01-01 11:08:10	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2021-01-01 11:08:10	--	Topic for #systemd is "Version 247 released"
+2021-01-01 11:08:10	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2021-01-01 11:08:10	--	Channel #systemd: 536 nicks (1 op, 0 voices, 535 normals)
+2021-01-01 11:08:46	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2021-01-01 11:09:49	<--	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has quit (Ping timeout: 260 seconds)
+2021-01-01 11:10:44	-->	caterfxo (caterfxo@gateway/vpn/privateinternetaccess/caterfxo) has joined #systemd
+2021-01-01 11:30:56	<--	WilliamH (~william@gentoo/developer/williamh) has quit (Quit: leaving)
+2021-01-01 15:21:36	--	irc: disconnected from server
+2021-01-01 15:22:14	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2021-01-01 15:22:14	--	Topic for #systemd is "Version 247 released"
+2021-01-01 15:22:14	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2021-01-01 15:22:14	--	Channel #systemd: 533 nicks (1 op, 0 voices, 532 normals)
+2021-01-01 15:22:51	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2021-01-01 15:24:45	<--	hendry (~hendry@210.23.22.2) has quit (Ping timeout: 240 seconds)
+2021-01-01 15:31:11	--	irc: disconnected from server
+2021-01-12 23:09:43	-->	jungdongho (~jungdongh@115.23.138.101) has joined #systemd
+2021-01-12 23:09:43	--	Topic for #systemd is "Version 247 released"
+2021-01-12 23:09:43	--	Topic set by zbyszek on Fri, 27 Nov 2020 03:44:15
+2021-01-12 23:09:43	--	Channel #systemd: 551 nicks (1 op, 0 voices, 550 normals)
+2021-01-12 23:10:20	--	Channel created on Wed, 14 Apr 2010 09:58:39
+2021-01-12 23:14:24	<--	Jookia (~Jookia@gateway/tor-sasl/jookia) has quit (Ping timeout: 240 seconds)
+2021-01-12 23:18:25	<--	WilliButz (~WilliButz@NixOS/user/WilliButz) has quit (Ping timeout: 240 seconds)
+2021-01-12 23:19:50	-->	chrisccoulson (~chrisccou@ubuntu/member/chrisccoulson) has joined #systemd
+2021-01-12 23:19:51	-->	Jookia (~Jookia@gateway/tor-sasl/jookia) has joined #systemd
+2021-01-12 23:26:22	--	irc: disconnected from server
