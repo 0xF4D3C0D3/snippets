@@ -54,13 +54,13 @@
   help = None
 [profiles]
   [[default]]
-    background_color = "#eee8d5"
+    background_color = "#fdf6e3"
     cursor_color = "#002b36"
     font = MesloLGS NF 12
-    foreground_color = "#002b36"
+    foreground_color = "#586e75"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#073642:#d30102:#859900:#b58900:#6c71c4:#d33682:#2aa198:#839496:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#93a1a1"
+    palette = "#073642:#dc322f:#859900:#b58900:#87bee4:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#3d3846:#3d3846:#3d3846:#6c71c4:#000000:#c0bfbc"
     use_system_font = False
     copy_on_selection = True
     rewrap_on_resize = False
